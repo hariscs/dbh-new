@@ -6,7 +6,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-export default function Layout(props: Record<string, string>) {
+export default function Layout({ children }: Props) {
   return (
     <>
 <header className="elementor elementor-26 elementor-location-header">
@@ -1635,118 +1635,6 @@ export default function Layout(props: Record<string, string>) {
   </div>
 </footer>
     
-      {(props.blog_section_1___head || props.blog_section_1___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
-                {props.blog_section_1___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_2___head || props.blog_section_2___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_2___head && <h2>{props.blog_section_2___head}</h2>}
-                {props.blog_section_2___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_2___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_3___head || props.blog_section_3___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_3___head && <h2>{props.blog_section_3___head}</h2>}
-                {props.blog_section_3___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_3___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_4___head || props.blog_section_4___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_4___head && <h2>{props.blog_section_4___head}</h2>}
-                {props.blog_section_4___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_4___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_5___head || props.blog_section_5___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_5___head && <h2>{props.blog_section_5___head}</h2>}
-                {props.blog_section_5___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_5___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_6___head || props.blog_section_6___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_6___head && <h2>{props.blog_section_6___head}</h2>}
-                {props.blog_section_6___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_6___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_7___head || props.blog_section_7___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_7___head && <h2>{props.blog_section_7___head}</h2>}
-                {props.blog_section_7___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_7___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_8___head || props.blog_section_8___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_8___head && <h2>{props.blog_section_8___head}</h2>}
-                {props.blog_section_8___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_8___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 </>
   );
 }
