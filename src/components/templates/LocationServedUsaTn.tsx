@@ -552,49 +552,49 @@ export default function LocationServedUsaTn(props: Record<string, string>) {
               <div className="g-wrap" id="dmg-gallery-1">
                 <div className="dmg-grid">
                   <div className="g-item">
-                    <div style={{position:"relative",width:"100%"}}><Image src="/images/e3ff331a2a5604c280bb4e77f097aeac.webp" alt="Gallery image" fill style={{objectFit:"contain"}} /></div>
+                    <Image src="/images/e3ff331a2a5604c280bb4e77f097aeac.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
                     <div className="g-overlay"></div>
                     <div className="g-line"></div>
                     <div className="g-corner"></div>
                   </div>
                   <div className="g-item">
-                    <div style={{position:"relative",width:"100%"}}><Image src="/images/d568211904d8538882d895f7bc6ab25e.webp" alt="Gallery image" fill style={{objectFit:"contain"}} /></div>
+                    <Image src="/images/d568211904d8538882d895f7bc6ab25e.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
                     <div className="g-overlay"></div>
                     <div className="g-line"></div>
                     <div className="g-corner"></div>
                   </div>
                   <div className="g-item">
-                    <div style={{position:"relative",width:"100%"}}><Image src="/images/26493349f84c0c5ce91ce31a6773b846.webp" alt="Gallery image" fill style={{objectFit:"contain"}} /></div>
+                    <Image src="/images/26493349f84c0c5ce91ce31a6773b846.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
                     <div className="g-overlay"></div>
                     <div className="g-line"></div>
                     <div className="g-corner"></div>
                   </div>
                   <div className="g-item">
-                    <div style={{position:"relative",width:"100%"}}><Image src="/images/6a341c3f03b8e72eb5a9feb6df87d656.webp" alt="Gallery image" fill style={{objectFit:"contain"}} /></div>
+                    <Image src="/images/6a341c3f03b8e72eb5a9feb6df87d656.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
                     <div className="g-overlay"></div>
                     <div className="g-line"></div>
                     <div className="g-corner"></div>
                   </div>
                   <div className="g-item">
-                    <div style={{position:"relative",width:"100%"}}><Image src="/images/8182a0d37cb967bc1479e1afc0af8e15.webp" alt="Gallery image" fill style={{objectFit:"contain"}} /></div>
+                    <Image src="/images/8182a0d37cb967bc1479e1afc0af8e15.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
                     <div className="g-overlay"></div>
                     <div className="g-line"></div>
                     <div className="g-corner"></div>
                   </div>
                   <div className="g-item">
-                    <div style={{position:"relative",width:"100%"}}><Image src="/images/b4937313007bffe7a5a245961ca2f6d9.webp" alt="Gallery image" fill style={{objectFit:"contain"}} /></div>
+                    <Image src="/images/b4937313007bffe7a5a245961ca2f6d9.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
                     <div className="g-overlay"></div>
                     <div className="g-line"></div>
                     <div className="g-corner"></div>
                   </div>
                   <div className="g-item">
-                    <div style={{position:"relative",width:"100%"}}><Image src="/images/c8cf9accc8fb330423b91a194a72c909.webp" alt="Gallery image" fill style={{objectFit:"contain"}} /></div>
+                    <Image src="/images/c8cf9accc8fb330423b91a194a72c909.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
                     <div className="g-overlay"></div>
                     <div className="g-line"></div>
                     <div className="g-corner"></div>
                   </div>
                   <div className="g-item">
-                    <div style={{position:"relative",width:"100%"}}><Image src="/images/c27e6e0e5ced79116b4fcfbce0f35be6.webp" alt="Gallery image" fill style={{objectFit:"contain"}} /></div>
+                    <Image src="/images/c27e6e0e5ced79116b4fcfbce0f35be6.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
                     <div className="g-overlay"></div>
                     <div className="g-line"></div>
                     <div className="g-corner"></div>

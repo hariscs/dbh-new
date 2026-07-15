@@ -120,7 +120,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -195,19 +195,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -282,19 +282,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -379,10 +379,10 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -445,13 +445,13 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -514,7 +514,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -577,7 +577,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -640,13 +640,13 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -712,7 +712,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -797,7 +797,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -860,7 +860,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -921,7 +921,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -984,7 +984,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -1047,7 +1047,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -1110,7 +1110,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -1173,7 +1173,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -1236,7 +1236,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -1299,7 +1299,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -1362,7 +1362,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -1425,7 +1425,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -1488,7 +1488,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -1551,7 +1551,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -1614,7 +1614,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -1702,7 +1702,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -1766,7 +1766,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -1832,7 +1832,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -1896,7 +1896,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -1962,7 +1962,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -2028,7 +2028,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -2094,7 +2094,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -2160,7 +2160,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -2226,10 +2226,10 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -2295,7 +2295,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -2358,7 +2358,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -2421,7 +2421,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -2484,7 +2484,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -2547,7 +2547,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -2610,7 +2610,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -2673,7 +2673,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -2736,7 +2736,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -2824,7 +2824,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -2890,7 +2890,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -2956,7 +2956,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -3020,19 +3020,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -3098,7 +3098,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -3161,7 +3161,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -3224,7 +3224,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -3285,7 +3285,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -3348,7 +3348,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -3409,10 +3409,10 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -3478,7 +3478,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -3542,19 +3542,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -3618,7 +3618,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -3701,19 +3701,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -3774,19 +3774,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -3847,19 +3847,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -3920,19 +3920,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -3993,19 +3993,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -4088,19 +4088,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -4161,19 +4161,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -4234,19 +4234,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -4307,19 +4307,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -4380,19 +4380,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -4453,19 +4453,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -4526,19 +4526,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -4599,10 +4599,10 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -4663,7 +4663,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -4724,19 +4724,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -4800,7 +4800,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -4886,19 +4886,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -4964,19 +4964,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -5040,7 +5040,7 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>
@@ -5104,19 +5104,19 @@ export default function Page() {
                               <div className="elementor-shortcode">
                                 <div className="author-business-units-wrapper">
                                   <a href="https://alliancerecovery.com/" className="business-unit-pill alliance-recovery-unit-pill" style={{"color":"#007583"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg" alt="Alliance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://californiadetox.com/" className="business-unit-pill california-detox-unit-pill" style={{"color":"#195a7b"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg" alt="California Detox" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://connectionsoc.com/" className="business-unit-pill connections-mental-health-unit-pill" style={{"color":"#5b9093"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg" alt="Connections Mental Health" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="http://gratitudelodge.com/" className="business-unit-pill gratitude-lodge-unit-pill" style={{"color":"#198aff"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg" alt="Gratitude Lodge" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                   <a href="https://renaissancerecovery.com/" className="business-unit-pill renaissance-recovery-unit-pill" style={{"color":"#195b7e"}} rel="nofollow noopener" target="_blank">
-                                    <div style={{position:"relative",width:"100%"}}><Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" fill style={{objectFit:"contain"}} className="business-unit-icon" /></div>
+                                    <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg" alt="Renaissance Recovery" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="business-unit-icon" />
                                   </a>
                                 </div>
                               </div>

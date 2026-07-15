@@ -24,7 +24,7 @@ export default function Page() {
           <div className="elementor-element elementor-element-c7ce012 banner_head elementor-widget elementor-widget-heading" data-widget_type="heading.default">
             <div className="elementor-widget-container">
               <h2 className="elementor-heading-title elementor-size-default">
-                Comprehensive Behavioral Health Care, From 
+                Comprehensive Behavioral Health Care, From { " "}
                 <strong>
                   Coast to Coast
                   <strong>
@@ -94,7 +94,7 @@ export default function Page() {
             <div className="elementor-element elementor-element-4b66f59 banner_head elementor-widget elementor-widget-heading" data-widget_type="heading.default">
               <div className="elementor-widget-container">
                 <h2 className="elementor-heading-title elementor-size-default">
-                  Comprehensive Behavioral Health Care, From 
+                  Comprehensive Behavioral Health Care, From  { " "}
                   <strong>
                     Coast to Coast
                     <strong>

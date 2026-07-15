@@ -77,47 +77,47 @@ Your Request Has Been Received
                       <div className="elementor-image-carousel swiper-wrapper" aria-live="off" style={{"transitionDuration":"0ms","transform":"none"}} id="swiper-wrapper-862f008e3b9eb487">
                         <div className="swiper-slide swiper-slide-active" role="group" aria-roledescription="slide" aria-label="1 / 9" style={{"width":"772px","visibility":"visible"}}>
                           <figure className="swiper-slide-inner">
-                            <div style={{position:"relative",width:"100%"}}><Image src="/images/adede1fd1308ac37ddc2a15de855c908.webp" alt="rectangle-249-1-68b941b1d65c5-292.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                            <Image src="/images/adede1fd1308ac37ddc2a15de855c908.webp" alt="rectangle-249-1-68b941b1d65c5-292.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                           </figure>
                         </div>
                         <div className="swiper-slide swiper-slide-next" role="group" aria-roledescription="slide" aria-label="2 / 9" style={{"width":"772px","visibility":"visible"}}>
                           <figure className="swiper-slide-inner">
-                            <div style={{position:"relative",width:"100%"}}><Image src="/images/2bba538ad94e6f8489843977d8227be1.webp" alt="rectangle-249-2-68b941b68d605-294.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                            <Image src="/images/2bba538ad94e6f8489843977d8227be1.webp" alt="rectangle-249-2-68b941b68d605-294.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                           </figure>
                         </div>
                         <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 / 9" style={{"width":"772px","visibility":"visible"}}>
                           <figure className="swiper-slide-inner">
-                            <div style={{position:"relative",width:"100%"}}><Image src="/images/8595c253a6785647e17e4985f1437d1c.webp" alt="24_03_26_GratitudeLodge_020-6" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                            <Image src="/images/8595c253a6785647e17e4985f1437d1c.webp" alt="24_03_26_GratitudeLodge_020-6" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                           </figure>
                         </div>
                         <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 / 9" style={{"width":"772px","visibility":"visible"}}>
                           <figure className="swiper-slide-inner">
-                            <div style={{position:"relative",width:"100%"}}><Image src="/images/7c89d11f90f2bee2857d8b00c8b6c597.webp" alt="Gratitude-Lodge-Long-Beach-Living-Room-2-1-4" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                            <Image src="/images/7c89d11f90f2bee2857d8b00c8b6c597.webp" alt="Gratitude-Lodge-Long-Beach-Living-Room-2-1-4" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                           </figure>
                         </div>
                         <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 / 9" style={{"width":"772px","visibility":"visible"}}>
                           <figure className="swiper-slide-inner">
-                            <div style={{position:"relative",width:"100%"}}><Image src="/images/81c0e7edc070f1d19a318c29a80a69d8.webp" alt="pexels-mel-m-706177605-33591299-scaled" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                            <Image src="/images/81c0e7edc070f1d19a318c29a80a69d8.webp" alt="pexels-mel-m-706177605-33591299-scaled" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                           </figure>
                         </div>
                         <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="6 / 9" style={{"width":"772px","visibility":"visible"}}>
                           <figure className="swiper-slide-inner">
-                            <div style={{position:"relative",width:"100%"}}><Image src="/images/985dc234d088f0e2f4735eeb11424e2a.webp" alt="AR-Hollywood3-e1755880049863" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                            <Image src="/images/985dc234d088f0e2f4735eeb11424e2a.webp" alt="AR-Hollywood3-e1755880049863" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                           </figure>
                         </div>
                         <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="7 / 9" style={{"width":"772px","visibility":"visible"}}>
                           <figure className="swiper-slide-inner">
-                            <div style={{position:"relative",width:"100%"}}><Image src="/images/0472767ca0bc6815ed3b42cde3956796.webp" alt="IMG_2321-199.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                            <Image src="/images/0472767ca0bc6815ed3b42cde3956796.webp" alt="IMG_2321-199.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                           </figure>
                         </div>
                         <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="8 / 9" style={{"width":"772px","visibility":"visible"}}>
                           <figure className="swiper-slide-inner">
-                            <div style={{position:"relative",width:"100%"}}><Image src="/images/26dbb29477fb3c528d9f952c87183676.webp" alt="IMG_2306-199.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                            <Image src="/images/26dbb29477fb3c528d9f952c87183676.webp" alt="IMG_2306-199.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                           </figure>
                         </div>
                         <div className="swiper-slide swiper-slide-duplicate-prev" role="group" aria-roledescription="slide" aria-label="9 / 9" style={{"width":"772px","visibility":"visible"}}>
                           <figure className="swiper-slide-inner">
-                            <div style={{position:"relative",width:"100%"}}><Image src="/images/5b4741d0414ce83bed6f580659d242f8.webp" alt="Rectangle-250" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                            <Image src="/images/5b4741d0414ce83bed6f580659d242f8.webp" alt="Rectangle-250" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                           </figure>
                         </div>
                       </div>
@@ -310,67 +310,67 @@ Your Request Has Been Received
                     <div className="elementor-image-carousel swiper-wrapper" aria-live="off" id="swiper-wrapper-6bd6731067b0ccc55" style={{"transitionDuration":"0ms","transform":"none"}}>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/adede1fd1308ac37ddc2a15de855c908.webp" alt="rectangle-249-1-68b941b1d65c5-292.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/adede1fd1308ac37ddc2a15de855c908.webp" alt="rectangle-249-1-68b941b1d65c5-292.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/7938aaf8c274471e65820a52350a5a2c.webp" alt="1-1-190.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/7938aaf8c274471e65820a52350a5a2c.webp" alt="1-1-190.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/2bba538ad94e6f8489843977d8227be1.webp" alt="rectangle-249-2-68b941b68d605-294.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/2bba538ad94e6f8489843977d8227be1.webp" alt="rectangle-249-2-68b941b68d605-294.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/2413e1bbfc64e52f2d0e4e867dda5bde.webp" alt="4-193.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/2413e1bbfc64e52f2d0e4e867dda5bde.webp" alt="4-193.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/14581ff2eb3c7af14e452f8166402294.webp" alt="rectangle-250-1-68b941b299489-293.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/14581ff2eb3c7af14e452f8166402294.webp" alt="rectangle-250-1-68b941b299489-293.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="6 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/0472767ca0bc6815ed3b42cde3956796.webp" alt="IMG_2321-199.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/0472767ca0bc6815ed3b42cde3956796.webp" alt="IMG_2321-199.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="7 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/a5c28ebb3a420e94c566d0e9ecbd6c89.webp" alt="021_TPP_LangstonGroup_5772VenturiDr-197.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/a5c28ebb3a420e94c566d0e9ecbd6c89.webp" alt="021_TPP_LangstonGroup_5772VenturiDr-197.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="8 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/ea96ac23ca2246da833092650ce14a30.webp" alt="rectangle-251-1-1-68b941b47d396-293.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/ea96ac23ca2246da833092650ce14a30.webp" alt="rectangle-251-1-1-68b941b47d396-293.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="9 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/4ea9de3f7b6c8f32a566b2873845eab1.webp" alt="IG20036699_2_0-199.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/4ea9de3f7b6c8f32a566b2873845eab1.webp" alt="IG20036699_2_0-199.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="10 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/c7f0095b6a09cd4133d6525b04147927.webp" alt="rectangle-250-2-68b941b9428a8-282.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/c7f0095b6a09cd4133d6525b04147927.webp" alt="rectangle-250-2-68b941b9428a8-282.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="11 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/a909a4f842300b80633654382211960b.webp" alt="genMid.IG20036699_5_0-188.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/a909a4f842300b80633654382211960b.webp" alt="genMid.IG20036699_5_0-188.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="12 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/26dbb29477fb3c528d9f952c87183676.webp" alt="IMG_2306-199.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/26dbb29477fb3c528d9f952c87183676.webp" alt="IMG_2306-199.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="13 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/7105b2729b371da62884df8ac1d6d4e8.webp" alt="IMG_2312-199.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/7105b2729b371da62884df8ac1d6d4e8.webp" alt="IMG_2312-199.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                     </div>
@@ -429,42 +429,42 @@ Your Request Has Been Received
                     <div className="elementor-image-carousel swiper-wrapper" aria-live="off" id="swiper-wrapper-7ea3106c667e106388" style={{"transitionDuration":"0ms","transform":"none"}}>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 8" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/6748f2380daf832caee9f352146fcd3e.webp" alt="1-1-62.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/6748f2380daf832caee9f352146fcd3e.webp" alt="1-1-62.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 8" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/d9592dadcbc88c21a732a18b820f46d3.webp" alt="IMG_2321-62.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/d9592dadcbc88c21a732a18b820f46d3.webp" alt="IMG_2321-62.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 8" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/d47fc32dc976e2ff1a173f2e30356b19.webp" alt="021_TPP_LangstonGroup_5772VenturiDr-62.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/d47fc32dc976e2ff1a173f2e30356b19.webp" alt="021_TPP_LangstonGroup_5772VenturiDr-62.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 of 8" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/c2315769a44875a89b73aa60dff27e32.webp" alt="rectangle-251-1-1-68b941b47d396-61.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/c2315769a44875a89b73aa60dff27e32.webp" alt="rectangle-251-1-1-68b941b47d396-61.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 of 8" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/2281e1e46c8ecc4a72f78248e0688f41.webp" alt="IG20036699_2_0-62.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/2281e1e46c8ecc4a72f78248e0688f41.webp" alt="IG20036699_2_0-62.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="6 of 8" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/9b48be6eb7851a58e226d047273b8968.webp" alt="genMid.IG20036699_5_0-62.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/9b48be6eb7851a58e226d047273b8968.webp" alt="genMid.IG20036699_5_0-62.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="7 of 8" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/5e74f266be76e872fec5451fb6dc37c4.webp" alt="DSC_3606-62.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/5e74f266be76e872fec5451fb6dc37c4.webp" alt="DSC_3606-62.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="8 of 8" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/c7916c4f8cf6b3c03feaf03c246c93fd.webp" alt="017_TPP_LangstonGroup_5772VenturiDr-62.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/c7916c4f8cf6b3c03feaf03c246c93fd.webp" alt="017_TPP_LangstonGroup_5772VenturiDr-62.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                     </div>
@@ -691,67 +691,67 @@ Your Request Has Been Received
                     <div className="elementor-image-carousel swiper-wrapper" aria-live="off" id="swiper-wrapper-948643bcbb8a13eb" style={{"transitionDuration":"0ms","transform":"none"}}>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/adede1fd1308ac37ddc2a15de855c908.webp" alt="rectangle-249-1-68b941b1d65c5-292.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/adede1fd1308ac37ddc2a15de855c908.webp" alt="rectangle-249-1-68b941b1d65c5-292.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/7938aaf8c274471e65820a52350a5a2c.webp" alt="1-1-190.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/7938aaf8c274471e65820a52350a5a2c.webp" alt="1-1-190.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/2bba538ad94e6f8489843977d8227be1.webp" alt="rectangle-249-2-68b941b68d605-294.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/2bba538ad94e6f8489843977d8227be1.webp" alt="rectangle-249-2-68b941b68d605-294.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/2413e1bbfc64e52f2d0e4e867dda5bde.webp" alt="4-193.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/2413e1bbfc64e52f2d0e4e867dda5bde.webp" alt="4-193.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/14581ff2eb3c7af14e452f8166402294.webp" alt="rectangle-250-1-68b941b299489-293.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/14581ff2eb3c7af14e452f8166402294.webp" alt="rectangle-250-1-68b941b299489-293.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="6 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/0472767ca0bc6815ed3b42cde3956796.webp" alt="IMG_2321-199.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/0472767ca0bc6815ed3b42cde3956796.webp" alt="IMG_2321-199.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="7 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/a5c28ebb3a420e94c566d0e9ecbd6c89.webp" alt="021_TPP_LangstonGroup_5772VenturiDr-197.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/a5c28ebb3a420e94c566d0e9ecbd6c89.webp" alt="021_TPP_LangstonGroup_5772VenturiDr-197.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="8 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/ea96ac23ca2246da833092650ce14a30.webp" alt="rectangle-251-1-1-68b941b47d396-293.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/ea96ac23ca2246da833092650ce14a30.webp" alt="rectangle-251-1-1-68b941b47d396-293.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="9 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/4ea9de3f7b6c8f32a566b2873845eab1.webp" alt="IG20036699_2_0-199.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/4ea9de3f7b6c8f32a566b2873845eab1.webp" alt="IG20036699_2_0-199.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="10 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/c7f0095b6a09cd4133d6525b04147927.webp" alt="rectangle-250-2-68b941b9428a8-282.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/c7f0095b6a09cd4133d6525b04147927.webp" alt="rectangle-250-2-68b941b9428a8-282.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="11 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/a909a4f842300b80633654382211960b.webp" alt="genMid.IG20036699_5_0-188.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/a909a4f842300b80633654382211960b.webp" alt="genMid.IG20036699_5_0-188.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="12 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/26dbb29477fb3c528d9f952c87183676.webp" alt="IMG_2306-199.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/26dbb29477fb3c528d9f952c87183676.webp" alt="IMG_2306-199.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                       <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="13 of 13" style={{"visibility":"visible"}}>
                         <figure className="swiper-slide-inner">
-                          <div style={{position:"relative",width:"100%"}}><Image src="/images/7105b2729b371da62884df8ac1d6d4e8.webp" alt="IMG_2312-199.webp" fill style={{objectFit:"contain"}} className="swiper-slide-image" /></div>
+                          <Image src="/images/7105b2729b371da62884df8ac1d6d4e8.webp" alt="IMG_2312-199.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                         </figure>
                       </div>
                     </div>

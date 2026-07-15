@@ -56,7 +56,7 @@ export default function LocationServedUsaAlcohol(props: Record<string, string>) 
               <div className="elementor-widget-container">
                 <div className="elementor-author-box">
                   <div className="elementor-author-box__avatar">
-                    <div style={{position:"relative",width:"100%"}}><Image src="/images/0dc46ba9b1df1c60069938daa96aa95a.webp" alt="Picture of Written By:" fill style={{objectFit:"contain"}} /></div>
+                    <Image src="/images/0dc46ba9b1df1c60069938daa96aa95a.webp" alt="Picture of Written By:" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
                   </div>
                   <div className="elementor-author-box__text">
                     <div>
@@ -78,7 +78,7 @@ export default function LocationServedUsaAlcohol(props: Record<string, string>) 
               <div className="elementor-widget-container">
                 <div className="elementor-author-box">
                   <div className="elementor-author-box__avatar">
-                    <div style={{position:"relative",width:"100%"}}><Image src="/images/1b4eb31b1adebde15844d794a2ee8066.webp" alt="Picture of Content Manager:" fill style={{objectFit:"contain"}} /></div>
+                    <Image src="/images/1b4eb31b1adebde15844d794a2ee8066.webp" alt="Picture of Content Manager:" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
                   </div>
                   <div className="elementor-author-box__text">
                     <div>
@@ -100,7 +100,7 @@ export default function LocationServedUsaAlcohol(props: Record<string, string>) 
               <div className="elementor-widget-container">
                 <div className="elementor-author-box">
                   <div className="elementor-author-box__avatar">
-                    <div style={{position:"relative",width:"100%"}}><Image src="/images/25adee1fd5544ebff212e174110a1b67.webp" alt="Picture of Editor:" fill style={{objectFit:"contain"}} /></div>
+                    <Image src="/images/25adee1fd5544ebff212e174110a1b67.webp" alt="Picture of Editor:" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
                   </div>
                   <div className="elementor-author-box__text">
                     <div>
