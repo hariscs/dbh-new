@@ -13,11 +13,11 @@ type BuilderPageData = {
   meta: { slug: string; parent: string; updatedAt: string };
 };
 
-export async function fetchPageData(slug: string): Promise<BuilderPageData | null> {
-  if (!slug) return null;
+export async function fetchPageData(path: string): Promise<BuilderPageData | null> {
+  if (!path) return null;
   try {
     const res = await fetch(
-      `${WORDPRESS_URL}/wp-json/builder/v1/page-data?slug=${encodeURIComponent(slug)}`,
+      `${WORDPRESS_URL}/wp-json/builder/v1/page-data?path=${encodeURIComponent(path)}`,
       { next: { revalidate: REVALIDATE } }
     );
     if (!res.ok) return null;

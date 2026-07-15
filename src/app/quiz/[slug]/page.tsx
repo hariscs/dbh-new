@@ -7,6 +7,8 @@ import { fetchPageData } from "@/lib/wordpress";
 export const revalidate = 60;
 export const dynamicParams = true;
 
+const BASE_PATH = "quiz";
+
 const FALLBACK_SLUGS = ["bipolar-disorder","bipolar-disorder-dsm5","ptsd-checklist-civilian","am-i-alcoholic","am-i-addicted","depression-rating-scale-phq-9","generalized-anxiety-disorder-screening","anxiety-worry-7"] as string[];
 
 export async function generateStaticParams() {
@@ -27,7 +29,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const data = await fetchPageData(slug);
+  const data = await fetchPageData(`${BASE_PATH}/${slug}`);
   if (!data) return {};
   return {
     title: data.seo.title || undefined,
@@ -39,7 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const data = await fetchPageData(slug);
+  const data = await fetchPageData(`${BASE_PATH}/${slug}`);
   if (!data) notFound();
   return <Quiz {...data.fields} />;
 }

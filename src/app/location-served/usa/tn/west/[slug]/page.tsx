@@ -7,6 +7,8 @@ import { fetchPageData } from "@/lib/wordpress";
 export const revalidate = 60;
 export const dynamicParams = true;
 
+const BASE_PATH = "location-served/usa/tn/west";
+
 const FALLBACK_SLUGS = ["adhd","premenstrual-dysphoric-disorder","adjustment","borderline-personality-disorder","personality-disorder","neurodevelopment-disorder","virtual-iop","sober-living","drug-rehab","php-drug-rehab","iop-drug-rehab","outpatient-drug-rehab"] as string[];
 
 export async function generateStaticParams() {
@@ -27,7 +29,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const data = await fetchPageData(slug);
+  const data = await fetchPageData(`${BASE_PATH}/${slug}`);
   if (!data) return {};
   return {
     title: data.seo.title || undefined,
@@ -39,7 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const data = await fetchPageData(slug);
+  const data = await fetchPageData(`${BASE_PATH}/${slug}`);
   if (!data) notFound();
   return <LocationServedUsaTnWest {...data.fields} />;
 }
