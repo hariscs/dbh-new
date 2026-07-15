@@ -7,6 +7,8 @@ import { fetchPageData } from "@/lib/wordpress";
 export const revalidate = 60;
 export const dynamicParams = true;
 
+const BASE_PATH = "location-served/usa/ca";
+
 const FALLBACK_SLUGS = ["mat-treatment","couples-rehab","adhd","premenstrual-dysphoric-disorder","adjustment","borderline-personality-disorder","personality-disorder","neurodevelopment-disorder","northern","virtual-iop","sober-living","drug-rehab","php-drug-rehab","iop-drug-rehab","outpatient-drug-rehab","emdr-therapy","pet-friendly-rehab","dual-diagnosis-treatment","lgbtq-drug-rehab","dbt-therapy","cbt-therapy"] as string[];
 
 export async function generateStaticParams() {
@@ -27,7 +29,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const data = await fetchPageData(slug);
+  const data = await fetchPageData(`${BASE_PATH}/${slug}`);
   if (!data) return {};
   return {
     title: data.seo.title || undefined,
@@ -39,7 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const data = await fetchPageData(slug);
+  const data = await fetchPageData(`${BASE_PATH}/${slug}`);
   if (!data) notFound();
   return <LocationServedUsaCa {...data.fields} />;
 }
