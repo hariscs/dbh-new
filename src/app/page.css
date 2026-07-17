@@ -630,7 +630,12 @@
 .elementor-widget-divider.elementor-view-framed .elementor-icon, .elementor-widget-divider.elementor-view-default .elementor-icon svg { fill: var( --e-global-color-secondary ); }
 .elementor-107941 .elementor-element.elementor-element-956a4b3 { --divider-border-style: solid; --divider-color: #2E6AA180; --divider-border-width: 1px; }
 .elementor-107941 .elementor-element.elementor-element-956a4b3 .elementor-divider { padding-block: 16px; }
+.elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator { border-block-start: var(--divider-border-width) var(--divider-border-style) var(--divider-color); }
+.elementor-107941 .elementor-element.elementor-element-956a4b3 .elementor-divider-separator { width: 100%; }
 .elementor-107941 .elementor-element.elementor-element-8722214 > .elementor-widget-container { margin: 0px; padding: 0px; }
+.elementor-widget-divider .elementor-divider-separator { direction: ltr; display: flex; margin: 0; }
+.elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator { border-block-start: var(--divider-border-width) var(--divider-border-style) var(--divider-color); }
+.elementor-108125 .elementor-element.elementor-element-320853d .elementor-divider-separator { width: 100%; }
 .elementor-107941 .elementor-element.elementor-element-8722214 { font-family: Montserrat, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; }
 .elementor-107941 .elementor-element.elementor-element-8722214 p { margin-block-end: 0px; }
 .elementor-107941 .elementor-element.elementor-element-a35fc9c > .elementor-widget-container { background-color: rgb(82, 122, 154); border-radius: 100px; }
@@ -765,3 +770,4 @@ article.card { padding: 10px; }}
 .elementor-widget-loop-grid .elementor-button { font-family: var( --e-global-typography-accent-font-family ), Sans-serif; font-weight: var( --e-global-typography-accent-font-weight ); background-color: var( --e-global-color-accent ); }
 .elementor-icon-box-title { overflow-wrap: break-word; }
 @media screen and (min-device-width: 1025px) and (max-device-width: 1366px) {.elementor-loop-container.elementor-grid { grid-template-columns: repeat(3, 1fr) !important; }}
+button:focus, button:hover{ outline: none !important; box-shadow: none; border: 0px !important; border-bottom: 2px solid #2E6AA1 !important; }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Link from 'next/link';
 
 export default function LocationServedUsa(props: Record<string, string>) {
@@ -687,7 +688,9 @@ export default function LocationServedUsa(props: Record<string, string>) {
                   </div>
                   <div className="elementor-element elementor-element-4ea39b57 e-con-full e-flex e-con e-child">
                     <div className="elementor-element elementor-element-2792fbc elementor-widget elementor-widget-html" data-widget_type="html.default">
-                      <div className="elementor-widget-container"></div>
+                      <div className="elementor-widget-container">
+                        <TrustIndexWidget widgetId="6c23c3d40f38852df246e2f6d3e" />
+                      </div>
                     </div>
                     <div className="elementor-element elementor-element-493db9b9 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-arrows-position-inside elementor-widget elementor-widget-loop-carousel e-widget-swiper" data-settings="{&quot;template_id&quot;:&quot;200&quot;,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;slides_to_show&quot;:&quot;2&quot;,&quot;_skin&quot;:&quot;post&quot;,&quot;slides_to_show_tablet&quot;:&quot;2&quot;,&quot;slides_to_show_mobile&quot;:&quot;1&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;edit_handle_selector&quot;:&quot;.elementor-loop-container&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;,&quot;speed&quot;:500,&quot;offset_sides&quot;:&quot;none&quot;,&quot;arrows&quot;:&quot;yes&quot;,&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="loop-carousel.post">
                       <div className="elementor-widget-container">

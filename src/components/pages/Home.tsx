@@ -948,7 +948,9 @@ export default function Page() {
                                         </div>
                                         <div className="elementor-element elementor-element-956a4b3 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-widget_type="divider.default">
                                           <div className="elementor-widget-container">
-                                            <div className="elementor-divider"></div>
+                                            <div className="elementor-divider">
+                                              <span className="elementor-divider-separator"></span>
+                                            </div>
                                           </div>
                                         </div>
                                         <div className="elementor-element elementor-element-8722214 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
@@ -1005,7 +1007,9 @@ export default function Page() {
                                         </div>
                                         <div className="elementor-element elementor-element-956a4b3 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-widget_type="divider.default">
                                           <div className="elementor-widget-container">
-                                            <div className="elementor-divider"></div>
+                                            <div className="elementor-divider">
+                                              <span className="elementor-divider-separator"></span>
+                                            </div>
                                           </div>
                                         </div>
                                         <div className="elementor-element elementor-element-8722214 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
@@ -1089,7 +1093,9 @@ resilience, and long-lasting recovery.
                                         </div>
                                         <div className="elementor-element elementor-element-956a4b3 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-widget_type="divider.default">
                                           <div className="elementor-widget-container">
-                                            <div className="elementor-divider"></div>
+                                            <div className="elementor-divider">
+                                              <span className="elementor-divider-separator"></span>
+                                            </div>
                                           </div>
                                         </div>
                                         <div className="elementor-element elementor-element-8722214 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
@@ -1193,7 +1199,9 @@ programs nationwide, however home is in Southern California with Gratitude Lodge
                                     </div>
                                     <div className="elementor-element elementor-element-956a4b3 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-widget_type="divider.default">
                                       <div className="elementor-widget-container">
-                                        <div className="elementor-divider"></div>
+                                        <div className="elementor-divider">
+                                          <span className="elementor-divider-separator"></span>
+                                        </div>
                                       </div>
                                     </div>
                                     <div className="elementor-element elementor-element-8722214 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
@@ -1262,7 +1270,9 @@ programs nationwide, however home is in Southern California with Gratitude Lodge
                                     </div>
                                     <div className="elementor-element elementor-element-320853d elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-widget_type="divider.default">
                                       <div className="elementor-widget-container">
-                                        <div className="elementor-divider"></div>
+                                        <div className="elementor-divider">
+                                          <span className="elementor-divider-separator"></span>
+                                        </div>
                                       </div>
                                     </div>
                                     <div className="elementor-element elementor-element-912dc4a bio-team-home elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
@@ -1319,7 +1329,9 @@ programs nationwide, however home is in Southern California with Gratitude Lodge
                                     </div>
                                     <div className="elementor-element elementor-element-956a4b3 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-widget_type="divider.default">
                                       <div className="elementor-widget-container">
-                                        <div className="elementor-divider"></div>
+                                        <div className="elementor-divider">
+                                          <span className="elementor-divider-separator"></span>
+                                        </div>
                                       </div>
                                     </div>
                                     <div className="elementor-element elementor-element-8722214 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
@@ -1409,7 +1421,9 @@ programs nationwide, however home is in Southern California with Gratitude Lodge
                                     </div>
                                     <div className="elementor-element elementor-element-956a4b3 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-widget_type="divider.default">
                                       <div className="elementor-widget-container">
-                                        <div className="elementor-divider"></div>
+                                        <div className="elementor-divider">
+                                          <span className="elementor-divider-separator"></span>
+                                        </div>
                                       </div>
                                     </div>
                                     <div className="elementor-element elementor-element-8722214 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
@@ -1466,7 +1480,9 @@ programs nationwide, however home is in Southern California with Gratitude Lodge
                                     </div>
                                     <div className="elementor-element elementor-element-956a4b3 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-widget_type="divider.default">
                                       <div className="elementor-widget-container">
-                                        <div className="elementor-divider"></div>
+                                        <div className="elementor-divider">
+                                          <span className="elementor-divider-separator"></span>
+                                        </div>
                                       </div>
                                     </div>
                                     <div className="elementor-element elementor-element-8722214 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
@@ -1523,7 +1539,9 @@ programs nationwide, however home is in Southern California with Gratitude Lodge
                                     </div>
                                     <div className="elementor-element elementor-element-956a4b3 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-widget_type="divider.default">
                                       <div className="elementor-widget-container">
-                                        <div className="elementor-divider"></div>
+                                        <div className="elementor-divider">
+                                          <span className="elementor-divider-separator"></span>
+                                        </div>
                                       </div>
                                     </div>
                                     <div className="elementor-element elementor-element-8722214 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
@@ -1601,7 +1619,9 @@ programs nationwide, however home is in Southern California with Gratitude Lodge
                                     </div>
                                     <div className="elementor-element elementor-element-956a4b3 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-widget_type="divider.default">
                                       <div className="elementor-widget-container">
-                                        <div className="elementor-divider"></div>
+                                        <div className="elementor-divider">
+                                          <span className="elementor-divider-separator"></span>
+                                        </div>
                                       </div>
                                     </div>
                                     <div className="elementor-element elementor-element-8722214 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
@@ -1721,7 +1741,9 @@ counselor I can be.
                                     </div>
                                     <div className="elementor-element elementor-element-956a4b3 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-widget_type="divider.default">
                                       <div className="elementor-widget-container">
-                                        <div className="elementor-divider"></div>
+                                        <div className="elementor-divider">
+                                          <span className="elementor-divider-separator"></span>
+                                        </div>
                                       </div>
                                     </div>
                                     <div className="elementor-element elementor-element-8722214 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
@@ -1778,7 +1800,9 @@ counselor I can be.
                                     </div>
                                     <div className="elementor-element elementor-element-956a4b3 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-widget_type="divider.default">
                                       <div className="elementor-widget-container">
-                                        <div className="elementor-divider"></div>
+                                        <div className="elementor-divider">
+                                          <span className="elementor-divider-separator"></span>
+                                        </div>
                                       </div>
                                     </div>
                                     <div className="elementor-element elementor-element-8722214 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
@@ -1856,7 +1880,9 @@ counselor I can be.
                                     </div>
                                     <div className="elementor-element elementor-element-956a4b3 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-widget_type="divider.default">
                                       <div className="elementor-widget-container">
-                                        <div className="elementor-divider"></div>
+                                        <div className="elementor-divider">
+                                          <span className="elementor-divider-separator"></span>
+                                        </div>
                                       </div>
                                     </div>
                                     <div className="elementor-element elementor-element-8722214 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
@@ -1913,7 +1939,9 @@ counselor I can be.
                                     </div>
                                     <div className="elementor-element elementor-element-956a4b3 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-widget_type="divider.default">
                                       <div className="elementor-widget-container">
-                                        <div className="elementor-divider"></div>
+                                        <div className="elementor-divider">
+                                          <span className="elementor-divider-separator"></span>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -1963,7 +1991,9 @@ counselor I can be.
                                     </div>
                                     <div className="elementor-element elementor-element-956a4b3 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-widget_type="divider.default">
                                       <div className="elementor-widget-container">
-                                        <div className="elementor-divider"></div>
+                                        <div className="elementor-divider">
+                                          <span className="elementor-divider-separator"></span>
+                                        </div>
                                       </div>
                                     </div>
                                     <div className="elementor-element elementor-element-8722214 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">

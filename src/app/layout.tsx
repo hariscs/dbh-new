@@ -6,6 +6,7 @@ import Script from "next/script";
 import DeferredStylesheet from "@/components/DeferredStylesheet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileMenu from "@/components/MobileMenu";
 
 export const metadata: Metadata = {
   title: "dbh-test",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <DeferredStylesheet href="https://cdn.trustindex.io/assets/widget-presetted-css/v2/80-light-background.css" />
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGF7WNCV" height="0" width="0" style={{display:"none",visibility:"hidden"}} /></noscript>
         <Header />
+        <MobileMenu />
         <main>{children}</main>
         <Footer />
         <WidgetInteractions />
