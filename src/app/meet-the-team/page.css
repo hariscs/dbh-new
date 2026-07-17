@@ -307,3 +307,7 @@ body.rtl .elementor-2113 .elementor-element.elementor-element-bba96c1 { left: 0p
 .elementor-3115 .elementor-element.elementor-element-52faab38 h2 { max-width: 520px; }
 .elementor-3115 .elementor-element.elementor-element-1c92a7b2 p { max-width: 500px; }
 .team-name-sty a { color:transparent }
+/* Equal-height author cards: the grid cells are already 1fr (equal), so stretch each
+   card to fill its cell instead of centering it to its own content height. */
+.elementor-2113 .elementor-widget-loop-grid .elementor-loop-container.elementor-grid { align-items: stretch; }
+.elementor-2113 .elementor-widget-loop-grid .e-loop-item { align-self: stretch; height: 100%; }

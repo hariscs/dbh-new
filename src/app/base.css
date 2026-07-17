@@ -2216,6 +2216,9 @@ ul { display: block; list-style-type: disc; margin-block-start: 1em; margin-bloc
 .elementor-103473 .elementor-element.elementor-element-26d3535d .elementor-divider-separator { width: 100%; }
 .elementor-widget-divider .elementor-divider-separator { direction: ltr; display: flex; margin: 0; }
 .elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator { border-block-start: var(--divider-border-width) var(--divider-border-style) var(--divider-color); }
+.elementor-103459 .elementor-element.elementor-element-6115d9e4 .elementor-divider-separator { width: 100%; }
+.page-id-2998 .elementor-absolute .elementor-button .elementor-button-content-wrapper span { color : #FFF }
+.page-id-2998 .elementor-button { text-decoration: none !important; }
 @keyframes elementor-headline-dash { 
   0% { opacity: 1; stroke-dasharray: 0, 1500; }
   100% { opacity: 1; stroke-dasharray: 1500, 1500; }
