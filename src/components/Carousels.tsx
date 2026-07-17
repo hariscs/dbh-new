@@ -42,6 +42,11 @@ export default function Carousels() {
         const desktop = toCount(settings.slides_to_show, 1);
         const tablet = toCount(settings.slides_to_show_tablet, desktop);
         const mobile = toCount(settings.slides_to_show_mobile, 1);
+
+        const slideCount = wrapper
+          ? Array.from(wrapper.children).filter((c) => c.classList.contains("swiper-slide")).length
+          : 0;
+        const wantsLoop = settings.infinite === "yes" || settings.loop === "yes";
         const options: SwiperOptions = {
           modules: [Navigation, Pagination, Autoplay],
           slidesPerView: mobile,
@@ -49,7 +54,7 @@ export default function Carousels() {
             768: { slidesPerView: tablet },
             1025: { slidesPerView: desktop },
           },
-          loop: settings.infinite === "yes" || settings.loop === "yes",
+          loop: wantsLoop && slideCount >= Math.max(desktop, tablet, mobile) * 2,
           speed: toCount(settings.speed, 500),
           autoplay:
             settings.autoplay === "yes"
