@@ -28,12 +28,6 @@
     "typescript": "^6.0.3",
     "wrangler": "^4.111.0"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "sharp",
-      "unrs-resolver"
-    ]
-  },
   "browserslist": [
     "chrome >= 111",
     "edge >= 111",
