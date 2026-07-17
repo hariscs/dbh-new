@@ -5323,7 +5323,7 @@ export default function Page() {
                         <div className="elementor-element elementor-element-7d76f483 e-con-full e-flex e-con e-child">
                           <div className="elementor-element elementor-element-3e2aafc8 elementor-widget__width-inherit elementor-widget-mobile__width-inherit elementor-widget elementor-widget-html" data-widget_type="html.default">
                             <div className="elementor-widget-container">
-                              <iframe loading="lazy" id="JotFormIFrame-252953870854469" title="TDRC New Design Insurance Form" allowTransparency allow="geolocation; microphone; camera; fullscreen; payment" src="https://form.jotform.com/252953870854469?isIframeEmbed=1&parentURL=https%3A%2F%2Fdistrictbehavioralhealth.com%2Fmeet-the-team%2F" style={{"minWidth":"100%","maxWidth":"100%","border":"none","height":"680px"}}></iframe>
+                              <iframe loading="lazy" id="JotFormIFrame-252953870854469" title="TDRC New Design Insurance Form" allow="geolocation; microphone; camera; fullscreen; payment" src="https://form.jotform.com/252953870854469?isIframeEmbed=1&parentURL=https%3A%2F%2Fdistrictbehavioralhealth.com%2Fmeet-the-team%2F" style={{"minWidth":"100%","maxWidth":"100%","border":"none","height":"680px"}}></iframe>
                             </div>
                           </div>
                         </div>

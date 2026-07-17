@@ -915,7 +915,7 @@ export default function Page() {
                     <div className="elementor-element elementor-element-1f654915 e-con-full e-flex e-con e-child">
                       <div className="elementor-element elementor-element-29f7cd8c elementor-widget__width-inherit elementor-widget-mobile__width-inherit elementor-widget elementor-widget-html" data-widget_type="html.default">
                         <div className="elementor-widget-container">
-                          <iframe loading="lazy" id="JotFormIFrame-250221107434442" title="Insurance Verification Form" allowTransparency allowFullScreen allow="geolocation; microphone; camera" src="https://hipaa.jotform.com/250221107434442?referrer_url_last=districtbehavioralhealth.com&landing_page_url_last=https%3A%2F%2Fdistrictbehavioralhealth.com%2Fnewsroom%2F&isIframeEmbed=1" style={{"minWidth":"100%","height":"1106px","border":"none","visibility":"visible"}}></iframe>
+                          <iframe loading="lazy" id="JotFormIFrame-250221107434442" title="Insurance Verification Form" allowFullScreen allow="geolocation; microphone; camera" src="https://hipaa.jotform.com/250221107434442?referrer_url_last=districtbehavioralhealth.com&landing_page_url_last=https%3A%2F%2Fdistrictbehavioralhealth.com%2Fnewsroom%2F&isIframeEmbed=1" style={{"minWidth":"100%","height":"1106px","border":"none","visibility":"visible"}}></iframe>
                         </div>
                       </div>
                     </div>

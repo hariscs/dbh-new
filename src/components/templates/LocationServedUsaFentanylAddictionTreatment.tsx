@@ -1814,7 +1814,7 @@ export default function LocationServedUsaFentanylAddictionTreatment(props: Recor
           <div className="elementor-element elementor-element-6ba3ee9 e-con-full e-flex e-con e-child">
             <div className="elementor-element elementor-element-5a81ed4 elementor-widget__width-inherit elementor-widget-mobile__width-inherit elementor-widget elementor-widget-html" data-widget_type="html.default">
               <div className="elementor-widget-container">
-                <iframe loading="lazy" id="JotFormIFrame-252953870854469" title="TDRC New Design Insurance Form" allowTransparency allow="geolocation; microphone; camera; fullscreen; payment" src="https://form.jotform.com/252953870854469?isIframeEmbed=1&parentURL=https%3A%2F%2Fdistrictbehavioralhealth.com%2Flocation-served%2Fusa%2Ffentanyl-addiction-treatment%2Ffenty-fold%2F" style={{"minWidth":"100%","maxWidth":"100%","border":"none","height":"680px"}}></iframe>
+                <iframe loading="lazy" id="JotFormIFrame-252953870854469" title="TDRC New Design Insurance Form" allow="geolocation; microphone; camera; fullscreen; payment" src="https://form.jotform.com/252953870854469?isIframeEmbed=1&parentURL=https%3A%2F%2Fdistrictbehavioralhealth.com%2Flocation-served%2Fusa%2Ffentanyl-addiction-treatment%2Ffenty-fold%2F" style={{"minWidth":"100%","maxWidth":"100%","border":"none","height":"680px"}}></iframe>
               </div>
             </div>
           </div>

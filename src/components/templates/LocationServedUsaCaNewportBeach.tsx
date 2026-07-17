@@ -4064,7 +4064,7 @@ export default function LocationServedUsaCaNewportBeach(props: Record<string, st
         </div>
         <div className="elementor-element elementor-element-11b3bb0 elementor-widget elementor-widget-image" data-widget_type="image.default">
           <div className="elementor-widget-container">
-            <Link href="/wp-content/uploads/2026/01/image-5.webp" data-elementor-open-lightbox="yes">
+            <Link href="https://districtbehavioralhealth.com/wp-content/uploads/2026/01/image-5.webp" data-elementor-open-lightbox="yes">
               <Image src="/images/598bdb38c5473478e78a0522311470d2.webp" alt="" width={630} height={342} className="attachment-full size-full wp-image-2580" />
             </Link>
           </div>

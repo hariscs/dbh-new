@@ -24,7 +24,7 @@ export default function Page() {
     <div className="elementor-element elementor-element-52e2f89 e-con-full e-flex e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
       <div className="elementor-element elementor-element-7316e2d elementor-widget elementor-widget-html" data-widget_type="html.default">
         <div className="elementor-widget-container">
-          <iframe loading="lazy" id="JotFormIFrame-261385166663161" title="Patient Health Questionnaire and Generalized Anxiety Disorder Questionnaire" allowTransparency allow="geolocation; microphone; camera; fullscreen; payment" src="https://form.jotform.com/261385166663161?isIframeEmbed=1&parentURL=https%3A%2F%2Fdistrictbehavioralhealth.com%2Fquiz%2Fgeneralized-anxiety-disorder-screening%2F" style={{"minWidth":"100%","maxWidth":"100%","height":"2282px","border":"none"}}></iframe>
+          <iframe loading="lazy" id="JotFormIFrame-261385166663161" title="Patient Health Questionnaire and Generalized Anxiety Disorder Questionnaire" allow="geolocation; microphone; camera; fullscreen; payment" src="https://form.jotform.com/261385166663161?isIframeEmbed=1&parentURL=https%3A%2F%2Fdistrictbehavioralhealth.com%2Fquiz%2Fgeneralized-anxiety-disorder-screening%2F" style={{"minWidth":"100%","maxWidth":"100%","height":"2282px","border":"none"}}></iframe>
         </div>
       </div>
     </div>

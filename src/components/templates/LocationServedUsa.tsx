@@ -1498,42 +1498,42 @@ export default function LocationServedUsa(props: Record<string, string>) {
                       <div className="elementor-image-carousel-wrapper swiper swiper-initialized swiper-horizontal swiper-pointer-events" role="region" aria-roledescription="carousel" aria-label="Image Carousel" dir="ltr">
                         <div className="elementor-image-carousel swiper-wrapper swiper-image-stretch" aria-live="off" style={{"transitionDuration":"0ms","transform":"none"}} id="swiper-wrapper-67aaf6f20b4a73b8">
                           <div className="swiper-slide swiper-slide-active" role="group" aria-roledescription="slide" aria-label="1 / 6" style={{"width":"497.667px","marginRight":"20px","visibility":"visible"}}>
-                            <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/01/rectangle-249-1-68b941b1d65c5.webp">
+                            <Link data-elementor-open-lightbox="yes" href="https://districtbehavioralhealth.com/wp-content/uploads/2026/01/rectangle-249-1-68b941b1d65c5.webp">
                               <figure className="swiper-slide-inner">
                                 <Image src="/images/2aaccce98b6f73395f5c64c702544ecf.webp" alt="rectangle-249-1-68b941b1d65c5.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                               </figure>
                             </Link>
                           </div>
                           <div className="swiper-slide swiper-slide-next" role="group" aria-roledescription="slide" aria-label="2 / 6" style={{"width":"497.667px","marginRight":"20px","visibility":"visible"}}>
-                            <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/01/rectangle-250-1-68b941b299489.webp">
+                            <Link data-elementor-open-lightbox="yes" href="https://districtbehavioralhealth.com/wp-content/uploads/2026/01/rectangle-250-1-68b941b299489.webp">
                               <figure className="swiper-slide-inner">
                                 <Image src="/images/4f0e5c4294ee6ec8832fcd66ce98d172.webp" alt="rectangle-250-1-68b941b299489.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                               </figure>
                             </Link>
                           </div>
                           <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 / 6" style={{"width":"497.667px","marginRight":"20px","visibility":"visible"}}>
-                            <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/01/rectangle-251-1-1-68b941b47d396.webp">
+                            <Link data-elementor-open-lightbox="yes" href="https://districtbehavioralhealth.com/wp-content/uploads/2026/01/rectangle-251-1-1-68b941b47d396.webp">
                               <figure className="swiper-slide-inner">
                                 <Image src="/images/c2d093f0fb2473f5e2e97e65e37bb14c.webp" alt="rectangle-251-1-1-68b941b47d396.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                               </figure>
                             </Link>
                           </div>
                           <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 / 6" style={{"width":"497.667px","marginRight":"20px","visibility":"visible"}}>
-                            <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/01/rectangle-249-2-68b941b68d605.webp">
+                            <Link data-elementor-open-lightbox="yes" href="https://districtbehavioralhealth.com/wp-content/uploads/2026/01/rectangle-249-2-68b941b68d605.webp">
                               <figure className="swiper-slide-inner">
                                 <Image src="/images/9ceae7cd22108ad8641e0419d747499e.webp" alt="rectangle-249-2-68b941b68d605.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                               </figure>
                             </Link>
                           </div>
                           <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 / 6" style={{"width":"497.667px","marginRight":"20px","visibility":"visible"}}>
-                            <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/01/rectangle-250-2-68b941b9428a8.webp">
+                            <Link data-elementor-open-lightbox="yes" href="https://districtbehavioralhealth.com/wp-content/uploads/2026/01/rectangle-250-2-68b941b9428a8.webp">
                               <figure className="swiper-slide-inner">
                                 <Image src="/images/c95abf8b6dabf275a06a60af535c8df4.webp" alt="rectangle-250-2-68b941b9428a8.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                               </figure>
                             </Link>
                           </div>
                           <div className="swiper-slide swiper-slide-duplicate-prev" role="group" aria-roledescription="slide" aria-label="6 / 6" style={{"width":"497.667px","marginRight":"20px","visibility":"visible"}}>
-                            <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/01/rectangle-251-2-68b941bad8a4b.webp">
+                            <Link data-elementor-open-lightbox="yes" href="https://districtbehavioralhealth.com/wp-content/uploads/2026/01/rectangle-251-2-68b941bad8a4b.webp">
                               <figure className="swiper-slide-inner">
                                 <Image src="/images/e9fc5128fbf95847f94751b9ecde6221.webp" alt="rectangle-251-2-68b941bad8a4b.webp" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} className="swiper-slide-image" />
                               </figure>
@@ -2312,7 +2312,7 @@ export default function LocationServedUsa(props: Record<string, string>) {
           <div className="elementor-element elementor-element-b407a0b e-con-full e-flex e-con e-child">
             <div className="elementor-element elementor-element-88ac59c elementor-widget__width-inherit elementor-widget-mobile__width-inherit elementor-widget elementor-widget-html" data-widget_type="html.default">
               <div className="elementor-widget-container">
-                <iframe loading="lazy" id="JotFormIFrame-252953870854469" title="TDRC New Design Insurance Form" allowTransparency allow="geolocation; microphone; camera; fullscreen; payment" src="https://form.jotform.com/252953870854469?isIframeEmbed=1&parentURL=https%3A%2F%2Fdistrictbehavioralhealth.com%2Flocation-served%2Fusa%2Fsober-living%2F" style={{"minWidth":"100%","maxWidth":"100%","border":"none","height":"680px"}}></iframe>
+                <iframe loading="lazy" id="JotFormIFrame-252953870854469" title="TDRC New Design Insurance Form" allow="geolocation; microphone; camera; fullscreen; payment" src="https://form.jotform.com/252953870854469?isIframeEmbed=1&parentURL=https%3A%2F%2Fdistrictbehavioralhealth.com%2Flocation-served%2Fusa%2Fsober-living%2F" style={{"minWidth":"100%","maxWidth":"100%","border":"none","height":"680px"}}></iframe>
               </div>
             </div>
           </div>

@@ -217,7 +217,7 @@ export default function RehabAdmission(props: Record<string, string>) {
                   <div className="elementor-element elementor-element-a190554 e-con-full e-flex e-con e-child">
                     <div className="elementor-element elementor-element-9086a1f elementor-widget__width-inherit elementor-widget-mobile__width-inherit elementor-widget elementor-widget-html" data-widget_type="html.default">
                       <div className="elementor-widget-container">
-                        <iframe loading="lazy" id="JotFormIFrame-252953870854469" src="https://form.jotform.com/252953870854469?isIframeEmbed=1&amp;parentURL=https%3A%2F%2Fdistrictbehavioralhealth.com%2Frehab-admission%2F" allow="geolocation; microphone; camera; fullscreen; payment" title="TDRC New Design Insurance Form" allowTransparency style={{minWidth:"100%",maxWidth:"100%",border:"none",height:"700px"}}></iframe>
+                        <iframe loading="lazy" id="JotFormIFrame-252953870854469" src="https://form.jotform.com/252953870854469?isIframeEmbed=1&amp;parentURL=https%3A%2F%2Fdistrictbehavioralhealth.com%2Frehab-admission%2F" allow="geolocation; microphone; camera; fullscreen; payment" title="TDRC New Design Insurance Form" style={{minWidth:"100%",maxWidth:"100%",border:"none",height:"700px"}}></iframe>
                         <WidgetScript src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js" />
                         <Script id="inline-script-0" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `window.addEventListener("widgetScriptLoaded",function(){window.jotformEmbedHandler("iframe[id='JotFormIFrame-252953870854469']", "https://form.jotform.com/")},{once:true});` }} />
                       </div>
