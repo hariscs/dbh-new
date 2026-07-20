@@ -1121,48 +1121,6 @@ export default function LocationServedUsaAlcohol(props: Record<string, string>) 
         </div>
       </div>
     </div>
-          {(props.blog_section_1___head || props.blog_section_1___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
-                {props.blog_section_1___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_2___head || props.blog_section_2___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_2___head && <h2>{props.blog_section_2___head}</h2>}
-                {props.blog_section_2___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_2___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_3___head || props.blog_section_3___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_3___head && <h2>{props.blog_section_3___head}</h2>}
-                {props.blog_section_3___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_3___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
       {(props.blog_section_4___head || props.blog_section_4___con) && (
         <div className="elementor-element e-flex e-con-boxed e-con e-parent">
           <div className="e-con-inner">
@@ -1240,11 +1198,6 @@ export default function LocationServedUsaAlcohol(props: Record<string, string>) 
             <h2 className="elementor-heading-title elementor-size-default">
               Related Blogs
             </h2>
-          </div>
-        </div>
-        <div className="elementor-element elementor-element-e92e876 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-          <div className="elementor-widget-container">
-            {props.blog_section_2___con && <div dangerouslySetInnerHTML={{ __html: props.blog_section_2___con }} />}
           </div>
         </div>
         <div className="elementor-element elementor-element-51273dd interlinking-shortcode__widget elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">

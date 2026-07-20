@@ -1,3 +1,11 @@
+/* Self-hosted heading font (not on Google Fonts). The CSS references it by name. */
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('/fonts/AvenirLTProBlack.ttf') format('truetype');
+}
 :root {
   --mm-z: 9999;
   --mm-accent: #273F52;

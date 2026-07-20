@@ -3236,7 +3236,7 @@ A Lifelong Support System.
             <div className="elementor-element elementor-element-b79f469 e-con-full e-flex e-con e-child">
               <div className="elementor-element elementor-element-4d15adf elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-html" data-widget_type="html.default">
                 <div className="elementor-widget-container">
-                  <iframe loading="lazy" title="TDRC New Design Insurance Form" src="https://form.jotform.com/252953870854469?parentURL=https%3A%2F%2Fdistrictbehavioralhealth.com%2F&jsForm=true" allow="geolocation; microphone; camera; fullscreen; payment" name="252953870854469" id="252953870854469" style={{"width":"10px","minWidth":"100%","display":"block","overflow":"hidden","height":"526px","border":"none"}}></iframe>
+                  <iframe loading="lazy" id="JotFormIFrame-252953870854469" title="TDRC New Design Insurance Form" src="https://form.jotform.com/252953870854469?isIframeEmbed=1&parentURL=https%3A%2F%2Fdistrictbehavioralhealth.com%2F" allow="geolocation; microphone; camera; fullscreen; payment" name="252953870854469" style={{"minWidth":"100%","maxWidth":"100%","height":"526px","border":"none"}}></iframe>
                 </div>
               </div>
             </div>
