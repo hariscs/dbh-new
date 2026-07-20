@@ -5,6 +5,16 @@ import Link from 'next/link';
 export default function LocationServedUsaAlcohol(props: Record<string, string>) {
   const topic_2 = props.topic_2 ?? "Addiction";
   const address_county = props.address_county ?? "Orange County";
+  // The displayed date comes from the API's meta.createdAt (ISO 8601). Use only the date portion
+  // (YYYY-MM-DD) so the calendar date shown matches WordPress and isn't shifted by timezone.
+    const createdAtDate = props.createdAt
+    ? new Date(props.createdAt).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        timeZone: "UTC",
+      })
+    : "";
   return (
     <>
     <div className="wp-singular page-template-default page page-id-105168 page-child parent-pageid-3171 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-theme-child-master hello-elementor-default elementor-default elementor-kit-7 elementor-page elementor-page-105168 elementor-page-2841 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit">
@@ -38,7 +48,7 @@ export default function LocationServedUsaAlcohol(props: Record<string, string>) 
           <div className="elementor-element elementor-element-4710631 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
             <div className="elementor-widget-container">
               <h2 className="elementor-heading-title elementor-size-default">
-                April 28, 2026
+                {createdAtDate}
               </h2>
             </div>
           </div>
@@ -46,9 +56,16 @@ export default function LocationServedUsaAlcohol(props: Record<string, string>) 
         <div className="elementor-element elementor-element-01eaf37 e-con-full e-flex e-con e-child">
           <div className="elementor-element elementor-element-06e6a27 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
             <div className="elementor-widget-container">
-              <h2 className="elementor-heading-title elementor-size-default">
-                Alcohol {topic_2} Treatment Program at District Behavioral Health
-              </h2>
+              {props.h1 ? (
+                <h2
+                  className="elementor-heading-title elementor-size-default"
+                  dangerouslySetInnerHTML={{ __html: props.h1 }}
+                />
+              ) : (
+                <h2 className="elementor-heading-title elementor-size-default">
+                  Alcohol {topic_2} Treatment Program at District Behavioral Health
+                </h2>
+              )}
             </div>
           </div>
           <div className="elementor-element elementor-element-4ce7498 e-con-full e-flex e-con e-child">
@@ -222,6 +239,10 @@ export default function LocationServedUsaAlcohol(props: Record<string, string>) 
         <div className="elementor-element elementor-element-3db8da9 e-con-full content-area e-flex e-con e-child">
           <div className="elementor-element elementor-element-ac45da2 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
             <div className="elementor-widget-container">
+              {props.blog_section_1___con ? (
+                <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
+              ) : (
+              <>
               <p>
                 Alcohol addiction treatment is a structured process that helps individuals break the cycle of alcohol dependence. Over time, chronic alcohol use can reshape behavior and create a physical dependence that is incredibly difficult to overcome with willpower alone. 
               </p>
@@ -844,6 +865,8 @@ export default function LocationServedUsaAlcohol(props: Record<string, string>) 
                 </a>
               </p>
               <p></p>
+              </>
+              )}
             </div>
           </div>
           <div className="elementor-element elementor-element-09ec5af e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">

@@ -1,17 +1,36 @@
 "use client";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+
+function closeMegaMenus() {
+  for (const openItem of document.querySelectorAll(".has-mega-menu.is-open")) {
+    openItem.classList.remove("is-open");
+    openItem.querySelector("a[aria-haspopup]")?.setAttribute("aria-expanded", "false");
+  }
+}
 
 export default function WidgetInteractions() {
+  const pathname = usePathname();
+
+  // Close any open mega menu when the route changes (SPA navigation keeps the DOM,
+  // so the menu would otherwise stay open after navigating to a new page).
+  useEffect(() => {
+    closeMegaMenus();
+  }, [pathname]);
+
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
       const target = e.target instanceof Element ? e.target : null;
       if (!target) return;
 
-      if (!target.closest(".has-mega-menu")) {
-        for (const openItem of document.querySelectorAll(".has-mega-menu.is-open")) {
-          openItem.classList.remove("is-open");
-          openItem.querySelector("a[aria-haspopup]")?.setAttribute("aria-expanded", "false");
-        }
+      // Close open mega menus when clicking outside them, OR on a real navigation link
+      // inside one (a page link, not the popup toggle) so the menu closes on click.
+      const megaLink = target.closest<HTMLAnchorElement>(".has-mega-menu a[href]");
+      const megaHref = megaLink?.getAttribute("href") ?? "";
+      const isRealMegaNav =
+        !!megaLink && !megaLink.hasAttribute("aria-haspopup") && megaHref !== "" && !megaHref.startsWith("#");
+      if (!target.closest(".has-mega-menu") || isRealMegaNav) {
+        closeMegaMenus();
       }
 
       const actionLink = target.closest('a[href^="#elementor-action"]');

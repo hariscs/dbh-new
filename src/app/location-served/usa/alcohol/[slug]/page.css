@@ -353,3 +353,10 @@ body:not(.rtl) .elementor-2841 .elementor-element.elementor-element-1546c37.elem
 @media (max-width: 767px) {.e-loop-item-105048 .elementor-element.elementor-element-fa3fef1:not(.elementor-motion-effects-element-type-background), .e-loop-item-105048 .elementor-element.elementor-element-fa3fef1 > .elementor-motion-effects-container > .elementor-motion-effects-layer { background-image: url("/images/15b7713d3dff141a6aff51736d6b0db3.webp"); }}
 .elementor-widget-loop-grid .elementor-button { font-family: var( --e-global-typography-accent-font-family ), Sans-serif; font-weight: var( --e-global-typography-accent-font-weight ); background-color: var( --e-global-color-accent ); }
 @media screen and (min-device-width: 1025px) and (max-device-width: 1366px) {.elementor-loop-container.elementor-grid { grid-template-columns: repeat(3, 1fr) !important; }}
+/* ce0cea7 sidebar (TOC): Elementor's sticky is JS-driven (sticky_offset:150, desktop+tablet)
+   and doesn't run in this static export, so implement it with CSS position: sticky.
+   align-self: flex-start lets the sidebar keep its own height (instead of stretching to the
+   flex row) so it has travel room; sticky naturally stops at the parent's bottom (sticky_parent). */
+@media (min-width: 768px) {
+  .elementor-2841 .elementor-element.elementor-element-ce0cea7 { position: sticky; top: 150px; align-self: flex-start; }
+}

@@ -6,6 +6,9 @@ import Link from 'next/link';
 export default function LocationServedUsa(props: Record<string, string>) {
   const geo = props.geo ?? "National";
   const topic_1 = props.topic_1 ?? "Sober Living";
+  // Only show the h2 section (57830ff4 — heading + intro) when h2___con has content.
+  const h2___con = props.h2___con?? "";
+  const showH2Con = Boolean(props.h2___con && props.h2___con.trim());
   const topic_2 = props.topic_2 ?? "Housing";
   const address_county = props.address_county ?? "Orange County";
   const outpatient_facilities___number = props.outpatient_facilities___number ?? "1";
@@ -47,7 +50,7 @@ export default function LocationServedUsa(props: Record<string, string>) {
               <div className="elementor-element elementor-element-2a5cde22 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                 <div className="elementor-widget-container">
                   <h1 className="elementor-heading-title elementor-size-default">
-                    Best {topic_1} {topic_2} Across the Country (Highly Reviewed & Awarded)
+                    {topic_1} {topic_2} Across the Country (Highly Reviewed & Awarded)
                   </h1>
                 </div>
               </div>
@@ -249,6 +252,7 @@ export default function LocationServedUsa(props: Record<string, string>) {
         </div>
       </div>
     </div>
+    {showH2Con && (
     <div className="elementor-element elementor-element-57830ff4 table-of-content-headings e-flex e-con-boxed e-con e-parent e-lazyloaded">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-5362f2f6 e-con-full e-flex e-con e-child">
@@ -462,57 +466,14 @@ export default function LocationServedUsa(props: Record<string, string>) {
           </div>
           <div className="elementor-element elementor-element-5e511adb elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
             <div className="elementor-widget-container">
-              <p>
-                Are you stepping out of treatment and wondering how to hold on to everything you’ve worked so hard to build? Early recovery is one of the most vulnerable phases of the entire journey, and the gap between a structured program and independent living can feel 
-                <strong>
-                  disorienting, isolating, and destabilizing
-                </strong>
-                . Sober living exists to bridge that gap, but choosing the right environment matters more than most people realize. Here’s what we hear most:
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    What if I’m not strong enough to stay sober without 24/7 clinical support?
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Will the people in the house actually support my recovery, or undermine it?
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    What if I struggle with the rules and structure?
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Can I afford sober living while I’m getting back on my feet?
-                  </p>
-                </li>
-              </ul>
-              <p>
-                These are honest, grounded fears, and asking these questions means you understand what’s at stake. You deserve a sober living environment that is 
-                <strong>
-                  accountable, genuinely supportive, and structured enough to protect your recovery without feeling like a cage
-                </strong>
-                .
-              </p>
-              <p>
-                At 
-                <Link href="/">
-                  District Behavioral Health Group
-                </Link>
-                , we understand that recovery evolves rather than ending at discharge. Our sober living program provides a peer-supported, clinician-informed environment where residents hold each other accountable and build the practical life skills that sustain long-term sobriety. Structure, community, and dignity coexist to promote long-term recovery.
-              </p>
-              <p>
-                Read more below.
-              </p>
+              {h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con}} />}
             </div>
           </div>
         </div>
       </div>
     </div>
+    )}
+    {showH2Con && (
     <div className="elementor-element elementor-element-49f1055 e-con-full e-flex e-con e-parent">
       <div className="elementor-element elementor-element-5207043 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
         <div className="elementor-widget-container">
@@ -531,14 +492,7 @@ export default function LocationServedUsa(props: Record<string, string>) {
                     <div className="elementor-element elementor-element-27baceac elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
                       <div className="elementor-widget-container">
                         <p>
-                          Our behavioral health services support men and women struggling with substance use and co-occurring mental health disorders. 
-                          <strong>
-                            District Behavioral Health
-                          </strong>
-                           focuses on providing a 
-                          <strong>
-                            comprehensive continuum of care
-                          </strong>
+                          Our behavioral health services support men and women struggling with substance use and co-occurring mental health disorders. <strong>District Behavioral Health</strong> focuses on providing a <strong>comprehensive continuum of care</strong>
                           , including personalized outpatient treatment, intensive outpatient (IOP) and partial hospitalization programs (PHP), and coordinated support services designed to help individuals stabilize, develop effective coping skills, and build lasting recovery within their communities.
                         </p>
                       </div>
@@ -597,6 +551,7 @@ export default function LocationServedUsa(props: Record<string, string>) {
         </div>
       </div>
     </div>
+    )}
     <div className="elementor-element elementor-element-5e096e30 empty-container-sty table-of-content-headings e-flex e-con-boxed e-con e-parent e-lazyloaded">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-1fa0e0d elementor-widget__width-initial elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">

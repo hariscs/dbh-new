@@ -1,7 +1,11 @@
 import "./page.css";
+// Also load the alcohol template's styles: this route renders either template depending on
+// the page's builder `fields.template` (see LocationServedByTemplate). Both stylesheets are
+// scoped to their own Elementor page id (.elementor-691 / .elementor-2841), so they coexist.
+import "../alcohol/[slug]/page.css";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import LocationServedUsa from "@/components/templates/LocationServedUsa";
+import LocationServedByTemplate from "@/components/templates/LocationServedByTemplate";
 import { fetchPageData } from "@/lib/wordpress";
 
 export const revalidate = 60;
@@ -43,5 +47,5 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
   const data = await fetchPageData(`${BASE_PATH}/${slug}`);
   if (!data) notFound();
-  return <LocationServedUsa {...data.fields} />;
+  return <LocationServedByTemplate fields={data.fields} createdAt={data.meta.createdAt} />;
 }

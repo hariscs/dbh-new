@@ -2228,6 +2228,7 @@ ul { display: block; list-style-type: disc; margin-block-start: 1em; margin-bloc
 .page-id-2998 .elementor-absolute .elementor-button .elementor-button-content-wrapper span { color : #FFF }
 .page-id-2998 .elementor-button { text-decoration: none !important; }
 .elementor-element-098e0af .elementor-button { text-decoration: none; }
+@media (max-width:490px) {.dbh-mega-cards.dbh-mega-cards--columns {display: block;} .dbh-mega-cards.dbh-mega-cards--columns .dbh-mega-col { margin-bottom:20px }}
 @keyframes elementor-headline-dash { 
   0% { opacity: 1; stroke-dasharray: 0, 1500; }
   100% { opacity: 1; stroke-dasharray: 1500, 1500; }

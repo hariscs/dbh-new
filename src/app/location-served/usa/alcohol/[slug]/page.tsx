@@ -43,5 +43,5 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
   const data = await fetchPageData(`${BASE_PATH}/${slug}`);
   if (!data) notFound();
-  return <LocationServedUsaAlcohol {...data.fields} />;
+  return <LocationServedUsaAlcohol {...data.fields} createdAt={data.meta.createdAt} />;
 }

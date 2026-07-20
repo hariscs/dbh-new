@@ -10,7 +10,7 @@ type BuilderPageData = {
   slug: string;
   fields: Record<string, string>;
   seo: { title: string; description: string; canonical: string; robots: string };
-  meta: { slug: string; parent: string; updatedAt: string };
+  meta: { slug: string; parent: string; updatedAt: string; createdAt: string };
 };
 
 export async function fetchPageData(path: string): Promise<BuilderPageData | null> {
