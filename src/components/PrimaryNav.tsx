@@ -196,7 +196,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                 </Link>
                               </div>
                             </div>
-                            <div className="dbh-mega-content dbh-mega-content--image" id={`mega-group-104592${idSuffix}`} role="tabpanel" aria-hidden="true">
+                            <div className="dbh-mega-content dbh-mega-content--image" id={`mega-group-104592${idSuffix}`} role="tabpanel" aria-hidden="true" data-show-blogs="1">
                               <div className="dbh-mega-cards dbh-mega-cards--image">
                                 <Link className="dbh-mega-card" href="/location-served/usa/drug-rehab/">
                                   <div className="dbh-mega-card__body">
@@ -230,7 +230,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                 </Link>
                               </div>
                             </div>
-                            <div className="dbh-mega-content dbh-mega-content--columns" id={`mega-group-104593${idSuffix}`} role="tabpanel" aria-hidden="true">
+                            <div className="dbh-mega-content dbh-mega-content--columns" id={`mega-group-104593${idSuffix}`} role="tabpanel" aria-hidden="true" data-show-blogs="1">
                               <div className="dbh-mega-cards dbh-mega-cards--columns">
                                 <div className="dbh-mega-col">
                                   <p className="dbh-mega-col__heading">

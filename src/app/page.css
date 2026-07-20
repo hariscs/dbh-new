@@ -770,4 +770,4 @@ article.card { padding: 10px; }}
 .elementor-widget-loop-grid .elementor-button { font-family: var( --e-global-typography-accent-font-family ), Sans-serif; font-weight: var( --e-global-typography-accent-font-weight ); background-color: var( --e-global-color-accent ); }
 .elementor-icon-box-title { overflow-wrap: break-word; }
 @media screen and (min-device-width: 1025px) and (max-device-width: 1366px) {.elementor-loop-container.elementor-grid { grid-template-columns: repeat(3, 1fr) !important; }}
-button:focus, button:hover{ outline: none !important; box-shadow: none; border: 0px !important; border-bottom: 2px solid #2E6AA1 !important; }
+button:focus, button:hover{ outline: none !important; box-shadow: none; border: 0px !important; }
