@@ -2871,7 +2871,7 @@ Renaissance Recovery
                       <div className="elementor-element elementor-element-873f78b elementor-align-justify elementor-widget-tablet__width-inherit elementor-widget-mobile__width-inherit elementor-widget__width-initial elementor-widget elementor-widget-button" data-widget_type="button.default">
                         <div className="elementor-widget-container">
                           <div className="elementor-button-wrapper">
-                            <Link className="elementor-button elementor-button-link elementor-size-sm" href="/facility/district-recovery-community-nashville/">
+                            <Link className="elementor-button elementor-button-link elementor-size-sm" href="/facility/sober-living-houses-tennessee-renaissance-recovery/">
                               <span className="elementor-button-content-wrapper">
                                 <span className="elementor-button-text">
                                   Take a Tour
@@ -2950,84 +2950,10 @@ Renaissance Recovery
                 <div className="elementor-element elementor-element-33e1e5d elementor-align-justify elementor-widget-mobile__width-inherit elementor-widget__width-initial elementor-widget elementor-widget-button animated fadeIn" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="button.default">
                   <div className="elementor-widget-container">
                     <div className="elementor-button-wrapper">
-                      <Link className="elementor-button elementor-button-link elementor-size-sm" href="/drug/rehab/florida/palm-beach-county/">
+                      <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:888-702-0484">
                         <span className="elementor-button-content-wrapper">
                           <span className="elementor-button-text">
                             Call Now
-                          </span>
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="elementor-element elementor-element-9446cc4 e-con-full e-flex e-con e-child">
-                <div className="elementor-element elementor-element-8369043 elementor-widget__width-initial elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-widget_type="icon-box.default">
-                  <div className="elementor-widget-container">
-                    <div className="elementor-icon-box-wrapper">
-                      <div className="elementor-icon-box-icon">
-                        <span className="elementor-icon">
-                          <svg width={48} height={60} viewBox="0 0 48 60" fill="none">
-                            <path d="M44 30C44 27.3736 43.4827 24.7728 42.4776 22.3463C41.4725 19.9198 39.9993 17.715 38.1421 15.8579C36.285 14.0007 34.0802 12.5275 31.6537 11.5224C29.2272 10.5173 26.6264 10 24 10V14C27.1644 13.9999 30.2577 14.9382 32.8889 16.6961C35.52 18.454 37.5708 20.9526 38.782 23.876C39.5862 25.8175 40.0001 27.8985 40 30H44ZM4 26V16C4 15.4696 4.21071 14.9609 4.58579 14.5858C4.96086 14.2107 5.46957 14 6 14H16C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16V24C18 24.5304 17.7893 25.0391 17.4142 25.4142C17.0391 25.7893 16.5304 26 16 26H12C12 30.2435 13.6857 34.3131 16.6863 37.3137C19.6869 40.3143 23.7565 42 28 42V38C28 37.4696 28.2107 36.9609 28.5858 36.5858C28.9609 36.2107 29.4696 36 30 36H38C38.5304 36 39.0391 36.2107 39.4142 36.5858C39.7893 36.9609 40 37.4696 40 38V48C40 48.5304 39.7893 49.0391 39.4142 49.4142C39.0391 49.7893 38.5304 50 38 50H28C14.746 50 4 39.254 4 26Z" fill="#E2EEFA"></path>
-                            <path d="M35.086 25.408C35.6892 26.8638 35.9998 28.4242 36 30H32.4C32.4 27.7722 31.515 25.6356 29.9397 24.0603C28.3644 22.485 26.2278 21.6 24 21.6V18C26.3733 18.0001 28.6933 18.704 30.6666 20.0226C32.6398 21.3412 34.1778 23.2153 35.086 25.408Z" fill="#E2EEFA"></path>
-                          </svg>
-                        </span>
-                      </div>
-                      <div className="elementor-icon-box-content">
-                        <h3 className="elementor-icon-box-title">
-                          <span>
-                            
-							Make the process simple. Ensure your benefits cover treatment.						
-                          </span>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="elementor-element elementor-element-ed544df elementor-align-justify elementor-widget-mobile__width-inherit elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-button" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="button.default">
-                  <div className="elementor-widget-container">
-                    <div className="elementor-button-wrapper">
-                      <Link className="elementor-button elementor-button-link elementor-size-sm" href="/drug/rehab/florida/palm-beach-county/">
-                        <span className="elementor-button-content-wrapper">
-                          <span className="elementor-button-text">
-                            Check Insurance
-                          </span>
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="elementor-element elementor-element-d32cda9 e-con-full e-flex e-con e-child">
-                <div className="elementor-element elementor-element-c9f912d elementor-widget__width-initial elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-widget_type="icon-box.default">
-                  <div className="elementor-widget-container">
-                    <div className="elementor-icon-box-wrapper">
-                      <div className="elementor-icon-box-icon">
-                        <span className="elementor-icon">
-                          <svg width={48} height={60} viewBox="0 0 48 60" fill="none">
-                            <path d="M44 30C44 27.3736 43.4827 24.7728 42.4776 22.3463C41.4725 19.9198 39.9993 17.715 38.1421 15.8579C36.285 14.0007 34.0802 12.5275 31.6537 11.5224C29.2272 10.5173 26.6264 10 24 10V14C27.1644 13.9999 30.2577 14.9382 32.8889 16.6961C35.52 18.454 37.5708 20.9526 38.782 23.876C39.5862 25.8175 40.0001 27.8985 40 30H44ZM4 26V16C4 15.4696 4.21071 14.9609 4.58579 14.5858C4.96086 14.2107 5.46957 14 6 14H16C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16V24C18 24.5304 17.7893 25.0391 17.4142 25.4142C17.0391 25.7893 16.5304 26 16 26H12C12 30.2435 13.6857 34.3131 16.6863 37.3137C19.6869 40.3143 23.7565 42 28 42V38C28 37.4696 28.2107 36.9609 28.5858 36.5858C28.9609 36.2107 29.4696 36 30 36H38C38.5304 36 39.0391 36.2107 39.4142 36.5858C39.7893 36.9609 40 37.4696 40 38V48C40 48.5304 39.7893 49.0391 39.4142 49.4142C39.0391 49.7893 38.5304 50 38 50H28C14.746 50 4 39.254 4 26Z" fill="#E2EEFA"></path>
-                            <path d="M35.086 25.408C35.6892 26.8638 35.9998 28.4242 36 30H32.4C32.4 27.7722 31.515 25.6356 29.9397 24.0603C28.3644 22.485 26.2278 21.6 24 21.6V18C26.3733 18.0001 28.6933 18.704 30.6666 20.0226C32.6398 21.3412 34.1778 23.2153 35.086 25.408Z" fill="#E2EEFA"></path>
-                          </svg>
-                        </span>
-                      </div>
-                      <div className="elementor-icon-box-content">
-                        <h3 className="elementor-icon-box-title">
-                          <span>
-                            
-							Explore our locations nationwide.						
-                          </span>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="elementor-element elementor-element-7ca879c elementor-align-justify elementor-widget-mobile__width-inherit elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-button" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="button.default">
-                  <div className="elementor-widget-container">
-                    <div className="elementor-button-wrapper">
-                      <Link className="elementor-button elementor-button-link elementor-size-sm" href="/drug/rehab/florida/palm-beach-county/">
-                        <span className="elementor-button-content-wrapper">
-                          <span className="elementor-button-text">
-                            View Centers
                           </span>
                         </span>
                       </Link>

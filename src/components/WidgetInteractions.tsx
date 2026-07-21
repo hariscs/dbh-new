@@ -18,6 +18,36 @@ export default function WidgetInteractions() {
     closeMegaMenus();
   }, [pathname]);
 
+  // Grow the desktop location-header logo + phone button (scale 1.1) once the
+  // page is scrolled past 100px. Elementor's native sticky-effects JS wasn't
+  // ported, so the effect classes sat static in the markup; this restores the
+  // intended scroll-triggered behavior. Only the desktop header (bbfbc92, hidden
+  // on tablet/mobile) is targeted, so it is desktop-only.
+  useEffect(() => {
+    const OFFSET = 100;
+    const headers = Array.from(
+      document.querySelectorAll<HTMLElement>(
+        ".elementor-location-header header.elementor-element-bbfbc92"
+      )
+    );
+    if (headers.length === 0) return;
+    let ticking = false;
+    const apply = () => {
+      ticking = false;
+      const grown = window.scrollY > OFFSET;
+      for (const h of headers) h.classList.toggle("dbh-hdr-grown", grown);
+    };
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(apply);
+      }
+    };
+    apply();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
       const target = e.target instanceof Element ? e.target : null;

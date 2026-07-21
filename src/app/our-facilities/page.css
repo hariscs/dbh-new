@@ -878,6 +878,7 @@ body.rtl .elementor-2998 .elementor-element.elementor-element-bcd827b { left: 30
 .elementor-2998 .elementor-element.elementor-element-3b1b7b1.elementor-widget-image-carousel .swiper-slide { display: flex; aspect-ratio: 16 / 9; }
 .elementor-2998 .elementor-element.elementor-element-3b1b7b1.elementor-widget-image-carousel figure, .elementor-2998 .elementor-element.elementor-element-3b1b7b1.elementor-widget-image-carousel a { width: 100%; height: 100%; }
 .elementor-2998 .elementor-element.elementor-element-3b1b7b1.elementor-widget-image-carousel img { width: 100%; height: 100%; object-fit: cover; }
+.elementor-2998 .elementor-element.elementor-widget-image-carousel img { height:100% !important}
 .elementor-2998 .elementor-element.elementor-element-b52495f:hover { opacity: 0.9; }
 @media (min-width: 1100px) and (max-width: 1500px) {.elementor-2998 .elementor-element.elementor-element-b52495f a { padding-inline: 40px !important; }}
 .elementor-2998 .elementor-element.elementor-element-fb44849:hover { opacity: 0.9; }
@@ -1066,7 +1067,7 @@ body.rtl .elementor-2998 .elementor-element.elementor-element-bcd827b { left: 30
 .dual-track::before { left: 0px; background: linear-gradient(to right, rgb(85, 170, 220) 0%, transparent 100%); }
 .dual-track::after { right: 0px; background: linear-gradient(to left, rgb(85, 170, 220) 0%, transparent 100%); }
 @media (max-width: 600px) {:root { --carousel-height: 340px; --slide-gap: 0px; --row-gap: 0px; }
-.dual-track::before, .dual-track::after { width: 40px; }}
+.dual-track::before, .dual-track::after { width: 40px; } .page-id-2998 .elementor-element-1005220 .elementor-widget-mobile__width-inherit:not(:last-child) .elementor-button.elementor-size-sm .elementor-button-content-wrapper span  { color: #fff; }}
 /* Facilities dual-track marquee: the static export dropped the base (desktop) CSS
    variables and the slide-row/belt/item layout (only the max-width:600px :root
    override survived), plus the requestAnimationFrame autoscroll. Restored here;

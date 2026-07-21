@@ -630,6 +630,15 @@ header.sticky-header .this-logo-sticky img { transform: scale(0.95); transition:
 header.sticky-header.elementor-sticky--effects .this-logo-sticky img { transform: scale(1.1); }
 header.sticky-header .menu-cta { transform: scale(0.95); transition: transform var(--transition); }
 header.sticky-header.elementor-sticky--effects .menu-cta { transform: scale(1); }
+/* Desktop location-header: logo + phone button rest at normal size and grow to
+   scale(1.1) only after the page is scrolled past 100px. The .dbh-hdr-grown
+   class is toggled on scroll by WidgetInteractions. These rules override the
+   static sticky--effects scale above (equal specificity, later in the cascade).
+   bbfbc92 is the desktop header (hidden on tablet/mobile), so this is desktop-only. */
+.elementor-location-header header.elementor-element-bbfbc92 .this-logo-sticky img,
+.elementor-location-header header.elementor-element-bbfbc92 .menu-cta { transform: scale(1); transition: transform var(--transition); }
+.elementor-location-header header.elementor-element-bbfbc92.dbh-hdr-grown .this-logo-sticky img,
+.elementor-location-header header.elementor-element-bbfbc92.dbh-hdr-grown .menu-cta { transform: scale(1.1); }
 @media only screen and (min-width: 1030px) {.elementor-26 .elementor-element.elementor-element-2427782 { display: none !important; }}
 @media only screen and (min-width: 1030px) {.elementor-26 .elementor-element.elementor-element-6e615ec { display: none !important; }}
 .elementor-117 .elementor-element.elementor-element-f7771bd { --display: flex; --flex-direction: column; --container-widget-width: 100%; --container-widget-height: initial; --container-widget-flex-grow: 0; --container-widget-align-self: initial; --flex-wrap-mobile: wrap; --gap: 50px 50px; --row-gap: 50px; --column-gap: 50px; --padding-top: 80px; --padding-bottom: 10px; --padding-left: 15px; --padding-right: 15px; }
@@ -2339,3 +2348,7 @@ ul { display: block; list-style-type: disc; margin-block-start: 1em; margin-bloc
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M4 10H16M16 10L11 5M16 10L11 15' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M4 10H16M16 10L11 5M16 10L11 15' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
 }
+.elementor-element-82dacc2 .e-con-inner{
+    align-items: center !important;
+}
+.elementor-2841 .elementor-element.elementor-element-e69e1a2.elementor-grid-0 .elementor-grid{ display:flex !important; gap: 8px; }

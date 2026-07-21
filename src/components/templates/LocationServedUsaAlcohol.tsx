@@ -1144,76 +1144,7 @@ export default function LocationServedUsaAlcohol(props: Record<string, string>) 
         </div>
       </div>
     </div>
-      {(props.blog_section_4___head || props.blog_section_4___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_4___head && <h2>{props.blog_section_4___head}</h2>}
-                {props.blog_section_4___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_4___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_5___head || props.blog_section_5___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_5___head && <h2>{props.blog_section_5___head}</h2>}
-                {props.blog_section_5___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_5___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_6___head || props.blog_section_6___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_6___head && <h2>{props.blog_section_6___head}</h2>}
-                {props.blog_section_6___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_6___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_7___head || props.blog_section_7___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_7___head && <h2>{props.blog_section_7___head}</h2>}
-                {props.blog_section_7___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_7___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_8___head || props.blog_section_8___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_8___head && <h2>{props.blog_section_8___head}</h2>}
-                {props.blog_section_8___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_8___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      
       <div className="elementor-element elementor-element-7a3a748 interlinking-section e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-b708b91 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
