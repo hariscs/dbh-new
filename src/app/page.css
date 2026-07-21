@@ -771,3 +771,19 @@ article.card { padding: 10px; }}
 .elementor-icon-box-title { overflow-wrap: break-word; }
 @media screen and (min-device-width: 1025px) and (max-device-width: 1366px) {.elementor-loop-container.elementor-grid { grid-template-columns: repeat(3, 1fr) !important; }}
 button:focus, button:hover{ outline: none !important; box-shadow: none; border: 0px !important; }
+/* Performance: skip style/layout/paint for OFF-screen sections so the initial render isn't
+   blocked computing styles for the whole 3,000+ element page (Style & Layout was the top
+   main-thread cost, delaying FCP/LCP). content-visibility:auto renders on-screen sections
+   normally and skips the rest until scrolled near; `auto` remembers each section's real
+   height after first render, and the fallback avoids scroll jank before then. The two
+   above-the-fold heroes are kept fully rendered so the LCP is never deferred. */
+.elementor-11 .e-con.e-parent {
+  content-visibility: auto;
+  contain-intrinsic-size: 500px;
+  contain-intrinsic-size: auto 500px;
+}
+.elementor-11 .elementor-element-1470cbf.e-parent,
+.elementor-11 .elementor-element-9f22cd4.e-parent {
+  content-visibility: visible;
+  contain-intrinsic-size: none;
+}
