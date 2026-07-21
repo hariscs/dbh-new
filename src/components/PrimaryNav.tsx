@@ -10,11 +10,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                     <li className="dbh-nav__item has-mega-menu">
                       <Link className="dbh-nav__link" href="#" aria-haspopup="true" aria-expanded="false" aria-controls={`mm-panel-104566${idSuffix}`}>
                         About
-                        <span className="dbh-nav__caret" aria-hidden="true">
-                          <svg width={10} height={6} viewBox="0 0 10 6" fill="none">
-                            <path d="M1 1L5 5L9 1" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                          </svg>
-                        </span>
+                        <span className="dbh-nav__caret" aria-hidden="true"></span>
                       </Link>
                       <div className="dbh-mega-panel" role="region" aria-hidden="true" id={`mm-panel-104566${idSuffix}`}>
                         <div className="dbh-mega-panel__inner">
@@ -51,11 +47,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__excerpt">
                                       Our family is your family. We have brought the absolute best to guide you.
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card dbh-mega-card--image" href="/our-facilities/">
@@ -69,11 +61,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__excerpt">
                                       Bright, cozy, and inviting: Our beautifully designed space is open.
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                               </div>
@@ -91,11 +79,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__excerpt">
                                       Transition smoothly back into everyday independent life.
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/location-served/usa/pet-friendly-rehab/">
@@ -106,11 +90,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__excerpt">
                                       Keep your supportive animal companion nearby.
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/location-served/usa/couples-rehab/">
@@ -121,11 +101,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__excerpt">
                                       Heal your relationship while finding individual sobriety.
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                               </div>
@@ -137,11 +113,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                     <li className="dbh-nav__item has-mega-menu">
                       <Link className="dbh-nav__link" href="#" aria-haspopup="true" aria-expanded="false" aria-controls={`mm-panel-104576${idSuffix}`}>
                         Addiction Programs
-                        <span className="dbh-nav__caret" aria-hidden="true">
-                          <svg width={10} height={6} viewBox="0 0 10 6" fill="none">
-                            <path d="M1 1L5 5L9 1" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                          </svg>
-                        </span>
+                        <span className="dbh-nav__caret" aria-hidden="true"></span>
                       </Link>
                       <div className="dbh-mega-panel" role="region" aria-hidden="true" id={`mm-panel-104576${idSuffix}`}>
                         <div className="dbh-mega-panel__inner">
@@ -187,11 +159,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__excerpt">
                                       Learn what to expect during our simple intake and evaluation steps.
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                               </div>
@@ -206,11 +174,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__excerpt">
                                       Compassionate care for substance addiction.
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/location-served/usa/alcohol/addiction/">
@@ -221,11 +185,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__excerpt">
                                       Professional support for sustainable sobriety.
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                               </div>
@@ -241,11 +201,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Alcohol Addiction
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/opioids-addiction-treatment/">
@@ -253,11 +209,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Opioid Addiction
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/meth-addiction-treatment/">
@@ -265,11 +217,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Meth Addiction
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/cocaine-addiction-treatment/">
@@ -277,11 +225,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Cocaine Addiction
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/marijuana-addiction-treatment/">
@@ -289,11 +233,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Marijuana Addiction
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/xanax-addiction-treatment/">
@@ -301,11 +241,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Xanax Addiction
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/fentanyl-addiction-treatment/">
@@ -313,11 +249,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Fentanyl Addiction
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                 </div>
@@ -336,11 +268,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__excerpt">
                                       Safe medical clearance and stabilization.
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/location-served/usa/residential-substance-use/">
@@ -351,11 +279,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__excerpt">
                                       Comprehensive, 24-hour structured care.
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/location-served/usa/iop-drug-rehab/">
@@ -366,11 +290,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__excerpt">
                                       Flexible treatment with therapy sessions.
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/location-served/usa/php-drug-rehab/">
@@ -381,11 +301,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__excerpt">
                                       Intensive daily treatment while living at home.
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/location-served/usa/outpatient-drug-rehab/">
@@ -396,11 +312,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__excerpt">
                                       Continued group support and therapy.
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                               </div>
@@ -416,11 +328,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Dual Diagnosis
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/dbt-therapy/">
@@ -428,11 +336,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         DBT
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/act/">
@@ -440,11 +344,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         ACT
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/mat-therapy/">
@@ -452,11 +352,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         MAT
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/motivational/">
@@ -464,11 +360,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Motivational Interviewing
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/ifs/">
@@ -476,11 +368,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         IFS
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/cpt/">
@@ -488,11 +376,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         CPT
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                 </div>
@@ -503,11 +387,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         CBT
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/emdr-therapy/">
@@ -515,11 +395,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         EMDR
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/family/">
@@ -527,11 +403,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Family Counseling
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="#">
@@ -539,11 +411,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Individual Therapy
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/trauma/">
@@ -551,11 +419,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Trauma Informed
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/psycho-dynamic/">
@@ -563,11 +427,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Psychodynamic Therapy
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                 </div>
@@ -586,11 +446,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                 <span className="dbh-mega-blog-item__title">
                                   Adderall/How long in your system
                                 </span>
-                                <span className="dbh-mega-blog-item__arrow" aria-hidden="true">
-                                  <svg width={16} height={16} viewBox="0 0 20 20" fill="none">
-                                    <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                  </svg>
-                                </span>
+                                <span className="dbh-mega-blog-item__arrow" aria-hidden="true"></span>
                               </div>
                             </Link>
                             <Link className="dbh-mega-blog-item" href="/location-served/usa/adderall-addiction-treatment/withdrawal/">
@@ -601,11 +457,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                 <span className="dbh-mega-blog-item__title">
                                   Adderall/Withdrawal (DrugUse Blog National)
                                 </span>
-                                <span className="dbh-mega-blog-item__arrow" aria-hidden="true">
-                                  <svg width={16} height={16} viewBox="0 0 20 20" fill="none">
-                                    <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                  </svg>
-                                </span>
+                                <span className="dbh-mega-blog-item__arrow" aria-hidden="true"></span>
                               </div>
                             </Link>
                             <Link className="dbh-mega-blog-item" href="/location-served/usa/alcohol/addiction/">
@@ -616,11 +468,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                 <span className="dbh-mega-blog-item__title">
                                   Alcohol/Addiction (DrugUse Blog National)
                                 </span>
-                                <span className="dbh-mega-blog-item__arrow" aria-hidden="true">
-                                  <svg width={16} height={16} viewBox="0 0 20 20" fill="none">
-                                    <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                  </svg>
-                                </span>
+                                <span className="dbh-mega-blog-item__arrow" aria-hidden="true"></span>
                               </div>
                             </Link>
                           </div>
@@ -630,11 +478,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                     <li className="dbh-nav__item has-mega-menu">
                       <Link className="dbh-nav__link" href="#" aria-haspopup="true" aria-expanded="false" aria-controls={`mm-panel-104837${idSuffix}`}>
                         Mental Health
-                        <span className="dbh-nav__caret" aria-hidden="true">
-                          <svg width={10} height={6} viewBox="0 0 10 6" fill="none">
-                            <path d="M1 1L5 5L9 1" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                          </svg>
-                        </span>
+                        <span className="dbh-nav__caret" aria-hidden="true"></span>
                       </Link>
                       <div className="dbh-mega-panel" role="region" aria-hidden="true" id={`mm-panel-104837${idSuffix}`}>
                         <div className="dbh-mega-panel__inner">
@@ -677,11 +521,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__excerpt">
                                       Specialized care for overall emotional wellness.
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                               </div>
@@ -696,11 +536,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__excerpt">
                                       Pervasive, ingrained patterns of thinking, feeling, and behaving.
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/location-served/usa/trauma/">
@@ -711,11 +547,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__excerpt">
                                       Emotional responses triggered by deeply distressing or painful events.
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/location-served/usa/anxiety/">
@@ -726,11 +558,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__excerpt">
                                       Intense feelings of worry or fear impacting daily routines.
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                               </div>
@@ -746,11 +574,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Depression
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/bipolar/">
@@ -758,11 +582,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Bipolar Disorder
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/antisocial-persnonality/">
@@ -770,11 +590,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Antisocial Personality Disorder
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                 </div>
@@ -787,11 +603,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Schizophrenia
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/schizoaffective-disorder/">
@@ -799,11 +611,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Schizoaffective Disorder
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                 </div>
@@ -816,11 +624,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         PTSD
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/acute-stress-disorder/">
@@ -828,11 +632,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Acute Stress Disorder
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                 </div>
@@ -845,11 +645,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Generalized Anxiety Disorder
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/social/">
@@ -857,11 +653,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Social Anxiety Disorder
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/panic-disorder/">
@@ -869,11 +661,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Panic Disorder
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/obsessive-compulsive/">
@@ -881,11 +669,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Obsessive-Compulsive Disorder
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                 </div>
@@ -902,11 +686,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Dual Diagnosis
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/dbt-therapy/">
@@ -914,11 +694,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         DBT
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/act/">
@@ -926,11 +702,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         ACT
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/mat-therapy/">
@@ -938,11 +710,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         MAT
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/motivational/">
@@ -950,11 +718,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Motivational Interviewing
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/ifs/">
@@ -962,11 +726,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         IFS
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/cpt/">
@@ -974,11 +734,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         CPT
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                 </div>
@@ -989,11 +745,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         CBT
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/emdr-therapy/">
@@ -1001,11 +753,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         EMDR
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/family/">
@@ -1013,11 +761,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Family Counseling
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="#">
@@ -1025,11 +769,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Individual Therapy
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/trauma/">
@@ -1037,11 +777,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Trauma Informed
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                   <Link className="dbh-mega-card" href="/location-served/usa/psycho-dynamic/">
@@ -1049,11 +785,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                       <span className="dbh-mega-card__title">
                                         Psychodynamic Therapy
                                       </span>
-                                      <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                        <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                        </svg>
-                                      </span>
+                                      <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                     </div>
                                   </Link>
                                 </div>
@@ -1072,11 +804,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                 <span className="dbh-mega-blog-item__title">
                                   Ativan (Lorazepam)/ How long in your...
                                 </span>
-                                <span className="dbh-mega-blog-item__arrow" aria-hidden="true">
-                                  <svg width={16} height={16} viewBox="0 0 20 20" fill="none">
-                                    <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                  </svg>
-                                </span>
+                                <span className="dbh-mega-blog-item__arrow" aria-hidden="true"></span>
                               </div>
                             </Link>
                             <Link className="dbh-mega-blog-item" href="/location-served/usa/adderall-addiction-treatment/how-long-in-your-system/">
@@ -1087,11 +815,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                 <span className="dbh-mega-blog-item__title">
                                   Adderall/How long in your system
                                 </span>
-                                <span className="dbh-mega-blog-item__arrow" aria-hidden="true">
-                                  <svg width={16} height={16} viewBox="0 0 20 20" fill="none">
-                                    <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                  </svg>
-                                </span>
+                                <span className="dbh-mega-blog-item__arrow" aria-hidden="true"></span>
                               </div>
                             </Link>
                             <Link className="dbh-mega-blog-item" href="/location-served/usa/alcohol/how-long-in-your-system/">
@@ -1102,11 +826,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                 <span className="dbh-mega-blog-item__title">
                                   Alcohol/how long in your system
                                 </span>
-                                <span className="dbh-mega-blog-item__arrow" aria-hidden="true">
-                                  <svg width={16} height={16} viewBox="0 0 20 20" fill="none">
-                                    <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                  </svg>
-                                </span>
+                                <span className="dbh-mega-blog-item__arrow" aria-hidden="true"></span>
                               </div>
                             </Link>
                           </div>
@@ -1116,11 +836,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                     <li className="dbh-nav__item has-mega-menu">
                       <Link className="dbh-nav__link" href="#" aria-haspopup="true" aria-expanded="false" aria-controls={`mm-panel-108075${idSuffix}`}>
                         Resources
-                        <span className="dbh-nav__caret" aria-hidden="true">
-                          <svg width={10} height={6} viewBox="0 0 10 6" fill="none">
-                            <path d="M1 1L5 5L9 1" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                          </svg>
-                        </span>
+                        <span className="dbh-nav__caret" aria-hidden="true"></span>
                       </Link>
                       <div className="dbh-mega-panel" role="region" aria-hidden="true" id={`mm-panel-108075${idSuffix}`}>
                         <div className="dbh-mega-panel__inner">
@@ -1151,11 +867,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__title">
                                       Bipolar Disorder Test
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/quiz/bipolar-disorder-dsm5/">
@@ -1163,11 +875,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__title">
                                       DSM-5 for Bipolar Disorder
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/quiz/ptsd-checklist-civilian/">
@@ -1175,11 +883,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__title">
                                       PTSD Test
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/quiz/anxiety-worry-7/">
@@ -1187,11 +891,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__title">
                                       Anxiety Test
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/quiz/am-i-addicted">
@@ -1199,11 +899,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__title">
                                       Addiction Test
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/quiz/am-i-alcoholic">
@@ -1211,11 +907,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__title">
                                       Alcohol Test
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/quiz/generalized-anxiety-disorder-screening/">
@@ -1223,11 +915,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__title">
                                       Generalized Anxiety Disorder Test
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                               </div>
@@ -1242,11 +930,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__title">
                                       Adderal
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/location-served/usa/ativan-addiction-treatment/">
@@ -1254,11 +938,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__title">
                                       Ativan
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/location-served/usa/bath-salts-addiction-treatment/">
@@ -1266,11 +946,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__title">
                                       Bath Salts
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/location-served/usa/crack-cocaine/">
@@ -1278,11 +954,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__title">
                                       Crack Cocaine
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/location-served/usa/fentanyl-addiction-treatment/">
@@ -1290,11 +962,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__title">
                                       Fentanyl
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/location-served/usa/heroin-addiction-treatment/">
@@ -1302,11 +970,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__title">
                                       Heroin
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/location-served/usa/ketamine-addiction-treatment/">
@@ -1314,11 +978,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__title">
                                       Ketamine
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/location-served/usa/opioids-addiction-treatment/">
@@ -1326,11 +986,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__title">
                                       Opioid
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                                 <Link className="dbh-mega-card" href="/location-served/usa/xanax-addiction-treatment/">
@@ -1338,11 +994,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                     <span className="dbh-mega-card__title">
                                       Xanax
                                     </span>
-                                    <span className="dbh-mega-card__arrow" aria-hidden="true">
-                                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="#006CAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                      </svg>
-                                    </span>
+                                    <span className="dbh-mega-card__arrow" aria-hidden="true"></span>
                                   </div>
                                 </Link>
                               </div>

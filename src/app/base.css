@@ -2307,3 +2307,35 @@ ul { display: block; list-style-type: disc; margin-block-start: 1em; margin-bloc
    render at its natural size, so a larger source image (e.g. 300x300) blows up while
    64x64 ones look fine. Force the intended fixed avatar size across all pages. */
 .elementor-author-box__avatar img { width: 64px !important; height: 64px !important; object-fit: cover; }
+
+/* Mega-menu card arrow drawn via CSS mask on the wrapper span (no inline <svg>), so each
+   arrow is a single DOM node instead of span+svg+path. Removes ~2 nodes per card across
+   the whole mega-menu, which renders twice per page (desktop nav + mobile menu). Color and
+   1.5px stroke match the original #006CAE arrow exactly. */
+.dbh-mega-card__arrow {
+  width: 20px;
+  height: 20px;
+  background-color: #006CAE;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M4 10H16M16 10L11 5M16 10L11 15' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M4 10H16M16 10L11 5M16 10L11 15' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+/* Nav dropdown caret drawn via CSS mask on the wrapper span (no inline <svg>). Keeps the
+   existing rotate-on-open transition. 10x6, #006CAE, 1.5px stroke — matches the original. */
+.dbh-nav__caret {
+  width: 10px;
+  height: 6px;
+  background-color: #006CAE;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none'%3E%3Cpath d='M1 1L5 5L9 1' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none'%3E%3Cpath d='M1 1L5 5L9 1' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+/* Featured-blog card arrow (mega-menu) drawn via CSS mask on the wrapper span (no inline
+   <svg>). Same arrow shape as the card arrow, rendered at 16x16 / #006CAE. */
+.dbh-mega-blog-item__arrow {
+  width: 16px;
+  height: 16px;
+  background-color: #006CAE;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M4 10H16M16 10L11 5M16 10L11 15' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M4 10H16M16 10L11 5M16 10L11 15' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
+}
