@@ -18,9 +18,11 @@ export const metadata: Metadata = {
 
 // Body fonts self-hosted via next/font (no external request, no render-blocking, auto-preloaded).
 // Exposed as CSS variables that the Elementor stylesheets reference — see base.css / *.css.
+// Only the weights actually used across the site (no full 100-900 variable range,
+// no italic — figcaption's rare italic falls back to a synthesized oblique).
 const montserrat = Montserrat({
   subsets: ["latin"],
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
   variable: "--font-montserrat",
 });
@@ -51,7 +53,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="elementor-default elementor-page-0">
         <DeferredStylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?ver=7.0.1" />
-        <DeferredStylesheet href="https://cdn.trustindex.io/assets/widget-presetted-css/v2/80-light-background.css" />
+        {/* 80-light-background.css (TrustIndex preset) is loaded on-demand by
+            TrustIndexWidget when the reviews section nears the viewport. */}
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGF7WNCV" height="0" width="0" style={{display:"none",visibility:"hidden"}} /></noscript>
         <Header />
         <MobileMenu />
