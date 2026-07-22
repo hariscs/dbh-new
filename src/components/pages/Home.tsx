@@ -74,7 +74,7 @@ export default function Page() {
         <div className="e-con-inner">
           <div className="elementor-element elementor-element-197f243 elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="/images/9597b4f2b6401eb2038cf91cba4d74b9.webp" alt="Rectangle 1" width={402} height={425} priority sizes="(max-width: 767px) 100vw, 402px" className="attachment-full size-full wp-image-312" />
+              <Image src="/images/9597b4f2b6401eb2038cf91cba4d74b9.webp" alt="Rectangle 1" width={402} height={425} preload fetchPriority="high" loading="eager" sizes="(max-width: 767px) 100vw, 402px" className="attachment-full size-full wp-image-312" />
             </div>
           </div>
           <div className="elementor-element elementor-element-cc1e3df e-con-full e-flex e-con e-child">
