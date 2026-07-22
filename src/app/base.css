@@ -636,9 +636,9 @@ header.sticky-header.elementor-sticky--effects .menu-cta { transform: scale(1); 
    static sticky--effects scale above (equal specificity, later in the cascade).
    bbfbc92 is the desktop header (hidden on tablet/mobile), so this is desktop-only. */
 .elementor-location-header header.elementor-element-bbfbc92 .this-logo-sticky img,
-.elementor-location-header header.elementor-element-bbfbc92 .menu-cta { transform: scale(1); transition: transform var(--transition); }
-.elementor-location-header header.elementor-element-bbfbc92.dbh-hdr-grown .this-logo-sticky img,
-.elementor-location-header header.elementor-element-bbfbc92.dbh-hdr-grown .menu-cta { transform: scale(1.1); }
+.elementor-location-header header.elementor-element-bbfbc92 .menu-cta { transform: scale(0.95); transition: transform var(--transition); }
+.elementor-location-header header.elementor-element-bbfbc92.dbh-hdr-grown .this-logo-sticky img { transform: scale(1.1); }
+.elementor-location-header header.elementor-element-bbfbc92.dbh-hdr-grown .menu-cta { transform: scale(1); }
 @media only screen and (min-width: 1030px) {.elementor-26 .elementor-element.elementor-element-2427782 { display: none !important; }}
 @media only screen and (min-width: 1030px) {.elementor-26 .elementor-element.elementor-element-6e615ec { display: none !important; }}
 .elementor-117 .elementor-element.elementor-element-f7771bd { --display: flex; --flex-direction: column; --container-widget-width: 100%; --container-widget-height: initial; --container-widget-flex-grow: 0; --container-widget-align-self: initial; --flex-wrap-mobile: wrap; --gap: 50px 50px; --row-gap: 50px; --column-gap: 50px; --padding-top: 80px; --padding-bottom: 10px; --padding-left: 15px; --padding-right: 15px; }
