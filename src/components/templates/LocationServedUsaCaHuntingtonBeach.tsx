@@ -2,8 +2,10 @@ import React from 'react';
 import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Image from 'next/image';
 import Link from 'next/link';
+import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 
-export default function LocationServedUsaCaHuntingtonBeach(props: Record<string, string>) {
+export default function LocationServedUsaCaHuntingtonBeach({ fields = {}, relatedLinks }: TemplateProps) {
+  const props = fields;
   const geo = props.geo ?? "Huntington Beach";
   const brand = props.brand ?? "Distric Behavioral Health";
   const state = props.state ?? "CA";
@@ -3793,120 +3795,25 @@ export default function LocationServedUsaCaHuntingtonBeach(props: Record<string,
         </div>
       </div>
     </div>
-    <div className="elementor-element elementor-element-1e2507e e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
-      <div className="e-con-inner">
-        <div className="elementor-element elementor-element-b64af59 e-con-full e-flex e-con e-child">
-          <div className="elementor-element elementor-element-139f157 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-            <div className="elementor-widget-container">
-              <h2 className="elementor-heading-title elementor-size-default">
-                Related Pages
-              </h2>
-            </div>
-          </div>
-          <div className="elementor-element elementor-element-0bbba3f e-con-full e-flex e-con e-child">
-            <div className="elementor-element elementor-element-6919bb5 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
-              <div className="elementor-widget-container">
-                <div className="elementor-shortcode">
-                  <div className="cards-wrapper">
-                    <div className="cards" role="list">
-                      <article className="card" role="listitem" style={{"display":"block"}}>
-                        <Link href="/location-served/usa/ca/huntington-beach/drug-rehab/">
-                          <h3>
-                            {geo} Drug {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"block"}}>
-                        <Link href="/location-served/usa/ca/huntington-beach/outpatient-drug-rehab/">
-                          <h3>
-                            {geo} Outpatient {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"block"}}>
-                        <Link href="/location-served/usa/ca/huntington-beach/virtual-iop/">
-                          <h3>
-                            {geo} Virtual {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"block"}}>
-                        <Link href="/location-served/usa/ca/huntington-beach/php-drug-rehab/">
-                          <h3>
-                            {geo} PHP {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/huntington-beach/sober-living/">
-                          <h3>
-                            {geo} Sober Living Housing (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/huntington-beach/adhd/">
-                          <h3>
-                            {geo} ADHD Therapy (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/huntington-beach/premenstrual-dysphoric-disorder/">
-                          <h3>
-                            {geo} Premenstrual Dysphoric Disorder Treatment (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/huntington-beach/adjustment/">
-                          <h3>
-                            {geo} Adjustment Disorder (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/huntington-beach/borderline-personality-disorder/">
-                          <h3>
-                            {geo} Borderline Personality Disorder Treatment (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/huntington-beach/personality-disorder/">
-                          <h3>
-                            {geo} Personality Disorder Treatment (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/huntington-beach/neurodevelopment-disorder/">
-                          <h3>
-                            {geo} Neurodevelopment Disorder Treatment (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/iop-drug-rehab/what-is-it/">
-                          <h3>
-                            Intensive Outpatient Program: What is {topic_1}
-                          </h3>
-                        </Link>
-                      </article>
-                    </div>
-                    <div id="button-wrapper">
-                      <button id="relatedloadMoreBtn">
-                        Load More
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <RelatedLinks
+      variant="nested"
+      ids={{ section: '1e2507e', outerChild: 'b64af59', heading: '139f157', innerChild: '0bbba3f', shortcode: '6919bb5' }}
+      heading="Related Pages"
+      cards={relatedLinks ?? [
+        { href: '/location-served/usa/ca/huntington-beach/drug-rehab/', title: <>{geo} Drug {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/huntington-beach/outpatient-drug-rehab/', title: <>{geo} Outpatient {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/huntington-beach/virtual-iop/', title: <>{geo} Virtual {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/huntington-beach/php-drug-rehab/', title: <>{geo} PHP {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/huntington-beach/sober-living/', title: <>{geo} Sober Living Housing (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/huntington-beach/adhd/', title: <>{geo} ADHD Therapy (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/huntington-beach/premenstrual-dysphoric-disorder/', title: <>{geo} Premenstrual Dysphoric Disorder Treatment (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/huntington-beach/adjustment/', title: <>{geo} Adjustment Disorder (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/huntington-beach/borderline-personality-disorder/', title: <>{geo} Borderline Personality Disorder Treatment (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/huntington-beach/personality-disorder/', title: <>{geo} Personality Disorder Treatment (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/huntington-beach/neurodevelopment-disorder/', title: <>{geo} Neurodevelopment Disorder Treatment (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/iop-drug-rehab/what-is-it/', title: <>Intensive Outpatient Program: What is {topic_1}</> },
+      ]}
+    />
     <div className="elementor-element elementor-element-c49a583 e-flex e-con-boxed e-con e-parent e-lazyloaded">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-4a33ab5 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">

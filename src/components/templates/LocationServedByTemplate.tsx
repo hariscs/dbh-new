@@ -1,5 +1,6 @@
 import LocationServedUsa from "./LocationServedUsa";
 import LocationServedUsaAlcohol from "./LocationServedUsaAlcohol";
+import type { RelatedCard } from "@/components/RelatedLinks";
 
 // Normalize a builder `fields.template` value so ordering/casing/spacing don't matter:
 // "Blog, CRO1" and "CRO1, Blog" both become "blog|cro1".
@@ -25,12 +26,15 @@ const ALCOHOL_TEMPLATES = new Set(["Blog, CRO1", "CRO1, Blog"].map(normalize));
 export default function LocationServedByTemplate({
   fields,
   createdAt,
+  relatedLinks,
 }: {
   fields: Record<string, string>;
   createdAt?: string;
+  relatedLinks?: RelatedCard[] | null;
 }) {
   if (ALCOHOL_TEMPLATES.has(normalize(fields.template ?? ""))) {
+    // the alcohol template's section is "Related Blogs", which stays hardcoded
     return <LocationServedUsaAlcohol {...fields} createdAt={createdAt ?? ""} />;
   }
-  return <LocationServedUsa {...fields} />;
+  return <LocationServedUsa fields={fields} relatedLinks={relatedLinks} />;
 }

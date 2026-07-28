@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { RelatedLinks } from '@/components/RelatedLinks';
 
 export default function LocationServedUsaAlcohol(props: Record<string, string>) {
   const topic_2 = props.topic_2 ?? "Addiction";
@@ -1145,67 +1146,18 @@ export default function LocationServedUsaAlcohol(props: Record<string, string>) 
       </div>
     </div>
       
-      <div className="elementor-element elementor-element-7a3a748 interlinking-section e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
-      <div className="e-con-inner">
-        <div className="elementor-element elementor-element-b708b91 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-          <div className="elementor-widget-container">
-            <h2 className="elementor-heading-title elementor-size-default">
-              Related Blogs
-            </h2>
-          </div>
-        </div>
-        <div className="elementor-element elementor-element-51273dd interlinking-shortcode__widget elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
-          <div className="elementor-widget-container">
-            <div className="elementor-shortcode">
-              <div className="cards-wrapper">
-                <div className="cards" role="list">
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/location-served/usa/alcohol/withdrawal/">
-                      <h3>
-                        Alcohol Withdrawal: Causes, Symptoms, Timeline, & Treatment
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/location-served/usa/acute-stress-disorder/">
-                      <h3>
-                        Acute Stress Disorder (ASD): Symptoms, Causes, & Treatment
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/location-served/usa/alcohol-disorder/">
-                      <h3>
-                        Alcohol Use Disorder Treatment Program
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/location-served/usa/mixing/risks-of-mixing-seroquel-and-alcohol/">
-                      <h3>
-                        Seroquel and Alcohol: The Risks of Mixing
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/alcohol/how-long-in-your-system/">
-                      <h3>
-                        How Long Does Alcohol Stay in Your System?
-                      </h3>
-                    </Link>
-                  </article>
-                </div>
-                <div id="button-wrapper">
-                  <button id="relatedloadMoreBtn">
-                    Load More
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <RelatedLinks
+        variant="flat"
+        ids={{ section: '7a3a748', heading: 'b708b91', shortcode: '51273dd' }}
+        heading="Related Blogs"
+        cards={[
+          { href: '/location-served/usa/alcohol/withdrawal/', title: <>Alcohol Withdrawal: Causes, Symptoms, Timeline, & Treatment</> },
+          { href: '/location-served/usa/acute-stress-disorder/', title: <>Acute Stress Disorder (ASD): Symptoms, Causes, & Treatment</> },
+          { href: '/location-served/usa/alcohol-disorder/', title: <>Alcohol Use Disorder Treatment Program</> },
+          { href: '/location-served/usa/mixing/risks-of-mixing-seroquel-and-alcohol/', title: <>Seroquel and Alcohol: The Risks of Mixing</> },
+          { href: '/location-served/usa/alcohol/how-long-in-your-system/', title: <>How Long Does Alcohol Stay in Your System?</> },
+        ]}
+      />
     <div className="elementor-element elementor-element-eef6312 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-90fd597 e-con-full e-flex e-con e-child">

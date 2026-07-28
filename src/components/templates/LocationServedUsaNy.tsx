@@ -2,8 +2,10 @@ import React from 'react';
 import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Image from 'next/image';
 import Link from 'next/link';
+import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 
-export default function LocationServedUsaNy(props: Record<string, string>) {
+export default function LocationServedUsaNy({ fields = {}, relatedLinks }: TemplateProps) {
+  const props = fields;
   const h1 = props.h1 ?? "Escape New York To Our PHP Rehab Centers Across The County";
   const geo = props.geo ?? "New York";
   const brand = props.brand ?? "Distric Behavioral Health";
@@ -4147,204 +4149,37 @@ export default function LocationServedUsaNy(props: Record<string, string>) {
           </div>
         </div>
       )}
-      <div className="elementor-element elementor-element-1e2507e e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
-      <div className="e-con-inner">
-        <div className="elementor-element elementor-element-b64af59 e-con-full e-flex e-con e-child">
-          <div className="elementor-element elementor-element-139f157 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-            <div className="elementor-widget-container">
-              <h2 className="elementor-heading-title elementor-size-default">
-                Related Pages
-              </h2>
-            </div>
-          </div>
-          <div className="elementor-element elementor-element-0bbba3f e-con-full e-flex e-con e-child">
-            <div className="elementor-element elementor-element-6919bb5 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
-              <div className="elementor-widget-container">
-                <div className="elementor-shortcode">
-                  <div className="cards-wrapper">
-                    <div className="cards" role="list">
-                      <article className="card" role="listitem" style={{"display":"block"}}>
-                        <Link href="/location-served/usa/ny/drug-rehab/">
-                          <h3>
-                            Escape {geo} To Our Drug {topic_2} Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"block"}}>
-                        <Link href="/location-served/usa/ny/outpatient-drug-rehab/">
-                          <h3>
-                            Escape {geo} To Our Outpatient {topic_2} Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"block"}}>
-                        <Link href="/location-served/usa/ny/iop-drug-rehab/">
-                          <h3>
-                            Escape {geo} To Our IOP {topic_2} Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"block"}}>
-                        <Link href="/location-served/usa/ny/virtual-iop/">
-                          <h3>
-                            Escape {geo} To Our Virtual IOP {topic_2} Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ny/sober-living/">
-                          <h3>
-                            Escape {geo} To Our Sober Living Housing Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ny/premenstrual-dysphoric-disorder/">
-                          <h3>
-                            Escape {geo} To Our Premenstrual Dysphoric Disorder Treatment Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ny/adhd/">
-                          <h3>
-                            Escape {geo} To Our ADHD Therapy Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ny/neurodevelopment-disorder-2/">
-                          <h3>
-                            Escape {geo} To Our Neurodevelopment Disorder Treatment Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ny/adjustment/">
-                          <h3>
-                            Escape {geo} To Our Adjustment Disorder Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ny/borderline-personality-disorder/">
-                          <h3>
-                            Escape {geo} To Our Borderline Personality Disorder Treatment Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ny/personality-disorder/">
-                          <h3>
-                            Escape {geo} To Our Personality Disorder Treatment Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ny/neurodevelopment-disorder/">
-                          <h3>
-                            Escape {geo} To Our Neurodevelopment Disorder Treatment Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/tn/nashville/php-drug-rehab/">
-                          <h3>
-                            Nashville {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/lantana/php-drug-rehab/">
-                          <h3>
-                            Lantana {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/lake-worth/php-drug-rehab/">
-                          <h3>
-                            Lake Worth {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/php-drug-rehab/">
-                          <h3>
-                            Delray {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/php-drug-rehab/">
-                          <h3>
-                            Palm Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/newport-beach/php-drug-rehab/">
-                          <h3>
-                            Newport Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/laguna-beach/php-drug-rehab/">
-                          <h3>
-                            Laguna Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/huntington-beach/php-drug-rehab/">
-                          <h3>
-                            Huntington Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/fountain-valley/php-drug-rehab/">
-                          <h3>
-                            Fountain Valley {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/long-beach/php-drug-rehab/">
-                          <h3>
-                            Long Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/orange-county/php-drug-rehab/">
-                          <h3>
-                            {address_county} {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/los-angeles/php-drug-rehab/">
-                          <h3>
-                            Los Angeles {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                    </div>
-                    <div id="button-wrapper">
-                      <button id="relatedloadMoreBtn">
-                        Load More
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <RelatedLinks
+        variant="nested"
+        ids={{ section: '1e2507e', outerChild: 'b64af59', heading: '139f157', innerChild: '0bbba3f', shortcode: '6919bb5' }}
+        heading="Related Pages"
+        cards={relatedLinks ?? [
+          { href: '/location-served/usa/ny/drug-rehab/', title: <>Escape {geo} To Our Drug {topic_2} Centers Across The County</> },
+          { href: '/location-served/usa/ny/outpatient-drug-rehab/', title: <>Escape {geo} To Our Outpatient {topic_2} Centers Across The County</> },
+          { href: '/location-served/usa/ny/iop-drug-rehab/', title: <>Escape {geo} To Our IOP {topic_2} Centers Across The County</> },
+          { href: '/location-served/usa/ny/virtual-iop/', title: <>Escape {geo} To Our Virtual IOP {topic_2} Centers Across The County</> },
+          { href: '/location-served/usa/ny/sober-living/', title: <>Escape {geo} To Our Sober Living Housing Centers Across The County</> },
+          { href: '/location-served/usa/ny/premenstrual-dysphoric-disorder/', title: <>Escape {geo} To Our Premenstrual Dysphoric Disorder Treatment Centers Across The County</> },
+          { href: '/location-served/usa/ny/adhd/', title: <>Escape {geo} To Our ADHD Therapy Centers Across The County</> },
+          { href: '/location-served/usa/ny/neurodevelopment-disorder-2/', title: <>Escape {geo} To Our Neurodevelopment Disorder Treatment Centers Across The County</> },
+          { href: '/location-served/usa/ny/adjustment/', title: <>Escape {geo} To Our Adjustment Disorder Centers Across The County</> },
+          { href: '/location-served/usa/ny/borderline-personality-disorder/', title: <>Escape {geo} To Our Borderline Personality Disorder Treatment Centers Across The County</> },
+          { href: '/location-served/usa/ny/personality-disorder/', title: <>Escape {geo} To Our Personality Disorder Treatment Centers Across The County</> },
+          { href: '/location-served/usa/ny/neurodevelopment-disorder/', title: <>Escape {geo} To Our Neurodevelopment Disorder Treatment Centers Across The County</> },
+          { href: '/location-served/usa/tn/nashville/php-drug-rehab/', title: <>Nashville {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+          { href: '/location-served/usa/fl/lantana/php-drug-rehab/', title: <>Lantana {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+          { href: '/location-served/usa/fl/lake-worth/php-drug-rehab/', title: <>Lake Worth {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+          { href: '/location-served/usa/fl/php-drug-rehab/', title: <>Delray {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+          { href: '/location-served/usa/fl/php-drug-rehab/', title: <>Palm Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+          { href: '/location-served/usa/ca/newport-beach/php-drug-rehab/', title: <>Newport Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+          { href: '/location-served/usa/ca/laguna-beach/php-drug-rehab/', title: <>Laguna Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+          { href: '/location-served/usa/ca/huntington-beach/php-drug-rehab/', title: <>Huntington Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+          { href: '/location-served/usa/ca/fountain-valley/php-drug-rehab/', title: <>Fountain Valley {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+          { href: '/location-served/usa/ca/long-beach/php-drug-rehab/', title: <>Long Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+          { href: '/location-served/usa/ca/orange-county/php-drug-rehab/', title: <>{address_county} {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+          { href: '/location-served/usa/ca/los-angeles/php-drug-rehab/', title: <>Los Angeles {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        ]}
+      />
     <div className="elementor-element elementor-element-c49a583 e-flex e-con-boxed e-con e-parent e-lazyloaded">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-4a33ab5 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">

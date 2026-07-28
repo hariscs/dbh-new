@@ -6,7 +6,7 @@ import "../alcohol/[slug]/page.css";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import LocationServedByTemplate from "@/components/templates/LocationServedByTemplate";
-import { fetchPageData } from "@/lib/wordpress";
+import { fetchPageData, fetchInterlinking } from "@/lib/wordpress";
 
 export const revalidate = 60;
 export const dynamicParams = true;
@@ -45,7 +45,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const data = await fetchPageData(`${BASE_PATH}/${slug}`);
+  const [data, relatedLinks] = await Promise.all([
+    fetchPageData(`${BASE_PATH}/${slug}`),
+    fetchInterlinking(`${BASE_PATH}/${slug}`),
+  ]);
   if (!data) notFound();
-  return <LocationServedByTemplate fields={data.fields} createdAt={data.meta.createdAt} />;
+  return <LocationServedByTemplate fields={data.fields} createdAt={data.meta.createdAt} relatedLinks={relatedLinks} />;
 }

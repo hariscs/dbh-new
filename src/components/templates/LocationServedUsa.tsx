@@ -2,8 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Link from 'next/link';
+import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 
-export default function LocationServedUsa(props: Record<string, string>) {
+export default function LocationServedUsa({ fields = {}, relatedLinks }: TemplateProps) {
+  const props = fields;
   const geo = props.geo ?? "National";
   const topic_1 = props.topic_1 ?? "Sober Living";
   // Only show the h2 section (57830ff4 — heading + intro) when h2___con has content.
@@ -1787,445 +1789,72 @@ export default function LocationServedUsa(props: Record<string, string>) {
         </div>
       </div>
     </div>
-    <div className="elementor-element elementor-element-cd42b9b interlinking-section e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
-      <div className="e-con-inner">
-        <div className="elementor-element elementor-element-38f294a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-          <div className="elementor-widget-container">
-            <h2 className="elementor-heading-title elementor-size-default">
-              Related Pages
-            </h2>
-          </div>
-        </div>
-        <div className="elementor-element elementor-element-517da75 interlinking-shortcode__widget elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
-          <div className="elementor-widget-container">
-            <div className="elementor-shortcode">
-              <div className="cards-wrapper">
-                <div className="cards" role="list">
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/location-served/usa/adhd/">
-                      <h3>
-                        ADHD Therapy Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/location-served/usa/premenstrual-dysphoric-disorder/">
-                      <h3>
-                        Premenstrual Dysphoric Disorder Treatment Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/location-served/usa/adjustment/">
-                      <h3>
-                        Adjustment Disorder Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/location-served/usa/borderline-personality-disorder/">
-                      <h3>
-                          Borderline Personality Disorder Treatment Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/personality-disorder/">
-                      <h3>
-                        Personality Disorder Treatment Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/neurodevelopment-disorder/">
-                      <h3>
-                        Neurodevelopment Disorder Treatment Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/virtual-iop/">
-                      <h3>
-                          Virtual IOP Rehab Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/drug-rehab/">
-                      <h3>
-                        Drug Rehab Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/php-drug-rehab/">
-                      <h3>
-                        PHP Rehab Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/iop-drug-rehab/">
-                      <h3>
-                        IOP Rehab Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/outpatient-drug-rehab/">
-                      <h3>
-                          Outpatient Rehab Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/lgbtq-drug-rehab/">
-                      <h3>
-                        LGBTQ Rehab Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/pet-friendly-rehab/">
-                      <h3>
-                        Pet Friendly Rehab Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/couples-rehab/">
-                      <h3>
-                        Couples Rehab Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/nitazene-addiction-treatment/">
-                      <h3>
-                        Nitazene Treatment] Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/ketamine-addiction-treatment/">
-                      <h3>
-                        Ketamine Treatment Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/xanax-addiction-treatment/">
-                      <h3>
-                        Best Xanax Rehab Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/benzo-addiction-treatment/">
-                      <h3>
-                        Best Benzo Rehab Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/fentanyl-addiction-treatment/">
-                      <h3>
-                        Best Fentanyl Rehab Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/marijuana-addiction-treatment/">
-                      <h3>
-                        Marijuana Treatment Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/kratom-addiction-treatment/">
-                      <h3>
-                        Best Kratom Rehab Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/cocaine-addiction-treatment/">
-                      <h3>
-                        Best Cocaine Rehab Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/meth-addiction-treatment/">
-                      <h3>
-                        Meth Treatment Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/emdr-therapy/">
-                      <h3>
-                        EMDR Therapy Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/dbt-therapy/">
-                      <h3>
-                        Best DBT Therapy Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/cbt-therapy/">
-                      <h3>
-                        Best CBT Therapy Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/mat-therapy/">
-                      <h3>
-                        MAT Therapy Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/dual-diagnosis-treatment/">
-                      <h3>
-                        Best Dual Diagnosis Rehab Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/psycho-dynamic/">
-                      <h3>
-                        Psycho Dynamic Therapy Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/dissociative-identity/">
-                      <h3>
-                        Dissociative Identity Disorder Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/social/">
-                      <h3>
-                        Social Anxiety Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/antisocial-personality/">
-                      <h3>
-                        Antisocial Personality Disorder Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/family/">
-                      <h3>
-                        Family Therapy Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/motivational/">
-                      <h3>
-                        Motivational Interview Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/act/">
-                      <h3>
-                        ACT Therapy Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/ifs/">
-                      <h3>
-                        IFS Therapy Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/panic-disorder/">
-                      <h3>
-                        Panic Disorder Treatment Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/trauma/">
-                      <h3>
-                        Trauma Treatment Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/cpt/">
-                      <h3>
-                        CPT Therapy Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/schizophrenia/">
-                      <h3>
-                        Schizophrenia Treatment Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/schizoaffective-disorder/">
-                      <h3>
-                        Schizoaffective Disorder Treatment Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/depression/">
-                      <h3>
-                        Depression Treatment Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/anxiety/">
-                      <h3>
-                        Anxiety Treatment Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/ptsd/">
-                      <h3>
-                        PTSD Treatment Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/bipolar/">
-                      <h3>
-                        Bipolar Disorder Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/obsessive-compulsive/">
-                      <h3>
-                        Obsessive Compulsive Disorder Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/mental-health/">
-                      <h3>
-                        Mental Health  Across the Country (Highly Reviewed & Awarded)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/ny/sober-living/">
-                      <h3>
-                        Escape New York To Our {topic_1} {topic_2} Centers Across The County
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/tn/sober-living/">
-                      <h3>
-                        Tennessee {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/fl/sober-living/">
-                      <h3>
-                        Florida {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/ca/sober-living/">
-                      <h3>
-                        California {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/tn/nashville/sober-living/">
-                      <h3>
-                        Nashville {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/fl/lantana/sober-living/">
-                      <h3>
-                        Lantana {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/fl/lake-worth/sober-living/">
-                      <h3>
-                        Lake Worth {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/fl/sober-living/">
-                      <h3>
-                        Delray {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/ca/newport-beach/sober-living/">
-                      <h3>
-                        Newport Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/ca/laguna-beach/sober-living/">
-                      <h3>
-                        Laguna Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/ca/huntington-beach/sober-living/">
-                      <h3>
-                        Huntington Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/location-served/usa/ca/fountain-valley/sober-living/">
-                      <h3>
-                        Fountain Valley {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                      </h3>
-                    </Link>
-                  </article>
-                </div>
-                <div id="button-wrapper">
-                  <button id="relatedloadMoreBtn">
-                    Load More
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <RelatedLinks
+      variant="flat"
+      ids={{ section: 'cd42b9b', heading: '38f294a', shortcode: '517da75' }}
+      heading="Related Pages"
+      cards={relatedLinks ?? [
+        { href: '/location-served/usa/adhd/', title: <>ADHD Therapy Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/premenstrual-dysphoric-disorder/', title: <>Premenstrual Dysphoric Disorder Treatment Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/adjustment/', title: <>Adjustment Disorder Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/borderline-personality-disorder/', title: <>Borderline Personality Disorder Treatment Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/personality-disorder/', title: <>Personality Disorder Treatment Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/neurodevelopment-disorder/', title: <>Neurodevelopment Disorder Treatment Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/virtual-iop/', title: <>Virtual IOP Rehab Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/drug-rehab/', title: <>Drug Rehab Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/php-drug-rehab/', title: <>PHP Rehab Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/iop-drug-rehab/', title: <>IOP Rehab Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/outpatient-drug-rehab/', title: <>Outpatient Rehab Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/lgbtq-drug-rehab/', title: <>LGBTQ Rehab Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/pet-friendly-rehab/', title: <>Pet Friendly Rehab Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/couples-rehab/', title: <>Couples Rehab Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/nitazene-addiction-treatment/', title: <>Nitazene Treatment] Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/ketamine-addiction-treatment/', title: <>Ketamine Treatment Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/xanax-addiction-treatment/', title: <>Best Xanax Rehab Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/benzo-addiction-treatment/', title: <>Best Benzo Rehab Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/fentanyl-addiction-treatment/', title: <>Best Fentanyl Rehab Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/marijuana-addiction-treatment/', title: <>Marijuana Treatment Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/kratom-addiction-treatment/', title: <>Best Kratom Rehab Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/cocaine-addiction-treatment/', title: <>Best Cocaine Rehab Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/meth-addiction-treatment/', title: <>Meth Treatment Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/emdr-therapy/', title: <>EMDR Therapy Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/dbt-therapy/', title: <>Best DBT Therapy Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/cbt-therapy/', title: <>Best CBT Therapy Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/mat-therapy/', title: <>MAT Therapy Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/dual-diagnosis-treatment/', title: <>Best Dual Diagnosis Rehab Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/psycho-dynamic/', title: <>Psycho Dynamic Therapy Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/dissociative-identity/', title: <>Dissociative Identity Disorder Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/social/', title: <>Social Anxiety Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/antisocial-personality/', title: <>Antisocial Personality Disorder Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/family/', title: <>Family Therapy Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/motivational/', title: <>Motivational Interview Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/act/', title: <>ACT Therapy Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/ifs/', title: <>IFS Therapy Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/panic-disorder/', title: <>Panic Disorder Treatment Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/trauma/', title: <>Trauma Treatment Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/cpt/', title: <>CPT Therapy Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/schizophrenia/', title: <>Schizophrenia Treatment Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/schizoaffective-disorder/', title: <>Schizoaffective Disorder Treatment Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/depression/', title: <>Depression Treatment Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/anxiety/', title: <>Anxiety Treatment Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/ptsd/', title: <>PTSD Treatment Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/bipolar/', title: <>Bipolar Disorder Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/obsessive-compulsive/', title: <>Obsessive Compulsive Disorder Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/mental-health/', title: <>Mental Health  Across the Country (Highly Reviewed & Awarded)</> },
+        { href: '/location-served/usa/ny/sober-living/', title: <>Escape New York To Our {topic_1} {topic_2} Centers Across The County</> },
+        { href: '/location-served/usa/tn/sober-living/', title: <>Tennessee {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/sober-living/', title: <>Florida {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/sober-living/', title: <>California {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/tn/nashville/sober-living/', title: <>Nashville {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/lantana/sober-living/', title: <>Lantana {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/lake-worth/sober-living/', title: <>Lake Worth {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/sober-living/', title: <>Delray {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/newport-beach/sober-living/', title: <>Newport Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/laguna-beach/sober-living/', title: <>Laguna Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/huntington-beach/sober-living/', title: <>Huntington Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/fountain-valley/sober-living/', title: <>Fountain Valley {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+      ]}
+    />
     <div className="elementor-element elementor-element-1d21950 e-flex e-con-boxed e-con e-parent" id="verifyinsurance" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-d843c0a elementor-hidden-desktop elementor-widget elementor-widget-menu-anchor" data-widget_type="menu-anchor.default">

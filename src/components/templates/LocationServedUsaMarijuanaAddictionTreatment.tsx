@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { RelatedLinks } from '@/components/RelatedLinks';
 
 export default function LocationServedUsaMarijuanaAddictionTreatment(props: Record<string, string>) {
   const h1 = props.h1 ?? "How to Recover From Edibles? 10 Tips to Quick Recovery";
@@ -493,29 +494,13 @@ export default function LocationServedUsaMarijuanaAddictionTreatment(props: Reco
         </div>
       </div>
     </div>
-    <div className="elementor-element elementor-element-7a3a748 interlinking-section e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
-      <div className="e-con-inner">
-        <div className="elementor-element elementor-element-b708b91 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-          <div className="elementor-widget-container">
-            <h2 className="elementor-heading-title elementor-size-default">
-              Related Blogs
-            </h2>
-          </div>
-        </div>
-        <div className="elementor-element elementor-element-e92e876 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-          <div className="elementor-widget-container">
-            <p>
-              Check out our addiction recovery blog to learn more about substance use disorders and how to get effective treatment.
-            </p>
-          </div>
-        </div>
-        <div className="elementor-element elementor-element-51273dd interlinking-shortcode__widget elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
-          <div className="elementor-widget-container">
-            <div className="elementor-shortcode"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <RelatedLinks
+      variant="flat"
+      ids={{ section: '7a3a748', heading: 'b708b91', text: 'e92e876', shortcode: '51273dd' }}
+      heading="Related Blogs"
+      description="Check out our addiction recovery blog to learn more about substance use disorders and how to get effective treatment."
+      cards={[]}
+    />
     <div className="elementor-element elementor-element-eef6312 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-90fd597 e-con-full e-flex e-con e-child">

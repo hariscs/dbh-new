@@ -2,8 +2,9 @@ import React from 'react';
 import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Image from 'next/image';
 import Link from 'next/link';
+import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 
-export default function Page() {
+export default function Page({ relatedLinks }: TemplateProps) {
   return (
     <>
     <div className="home wp-singular page-template page-template-elementor_header_footer page page-id-11 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-theme-child-master hello-elementor-default elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-11 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit">
@@ -2610,298 +2611,51 @@ A Lifelong Support System.
           <div className="elementor-element elementor-element-0d27ce3 e-con-full e-flex e-con e-child">
           </div>
         </div>
-        <div className="elementor-element elementor-element-a9a82a4 interlinking-section e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-element-2a7fa48 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-              <div className="elementor-widget-container">
-                <h2 className="elementor-heading-title elementor-size-default">
-                  Related Pages
-                </h2>
-              </div>
-            </div>
-            <div className="elementor-element elementor-element-d07969f interlinking-shortcode__widget elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
-              <div className="elementor-widget-container">
-                <div className="elementor-shortcode">
-                  <div className="cards-wrapper">
-                    <div className="cards" role="list">
-                      <article className="card" role="listitem" style={{"display":"block"}}>
-                        <Link href="/location-served/usa/ny/drug-rehab/">
-                          <h3>
-                            Escape New York To Our Drug Rehab Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"block"}}>
-                        <Link href="/location-served/usa/tn/drug-rehab/">
-                          <h3>
-                            Tennessee Drug Rehab (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"block"}}>
-                        <Link href="/location-served/usa/fl/drug-rehab/">
-                          <h3>
-                            Florida Drug Rehab (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"block"}}>
-                        <Link href="/location-served/usa/ny/premenstrual-dysphoric-disorder/">
-                          <h3>
-                            Escape New York To Our Premenstrual Dysphoric Disorder Treatment Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ny/adhd/">
-                          <h3>
-                            Escape New York To Our ADHD Therapy Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ny/neurodevelopment-disorder-2/">
-                          <h3>
-                            Escape New York To Our Neurodevelopment Disorder Treatment Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ny/adjustment/">
-                          <h3>
-                            Escape New York To Our Adjustment Disorder Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ny/borderline-personality-disorder/">
-                          <h3>
-                            Escape New York To Our Borderline Personality Disorder Treatment Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ny/personality-disorder/">
-                          <h3>
-                            Escape New York To Our Personality Disorder Treatment Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ny/sober-living/">
-                          <h3>
-                            Escape New York To Our Sober Living Housing Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ny/php-drug-rehab/">
-                          <h3>
-                            Escape New York To Our PHP Rehab Centers Across The County
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/newport-beach/adhd/">
-                          <h3>
-                            Newport Beach ADHD Therapy (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/tn/nashville/adhd/">
-                          <h3>
-                            Nashville ADHD Therapy (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/lantana/adhd/">
-                          <h3>
-                            Lantana ADHD Therapy (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/lake-worth/adhd/">
-                          <h3>
-                            Lake Worth ADHD Therapy (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/adhd/">
-                          <h3>
-                            Delray ADHD Therapy (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/laguna-beach/adhd/">
-                          <h3>
-                            Laguna Beach ADHD Therapy (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/huntington-beach/adhd/">
-                          <h3>
-                            Huntington Beach ADHD Therapy (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/fountain-valley/adhd/">
-                          <h3>
-                            Fountain Valley ADHD Therapy (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/long-beach/adhd/">
-                          <h3>
-                            Long Beach ADHD Therapy (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/tn/nashville/premenstrual-dysphoric-disorder/">
-                          <h3>
-                            Nashville Premenstrual Dysphoric Disorder Treatment (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/tn/nashville/drug-rehab/">
-                          <h3>
-                            Nashville Drug Rehab (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/lantana/drug-rehab/">
-                          <h3>
-                            Lantana Drug Rehab (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/lake-worth/drug-rehab/">
-                          <h3>
-                            Lake Worth Drug Rehab (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/drug-rehab/">
-                          <h3>
-                            Delray Drug Rehab (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/drug-rehab/">
-                          <h3>
-                            Palm Beach Drug Rehab (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/newport-beach/drug-rehab/">
-                          <h3>
-                            Newport Beach Drug Rehab (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/laguna-beach/drug-rehab/">
-                          <h3>
-                            Laguna Beach Drug Rehab (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/huntington-beach/drug-rehab/">
-                          <h3>
-                            Huntington Beach Drug Rehab (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/fountain-valley/drug-rehab/">
-                          <h3>
-                            Fountain Valley Drug Rehab (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/long-beach/drug-rehab/">
-                          <h3>
-                            Long Beach Drug Rehab (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/orange-county/drug-rehab/">
-                          <h3>
-                            Orange County Drug Rehab (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/los-angeles/drug-rehab/">
-                          <h3>
-                            Los Angeles Drug Rehab (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fentanyl-addiction-treatment/fenty-fold/">
-                          <h3>
-                            What is the “Fenty Fold?” Recovered Fentanyl Users Weigh In
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/clonazepam-addiction-treatment/">
-                          <h3>
-                            Clonazepam Addiction: Signs, Dependence, and Treatment Options
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/clonidine-addiction-treatment/">
-                          <h3>
-                            Clonidine Addiction: Risks, Withdrawal, and Treatment
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/codeine-addiction-treatment/">
-                          <h3>
-                            Understanding Codeine Addiction
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/buprenorphine-addiction-treatment/">
-                          <h3>
-                            Buprenorphine Addiction: Clinical Guide
-                          </h3>
-                        </Link>
-                      </article>
-                    </div>
-                    <div id="button-wrapper">
-                      <button id="relatedloadMoreBtn">
-                        Load More
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <RelatedLinks
+          variant="flat"
+          ids={{ section: 'a9a82a4', heading: '2a7fa48', shortcode: 'd07969f' }}
+          heading="Related Pages"
+          cards={relatedLinks ?? [
+            { href: '/location-served/usa/ny/drug-rehab/', title: <>Escape New York To Our Drug Rehab Centers Across The County</> },
+            { href: '/location-served/usa/tn/drug-rehab/', title: <>Tennessee Drug Rehab (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/fl/drug-rehab/', title: <>Florida Drug Rehab (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/ny/premenstrual-dysphoric-disorder/', title: <>Escape New York To Our Premenstrual Dysphoric Disorder Treatment Centers Across The County</> },
+            { href: '/location-served/usa/ny/adhd/', title: <>Escape New York To Our ADHD Therapy Centers Across The County</> },
+            { href: '/location-served/usa/ny/neurodevelopment-disorder-2/', title: <>Escape New York To Our Neurodevelopment Disorder Treatment Centers Across The County</> },
+            { href: '/location-served/usa/ny/adjustment/', title: <>Escape New York To Our Adjustment Disorder Centers Across The County</> },
+            { href: '/location-served/usa/ny/borderline-personality-disorder/', title: <>Escape New York To Our Borderline Personality Disorder Treatment Centers Across The County</> },
+            { href: '/location-served/usa/ny/personality-disorder/', title: <>Escape New York To Our Personality Disorder Treatment Centers Across The County</> },
+            { href: '/location-served/usa/ny/sober-living/', title: <>Escape New York To Our Sober Living Housing Centers Across The County</> },
+            { href: '/location-served/usa/ny/php-drug-rehab/', title: <>Escape New York To Our PHP Rehab Centers Across The County</> },
+            { href: '/location-served/usa/ca/newport-beach/adhd/', title: <>Newport Beach ADHD Therapy (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/tn/nashville/adhd/', title: <>Nashville ADHD Therapy (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/fl/lantana/adhd/', title: <>Lantana ADHD Therapy (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/fl/lake-worth/adhd/', title: <>Lake Worth ADHD Therapy (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/fl/adhd/', title: <>Delray ADHD Therapy (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/ca/laguna-beach/adhd/', title: <>Laguna Beach ADHD Therapy (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/ca/huntington-beach/adhd/', title: <>Huntington Beach ADHD Therapy (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/ca/fountain-valley/adhd/', title: <>Fountain Valley ADHD Therapy (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/ca/long-beach/adhd/', title: <>Long Beach ADHD Therapy (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/tn/nashville/premenstrual-dysphoric-disorder/', title: <>Nashville Premenstrual Dysphoric Disorder Treatment (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/tn/nashville/drug-rehab/', title: <>Nashville Drug Rehab (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/fl/lantana/drug-rehab/', title: <>Lantana Drug Rehab (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/fl/lake-worth/drug-rehab/', title: <>Lake Worth Drug Rehab (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/fl/drug-rehab/', title: <>Delray Drug Rehab (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/fl/drug-rehab/', title: <>Palm Beach Drug Rehab (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/ca/newport-beach/drug-rehab/', title: <>Newport Beach Drug Rehab (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/ca/laguna-beach/drug-rehab/', title: <>Laguna Beach Drug Rehab (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/ca/huntington-beach/drug-rehab/', title: <>Huntington Beach Drug Rehab (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/ca/fountain-valley/drug-rehab/', title: <>Fountain Valley Drug Rehab (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/ca/long-beach/drug-rehab/', title: <>Long Beach Drug Rehab (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/ca/orange-county/drug-rehab/', title: <>Orange County Drug Rehab (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/ca/los-angeles/drug-rehab/', title: <>Los Angeles Drug Rehab (Substance Abuse Treatment & Intervention)</> },
+            { href: '/location-served/usa/fentanyl-addiction-treatment/fenty-fold/', title: <>What is the “Fenty Fold?” Recovered Fentanyl Users Weigh In</> },
+            { href: '/location-served/usa/clonazepam-addiction-treatment/', title: <>Clonazepam Addiction: Signs, Dependence, and Treatment Options</> },
+            { href: '/location-served/usa/clonidine-addiction-treatment/', title: <>Clonidine Addiction: Risks, Withdrawal, and Treatment</> },
+            { href: '/location-served/usa/codeine-addiction-treatment/', title: <>Understanding Codeine Addiction</> },
+            { href: '/location-served/usa/buprenorphine-addiction-treatment/', title: <>Buprenorphine Addiction: Clinical Guide</> },
+          ]}
+        />
         <div className="elementor-element elementor-element-40ca6e0 e-con-full e-flex e-con e-parent e-lazyloaded" id="verify-ins" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
           <div className="elementor-element elementor-element-e29f0bd e-con-full e-flex e-con e-child">
             <div className="elementor-element elementor-element-7fe38d2 e-con-full e-flex e-con e-child">

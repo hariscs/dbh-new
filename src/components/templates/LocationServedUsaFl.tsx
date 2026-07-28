@@ -2,8 +2,10 @@ import React from 'react';
 import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Image from 'next/image';
 import Link from 'next/link';
+import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 
-export default function LocationServedUsaFl(props: Record<string, string>) {
+export default function LocationServedUsaFl({ fields = {}, relatedLinks }: TemplateProps) {
+  const props = fields;
   const geo = props.geo ?? "Delray";
   const brand = props.brand ?? "Distric Behavioral Health";
   const state = props.state ?? "FL";
@@ -3882,197 +3884,36 @@ export default function LocationServedUsaFl(props: Record<string, string>) {
         </div>
       </div>
     </div>
-    <div className="elementor-element elementor-element-1e2507e e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
-      <div className="e-con-inner">
-        <div className="elementor-element elementor-element-b64af59 e-con-full e-flex e-con e-child">
-          <div className="elementor-element elementor-element-139f157 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-            <div className="elementor-widget-container">
-              <h2 className="elementor-heading-title elementor-size-default">
-                Related Pages
-              </h2>
-            </div>
-          </div>
-          <div className="elementor-element elementor-element-0bbba3f e-con-full e-flex e-con e-child">
-            <div className="elementor-element elementor-element-6919bb5 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
-              <div className="elementor-widget-container">
-                <div className="elementor-shortcode">
-                  <div className="cards-wrapper">
-                    <div className="cards" role="list">
-                      <article className="card" role="listitem" style={{"display":"block"}}>
-                        <Link href="/location-served/usa/fl/drug-rehab/">
-                          <h3>
-                            Florida Drug {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"block"}}>
-                        <Link href="/location-served/usa/fl/iop-drug-rehab/">
-                          <h3>
-                            Florida IOP {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"block"}}>
-                        <Link href="/location-served/usa/fl/virtual-iop/">
-                          <h3>
-                            Florida Virtual IOP {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"block"}}>
-                        <Link href="/location-served/usa/fl/php-drug-rehab/">
-                          <h3>
-                            Florida PHP {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/sober-living/">
-                          <h3>
-                            Florida Sober Living Housing (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/adhd/">
-                          <h3>
-                            Florida ADHD Therapy (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/premenstrual-dysphoric-disorder/">
-                          <h3>
-                            Florida Premenstrual Dysphoric Disorder Treatment (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/adjustment/">
-                          <h3>
-                            Florida Adjustment Disorder (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/borderline-personality-disorder/">
-                          <h3>
-                            Florida Borderline Personality Disorder Treatment (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/personality-disorder/">
-                          <h3>
-                            Florida Personality Disorder Treatment (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/neurodevelopment-disorder/">
-                          <h3>
-                            Florida Neurodevelopment Disorder Treatment (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/tn/nashville/outpatient-drug-rehab/">
-                          <h3>
-                            Nashville {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/lantana/outpatient-drug-rehab/">
-                          <h3>
-                            Lantana {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/lake-worth/outpatient-drug-rehab/">
-                          <h3>
-                            Lake Worth {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/outpatient-drug-rehab/">
-                          <h3>
-                            {geo} {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/fl/outpatient-drug-rehab/">
-                          <h3>
-                            Palm Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/newport-beach/outpatient-drug-rehab/">
-                          <h3>
-                            Newport Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/laguna-beach/outpatient-drug-rehab/">
-                          <h3>
-                            Laguna Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/huntington-beach/outpatient-drug-rehab/">
-                          <h3>
-                            Huntington Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/fountain-valley/outpatient-drug-rehab/">
-                          <h3>
-                            Fountain Valley {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/long-beach/outpatient-drug-rehab/">
-                          <h3>
-                            Long Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/orange-county/outpatient-drug-rehab/">
-                          <h3>
-                            {address_county} {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                      <article className="card" role="listitem" style={{"display":"none"}}>
-                        <Link href="/location-served/usa/ca/los-angeles/outpatient-drug-rehab/">
-                          <h3>
-                            Los Angeles {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
-                          </h3>
-                        </Link>
-                      </article>
-                    </div>
-                    <div id="button-wrapper">
-                      <button id="relatedloadMoreBtn">
-                        Load More
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <RelatedLinks
+      variant="nested"
+      ids={{ section: '1e2507e', outerChild: 'b64af59', heading: '139f157', innerChild: '0bbba3f', shortcode: '6919bb5' }}
+      heading="Related Pages"
+      cards={relatedLinks ?? [
+        { href: '/location-served/usa/fl/drug-rehab/', title: <>Florida Drug {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/iop-drug-rehab/', title: <>Florida IOP {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/virtual-iop/', title: <>Florida Virtual IOP {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/php-drug-rehab/', title: <>Florida PHP {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/sober-living/', title: <>Florida Sober Living Housing (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/adhd/', title: <>Florida ADHD Therapy (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/premenstrual-dysphoric-disorder/', title: <>Florida Premenstrual Dysphoric Disorder Treatment (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/adjustment/', title: <>Florida Adjustment Disorder (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/borderline-personality-disorder/', title: <>Florida Borderline Personality Disorder Treatment (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/personality-disorder/', title: <>Florida Personality Disorder Treatment (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/neurodevelopment-disorder/', title: <>Florida Neurodevelopment Disorder Treatment (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/tn/nashville/outpatient-drug-rehab/', title: <>Nashville {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/lantana/outpatient-drug-rehab/', title: <>Lantana {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/lake-worth/outpatient-drug-rehab/', title: <>Lake Worth {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/outpatient-drug-rehab/', title: <>{geo} {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/fl/outpatient-drug-rehab/', title: <>Palm Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/newport-beach/outpatient-drug-rehab/', title: <>Newport Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/laguna-beach/outpatient-drug-rehab/', title: <>Laguna Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/huntington-beach/outpatient-drug-rehab/', title: <>Huntington Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/fountain-valley/outpatient-drug-rehab/', title: <>Fountain Valley {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/long-beach/outpatient-drug-rehab/', title: <>Long Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/orange-county/outpatient-drug-rehab/', title: <>{address_county} {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+        { href: '/location-served/usa/ca/los-angeles/outpatient-drug-rehab/', title: <>Los Angeles {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
+      ]}
+    />
     <div className="elementor-element elementor-element-c49a583 e-flex e-con-boxed e-con e-parent e-lazyloaded">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-4a33ab5 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
