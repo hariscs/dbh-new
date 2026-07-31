@@ -2,6 +2,7 @@ import "./page.css";
 import type { Metadata } from "next";
 import ThankYou from "@/components/pages/ThankYou";
 import { fetchPageData } from "@/lib/wordpress";
+import Header from "@/components/Header";
 
 export const revalidate = 60;
 
@@ -17,5 +18,10 @@ export async function generateMetadata(): Promise<import("next").Metadata> {
 
 export default async function Page() {
   const data = await fetchPageData("thank-you");
-  return <ThankYou {...(data?.fields ?? {})} />;
+  return (
+    <>
+      <Header fields={data?.fields} />
+      <ThankYou {...(data?.fields ?? {})} />
+    </>
+  );
 }

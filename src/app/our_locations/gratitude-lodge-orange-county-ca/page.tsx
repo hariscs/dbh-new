@@ -1,6 +1,7 @@
 import "./page.css";
 import type { Metadata } from "next";
 import OurLocationsGratitudeLodgeOrangeCountyCa from "@/components/pages/OurLocationsGratitudeLodgeOrangeCountyCa";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Gratitude Lodge - Orange County, CA - District Behavioral Health",
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <OurLocationsGratitudeLodgeOrangeCountyCa />;
+  return (
+    <>
+      <Header />
+      <OurLocationsGratitudeLodgeOrangeCountyCa />
+    </>
+  );
 }

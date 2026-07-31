@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import LocationServedUsaCaHuntingtonBeach from "@/components/templates/LocationServedUsaCaHuntingtonBeach";
 import { fetchPageData, fetchInterlinking } from "@/lib/wordpress";
+import Header from "@/components/Header";
 
 export const revalidate = 60;
 export const dynamicParams = true;
@@ -46,5 +47,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     fetchInterlinking(`${BASE_PATH}/${slug}`),
   ]);
   if (!data) notFound();
-  return <LocationServedUsaCaHuntingtonBeach fields={data.fields} relatedLinks={relatedLinks} />;
+  return (
+    <>
+      <Header fields={data.fields} />
+      <LocationServedUsaCaHuntingtonBeach fields={data.fields} relatedLinks={relatedLinks} />
+    </>
+  );
 }

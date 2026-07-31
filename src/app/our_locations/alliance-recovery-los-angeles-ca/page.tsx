@@ -1,6 +1,7 @@
 import "./page.css";
 import type { Metadata } from "next";
 import OurLocationsAllianceRecoveryLosAngelesCa from "@/components/pages/OurLocationsAllianceRecoveryLosAngelesCa";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Alliance Recovery - Los Angeles, CA - District Behavioral Health",
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <OurLocationsAllianceRecoveryLosAngelesCa />;
+  return (
+    <>
+      <Header />
+      <OurLocationsAllianceRecoveryLosAngelesCa />
+    </>
+  );
 }

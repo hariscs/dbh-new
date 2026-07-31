@@ -1,6 +1,7 @@
 import "./page.css";
 import type { Metadata } from "next";
 import OurLocationsCaliforniaDetoxOrangeCountyCa from "@/components/pages/OurLocationsCaliforniaDetoxOrangeCountyCa";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "California Detox - Orange County, CA - District Behavioral Health",
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <OurLocationsCaliforniaDetoxOrangeCountyCa />;
+  return (
+    <>
+      <Header />
+      <OurLocationsCaliforniaDetoxOrangeCountyCa />
+    </>
+  );
 }

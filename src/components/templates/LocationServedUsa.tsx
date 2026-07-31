@@ -3,8 +3,10 @@ import Image from 'next/image';
 import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
+import { resolvePhone } from "@/lib/phone";
 
 export default function LocationServedUsa({ fields = {}, relatedLinks }: TemplateProps) {
+  const { phone, telHref } = resolvePhone(fields);
   const props = fields;
   const geo = props.geo ?? "National";
   const topic_1 = props.topic_1 ?? "Sober Living";
@@ -138,10 +140,10 @@ export default function LocationServedUsa({ fields = {}, relatedLinks }: Templat
                 <div className="elementor-element elementor-element-15d8fbfe elementor-align-justify elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
                   <div className="elementor-widget-container">
                     <div className="elementor-button-wrapper">
-                      <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:+18887020484">
+                      <Link className="elementor-button elementor-button-link elementor-size-sm" href={telHref}>
                         <span className="elementor-button-content-wrapper">
                           <span className="elementor-button-text">
-                            Call Now! 888-702-0484
+                            Call Now! {phone}
                           </span>
                         </span>
                       </Link>
@@ -508,10 +510,10 @@ export default function LocationServedUsa({ fields = {}, relatedLinks }: Templat
                       <div className="elementor-element elementor-element-cf07434 elementor-align-justify elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
                         <div className="elementor-widget-container">
                           <div className="elementor-button-wrapper">
-                            <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:+18887020484">
+                            <Link className="elementor-button elementor-button-link elementor-size-sm" href={telHref}>
                               <span className="elementor-button-content-wrapper">
                                 <span className="elementor-button-text">
-                                  Call Now! 888-702-0484
+                                  Call Now! {phone}
                                 </span>
                               </span>
                             </Link>
@@ -1514,7 +1516,7 @@ export default function LocationServedUsa({ fields = {}, relatedLinks }: Templat
                   <div className="elementor-element elementor-element-59164d59 elementor-align-justify elementor-widget-mobile__width-inherit elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-button" data-widget_type="button.default">
                     <div className="elementor-widget-container">
                       <div className="elementor-button-wrapper">
-                        <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:+18887020484">
+                        <Link className="elementor-button elementor-button-link elementor-size-sm" href={telHref}>
                           <span className="elementor-button-content-wrapper">
                             <span className="elementor-button-text">
                               Tour Our Facilities
@@ -1572,7 +1574,7 @@ export default function LocationServedUsa({ fields = {}, relatedLinks }: Templat
                     <div className="elementor-element elementor-element-624d8463 elementor-align-justify elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-button-wrapper">
-                          <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:+18887020484">
+                          <Link className="elementor-button elementor-button-link elementor-size-sm" href={telHref}>
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-text">
                                 Call us we will work with you
@@ -1704,10 +1706,10 @@ export default function LocationServedUsa({ fields = {}, relatedLinks }: Templat
                     <div className="elementor-element elementor-element-5b41984f elementor-align-justify elementor-widget-mobile__width-inherit elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-button-wrapper">
-                          <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:+18887020484">
+                          <Link className="elementor-button elementor-button-link elementor-size-sm" href={telHref}>
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-text">
-                                888-702-0484
+                                {phone}
                               </span>
                             </span>
                           </Link>
@@ -1730,7 +1732,7 @@ export default function LocationServedUsa({ fields = {}, relatedLinks }: Templat
                     <div className="elementor-element elementor-element-2ce3b363 elementor-align-justify elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-button-wrapper">
-                          <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:+18887020484">
+                          <Link className="elementor-button elementor-button-link elementor-size-sm" href={telHref}>
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-text">
                                 Call Now! 844-759-0999
@@ -1758,10 +1760,10 @@ export default function LocationServedUsa({ fields = {}, relatedLinks }: Templat
                     <div className="elementor-element elementor-element-1aad63f5 elementor-align-justify elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-button-wrapper">
-                          <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:+18887020484">
+                          <Link className="elementor-button elementor-button-link elementor-size-sm" href={telHref}>
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-text">
-                                888-702-0484
+                                {phone}
                               </span>
                             </span>
                           </Link>

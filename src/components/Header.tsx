@@ -1,10 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import PrimaryNav from "@/components/PrimaryNav";
+import { resolvePhone } from "@/lib/phone";
 
-export default function Header() {
+/**
+ * The header renders from each page rather than the root layout, because the
+ * call-us number comes from that page's builder fields and Next layouts cannot
+ * read page data without opting the whole site out of static rendering.
+ */
+export default function Header({
+  fields,
+}: {
+  /** the page's builder fields; omit on routes without page data to use the fallback number */
+  fields?: Record<string, string> | null;
+}) {
+  const { phone, telHref } = resolvePhone(fields);
+  // role="banner" is set explicitly: the page owns the header now, so it renders inside
+  // <main>, and a <header> descended from <main> would otherwise stop exposing the
+  // banner landmark it had when the layout rendered it as a sibling of <main>.
   return (
-    <header className="elementor elementor-26 elementor-location-header">
+    <header role="banner" className="elementor elementor-26 elementor-location-header">
       <header className="elementor-element elementor-element-bbfbc92 sticky-header elementor-hidden-tablet elementor-hidden-mobile e-flex e-con-boxed e-con e-parent elementor-sticky elementor-sticky--active elementor-section--handles-inside e-lazyloaded elementor-sticky--effects" data-settings="{&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;laptop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;background_background&quot;:&quot;classic&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_effects_offset&quot;:90,&quot;sticky_offset&quot;:0,&quot;sticky_anchor_link_offset&quot;:0}">
         <div className="e-con-inner">
           <div className="elementor-element elementor-element-86b5b0d this-logo-sticky elementor-widget elementor-widget-image" data-widget_type="image.default">
@@ -28,10 +43,10 @@ export default function Header() {
           <div className="elementor-element elementor-element-0030369 elementor-align-right menu-cta elementor-widget elementor-widget-button" data-widget_type="button.default">
             <div className="elementor-widget-container">
               <div className="elementor-button-wrapper">
-                <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:+18887020484">
+                <Link className="elementor-button elementor-button-link elementor-size-sm" href={telHref}>
                   <span className="elementor-button-content-wrapper">
                     <span className="elementor-button-text">
-                      (888) 702-0484
+                      {phone}
                     </span>
                   </span>
                 </Link>

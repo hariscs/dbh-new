@@ -2,8 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks } from '@/components/RelatedLinks';
+import { resolvePhone } from "@/lib/phone";
 
 export default function LocationServedUsaFentanylAddictionTreatment(props: Record<string, string>) {
+  const { phone, telHref } = resolvePhone(props);
   const h1 = props.h1 ?? "What is the “Fenty Fold?” Recovered Fentanyl Users Weigh In";
   const drug = props.drug ?? "Fentanyl";
   const address_county = props.address_county ?? "Orange County";
@@ -616,10 +618,10 @@ export default function LocationServedUsaFentanylAddictionTreatment(props: Recor
                     To learn more about our addiction and mental health recovery programs, call our helpful team today at 
                   </span>
                 </strong>
-                <Link href="tel:+18887020484" target="_blank" rel="noopener noreferrer">
+                <Link href={telHref} target="_blank" rel="noopener noreferrer">
                   <strong>
                     <span>
-                      888-702-0484
+                      {phone}
                     </span>
                   </strong>
                 </Link>

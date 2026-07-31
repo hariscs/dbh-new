@@ -1,6 +1,7 @@
 import "./page.css";
 import type { Metadata } from "next";
 import DifferenceMentalHealthAddictionDualFocus from "@/components/pages/DifferenceMentalHealthAddictionDualFocus";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Mental Health & Addiction Dual Focus - District Behavioral Health",
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <DifferenceMentalHealthAddictionDualFocus />;
+  return (
+    <>
+      <Header />
+      <DifferenceMentalHealthAddictionDualFocus />
+    </>
+  );
 }

@@ -2,6 +2,7 @@ import "./page.css";
 import type { Metadata } from "next";
 import RehabAdmission from "@/components/pages/RehabAdmission";
 import { fetchPageData } from "@/lib/wordpress";
+import Header from "@/components/Header";
 
 export const revalidate = 60;
 
@@ -17,5 +18,10 @@ export async function generateMetadata(): Promise<import("next").Metadata> {
 
 export default async function Page() {
   const data = await fetchPageData("rehab-admission");
-  return <RehabAdmission {...(data?.fields ?? {})} />;
+  return (
+    <>
+      <Header fields={data?.fields} />
+      <RehabAdmission {...(data?.fields ?? {})} />
+    </>
+  );
 }

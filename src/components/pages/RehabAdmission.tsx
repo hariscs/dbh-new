@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { resolvePhone } from "@/lib/phone";
 
 const gridData0 = [
   {
@@ -37,6 +38,7 @@ const gridData0 = [
 
 
 export default function RehabAdmission(props: Record<string, string>) {
+  const { phone, telHref } = resolvePhone(props);
   const address_county = props.address_county ?? "Orange County";
   return (
     <>
@@ -82,9 +84,9 @@ export default function RehabAdmission(props: Record<string, string>) {
                       <div className="elementor-element elementor-element-b4be985 elementor-align-left elementor-widget-mobile__width-inherit e-transform elementor-mobile-align-justify elementor-widget elementor-widget-button" data-settings="&#123;&quot;_transform_translateY_effect_hover&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-5,&quot;sizes&quot;:[]&#125;,&quot;_animation_tablet&quot;:&quot;none&quot;,&quot;_transform_translateX_effect_hover&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover_tablet&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover_mobile&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateY_effect_hover_tablet&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateY_effect_hover_mobile&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;&#125;" data-widget_type="button.default">
                         <div className="elementor-widget-container">
                           <div className="elementor-button-wrapper">
-                            <Link href="tel:+18887020484" className="elementor-button elementor-button-link elementor-size-sm">
+                            <Link href={telHref} className="elementor-button elementor-button-link elementor-size-sm">
                               <span className="elementor-button-content-wrapper">
-                                <span className="elementor-button-text">888-702-0484</span>
+                                <span className="elementor-button-text">{phone}</span>
                               </span>
                             </Link>
                           </div>
@@ -159,9 +161,9 @@ export default function RehabAdmission(props: Record<string, string>) {
                     <div className="elementor-element elementor-element-0cb8354 elementor-align-justify elementor-widget-mobile__width-inherit e-transform elementor-mobile-align-justify elementor-widget__width-initial elementor-widget elementor-widget-button" data-settings="&#123;&quot;_transform_translateY_effect_hover&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-5,&quot;sizes&quot;:[]&#125;,&quot;_animation_tablet&quot;:&quot;none&quot;,&quot;_transform_translateX_effect_hover&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover_tablet&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover_mobile&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateY_effect_hover_tablet&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateY_effect_hover_mobile&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;&#125;" data-widget_type="button.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-button-wrapper">
-                          <Link href="tel:+18887020484" className="elementor-button elementor-button-link elementor-size-sm">
+                          <Link href={telHref} className="elementor-button elementor-button-link elementor-size-sm">
                             <span className="elementor-button-content-wrapper">
-                              <span className="elementor-button-text">888-702-0484</span>
+                              <span className="elementor-button-text">{phone}</span>
                             </span>
                           </Link>
                         </div>

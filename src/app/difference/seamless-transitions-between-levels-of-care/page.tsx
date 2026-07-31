@@ -1,6 +1,7 @@
 import "./page.css";
 import type { Metadata } from "next";
 import DifferenceSeamlessTransitionsBetweenLevelsOfCare from "@/components/pages/DifferenceSeamlessTransitionsBetweenLevelsOfCare";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Seamless Transitions Between Levels Of Care - District Behavioral Health",
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <DifferenceSeamlessTransitionsBetweenLevelsOfCare />;
+  return (
+    <>
+      <Header />
+      <DifferenceSeamlessTransitionsBetweenLevelsOfCare />
+    </>
+  );
 }

@@ -1,6 +1,7 @@
 import "./page.css";
 import type { Metadata } from "next";
 import OurLocationsGratitudeLodgeLongBeachCa from "@/components/pages/OurLocationsGratitudeLodgeLongBeachCa";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Gratitude Lodge - Long Beach, CA - District Behavioral Health",
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <OurLocationsGratitudeLodgeLongBeachCa />;
+  return (
+    <>
+      <Header />
+      <OurLocationsGratitudeLodgeLongBeachCa />
+    </>
+  );
 }

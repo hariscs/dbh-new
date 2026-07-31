@@ -1,6 +1,7 @@
 import "./page.css";
 import type { Metadata } from "next";
 import OurLocationsRenaissanceRecoveryPalmBeachFl from "@/components/pages/OurLocationsRenaissanceRecoveryPalmBeachFl";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Renaissance Recovery Palm Beach, FL - District Behavioral Health",
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <OurLocationsRenaissanceRecoveryPalmBeachFl />;
+  return (
+    <>
+      <Header />
+      <OurLocationsRenaissanceRecoveryPalmBeachFl />
+    </>
+  );
 }

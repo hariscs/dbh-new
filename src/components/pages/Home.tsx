@@ -3,8 +3,10 @@ import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
+import { resolvePhone } from "@/lib/phone";
 
 export default function Page({ relatedLinks }: TemplateProps) {
+  const { phone, telHref } = resolvePhone();
   return (
     <>
     <div className="home wp-singular page-template page-template-elementor_header_footer page page-id-11 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-theme-child-master hello-elementor-default elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-11 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit">
@@ -48,7 +50,7 @@ export default function Page({ relatedLinks }: TemplateProps) {
             <div className="elementor-element elementor-element-2219139 elementor-align-left elementor-widget elementor-widget-button" data-widget_type="button.default">
               <div className="elementor-widget-container">
                 <div className="elementor-button-wrapper">
-                  <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:+18887020484">
+                  <Link className="elementor-button elementor-button-link elementor-size-sm" href={telHref}>
                     <span className="elementor-button-content-wrapper">
                       <span className="elementor-button-icon">
                         <svg aria-hidden="true" className="e-font-icon-svg e-fas-phone-alt" viewBox="0 0 512 512">
@@ -56,7 +58,7 @@ export default function Page({ relatedLinks }: TemplateProps) {
                         </svg>
                       </span>
                       <span className="elementor-button-text">
-                        (888) 702-0484
+                        {phone}
                       </span>
                     </span>
                   </Link>
@@ -104,7 +106,7 @@ export default function Page({ relatedLinks }: TemplateProps) {
               <div className="elementor-element elementor-element-a2d92fb elementor-align-left elementor-mobile-align-justify elementor-widget elementor-widget-button" data-widget_type="button.default">
                 <div className="elementor-widget-container">
                   <div className="elementor-button-wrapper">
-                    <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:+18887020484">
+                    <Link className="elementor-button elementor-button-link elementor-size-sm" href={telHref}>
                       <span className="elementor-button-content-wrapper">
                         <span className="elementor-button-icon">
                           <svg aria-hidden="true" className="e-font-icon-svg e-fas-phone-alt" viewBox="0 0 512 512">
@@ -112,7 +114,7 @@ export default function Page({ relatedLinks }: TemplateProps) {
                           </svg>
                         </span>
                         <span className="elementor-button-text">
-                          (888) 702-0484
+                          {phone}
                         </span>
                       </span>
                     </Link>
@@ -1960,10 +1962,10 @@ counselor I can be.
               <div className="elementor-element elementor-element-82dfbfc elementor-align-left elementor-widget elementor-widget-button" data-widget_type="button.default">
                 <div className="elementor-widget-container">
                   <div className="elementor-button-wrapper">
-                    <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:+18887020484">
+                    <Link className="elementor-button elementor-button-link elementor-size-sm" href={telHref}>
                       <span className="elementor-button-content-wrapper">
                         <span className="elementor-button-text">
-                          (888) 702-0484
+                          {phone}
                         </span>
                       </span>
                     </Link>
@@ -2109,7 +2111,7 @@ counselor I can be.
                 <div className="elementor-element elementor-element-2370f64 elementor-align-left elementor-widget elementor-widget-button" data-widget_type="button.default">
                   <div className="elementor-widget-container">
                     <div className="elementor-button-wrapper">
-                      <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:+18887020484">
+                      <Link className="elementor-button elementor-button-link elementor-size-sm" href={telHref}>
                         <span className="elementor-button-content-wrapper">
                           <span className="elementor-button-icon">
                             <svg aria-hidden="true" className="e-font-icon-svg e-fas-phone-alt" viewBox="0 0 512 512">
@@ -2117,7 +2119,7 @@ counselor I can be.
                             </svg>
                           </span>
                           <span className="elementor-button-text">
-                            (888) 702-0484
+                            {phone}
                           </span>
                         </span>
                       </Link>
@@ -2135,7 +2137,7 @@ counselor I can be.
               <div className="elementor-element elementor-element-48fc06f elementor-align-left elementor-mobile-align-justify elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-button" data-widget_type="button.default">
                 <div className="elementor-widget-container">
                   <div className="elementor-button-wrapper">
-                    <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:+18887020484">
+                    <Link className="elementor-button elementor-button-link elementor-size-sm" href={telHref}>
                       <span className="elementor-button-content-wrapper">
                         <span className="elementor-button-icon">
                           <svg aria-hidden="true" className="e-font-icon-svg e-fas-phone-alt" viewBox="0 0 512 512">
@@ -2143,7 +2145,7 @@ counselor I can be.
                           </svg>
                         </span>
                         <span className="elementor-button-text">
-                          (888) 702-0484
+                          {phone}
                         </span>
                       </span>
                     </Link>
@@ -2175,9 +2177,9 @@ counselor I can be.
                 <div className="elementor-widget-container">
                   <p>
                     Not sure where to start? Call 
-                    <Link href="tel:+18887020484">
+                    <Link href={telHref}>
                       <span style={{"color":"#2e6aa1"}}>
-                        (888) 702-0484
+                        {phone}
                       </span>
                     </Link>
                      for journey guidance from our recovery counselors.

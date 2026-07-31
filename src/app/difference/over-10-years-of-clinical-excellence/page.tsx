@@ -1,6 +1,7 @@
 import "./page.css";
 import type { Metadata } from "next";
 import DifferenceOver10YearsOfClinicalExcellence from "@/components/pages/DifferenceOver10YearsOfClinicalExcellence";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Over 10 Years Of Clinical Excellence - District Behavioral Health",
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <DifferenceOver10YearsOfClinicalExcellence />;
+  return (
+    <>
+      <Header />
+      <DifferenceOver10YearsOfClinicalExcellence />
+    </>
+  );
 }

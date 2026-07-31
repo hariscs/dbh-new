@@ -1,6 +1,7 @@
 import "./page.css";
 import type { Metadata } from "next";
 import OurLocationsRenaissanceRecoveryOrangeCountyCa from "@/components/pages/OurLocationsRenaissanceRecoveryOrangeCountyCa";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Renaissance Recovery Orange County, CA - District Behavioral Health",
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <OurLocationsRenaissanceRecoveryOrangeCountyCa />;
+  return (
+    <>
+      <Header />
+      <OurLocationsRenaissanceRecoveryOrangeCountyCa />
+    </>
+  );
 }

@@ -2,8 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks } from '@/components/RelatedLinks';
+import { resolvePhone } from "@/lib/phone";
 
 export default function LocationServedUsaAlcohol(props: Record<string, string>) {
+  const { phone, telHref } = resolvePhone(props);
   const topic_2 = props.topic_2 ?? "Addiction";
   const address_county = props.address_county ?? "Orange County";
   // The displayed date comes from the API's meta.createdAt (ISO 8601). Use only the date portion
@@ -796,7 +798,7 @@ export default function LocationServedUsaAlcohol(props: Record<string, string>) 
               <p>
                 If you or someone you love is struggling with alcohol addiction, call our caring team today at 
                 <strong>
-                  (888) 702-0484
+                  {phone}
                 </strong>
                  and begin the path toward recovery.
               </p>

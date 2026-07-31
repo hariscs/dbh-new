@@ -2,6 +2,7 @@ import "./page.css";
 import type { Metadata } from "next";
 import Blogs from "@/components/pages/Blogs";
 import { fetchPageData, fetchBlogs } from "@/lib/wordpress";
+import Header from "@/components/Header";
 
 export const revalidate = 60;
 
@@ -27,11 +28,16 @@ export default async function Page({
     fetchBlogs(currentPage),
   ]);
   return (
-    <Blogs
-      fields={data?.fields ?? {}}
-      blogs={blogs}
-      currentPage={currentPage}
-      totalPages={totalPages}
-    />
+    <>
+      <Header fields={data?.fields} />
+      (
+      <Blogs
+        fields={data?.fields ?? {}}
+        blogs={blogs}
+        currentPage={currentPage}
+        totalPages={totalPages}
+      />
+    )
+    </>
   );
 }

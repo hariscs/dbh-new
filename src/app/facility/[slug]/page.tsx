@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import FacilityDetail, { type GalleryImage } from "@/components/templates/FacilityDetail";
 import { fetchPageData } from "@/lib/wordpress";
+import Header from "@/components/Header";
 
 export const revalidate = 60;
 export const dynamicParams = true;
@@ -32,12 +33,17 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   const f = data.fields as Record<string, unknown>;
   return (
-    <FacilityDetail
-      facilityName={clean(f.facility_name as string) || undefined}
-      facilityLocation={clean(f.facility_location as string) || undefined}
-      interiorsGallery={asGallery(f.facility_interiors_gallery)}
-      exteriorsGallery={asGallery(f.facility_exteriors_gallery)}
-      highlightsGallery={asGallery(f.location_highlights_gallery)}
-    />
+    <>
+      <Header fields={data.fields} />
+      (
+      <FacilityDetail
+        facilityName={clean(f.facility_name as string) || undefined}
+        facilityLocation={clean(f.facility_location as string) || undefined}
+        interiorsGallery={asGallery(f.facility_interiors_gallery)}
+        exteriorsGallery={asGallery(f.facility_exteriors_gallery)}
+        highlightsGallery={asGallery(f.location_highlights_gallery)}
+      />
+    )
+    </>
   );
 }

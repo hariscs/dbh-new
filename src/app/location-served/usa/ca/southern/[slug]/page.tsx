@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import LocationServedUsaCaSouthern from "@/components/templates/LocationServedUsaCaSouthern";
 import { fetchPageData, fetchInterlinking } from "@/lib/wordpress";
+import Header from "@/components/Header";
 
 export const revalidate = 60;
 export const dynamicParams = true;
@@ -46,5 +47,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     fetchInterlinking(`${BASE_PATH}/${slug}`),
   ]);
   if (!data) notFound();
-  return <LocationServedUsaCaSouthern fields={data.fields} relatedLinks={relatedLinks} />;
+  return (
+    <>
+      <Header fields={data.fields} />
+      <LocationServedUsaCaSouthern fields={data.fields} relatedLinks={relatedLinks} />
+    </>
+  );
 }

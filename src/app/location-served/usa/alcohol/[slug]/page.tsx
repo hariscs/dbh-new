@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import LocationServedUsaAlcohol from "@/components/templates/LocationServedUsaAlcohol";
 import { fetchPageData } from "@/lib/wordpress";
+import Header from "@/components/Header";
 
 export const revalidate = 60;
 export const dynamicParams = true;
@@ -43,5 +44,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
   const data = await fetchPageData(`${BASE_PATH}/${slug}`);
   if (!data) notFound();
-  return <LocationServedUsaAlcohol {...data.fields} createdAt={data.meta.createdAt} />;
+  return (
+    <>
+      <Header fields={data.fields} />
+      <LocationServedUsaAlcohol {...data.fields} createdAt={data.meta.createdAt} />
+    </>
+  );
 }

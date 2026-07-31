@@ -2,8 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks } from '@/components/RelatedLinks';
+import { resolvePhone } from "@/lib/phone";
 
 export default function LocationServedUsaAtivanLorazepam(props: Record<string, string>) {
+  const { phone, telHref } = resolvePhone(props);
   const topic_2 = props.topic_2 ?? "Withdrawal";
   const address_county = props.address_county ?? "Orange County";
   return (
@@ -554,9 +556,9 @@ export default function LocationServedUsaAtivanLorazepam(props: Record<string, s
               </ul>
               <p>
                 Learn about our prescription drug addiction and mental health treatment programs by calling admissions at 
-                <Link href="tel:+18887020484">
+                <Link href={telHref}>
                   <strong>
-                    888-702-0484
+                    {phone}
                   </strong>
                 </Link>
                 .

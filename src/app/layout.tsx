@@ -7,7 +7,6 @@ import WidgetInteractions from "@/components/WidgetInteractions";
 import JotformResizer from "@/components/JotformResizer";
 import Script from "next/script";
 import DeferredStylesheet from "@/components/DeferredStylesheet";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileMenu from "@/components/MobileMenu";
 
@@ -56,7 +55,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* 80-light-background.css (TrustIndex preset) is loaded on-demand by
             TrustIndexWidget when the reviews section nears the viewport. */}
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGF7WNCV" height="0" width="0" style={{display:"none",visibility:"hidden"}} /></noscript>
-        <Header />
+        {/* <Header /> is rendered by each page, not here: the call-us number comes
+            from that page's builder fields, and a layout cannot read page data
+            without making every route dynamic. See src/lib/phone.ts. */}
         <MobileMenu />
         <main>{children}</main>
         <Footer />

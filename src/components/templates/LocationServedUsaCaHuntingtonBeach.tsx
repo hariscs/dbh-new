@@ -3,8 +3,10 @@ import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
+import { resolvePhone } from "@/lib/phone";
 
 export default function LocationServedUsaCaHuntingtonBeach({ fields = {}, relatedLinks }: TemplateProps) {
+  const { phone, telHref } = resolvePhone(fields);
   const props = fields;
   const geo = props.geo ?? "Huntington Beach";
   const brand = props.brand ?? "Distric Behavioral Health";
@@ -170,10 +172,10 @@ export default function LocationServedUsaCaHuntingtonBeach({ fields = {}, relate
           <div className="elementor-element elementor-element-0ca03e3 elementor-widget-mobile__width-inherit e-transform elementor-mobile-align-justify elementor-widget elementor-widget-button animated fadeIn" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_transform_translateY_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-5,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="button.default">
             <div className="elementor-widget-container">
               <div className="elementor-button-wrapper">
-                <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:+18887020484">
+                <Link className="elementor-button elementor-button-link elementor-size-sm" href={telHref}>
                   <span className="elementor-button-content-wrapper">
                     <span className="elementor-button-text">
-                      888-702-0484
+                      {phone}
                     </span>
                   </span>
                 </Link>
@@ -3842,10 +3844,10 @@ export default function LocationServedUsaCaHuntingtonBeach({ fields = {}, relate
             <div className="elementor-element elementor-element-6e688c1 elementor-widget-mobile__width-inherit e-transform elementor-mobile-align-justify elementor-align-justify elementor-widget__width-initial elementor-widget elementor-widget-button animated fadeIn" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_transform_translateY_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-5,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="button.default">
               <div className="elementor-widget-container">
                 <div className="elementor-button-wrapper">
-                  <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:+18887020484">
+                  <Link className="elementor-button elementor-button-link elementor-size-sm" href={telHref}>
                     <span className="elementor-button-content-wrapper">
                       <span className="elementor-button-text">
-                        888-702-0484
+                        {phone}
                       </span>
                     </span>
                   </Link>

@@ -1,6 +1,7 @@
 import "./page.css";
 import type { Metadata } from "next";
 import MeetTheTeam from "@/components/pages/MeetTheTeam";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "| District Behavioral Health",
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <MeetTheTeam />;
+  return (
+    <>
+      <Header />
+      <MeetTheTeam />
+    </>
+  );
 }

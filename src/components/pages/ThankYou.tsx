@@ -2,9 +2,11 @@ import React from 'react';
 import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Image from 'next/image';
 import Link from 'next/link';
+import { resolvePhone } from "@/lib/phone";
 
 
 export default function ThankYou(props: Record<string, string>) {
+  const { phone, telHref } = resolvePhone(props);
   const address_county = props.address_county ?? "Orange County";
   const licenses_certifications = props.licenses_certifications ?? "4";
   return (
@@ -213,7 +215,7 @@ Your Request Has Been Received
                     <div className="elementor-element elementor-element-624d8463 elementor-align-justify elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-button-wrapper">
-                          <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:+18887020484">
+                          <Link className="elementor-button elementor-button-link elementor-size-sm" href={telHref}>
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-text">
                                 Call us we will work with you

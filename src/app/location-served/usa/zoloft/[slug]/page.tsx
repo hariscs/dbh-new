@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import LocationServedUsaZoloft from "@/components/templates/LocationServedUsaZoloft";
 import { fetchPageData } from "@/lib/wordpress";
+import Header from "@/components/Header";
 
 export const revalidate = 60;
 export const dynamicParams = true;
@@ -43,5 +44,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
   const data = await fetchPageData(`${BASE_PATH}/${slug}`);
   if (!data) notFound();
-  return <LocationServedUsaZoloft {...data.fields} />;
+  return (
+    <>
+      <Header fields={data.fields} />
+      <LocationServedUsaZoloft {...data.fields} />
+    </>
+  );
 }

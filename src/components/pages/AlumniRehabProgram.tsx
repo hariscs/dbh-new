@@ -2,9 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks } from '@/components/RelatedLinks';
+import { resolvePhone } from "@/lib/phone";
 
 
 export default function AlumniRehabProgram(props: Record<string, string>) {
+  const { phone, telHref } = resolvePhone(props);
   const h1 = props.h1 ?? "Alumni Rehab Program at District Behavioral Health";
   const address_county = props.address_county ?? "Orange County";
   return (
@@ -736,7 +738,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
                 </span>
                 <strong>
                   <span>
-                    (888) 702-0484
+                    {phone}
                   </span>
                 </strong>
                 <span>

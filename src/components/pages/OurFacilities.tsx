@@ -1,9 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { resolvePhone } from "@/lib/phone";
 
 
 export default function OurFacilities(props: Record<string, string>) {
+  const { phone, telHref } = resolvePhone(props);
   const address_county = props.address_county ?? "Orange County";
   return (
     <>
@@ -2950,7 +2952,7 @@ Renaissance Recovery
                 <div className="elementor-element elementor-element-33e1e5d elementor-align-justify elementor-widget-mobile__width-inherit elementor-widget__width-initial elementor-widget elementor-widget-button animated fadeIn" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="button.default">
                   <div className="elementor-widget-container">
                     <div className="elementor-button-wrapper">
-                      <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:888-702-0484">
+                      <Link className="elementor-button elementor-button-link elementor-size-sm" href={telHref}>
                         <span className="elementor-button-content-wrapper">
                           <span className="elementor-button-text">
                             Call Now

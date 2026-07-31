@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import AuthorDetail from "@/components/templates/AuthorDetail";
 import { fetchPageData } from "@/lib/wordpress";
+import Header from "@/components/Header";
 
 export const revalidate = 60;
 export const dynamicParams = true;
@@ -35,15 +36,25 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const linkedin = clean(f.linkedin_url);
 
   return (
-    <AuthorDetail
-      firstName={firstName || undefined}
-      lastName={lastName || undefined}
-      role={clean(f.titlelicense) || undefined}
-      headshot={featuredImage || undefined}
-      headshotWidth={featuredImage ? 280 : undefined}
-      headshotHeight={featuredImage ? 340 : undefined}
-      linkedin={linkedin || null}
-      bio={clean(f.bio) || undefined}
-    />
+
+    <>
+
+      <Header fields={data.fields} />
+
+      (
+      <AuthorDetail
+        firstName={firstName || undefined}
+        lastName={lastName || undefined}
+        role={clean(f.titlelicense) || undefined}
+        headshot={featuredImage || undefined}
+        headshotWidth={featuredImage ? 280 : undefined}
+        headshotHeight={featuredImage ? 340 : undefined}
+        linkedin={linkedin || null}
+        bio={clean(f.bio) || undefined}
+      />
+    )
+
+    </>
+
   );
 }

@@ -1,6 +1,7 @@
 import "./page.css";
 import type { Metadata } from "next";
 import DifferenceTransparentCommunicationWithFamilies from "@/components/pages/DifferenceTransparentCommunicationWithFamilies";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Transparent Communication With Families - District Behavioral Health",
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <DifferenceTransparentCommunicationWithFamilies />;
+  return (
+    <>
+      <Header />
+      <DifferenceTransparentCommunicationWithFamilies />
+    </>
+  );
 }

@@ -1,6 +1,7 @@
 import "./page.css";
 import type { Metadata } from "next";
 import OurLocationsRenaissanceRecoveryNashvilleTn from "@/components/pages/OurLocationsRenaissanceRecoveryNashvilleTn";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Renaissance Recovery Nashville, TN - District Behavioral Health",
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <OurLocationsRenaissanceRecoveryNashvilleTn />;
+  return (
+    <>
+      <Header />
+      <OurLocationsRenaissanceRecoveryNashvilleTn />
+    </>
+  );
 }

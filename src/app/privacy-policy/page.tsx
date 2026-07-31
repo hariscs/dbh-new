@@ -1,6 +1,7 @@
 import "./page.css";
 import type { Metadata } from "next";
 import PrivacyPolicy from "@/components/pages/PrivacyPolicy";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Thank You Page | District Behavioral Health",
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PrivacyPolicy />;
+  return (
+    <>
+      <Header />
+      <PrivacyPolicy />
+    </>
+  );
 }

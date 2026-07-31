@@ -2,8 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks } from '@/components/RelatedLinks';
+import { resolvePhone } from "@/lib/phone";
 
 export default function LocationServedUsaAdderallAddictionTreatment(props: Record<string, string>) {
+  const { phone, telHref } = resolvePhone(props);
   const topic_2 = props.topic_2 ?? "Withdrawal";
   const address_county = props.address_county ?? "Orange County";
   return (
@@ -492,9 +494,9 @@ export default function LocationServedUsaAdderallAddictionTreatment(props: Recor
               </ul>
               <p>
                 Learn about long-term recovery from Adderall addiction and mental health issues by calling our friendly admissions team at 
-                <Link href="tel:+18887020484">
+                <Link href={telHref}>
                   <strong>
-                    888-702-0484
+                    {phone}
                   </strong>
                 </Link>
                 .

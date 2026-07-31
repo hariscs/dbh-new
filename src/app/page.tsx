@@ -2,6 +2,7 @@ import "./page.css";
 import type { Metadata } from "next";
 import Home from "@/components/pages/Home";
 import { fetchInterlinking } from "@/lib/wordpress";
+import Header from "@/components/Header";
 
 // the homepage is the WordPress page at path "home"
 const INTERLINKING_PATH = "home";
@@ -15,5 +16,10 @@ export const metadata: Metadata = {
 
 export default async function Page() {
   const relatedLinks = await fetchInterlinking(INTERLINKING_PATH);
-  return <Home relatedLinks={relatedLinks} />;
+  return (
+    <>
+      <Header />
+      <Home relatedLinks={relatedLinks} />
+    </>
+  );
 }

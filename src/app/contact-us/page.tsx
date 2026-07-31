@@ -2,6 +2,7 @@ import "./page.css";
 import type { Metadata } from "next";
 import ContactUs from "@/components/pages/ContactUs";
 import { fetchPageData } from "@/lib/wordpress";
+import Header from "@/components/Header";
 
 export const revalidate = 60;
 
@@ -17,5 +18,10 @@ export async function generateMetadata(): Promise<import("next").Metadata> {
 
 export default async function Page() {
   const data = await fetchPageData("contact-us");
-  return <ContactUs {...(data?.fields ?? {})} />;
+  return (
+    <>
+      <Header fields={data?.fields} />
+      <ContactUs {...(data?.fields ?? {})} />
+    </>
+  );
 }
