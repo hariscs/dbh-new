@@ -8,14 +8,14 @@ declare global {
   }
 }
 
-const MAX_ATTEMPTS = 20;
 const RETRY_INTERVAL_MS = 250;
+const MAX_WAIT_MS = 30_000;
 
 export default function CtmRouteSwap() {
   const pathname = usePathname();
 
   useEffect(() => {
-    let attempts = 0;
+    let waited = 0;
     let timer = 0;
 
     const swap = () => {
@@ -24,8 +24,8 @@ export default function CtmRouteSwap() {
         main.runNow(document.body);
         return;
       }
-      attempts += 1;
-      if (attempts >= MAX_ATTEMPTS) return;
+      waited += RETRY_INTERVAL_MS;
+      if (waited >= MAX_WAIT_MS) return;
       timer = window.setTimeout(swap, RETRY_INTERVAL_MS);
     };
 
