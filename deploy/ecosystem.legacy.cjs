@@ -2,18 +2,16 @@ module.exports = {
   apps: [
     {
       name: 'dbh',
-      script: '/var/www/dbh/current/server.js',
-      cwd: '/var/www/dbh/current',
-      interpreter: '/root/.nvm/versions/node/v20.20.2/bin/node',
+      script: 'pnpm',
+      args: 'start',
+      cwd: '/var/www/dbh',
+      interpreter: 'none',
       exec_mode: 'fork',
       instances: 1,
       env: {
-        NODE_ENV: 'production',
         PORT: 3001,
-        HOSTNAME: '127.0.0.1',
+        PATH: '/root/.nvm/versions/node/v20.20.2/bin:' + process.env.PATH,
       },
-      max_memory_restart: '1G',
-      kill_timeout: 10000,
       out_file: '/var/log/dbh/out.log',
       error_file: '/var/log/dbh/error.log',
       merge_logs: true,
