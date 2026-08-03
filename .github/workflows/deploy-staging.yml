@@ -1,0 +1,194 @@
+name: Deploy to staging
+
+# dbh.staging-gl.com -> nginx -> Next.js standalone server on 127.0.0.1:3001
+#
+# The build happens here on the runner, not on the EC2 box: that host sits at ~87%
+# disk and the build asks for an 8GB heap. We ship the compiled artifact instead.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  # Never let two deploys race for the release symlink. Don't cancel a run that is
+  # already mid-deploy on the server, or we'd leave a half-swapped release behind.
+  group: deploy-staging
+  cancel-in-progress: false
+
+env:
+  APP_DIR: /var/www/dbh
+  APP_PORT: '3001'
+  HEALTH_URL: http://127.0.0.1:3001/
+  # Only 2 (live + one rollback target). A release unpacks to ~1.5GB — the 396
+  # prerendered /location-served pages are the bulk of it — and the box has under
+  # 4GB free. Three releases would not fit. Raise this after growing the volume.
+  KEEP_RELEASES: '2'
+  # Refuse to deploy below this much free space rather than filling the disk: a
+  # full disk also breaks the *running* site, since ISR writes to it.
+  MIN_FREE_MB: '2200'
+
+jobs:
+  deploy:
+    # Pinned, not ubuntu-latest: the artifact carries native binaries (sharp) that
+    # link against glibc. The runner image must match the server's Ubuntu 24.04, or
+    # a runner upgrade silently ships binaries the server can't load.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v5
+        with:
+          # Must match the Node major running on the server (`node -v` there).
+          node-version: '24'
+          cache: pnpm
+
+      - name: Restore Next.js build cache
+        uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: next-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ hashFiles('src/**', 'next.config.ts') }}
+          restore-keys: |
+            next-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-
+            next-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        # These are needed at BUILD time, not just runtime — pages are statically
+        # generated against the WordPress API during `next build`.
+        env:
+          WORDPRESS_URL: ${{ secrets.WORDPRESS_URL }}
+          WORDPRESS_REVALIDATE_SECONDS: ${{ secrets.WORDPRESS_REVALIDATE_SECONDS }}
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: pnpm build
+
+      - name: Assemble deploy artifact
+        # `output: 'standalone'` deliberately omits public/ and .next/static — it
+        # assumes a CDN serves them. Here nginx proxies /_next/static straight to
+        # the Next server, so both have to be copied in or every asset 404s.
+        run: |
+          set -euo pipefail
+          cp -r public .next/standalone/
+          mkdir -p .next/standalone/.next
+          cp -r .next/static .next/standalone/.next/
+          tar -czf release.tar.gz -C .next/standalone .
+
+      - name: Configure SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          # Pinned host key rather than StrictHostKeyChecking=no, so a hijacked or
+          # re-created IP fails the deploy instead of being trusted silently.
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Upload artifact to server
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+        run: |
+          set -euo pipefail
+          scp -i ~/.ssh/deploy_key release.tar.gz \
+            "$SSH_USER@$SSH_HOST:/tmp/release-${{ github.sha }}.tar.gz"
+
+      - name: Release
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          ssh -i ~/.ssh/deploy_key "$SSH_USER@$SSH_HOST" \
+            APP_DIR="$APP_DIR" APP_PORT="$APP_PORT" HEALTH_URL="$HEALTH_URL" \
+            KEEP_RELEASES="$KEEP_RELEASES" MIN_FREE_MB="$MIN_FREE_MB" SHA="$SHA" \
+            'bash -seuo pipefail' <<'REMOTE'
+          RELEASE_DIR="$APP_DIR/releases/$SHA"
+          PREVIOUS="$(readlink -f "$APP_DIR/current" || true)"
+
+          # --- make room BEFORE unpacking --------------------------------------
+          # Prune down to just the live release first. Unpacking 1.5GB onto a disk
+          # that is already ~87% full is what would take the site down, so the old
+          # rollback target is sacrificed to guarantee the new release fits.
+          if [ -d "$APP_DIR/releases" ]; then
+            cd "$APP_DIR/releases"
+            for old in */; do
+              [ -d "$old" ] || continue
+              [ "$(readlink -f "$old")" = "$PREVIOUS" ] && continue
+              rm -rf -- "$old"
+            done
+          fi
+
+          FREE_MB=$(df -Pm "$APP_DIR" | awk 'NR==2 {print $4}')
+          if [ "$FREE_MB" -lt "$MIN_FREE_MB" ]; then
+            echo "::error::Only ${FREE_MB}MB free at $APP_DIR, need ${MIN_FREE_MB}MB."
+            echo "Free space or grow the EBS volume, then re-run. Largest consumers:"
+            du -sh "$APP_DIR"/* /var/www/* 2>/dev/null | sort -rh | head -10
+            rm -f "/tmp/release-$SHA.tar.gz"   # don't strand 205MB in /tmp
+            exit 1
+          fi
+
+          # --- unpack the new release beside the live one ---------------------
+          rm -rf "$RELEASE_DIR"
+          mkdir -p "$RELEASE_DIR"
+          tar -xzf "/tmp/release-$SHA.tar.gz" -C "$RELEASE_DIR"
+          rm -f "/tmp/release-$SHA.tar.gz"
+
+          # Runtime env lives on the server, never in the repo, and is shared
+          # across releases so a deploy can't drop it.
+          ln -sfn "$APP_DIR/shared/.env.local" "$RELEASE_DIR/.env.local"
+
+          # --- swap ------------------------------------------------------------
+          # ln -T to a temp name then mv is atomic; a plain `ln -sfn` over an
+          # existing symlink is not, and can leave `current` pointing at nothing.
+          ln -sfnT "$RELEASE_DIR" "$APP_DIR/current.tmp"
+          mv -Tf "$APP_DIR/current.tmp" "$APP_DIR/current"
+
+          # --- restart ---------------------------------------------------------
+          # delete+start rather than reload: pm2 caches the resolved script path,
+          # so a reload can keep serving the old release through the new symlink.
+          pm2 delete dbh >/dev/null 2>&1 || true
+          pm2 start "$APP_DIR/shared/ecosystem.config.cjs" --update-env
+          pm2 save >/dev/null
+
+          # --- verify, or put the old release back ------------------------------
+          ok=false
+          for i in $(seq 1 30); do
+            if curl -fsS --max-time 5 -o /dev/null "$HEALTH_URL"; then ok=true; break; fi
+            sleep 2
+          done
+
+          if [ "$ok" != true ]; then
+            echo "::error::Health check failed on $HEALTH_URL — rolling back"
+            if [ -n "$PREVIOUS" ] && [ -d "$PREVIOUS" ]; then
+              ln -sfnT "$PREVIOUS" "$APP_DIR/current.tmp"
+              mv -Tf "$APP_DIR/current.tmp" "$APP_DIR/current"
+              pm2 delete dbh >/dev/null 2>&1 || true
+              pm2 start "$APP_DIR/shared/ecosystem.config.cjs" --update-env
+              pm2 save >/dev/null
+              echo "Rolled back to $PREVIOUS"
+            fi
+            pm2 logs dbh --lines 60 --nostream || true
+            exit 1
+          fi
+
+          # --- prune (this box runs hot on disk) --------------------------------
+          cd "$APP_DIR/releases"
+          ls -1dt */ 2>/dev/null | tail -n "+$((KEEP_RELEASES + 1))" | while read -r old; do
+            [ "$(readlink -f "$old")" = "$(readlink -f "$APP_DIR/current")" ] && continue
+            rm -rf -- "$old"
+          done
+
+          echo "Deployed $SHA"
+          df -h / | tail -1
+          REMOTE
