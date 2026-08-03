@@ -1,0 +1,20 @@
+# Build-script approvals. pnpm 11 treats unapproved install scripts as a hard
+# error (ERR_PNPM_IGNORED_BUILDS), where pnpm 10 only warned — so every package
+# with a build script must be listed here or CI fails outright.
+#
+# The key is `allowBuilds` (a map). Two older spellings do NOT work in pnpm 11
+# and fail silently, which is what broke the first deploy:
+#   - `onlyBuiltDependencies[]=` in .npmrc  — ignored entirely
+#   - `onlyBuiltDependencies:` (a list)     — the pnpm 10 name, ignored
+# Verify with `pnpm approve-builds --all`, which rewrites this block itself.
+#
+#   sharp         — Next's image optimiser. Its script is `install/check.js ||
+#                   npm run build`: with a matching @img/sharp-<platform>
+#                   prebuilt from the lockfile it just verifies and exits, and
+#                   only falls back to a node-gyp source build if the prebuilt
+#                   arch doesn't match the host.
+#   unrs-resolver — native resolver used by eslint-config-next; genuinely needs
+#                   its postinstall to place the binary.
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
