@@ -1,59 +1,91 @@
 #!/usr/bin/env bash
-# One-time setup on the staging box. Run once as the deploy user; after this the
-# GitHub Actions workflow owns every subsequent deploy.
+# One-time setup for the staging box. Idempotent — safe to re-run.
 #
-#   scp -i ~/work/keys/jake-district.pem deploy/setup-server.sh ubuntu@34.233.131.184:/tmp/
-#   ssh -i ~/work/keys/jake-district.pem ubuntu@34.233.131.184 'bash /tmp/setup-server.sh'
+#   scp -i ~/work/keys/jake-district.pem deploy/*.cjs deploy/setup-server.sh ubuntu@34.233.131.184:/tmp/
+#   ssh -i ~/work/keys/jake-district.pem ubuntu@34.233.131.184 'sudo bash /tmp/setup-server.sh'
+#
+# Context that drove the design here — this is NOT a dedicated staging box:
+#   * /var/www/dbh is root-owned and shares the host with five other apps
+#     (api, web, deploy-manager, plus gbp-auto-posting and district-complinace).
+#   * pm2 runs as root under pm2-root.service and owns all of them. Anything
+#     that talks to pm2 must therefore run as root, or it silently addresses a
+#     different, empty pm2 daemon and the deploy becomes a no-op.
+#   * Node is pinned to root's nvm v20.20.2. The `ubuntu` user's default node is
+#     18.19.1, which cannot run Next 16.
+# So: nothing here chowns or relocates the existing checkout. The release layout
+# is created alongside it and stays root-owned, matching every other app.
 set -euo pipefail
 
 APP_DIR=/var/www/dbh
-DEPLOY_USER="$(whoami)"
+NODE_BIN=/root/.nvm/versions/node/v20.20.2/bin
 
-echo "==> Creating release layout under $APP_DIR"
-sudo mkdir -p "$APP_DIR"/{releases,shared}
-sudo mkdir -p /var/log/dbh
-sudo chown -R "$DEPLOY_USER":"$DEPLOY_USER" "$APP_DIR" /var/log/dbh
-
-# The existing checkout at $APP_DIR is whatever is running today. Keep it around
-# as a fallback rather than deleting it — it is the only rollback target until
-# the first two pipeline deploys have run.
-if [ -d "$APP_DIR/.git" ]; then
-  echo "==> Existing git checkout found; preserving it at $APP_DIR/../dbh-legacy"
-  sudo mv "$APP_DIR/.git" "$APP_DIR/../dbh-legacy-git" 2>/dev/null || true
+if [ "$(id -u)" -ne 0 ]; then
+  echo "Run me as root (sudo bash $0) — the release layout and pm2 are root-owned." >&2
+  exit 1
 fi
 
-echo "==> Writing runtime env to $APP_DIR/shared/.env.local"
+echo "==> Release layout under $APP_DIR"
+mkdir -p "$APP_DIR/releases" "$APP_DIR/shared" /var/log/dbh
+
+echo "==> Runtime env at $APP_DIR/shared/.env.local"
+# Shared across releases so a deploy can never drop it. Seeded from the
+# pre-pipeline $APP_DIR/.env if that is still around.
 if [ ! -f "$APP_DIR/shared/.env.local" ]; then
-  cat > "$APP_DIR/shared/.env.local" <<'ENVFILE'
+  if [ -f "$APP_DIR/.env" ]; then
+    cp "$APP_DIR/.env" "$APP_DIR/shared/.env.local"
+    echo "    seeded from $APP_DIR/.env"
+  else
+    cat > "$APP_DIR/shared/.env.local" <<'ENVFILE'
 WORDPRESS_URL=https://districtbehavioralhealth.com
 WORDPRESS_REVALIDATE_SECONDS=60
 REVALIDATE_SECRET=CHANGE-ME
 ENVFILE
+    echo "    !! Set a real REVALIDATE_SECRET in $APP_DIR/shared/.env.local"
+  fi
   chmod 600 "$APP_DIR/shared/.env.local"
-  echo "    !! Set a real REVALIDATE_SECRET in $APP_DIR/shared/.env.local"
 else
   echo "    already exists, leaving alone"
 fi
+# Must equal the REVALIDATE_SECRET repo secret in GitHub Actions, and whatever
+# WordPress sends to the revalidate webhook.
 
-echo "==> Installing pm2 ecosystem config"
-# Copy deploy/ecosystem.config.cjs from the repo to $APP_DIR/shared/ before this,
-# or paste it in now.
-if [ ! -f "$APP_DIR/shared/ecosystem.config.cjs" ]; then
-  echo "    !! MISSING: copy deploy/ecosystem.config.cjs to $APP_DIR/shared/"
+echo "==> pm2 ecosystem configs"
+for f in ecosystem.config.cjs ecosystem.legacy.cjs; do
+  if [ -f "/tmp/$f" ]; then
+    install -m 644 "/tmp/$f" "$APP_DIR/shared/$f"
+    echo "    installed $f"
+  elif [ ! -f "$APP_DIR/shared/$f" ]; then
+    echo "    !! MISSING: copy deploy/$f to $APP_DIR/shared/"
+  else
+    echo "    $f already present"
+  fi
+done
+# The deploy workflow READS these and never rewrites them, so edits in the repo
+# do not reach the server on their own — re-run this script to push them.
+
+echo "==> Verifying the pinned Node interpreter exists"
+if [ -x "$NODE_BIN/node" ]; then
+  echo "    $("$NODE_BIN/node" -v) at $NODE_BIN/node"
+else
+  echo "    !! MISSING $NODE_BIN/node — update `interpreter` in ecosystem.config.cjs"
+  echo "       and node-version in .github/workflows/deploy-staging.yml to match."
 fi
 
-echo "==> Authorising the CI deploy key"
-# Paste the PUBLIC half of the ed25519 key generated for CI.
-echo "    Append the CI public key to ~/.ssh/authorized_keys, then re-run a deploy."
+echo "==> CI deploy key"
+# The workflow connects as a non-root user and escalates with sudo, so the CI
+# public key goes in THAT user's authorized_keys (not root's).
+if grep -qs "gh-actions-dbh-staging" /home/ubuntu/.ssh/authorized_keys; then
+  echo "    already authorised for ubuntu"
+else
+  echo "    !! Append the CI public key to /home/ubuntu/.ssh/authorized_keys"
+fi
 
-echo "==> Making pm2 survive reboots (note: a restart is already pending on this box)"
-pm2 startup systemd -u "$DEPLOY_USER" --hp "$HOME" | tail -1
+echo "==> pm2 boot persistence"
+"$NODE_BIN/pm2" startup systemd -u root --hp /root | tail -1
 echo "    ^ run the sudo command above if pm2 printed one"
 
 echo
 echo "==> Current state"
 df -h /
 echo
-echo "Who owns the running processes:"
-sudo pm2 list 2>/dev/null || echo "  (no root pm2)"
-pm2 list
+"$NODE_BIN/pm2" list

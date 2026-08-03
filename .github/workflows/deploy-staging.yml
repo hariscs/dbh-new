@@ -43,8 +43,12 @@ jobs:
 
       - uses: actions/setup-node@v5
         with:
-          # Must match the Node major running on the server (`node -v` there).
-          node-version: '24'
+          # Pinned to the EXACT version pm2 runs on the server (root's nvm
+          # node, see `interpreter` in shared/ecosystem.config.cjs). Not just
+          # the major: sharp's prebuilt binary is tied to the Node ABI, so a
+          # drift here ships a native module the server cannot load.
+          # The `ubuntu` user's default node is 18.19.1 — too old for Next 16.
+          node-version: '20.20.2'
           cache: pnpm
 
       - name: Restore Next.js build cache
@@ -109,12 +113,26 @@ jobs:
           SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
+          # `sudo env ... bash`, not a bare `bash`: /var/www/dbh and every other
+          # app on this box are root-owned, and pm2 runs under pm2-root.service.
+          # Connecting as $SSH_USER and running pm2 unprivileged would talk to a
+          # different, empty pm2 daemon — the live process would keep port 3001
+          # and the deploy would silently do nothing. sudo strips the
+          # environment, hence `env` rather than VAR=x prefixes.
           ssh -i ~/.ssh/deploy_key "$SSH_USER@$SSH_HOST" \
-            APP_DIR="$APP_DIR" APP_PORT="$APP_PORT" HEALTH_URL="$HEALTH_URL" \
-            KEEP_RELEASES="$KEEP_RELEASES" MIN_FREE_MB="$MIN_FREE_MB" SHA="$SHA" \
-            'bash -seuo pipefail' <<'REMOTE'
-          RELEASE_DIR="$APP_DIR/releases/$SHA"
-          PREVIOUS="$(readlink -f "$APP_DIR/current" || true)"
+            "sudo env APP_DIR='$APP_DIR' APP_PORT='$APP_PORT' HEALTH_URL='$HEALTH_URL' \
+              KEEP_RELEASES='$KEEP_RELEASES' MIN_FREE_MB='$MIN_FREE_MB' SHA='$SHA' \
+              RUN_ID='${{ github.run_id }}' bash -seuo pipefail" <<'REMOTE'
+          # pm2 by absolute path: sudo resets PATH to secure_path, which does not
+          # include root's nvm bin dir.
+          PM2=/root/.nvm/versions/node/v20.20.2/bin/pm2
+
+          # Release dirs are SHA+run, never bare SHA. Re-running a deploy for the
+          # SHA that is already live would otherwise resolve RELEASE_DIR to the
+          # running release and `rm -rf` it out from under the live process,
+          # taking the rollback target with it.
+          RELEASE_DIR="$APP_DIR/releases/$SHA-$RUN_ID"
+          PREVIOUS="$(readlink -f "$APP_DIR/current" 2>/dev/null || true)"
 
           # --- make room BEFORE unpacking --------------------------------------
           # Prune down to just the live release first. Unpacking 1.5GB onto a disk
@@ -157,14 +175,27 @@ jobs:
           # --- restart ---------------------------------------------------------
           # delete+start rather than reload: pm2 caches the resolved script path,
           # so a reload can keep serving the old release through the new symlink.
-          pm2 delete dbh >/dev/null 2>&1 || true
-          pm2 start "$APP_DIR/shared/ecosystem.config.cjs" --update-env
-          pm2 save >/dev/null
+          # This also retires the pre-pipeline `dbh` entry (bash -c 'pnpm start'
+          # against the git checkout) the first time it runs.
+          $PM2 delete dbh >/dev/null 2>&1 || true
+          $PM2 start "$APP_DIR/shared/ecosystem.config.cjs" --update-env
+          $PM2 save >/dev/null
 
           # --- verify, or put the old release back ------------------------------
+          # A bare `curl :3001` is NOT sufficient. If the new process dies on
+          # EADDRINUSE while something stale still holds the port, curl returns
+          # 200 from the old code and the deploy reports success having changed
+          # nothing. So also require that the process actually answering is
+          # running out of the release we just unpacked.
           ok=false
           for i in $(seq 1 30); do
-            if curl -fsS --max-time 5 -o /dev/null "$HEALTH_URL"; then ok=true; break; fi
+            if curl -fsS --max-time 5 -o /dev/null "$HEALTH_URL"; then
+              pid="$($PM2 pid dbh 2>/dev/null | tr -d '[:space:]')"
+              if [ -n "$pid" ] && [ "$pid" != "0" ] \
+                 && [ "$(readlink -f "/proc/$pid/cwd" 2>/dev/null)" = "$RELEASE_DIR" ]; then
+                ok=true; break
+              fi
+            fi
             sleep 2
           done
 
@@ -173,12 +204,21 @@ jobs:
             if [ -n "$PREVIOUS" ] && [ -d "$PREVIOUS" ]; then
               ln -sfnT "$PREVIOUS" "$APP_DIR/current.tmp"
               mv -Tf "$APP_DIR/current.tmp" "$APP_DIR/current"
-              pm2 delete dbh >/dev/null 2>&1 || true
-              pm2 start "$APP_DIR/shared/ecosystem.config.cjs" --update-env
-              pm2 save >/dev/null
+              $PM2 delete dbh >/dev/null 2>&1 || true
+              $PM2 start "$APP_DIR/shared/ecosystem.config.cjs" --update-env
+              $PM2 save >/dev/null
               echo "Rolled back to $PREVIOUS"
+            else
+              # First pipeline deploy: there is no previous release to return to,
+              # so fall back to the pre-pipeline app rather than leaving the site
+              # down. Remove ecosystem.legacy.cjs once a deploy has succeeded and
+              # the old checkout is cleaned up.
+              echo "No previous release — restoring the pre-pipeline app"
+              $PM2 delete dbh >/dev/null 2>&1 || true
+              $PM2 start "$APP_DIR/shared/ecosystem.legacy.cjs" --update-env || true
+              $PM2 save >/dev/null || true
             fi
-            pm2 logs dbh --lines 60 --nostream || true
+            $PM2 logs dbh --lines 60 --nostream || true
             exit 1
           fi
 
