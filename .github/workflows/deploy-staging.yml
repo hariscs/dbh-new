@@ -149,10 +149,7 @@ jobs:
               $PM2 save >/dev/null
               echo "Rolled back to $PREVIOUS"
             else
-              echo "No previous release — restoring the pre-pipeline app"
-              $PM2 delete dbh >/dev/null 2>&1 || true
-              $PM2 start "$APP_DIR/shared/ecosystem.legacy.cjs" --update-env || true
-              $PM2 save >/dev/null || true
+              echo "::error::No previous release to roll back to — dbh is DOWN"
             fi
             $PM2 logs dbh --lines 60 --nostream || true
             exit 1

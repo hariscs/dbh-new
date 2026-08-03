@@ -33,7 +33,7 @@ else
 fi
 
 echo "==> pm2 ecosystem configs"
-for f in ecosystem.config.cjs ecosystem.legacy.cjs; do
+for f in ecosystem.config.cjs; do
   if [ -f "/tmp/$f" ]; then
     install -m 644 "/tmp/$f" "$APP_DIR/shared/$f"
     echo "    installed $f"
