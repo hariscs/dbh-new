@@ -20,6 +20,7 @@ export default function LocationServedUsaTn({ fields = {}, relatedLinks }: Templ
   const facilities___mile_radius = props.facilities___mile_radius ?? "25";
   const high_rated_facilities___number = props.high_rated_facilities___number ?? "2";
   const high_rated_facilities___min_rating = props.high_rated_facilities___min_rating ?? "4";
+  const blog_section_1___con = props.blog_section_1___con ?? "";
   return (
     <>
     <div className="wp-singular page-template-default page page-id-1942 page-child parent-pageid-1754 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-theme-child-master hello-elementor-default elementor-default elementor-kit-7 elementor-page elementor-page-1942 elementor-page-1990 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit">
@@ -241,52 +242,9 @@ export default function LocationServedUsaTn({ fields = {}, relatedLinks }: Templ
         </div>
         <div className="elementor-element elementor-element-c3ca80f elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
           <div className="elementor-widget-container">
-            <p>
-              Seeking comprehensive, intensive care {near_in} {geo} that provides more support than weekly therapy sessions while avoiding residential placement requirements? Partial hospitalization programs ({topic_1}) create a vital connection between residential inpatient and outpatient therapy, and the challenges that lead individuals here (active addiction, destabilized mental health, and early recovery fragility) often result {near_in} feeling 
-              <strong>
-                mentally exhausted, physically depleted, and uncertain about what comes next
-              </strong>
-              . Selecting an appropriate {topic_1} represents a significant clinical and personal choice. Understanding what creates this difficulty is essential:
-            </p>
-            <ul>
-              <li>
-                <p>
-                  Could {topic_1} lack sufficient intensity for my current situation?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Am I prepared to return home each evening?
-                </p>
-              </li>
-              <li>
-                <p>
-                  How can I ensure coordinated care from the treatment team without gaps?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Is this care level financially realistic for my situation?
-                </p>
-              </li>
-            </ul>
-            <p>
-              Such questions demonstrate a realistic awareness of this decision’s gravity. Quality treatment should be 
-              <strong>
-                structured, clinically comprehensive, and built around your specific needs
-              </strong>
-              , rather than following a generic approach.
-            </p>
-            <p>
-              Through 
-              <Link href="/">
-                District Behavioral Health Group
-              </Link>
-              , our {topic_1} services {near_in} {geo} provide hospital-level clinical intensity within a structured, supportive framework. Licensed multidisciplinary professionals, including psychiatrists, therapists, and medical staff, collaborate on every aspect of your care plan to ensure comprehensive coverage. Receiving necessary treatment depth occurs while preserving meaningful connections to your external life.
-            </p>
-            <p>
-              Continue reading below.
-            </p>
+            {props.h2___con && (
+              <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />
+            )}
           </div>
         </div>
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
@@ -301,112 +259,22 @@ export default function LocationServedUsaTn({ fields = {}, relatedLinks }: Templ
                     <path d="M6 1V11M1 6H11" stroke="currentColor" strokeWidth="2" strokeLinecap="round"></path>
                   </svg>
                 </button>
-                <div className="blog-section-content" id="blog-content-6a578317117da" aria-hidden="true">
-                  <div className="blog-section-content-inner">
-                    <h2>
-                      Partial Hospitalization Program ({topic_1}) {near_in} {geo}
-                    </h2>
-                    <p>
-                      Seeking a 
-                      <strong>
-                        Partial Hospitalization Program ({topic_1}) {near_in} {geo}
-                      </strong>
-                       marks an important step for individuals who need intensive therapeutic intervention throughout their healing process. Comprehensive daytime treatment programs address the needs of those requiring more extensive support than standard outpatient care while avoiding the necessity of 24-hour residential placement.
-                    </p>
-                    <p>
-                      Extended therapeutic engagement lasting several hours daily defines these programs, allowing participants to return home each evening. Intensive treatment structure paired with residential flexibility promotes concentrated recovery efforts while maintaining essential family bonds and daily responsibilities.
-                    </p>
-                    <h3>
-                      Understanding Partial Hospitalization Programs
-                    </h3>
-                    <p>
-                      Comprehensive daytime treatment characterizes a Partial Hospitalization Program, providing extensive therapeutic intervention without requiring overnight stays. Several hours of structured participation across multiple weekly sessions typically forms the foundation of each treatment plan.
-                    </p>
-                    <p>
-                      Bridging care between inpatient and outpatient settings often utilizes PHPs, though these programs equally benefit individuals needing enhanced support beyond standard outpatient offerings.
-                    </p>
-                    <p>
-                      Multifaceted therapeutic methodologies frequently include counseling sessions, clinical monitoring, and practical skills training supporting both mental health recovery and substance use treatment.
-                    </p>
-                    <h3>
-                      Services Provided Within {topic_1} Programs
-                    </h3>
-                    <p>
-                      Varied therapeutic modalities typically constitute Partial Hospitalization Programs, addressing emotional and behavioral health through comprehensive intervention.
-                    </p>
-                    <p>
-                      Common {topic_1} components include:
-                    </p>
-                    <ul>
-                      <li>
-                        <p>
-                          Individual therapeutic sessions with licensed mental health practitioners
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Group therapy fostering peer support and accountability development
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Family-centered therapy enhancing interpersonal relationships and communication skills
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Medical supervision for medication management when clinically appropriate
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Educational workshops focusing on adaptive coping strategies and prevention planning
-                        </p>
-                      </li>
-                    </ul>
-                    <p>
-                      Complementary wellness services may enhance primary treatment, integrating mindfulness techniques or relaxation methods that support comprehensive healing.
-                    </p>
-                    <h3>
-                      Ideal Candidates for {topic_1} Services
-                    </h3>
-                    <p>
-                      Intensive therapeutic programming {near_in} {geo} serves individuals needing concentrated support while remaining capable of safe community living. Patients transitioning from residential treatment often discover continued professional assistance through PHPs especially beneficial.
-                    </p>
-                    <p>
-                      Concentrated supervision coupled with clinical framework particularly assists individuals navigating co-occurring substance use disorders and mental health conditions. Coordinated treatment approaches enable comprehensive addressing of various therapeutic requirements.
-                    </p>
-                    <h3>
-                      Benefits of {topic_1} Treatment Approach
-                    </h3>
-                    <p>
-                      Combining intensive intervention with preserved autonomy constitutes {topic_1}’s fundamental strength. Thorough daily treatment matched with practical skill implementation creates ideal conditions for sustainable recovery.
-                    </p>
-                    <p>
-                      Maintaining community and family relationships through {topic_1} engagement significantly enhances long-term recovery success. Continuous support network involvement strengthens positive lifestyle modifications and enduring stability.
-                    </p>
-                    <h3>
-                      Our Treatment Approach at District Behavioral Health Group
-                    </h3>
-                    <p>
-                      Specialized 
-                      <strong>
-                        Partial Hospitalization Programs {near_in} {geo}
-                      </strong>
-                       at 
-                      <Link href="/">
-                        District Behavioral Health
-                      </Link>
-                       Group assist individuals confronting addiction and mental health concerns concurrently. Research-supported therapeutic approaches integrated with customized treatment development ensure tailored care for every participant.
-                    </p>
-                    <p>
-                      Structured daily programming facilitated by committed clinical specialists focuses on building fundamental recovery skills that promote lasting wellness and individual development.
-                    </p>
-                    <p>
-                      Considering treatment alternatives for yourself or a loved one? Expert support throughout your recovery process starts with reaching out to our knowledgeable team.
-                    </p>
+                {(props.blog_section_1___head || props.blog_section_1___con) && (
+                  <div className="blog-section-content" id="blog-content-6a578317117da" aria-hidden="true">
+                    <div className='blog-section-content-inner'>
+                      <div className="e-con-inner">
+                        <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                          <div className="elementor-widget-container">
+                            {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
+                            {props.blog_section_1___con && (
+                              <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </div>
@@ -3979,20 +3847,7 @@ export default function LocationServedUsaTn({ fields = {}, relatedLinks }: Templ
         </div>
       </div>
     </div>
-          {(props.blog_section_1___head || props.blog_section_1___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
-                {props.blog_section_1___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+        
       {(props.blog_section_2___head || props.blog_section_2___con) && (
         <div className="elementor-element e-flex e-con-boxed e-con e-parent">
           <div className="e-con-inner">

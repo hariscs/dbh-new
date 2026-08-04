@@ -114,6 +114,26 @@ export default function WidgetInteractions() {
         }
       }
 
+      // "Read More" blog section on the location-served templates. The export shipped the
+      // button, the panel and the CSS that keys off [aria-hidden] / .active, but not the
+      // script that flips them, so the button did nothing. Delegated here because the same
+      // block appears in every location template.
+      const readMore = target.closest(".read-more-toggle");
+      if (readMore instanceof HTMLElement) {
+        e.preventDefault();
+        const panel =
+          document.getElementById(readMore.getAttribute("aria-controls") ?? "") ??
+          readMore.closest(".blog-section-wrapper")?.querySelector(".blog-section-content");
+        if (!panel) return;
+        const expanded = readMore.getAttribute("aria-expanded") !== "true";
+        readMore.setAttribute("aria-expanded", String(expanded));
+        readMore.classList.toggle("active", expanded);
+        panel.setAttribute("aria-hidden", String(!expanded));
+        const label = readMore.querySelector(".toggle-text");
+        if (label) label.textContent = expanded ? "Read Less" : "Read More";
+        return;
+      }
+
       const accTitle = target.closest(
         ".elementor-accordion .elementor-tab-title, .elementor-toggle .elementor-tab-title"
       );
