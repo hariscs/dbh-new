@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 import { resolvePhone } from "@/lib/phone";
+import FaqAccordion from '../FaqAccordion';
 
 export default function LocationServedUsaCaSouthern({ fields = {}, relatedLinks }: TemplateProps) {
   const { phone, telHref } = resolvePhone(fields);
@@ -29,7 +30,7 @@ export default function LocationServedUsaCaSouthern({ fields = {}, relatedLinks 
         <div className="elementor-element elementor-element-80f2f9d cb-id-headline elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
             <h1 className="elementor-heading-title elementor-size-default">
-              <span>{props.hero___head ?? "Southern California {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)"}</span>
+              {props.h1}
             </h1>
           </div>
         </div>
@@ -240,52 +241,7 @@ export default function LocationServedUsaCaSouthern({ fields = {}, relatedLinks 
         </div>
         <div className="elementor-element elementor-element-c3ca80f elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
           <div className="elementor-widget-container">
-            <p>
-              Finding a rehab program in Southern California that works around your life rather than disrupting it completely? Addiction creates profound consequences, leaving you 
-              <strong>
-                feeling drained, alone, and emotionally fragile
-              </strong>
-              , but many people realize that walking away from employment, relationships, or critical responsibilities simply cannot happen. {topic_1} treatment offers a practical alternative, although choosing the right program means addressing challenging questions. Regular discussions with our clients consistently reveal these frequent concerns:
-            </p>
-            <ul>
-              <li>
-                <p>
-                  Can I maintain enough discipline to stay on track without round-the-clock monitoring?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Environmental triggers at home may keep pulling me back – how do I handle that?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Will outpatient treatment be viewed with the same credibility as inpatient facilities?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Cost considerations might still put this option beyond my reach?
-                </p>
-              </li>
-            </ul>
-            <p>
-              All these worries arise from real experiences and understandable fears. Effective outpatient treatment must be 
-              <strong>
-                organized, individualized, and clinically thorough
-              </strong>
-              , respecting both your recovery process and the life you’re striving to rebuild.
-            </p>
-            <p>
-              At 
-              <Link href="/">
-                District Behavioral Health Group
-              </Link>
-              , outpatient programs in Southern California embody comprehensive treatment solutions, not reduced alternatives. Our clinical professionals integrate evidence-based methods, tailored treatment plans, and continuous expert oversight to provide essential support while maintaining your connection to everyday life. Your unique situation shapes our methodology.
-            </p>
-            <p>
-              Read on for additional information.
-            </p>
+            {props.h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />}
           </div>
         </div>
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
@@ -302,88 +258,7 @@ export default function LocationServedUsaCaSouthern({ fields = {}, relatedLinks 
                 </button>
                 <div className="blog-section-content" id="blog-content-6a57846928ec6" aria-hidden="true">
                   <div className="blog-section-content-inner">
-                    <h2>
-                      Comprehensive {topic_1} Services for Addiction & Mental Health in Southern California
-                    </h2>
-                    <p>
-                      Navigating the search for appropriate addiction or mental health support often creates stress, particularly while juggling career obligations, educational commitments, or family duties. {topic_1} programs present a viable and accommodating solution for countless people. Professional therapeutic intervention and expert guidance characterize these services, enabling participants to remain in their home environment while preserving established daily patterns.
-                    </p>
-                    <h3>
-                      Understanding {topic_1} Care Programs
-                    </h3>
-                    <p>
-                      Structured therapeutic support without requiring residential stays defines outpatient treatment for those who can benefit from professional guidance. Scheduled therapy appointments occur throughout each week, with clients returning to their homes following sessions. Daily obligations including employment, education, and family care can continue alongside this adaptable framework.
-                    </p>
-                    <p>
-                      Remaining within familiar surroundings enables participants to more effectively implement therapeutic techniques in authentic, everyday circumstances.
-                    </p>
-                    <h3>
-                      Core Services and Treatment Components
-                    </h3>
-                    <p>
-                      Comprehensive therapeutic methodologies typically form the foundation of outpatient programs, addressing both substance recovery and mental wellness needs. Standard offerings frequently encompass:
-                    </p>
-                    <ul>
-                      <li>
-                        <p>
-                          One-on-one counseling sessions with certified therapists
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Peer-supported group therapy experiences
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Skill-building workshops emphasizing stress management and prevention strategies
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Family-centered therapy sessions promoting improved communication and support networks
-                        </p>
-                      </li>
-                    </ul>
-                    <p>
-                      Helping participants comprehend their specific challenges while developing enhanced coping mechanisms and establishing robust support systems represents the primary goal of these interventions.
-                    </p>
-                    <h3>
-                      Adaptable Treatment Scheduling
-                    </h3>
-                    <p>
-                      Scheduling flexibility stands as a primary benefit of outpatient programming. Various schedule accommodations characterize most programs, with some clients attending sessions multiple times weekly while others engage in comprehensive programs spanning several treatment hours across numerous days.
-                    </p>
-                    <p>
-                      Continued participation in work responsibilities, academic pursuits, or family caregiving becomes possible through this adaptable approach while receiving ongoing therapeutic guidance.
-                    </p>
-                    <h3>
-                      Developing Sustainable Recovery Tools
-                    </h3>
-                    <p>
-                      Practical skill development supporting lasting wellness represents the central focus of outpatient services. Stress management techniques, trigger identification, enhanced communication abilities, and improved emotional control often become therapy session focal points.
-                    </p>
-                    <p>
-                      Real-world application opportunities arise naturally since participants maintain their standard living situations. Confidence building and sustained recovery progress may develop more effectively through this practical approach.
-                    </p>
-                    <h3>
-                      District Behavioral Health Group’s {topic_1} Services
-                    </h3>
-                    <p>
-                      Comprehensive outpatient programming at 
-                      <Link href="/">
-                        <strong>
-                          District Behavioral Health
-                        </strong>
-                      </Link>
-                      <strong>
-                         Group
-                      </strong>
-                       serves individuals addressing addiction and mental health challenges throughout Southern California. Structured therapeutic interventions, professional counseling, and comprehensive support services enable recovery focus while preserving essential daily commitments.
-                    </p>
-                    <p>
-                      Initial recovery steps or continued care following intensive treatment both benefit from outpatient programs offering flexible, supportive pathways toward enhanced wellness and stability.
-                    </p>
+                    {props.blog_section_1___con && <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />}
                   </div>
                 </div>
               </div>
@@ -4287,168 +4162,7 @@ export default function LocationServedUsaCaSouthern({ fields = {}, relatedLinks 
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
               <div className="elementor-shortcode">
-                <div className="custom-accordion">
-                  <div className="custom-accordion__item active">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Will insurance plans cover Southern California outpatient rehab services?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon hidden"></div>
-                        <div className="opened-icon"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content">
-                      <p>
-                        Leading insurance providers typically include Southern California outpatient rehab in their coverage, encompassing specialized programs such as PHP and IOP. Benefits verification specialists will review your specific coverage in Southern California to clarify which services your plan includes.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Must I leave my employment to participate in Southern California outpatient rehab?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Employment continuity remains possible with Southern California outpatient rehab, as these programs accommodate working professionals. Flexible scheduling options ensure your recovery process doesn’t disrupt your career commitments in Southern California.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What duration can I expect for Southern California outpatient rehab?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Program duration in Southern California generally spans from multiple weeks to several months depending on individual circumstances. Clinical teams collaborate with you to establish appropriate timeframes for your healing process in Southern California.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What does daily life look like during Southern California outpatient rehab?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Throughout Southern California outpatient rehab, participants engage in one-on-one counseling and therapeutic group sessions focused on practical skill development. Structured scheduling maintains treatment consistency while allowing you to remain at home in Southern California.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What are the financial considerations for Southern California outpatient rehab?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Treatment expenses in Southern California outpatient rehab depend on insurance benefits and care intensity levels required. Financial guidance consultations help clarify expected investment amounts for your treatment journey in Southern California.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Can outpatient rehab in Southern California provide meaningful results?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Evidence supports outpatient rehab in Southern California as an effective approach for sustaining long-term recovery success. Personal investment in this treatment model delivers essential clinical guidance and peer connections vital for rebuilding your life in Southern California.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        How should I handle therapy hesitation in Southern California?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Therapeutic anxiety is common among individuals beginning treatment in Southern California, yet our counselors adapt to each person’s comfort level. Priority focuses on establishing trust and emotional safety before progressing through deeper therapeutic work in Southern California.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Why might group sessions in Southern California outpatient rehab seem overwhelming?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Apprehension about group participation in Southern California represents a natural response, though these environments foster mutual support among individuals facing similar challenges. Participation remains voluntary, allowing observation until you’re comfortable engaging with fellow participants in Southern California.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        How do IOP and traditional Southern California outpatient rehab differ?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Enhanced frequency characterizes Intensive {topic_1} Programs (IOP) in Southern California, providing increased weekly contact hours for individuals requiring elevated clinical oversight. Traditional outpatient services in Southern California function as adaptable continuation care following initial stabilization achievements.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Can Southern California outpatient rehab address dual-diagnosis conditions?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Comprehensive outpatient treatment in Southern California frequently incorporates coordinated care for concurrent mental health challenges including depression or trauma-related disorders. Simultaneous treatment of both psychological wellness and substance use concerns establishes optimal recovery outcomes in Southern California.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <FaqAccordion html={props.faqs___con} />
               </div>
             </div>
           </div>

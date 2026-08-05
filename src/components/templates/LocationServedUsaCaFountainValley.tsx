@@ -3,6 +3,7 @@ import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
+import FaqAccordion from '@/components/FaqAccordion';
 import { resolvePhone } from "@/lib/phone";
 
 export default function LocationServedUsaCaFountainValley({ fields = {}, relatedLinks }: TemplateProps) {
@@ -4177,104 +4178,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
               <div className="elementor-shortcode">
-                <div className="custom-accordion">
-                  <div className="custom-accordion__item active">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What is the operational structure of {topic_1} rehab {near_in} {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon hidden"></div>
-                        <div className="opened-icon"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content">
-                      <p>
-                        Intensive daytime treatment sessions {near_in} {geo} {topic_1} rehab blend therapeutic interventions with expert clinical oversight. Clients maintain their home environment during evening hours while participating {near_in} comprehensive recovery programming.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Who represents the ideal candidates for {topic_1} rehab {near_in} {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Comprehensive therapeutic care without residential requirements makes {topic_1} rehab {near_in} {geo} particularly suitable for certain client populations. Many individuals transitioning from residential treatment find this intermediate level especially effective.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What timeframe typically characterizes {topic_1} rehab {near_in} {geo} programs?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Clinical evaluations and personal advancement patterns guide overall program length. Multiple weeks of active engagement usually precede graduation to lower intensity treatment options.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What therapeutic methodologies are integrated within {topic_1} rehab?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Collective therapy sessions, individual counseling meetings, and hands-on skill building constitute {topic_1} rehab’s foundational elements. Coping strategy development, mental health stabilization, and healthy habit formation represent key treatment priorities.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Can {topic_1} rehab {near_in} {geo} work around existing personal responsibilities?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Certainly. Ongoing life obligations remain manageable during {topic_1} rehab {near_in} {geo} enrollment. Program scheduling creates organized harmony between therapeutic needs and personal commitments.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What transition occurs after {topic_1} rehab program completion?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Standard outpatient treatment or ongoing therapeutic support commonly succeeds {topic_1} rehab completion. Gradual intensity reduction preserves treatment gains and encourages long-term wellness maintenance.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <FaqAccordion html={props.faqs___con} />
               </div>
             </div>
           </div>

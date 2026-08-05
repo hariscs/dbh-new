@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 import { resolvePhone } from "@/lib/phone";
+import FaqAccordion from '../FaqAccordion';
 
 export default function LocationServedUsaTnNashville({ fields = {}, relatedLinks }: TemplateProps) {
   const { phone, telHref } = resolvePhone(fields);
@@ -30,7 +31,7 @@ export default function LocationServedUsaTnNashville({ fields = {}, relatedLinks
         <div className="elementor-element elementor-element-80f2f9d cb-id-headline elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
             <h1 className="elementor-heading-title elementor-size-default">
-              {geo} {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
+              {props.h1}
             </h1>
           </div>
         </div>
@@ -239,52 +240,7 @@ export default function LocationServedUsaTnNashville({ fields = {}, relatedLinks
         </div>
         <div className="elementor-element elementor-element-c3ca80f elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
           <div className="elementor-widget-container">
-            <p>
-              Intensive care options {near_in} {geo} that bridge the gap between inpatient stays and weekly outpatient visits may be exactly what you’re seeking if residential treatment feels too restrictive. Between residential facilities and traditional therapy sessions, partial hospitalization programs ({topic_1}) serve as a crucial middle ground, yet individuals requiring this care level (battling active addiction, experiencing mental health crises, or navigating early recovery challenges) frequently find themselves 
-              <strong>
-                emotionally exhausted, physically depleted, and uncertain about their next moves
-              </strong>
-              . Choosing the right {topic_1} involves both critical medical considerations and deeply intimate personal factors. Why this choice feels so overwhelming is something we completely understand:
-            </p>
-            <ul>
-              <li>
-                <p>
-                  Will {topic_1} provide adequate intensity for what I’m facing right now?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Am I ready to handle going home each night during treatment?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Can I trust that the treatment team will truly coordinate my care instead of letting me slip through cracks?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Will I be able to afford this level of treatment realistically?
-                </p>
-              </li>
-            </ul>
-            <p>
-              These concerns reflect a healthy understanding of how significant this decision truly is. What you deserve is treatment that remains 
-              <strong>
-                well-structured, clinically comprehensive, and customized to your specific needs
-              </strong>
-              , not cookie-cutter approaches.
-            </p>
-            <p>
-              At 
-              <Link href="/">
-                District Behavioral Health Group
-              </Link>
-              , our {topic_1} offerings {near_in} {geo} deliver hospital-level clinical excellence within a structured, compassionate environment. Multiple licensed specialists, including psychiatrists, therapists, and medical staff, coordinate every element of your care plan to guarantee thorough support. Access to intensive treatment becomes possible while maintaining vital ties to your community and home life.
-            </p>
-            <p>
-              Keep reading for more details.
-            </p>
+            {props.h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />}
           </div>
         </div>
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
@@ -4031,8 +3987,10 @@ export default function LocationServedUsaTnNashville({ fields = {}, relatedLinks
         <div className="elementor-element elementor-element-c3b914c e-con-full e-flex e-con e-child">
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
-        {props.faqs___con && <div dangerouslySetInnerHTML={{ __html: props.faqs___con }} />}
-      </div>
+              <div className="elementor-shortcode">
+                <FaqAccordion html={props.faqs___con} />
+              </div>
+            </div>
           </div>
         </div>
       </div>

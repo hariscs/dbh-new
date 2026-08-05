@@ -3,6 +3,7 @@ import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
+import FaqAccordion from '@/components/FaqAccordion';
 import { resolvePhone } from "@/lib/phone";
 
 export default function LocationServedUsaCaHuntingtonBeach({ fields = {}, relatedLinks }: TemplateProps) {
@@ -240,52 +241,7 @@ export default function LocationServedUsaCaHuntingtonBeach({ fields = {}, relate
         </div>
         <div className="elementor-element elementor-element-c3ca80f elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
           <div className="elementor-widget-container">
-            <p>
-              Between inpatient care and independent living, an intensive outpatient program {near_in} {geo} might offer exactly the structured support you need. Recovery journeys take unexpected turns, which is precisely why IOPs fill this crucial gap, though locating one with genuine clinical rigor while respecting your daily commitments proves more challenging than expected. Navigating 
-              <strong>
-                ongoing cravings, emotional instability, and the challenge of establishing healthy patterns remains typical during this phase
-              </strong>
-              . Common hesitations that prevent people from moving forward include:
-            </p>
-            <ul>
-              <li>
-                <p>
-                  Does this program offer sufficient intensity to create meaningful change?
-                </p>
-              </li>
-              <li>
-                <p>
-                  How can I maintain my job, family obligations, or education during treatment?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Since I’ve attempted similar programs before without lasting success, why would this be different?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Is ongoing structured treatment financially realistic for my situation?
-                </p>
-              </li>
-            </ul>
-            <p>
-              Valid questions like these require straightforward responses. Your recovery deserves an {topic_1} that is 
-              <strong>
-                well-organized, clinically sound, and tailored to your current recovery phase
-              </strong>
-              , rather than a standard program that simply fulfills requirements.
-            </p>
-            <p>
-              Through 
-              <Link href="/">
-                District Behavioral Health Group
-              </Link>
-              , our intensive outpatient program {near_in} {geo} serves individuals committed to long-term recovery who require programming that reflects their dedication. Multiple weekly appointments, credentialed clinical professionals, and personalized treatment planning deliver the therapeutic intensity your healing demands within a framework that allows you to maintain your responsibilities.
-            </p>
-            <p>
-              Continue reading below.
-            </p>
+            {props.h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />}
           </div>
         </div>
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
@@ -300,11 +256,22 @@ export default function LocationServedUsaCaHuntingtonBeach({ fields = {}, relate
                     <path d="M6 1V11M1 6H11" stroke="currentColor" strokeWidth="2" strokeLinecap="round"></path>
                   </svg>
                 </button>
-                <div className="blog-section-content" id="blog-content-6a5783c881e09" aria-hidden="true">
-                  <div className="blog-section-content-inner">
-                    {props.blog_section_1___con && <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />}
+                {(props.blog_section_1___head || props.blog_section_1___con) && (
+                  <div className="blog-section-content" id="blog-content-6a578317117da" aria-hidden="true">
+                    <div className='blog-section-content-inner'>
+                      <div className="e-con-inner">
+                        <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                          <div className="elementor-widget-container">
+                            {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
+                            {props.blog_section_1___con && (
+                              <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </div>
@@ -457,7 +424,89 @@ export default function LocationServedUsaCaHuntingtonBeach({ fields = {}, relate
         </div>
         <div className="elementor-element elementor-element-4235d3c elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
           <div className="elementor-widget-container">
-            <div className="elementor-shortcode"></div>
+            <div className="elementor-shortcode">
+              <div className="g-wrap" id="dmg-gallery-1">
+                <div className="dmg-grid">
+                  <div className="g-item">
+                    <Image src="/images/e3ff331a2a5604c280bb4e77f097aeac.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
+                    <div className="g-overlay"></div>
+                    <div className="g-line"></div>
+                    <div className="g-corner"></div>
+                  </div>
+                  <div className="g-item">
+                    <Image src="/images/d568211904d8538882d895f7bc6ab25e.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
+                    <div className="g-overlay"></div>
+                    <div className="g-line"></div>
+                    <div className="g-corner"></div>
+                  </div>
+                  <div className="g-item">
+                    <Image src="/images/26493349f84c0c5ce91ce31a6773b846.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
+                    <div className="g-overlay"></div>
+                    <div className="g-line"></div>
+                    <div className="g-corner"></div>
+                  </div>
+                  <div className="g-item">
+                    <Image src="/images/6a341c3f03b8e72eb5a9feb6df87d656.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
+                    <div className="g-overlay"></div>
+                    <div className="g-line"></div>
+                    <div className="g-corner"></div>
+                  </div>
+                  <div className="g-item">
+                    <Image src="/images/8182a0d37cb967bc1479e1afc0af8e15.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
+                    <div className="g-overlay"></div>
+                    <div className="g-line"></div>
+                    <div className="g-corner"></div>
+                  </div>
+                  <div className="g-item">
+                    <Image src="/images/b4937313007bffe7a5a245961ca2f6d9.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
+                    <div className="g-overlay"></div>
+                    <div className="g-line"></div>
+                    <div className="g-corner"></div>
+                  </div>
+                  <div className="g-item">
+                    <Image src="/images/c8cf9accc8fb330423b91a194a72c909.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
+                    <div className="g-overlay"></div>
+                    <div className="g-line"></div>
+                    <div className="g-corner"></div>
+                  </div>
+                  <div className="g-item">
+                    <Image src="/images/c27e6e0e5ced79116b4fcfbce0f35be6.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
+                    <div className="g-overlay"></div>
+                    <div className="g-line"></div>
+                    <div className="g-corner"></div>
+                  </div>
+                </div>
+                <div className="dmg-fade"></div>
+                <button className="g-toggle dmg-toggle" type="button">
+                  Show all photos ↓
+                </button>
+              </div>
+              <div id="dmg-lb">
+                <div id="dmg-lb-box">
+                  <button id="dmg-lb-close" type="button" aria-label="Close">
+                    <svg width={18} height={18} viewBox="0 0 18 18" fill="none">
+                      <line x1="1" y1="1" x2="17" y2="17" stroke="white" strokeWidth="1.5" strokeLinecap="round"></line>
+                      <line x1="17" y1="1" x2="1" y2="17" stroke="white" strokeWidth="1.5" strokeLinecap="round"></line>
+                    </svg>
+                  </button>
+                  <button id="dmg-lb-prev" type="button" aria-label="Previous">
+                    <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
+                      <polyline points="13,3 6,10 13,17" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></polyline>
+                    </svg>
+                  </button>
+                  <button id="dmg-lb-next" type="button" aria-label="Next">
+                    <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
+                      <polyline points="7,3 14,10 7,17" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></polyline>
+                    </svg>
+                  </button>
+                  <div id="dmg-lb-img-wrap"></div>
+                  <div id="dmg-lb-counter"></div>
+                  <div id="dmg-lb-bar">
+                    <div id="dmg-lb-bar-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -3902,136 +3951,7 @@ export default function LocationServedUsaCaHuntingtonBeach({ fields = {}, relate
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
               <div className="elementor-shortcode">
-                <div className="custom-accordion">
-                  <div className="custom-accordion__item active">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Does my insurance provide coverage for {topic_1} treatment {near_in} {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon hidden"></div>
-                        <div className="opened-icon"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content">
-                      <p>
-                        Most major insurance providers typically offer coverage for {topic_1} treatment {near_in} {geo}, including comprehensive clinical services and mental health support. Our intake specialists can verify your specific benefits to confirm your plan’s coverage for treatment services {near_in} {geo}.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Essential items needed for {topic_1} treatment {near_in} {geo} – what should I bring?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Comfortable attire, necessary personal items, and current prescription medications represent the basic requirements you’ll need. Since your residence remains at home {near_in} {geo}, only materials needed for therapeutic sessions are required.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        After {topic_1} treatment completion {near_in} {geo}, what’s the next step?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Standard outpatient care or community support group participation usually follows {topic_1} program completion {near_in} {geo}. This continuity approach helps maintain your progress while fully returning to everyday life {near_in} {geo}.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Must I leave my job to participate {near_in} {topic_1} treatment {near_in} {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Not at all – {topic_1} programs {near_in} {geo} are designed with flexible scheduling, offering morning or evening session options. Your employment {near_in} {geo} can continue while dedicating essential time to your recovery process.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Expected timeframe for {topic_1} services {near_in} {geo} – how long?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Treatment programs {near_in} {geo} generally range from several weeks to multiple months, depending on individual requirements and therapeutic goals. Your treatment team {near_in} {geo} will determine the ideal duration as you advance through care.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Daily structure within {geo} {topic_1} treatment – what’s it like?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Organized programming {near_in} {geo} {topic_1} features scheduled individual counseling and group therapy sessions. Clinical support remains available throughout these activities to assist with challenges unique to {geo}.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Anxiety about therapy participation during {geo} treatment – is this expected?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Nervousness about sharing personal experiences is perfectly normal for individuals new to {geo} {topic_1} programs, and our clinical team fully recognizes this response. Treatment progression honors your comfort zone throughout your experience {near_in} {geo}.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Other options when CBT proves ineffective during {geo} {topic_1} treatment?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Different therapeutic approaches are routinely explored, and our {geo} programs utilize multiple evidence-based treatment options. Team collaboration will identify the most effective therapeutic method for your healing journey {near_in} {geo}.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <FaqAccordion html={props.faqs___con} />
               </div>
             </div>
           </div>

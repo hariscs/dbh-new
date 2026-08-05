@@ -6,6 +6,14 @@ import { RelatedLinks } from '@/components/RelatedLinks';
 export default function LocationServedUsaCannabisAddictionTreatment(props: Record<string, string>) {
   const topic_2 = props.topic_2 ?? "Withdrawal";
   const address_county = props.address_county ?? "Orange County";
+  const createdAtDate = props.createdAt
+    ? new Date(props.createdAt).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        timeZone: "UTC",
+      })
+    : "April 28, 2026";
   return (
     <>
     <div className="wp-singular page-template-default page page-id-105139 page-child parent-pageid-105044 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-theme-child-master hello-elementor-default elementor-default elementor-kit-7 elementor-page elementor-page-105139 elementor-page-2841 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit">
@@ -39,7 +47,7 @@ export default function LocationServedUsaCannabisAddictionTreatment(props: Recor
           <div className="elementor-element elementor-element-4710631 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
             <div className="elementor-widget-container">
               <h2 className="elementor-heading-title elementor-size-default">
-                April 28, 2026
+                {createdAtDate}
               </h2>
             </div>
           </div>

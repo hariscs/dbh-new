@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./base.css";
 import Carousels from "@/components/Carousels";
 import WidgetInteractions from "@/components/WidgetInteractions";
+import GalleryInteractions from "@/components/GalleryInteractions";
 import JotformResizer from "@/components/JotformResizer";
 import Script from "next/script";
 import DeferredStylesheet from "@/components/DeferredStylesheet";
@@ -64,6 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <WidgetInteractions />
+        <GalleryInteractions />
         <Carousels />
         <JotformResizer />
         <CtmRouteSwap />

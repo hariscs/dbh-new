@@ -12,6 +12,10 @@ import { useEffect } from "react";
 // few px short of document.documentElement and shows a scrollbar.
 const HEIGHT_BUFFER = 24;
 
+// Embeds appear with either id="JotFormIFrame-<formID>" or the bare form id, so match
+// on the src as well rather than on the id prefix alone.
+const JOTFORM_IFRAMES = 'iframe[id^="JotFormIFrame-"], iframe[src*="form.jotform.com"]';
+
 export default function JotformResizer() {
   useEffect(() => {
     // Remember each form's last reported height so we can re-apply it on window
@@ -29,10 +33,19 @@ export default function JotformResizer() {
     }
 
     function findIframe(formId: string): HTMLIFrameElement | null {
-      const byId = document.getElementById(`JotFormIFrame-${formId}`);
-      if (byId instanceof HTMLIFrameElement) return byId;
-      // Fall back to the only JotForm iframe on the page if the id doesn't resolve.
-      const all = document.querySelectorAll<HTMLIFrameElement>('iframe[id^="JotFormIFrame-"]');
+      // Standard embed: id="JotFormIFrame-<formID>".
+      const prefixed = document.getElementById(`JotFormIFrame-${formId}`);
+      if (prefixed instanceof HTMLIFrameElement) return prefixed;
+
+      // About half the embeds on this site carry the bare form id instead
+      // (id="252953870854469"), with `name` set to the same value.
+      const bare = document.getElementById(formId);
+      if (bare instanceof HTMLIFrameElement) return bare;
+      const byName = document.querySelector<HTMLIFrameElement>(`iframe[name="${formId}"]`);
+      if (byName) return byName;
+
+      // Last resort: the only JotForm iframe on the page, whichever id form it uses.
+      const all = document.querySelectorAll<HTMLIFrameElement>(JOTFORM_IFRAMES);
       return all.length === 1 ? all[0] : null;
     }
 
@@ -59,7 +72,7 @@ export default function JotformResizer() {
     function onResize() {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(() => {
-        for (const iframe of document.querySelectorAll<HTMLIFrameElement>('iframe[id^="JotFormIFrame-"]')) {
+        for (const iframe of document.querySelectorAll<HTMLIFrameElement>(JOTFORM_IFRAMES)) {
           const height = lastHeight.get(iframe);
           if (height) iframe.style.height = `${height + HEIGHT_BUFFER}px`;
         }

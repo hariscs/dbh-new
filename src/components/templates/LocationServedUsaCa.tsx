@@ -3,6 +3,7 @@ import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
+import FaqAccordion from '../FaqAccordion';
 
 export default function LocationServedUsaCa({ fields = {}, relatedLinks }: TemplateProps) {
   const props = fields;
@@ -237,44 +238,7 @@ export default function LocationServedUsaCa({ fields = {}, relatedLinks }: Templ
         </div>
         <div className="elementor-element elementor-element-c3ca80f elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
           <div className="elementor-widget-container">
-            <p>
-              In California, couples facing substance use often find themselves stuck between wanting change and fearing what that change might mean for their relationship. For many trust slips, communication breaks down and the sense of safety that once held them together starts to fall away. When support turns into tension, many couples begin to ask if recovery will push them further apart. They wonder if healing is possible without losing each other. 
-              <strong>
-                The question isn’t only about sobriety. It’s whether the relationship can recover alongside them.
-              </strong>
-            </p>
-            <ul>
-              <li>
-                Fear of separation can make couples avoid treatment
-              </li>
-              <li>
-                For many resentment build when both partners feel overwhelmed
-              </li>
-              <li>
-                Most don’t know how to help without losing each other
-              </li>
-              <li>
-                Trust and communication often begin to break down
-              </li>
-              <li>
-                Distance grows as care turns to frustration
-              </li>
-            </ul>
-            <p>
-              <strong>
-                {topic_1} drug rehab allows both partners to start recovery without giving up the relationship that matters most
-              </strong>
-              . When substance use has created distance or broken trust, many couples worry that treatment will only add more separation. This specific type of rehab ensure partners can heal happens side by side. Treatment focuses building sobriety on trust and accountability, giving both people the chance to move forward together while staying connected through every step.
-            </p>
-            <p>
-              At Gratitude Lodge, couples drug rehab treatment is offered through the District Behavioral Health network in a structured inpatient setting. Care includes individual therapy and joint clinical support. This approach works well for couples whose substance use is shaped by shared routines or emotional patterns. It creates a steady environment where both partners can focus on healing while facing the deeper issues together. 
-              <strong>
-                With consistent structure couples have the tools to rebuild together and stay committed over time.
-              </strong>
-            </p>
-            <p>
-              See more about our couples drug rehab program below.
-            </p>
+            {props.h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />}
           </div>
         </div>
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
@@ -4167,7 +4131,7 @@ export default function LocationServedUsaCa({ fields = {}, relatedLinks }: Templ
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
               <div className="elementor-shortcode">
-                {props.faqs___con && <div dangerouslySetInnerHTML={{ __html: props.faqs___con }} />}
+                <FaqAccordion html={props.faqs___con} />
               </div>
             </div>
           </div>

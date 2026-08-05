@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 import { resolvePhone } from "@/lib/phone";
+import FaqAccordion from '../FaqAccordion';
 
 export default function LocationServedUsaCaSanFrancisco({ fields = {}, relatedLinks }: TemplateProps) {
   const { phone, telHref } = resolvePhone(fields);
@@ -240,52 +241,7 @@ export default function LocationServedUsaCaSanFrancisco({ fields = {}, relatedLi
         </div>
         <div className="elementor-element elementor-element-c3ca80f elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
           <div className="elementor-widget-container">
-            <p>
-              Comprehensive, intensive treatment options near {geo} that bridge the gap between residential care and standard weekly sessions might be exactly what you’re searching for if full hospitalization isn’t necessary. Bridge-level care through partial hospitalization programs ({topic_1}) connects intensive inpatient treatment with conventional outpatient therapy, addressing the core issues that bring individuals to this treatment level (active addiction, mental health instability, and early recovery challenges) which frequently generate 
-              <strong>
-                emotional exhaustion, physical weakness, and uncertainty about next steps
-              </strong>
-              . Choosing the right {topic_1} involves both important clinical considerations and deeply personal factors. Recognition of these complex concerns shapes our treatment philosophy:
-            </p>
-            <ul>
-              <li>
-                <p>
-                  Will {topic_1} provide sufficient intensity for my specific needs?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Can I manage the transition back home every evening?
-                </p>
-              </li>
-              <li>
-                <p>
-                  What ensures my treatment team delivers integrated care instead of disconnected services?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Does this treatment level fit within my financial resources?
-                </p>
-              </li>
-            </ul>
-            <p>
-              These important considerations reflect your thoughtful approach to this essential treatment choice. Effective treatment should be 
-              <strong>
-                systematically structured, clinically comprehensive, and customized to your specific needs
-              </strong>
-              , avoiding one-size-fits-all methodologies.
-            </p>
-            <p>
-              Via 
-              <Link href="/">
-                District Behavioral Health Group
-              </Link>
-              , our {topic_1} near {geo} delivers hospital-quality clinical excellence in a structured, supportive environment. Multi-disciplinary licensed professionals, including psychiatrists, therapists, and medical staff, work together to coordinate every element of your treatment plan, providing complete therapeutic coverage. Accessing intensive therapeutic support while maintaining vital connections to your community life remains fully possible.
-            </p>
-            <p>
-              Continue reading below.
-            </p>
+            {props.h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />}
           </div>
         </div>
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
@@ -3989,104 +3945,7 @@ export default function LocationServedUsaCaSanFrancisco({ fields = {}, relatedLi
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
               <div className="elementor-shortcode">
-                <div className="custom-accordion">
-                  <div className="custom-accordion__item active">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Does {topic_1} rehab near {geo} require residential stays?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon hidden"></div>
-                        <div className="opened-icon"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content">
-                      <p>
-                        Actually, {topic_1} rehab near {geo} operates as an outpatient program featuring intensive daily treatment. Participants engage in therapeutic activities throughout the day before returning to their homes each evening.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Which individuals benefit most from {topic_1} rehab near {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Frequently selected by individuals requiring structured daily support and clinical oversight, {topic_1} rehab near {geo} appeals particularly to those with elevated relapse concerns.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What level of organization characterizes {topic_1} rehab near {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Treatment centers near {geo} maintain rigorous daily schedules featuring numerous therapeutic interventions. Such organization promotes consistent habits and personal responsibility.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Are medical services available through {topic_1} rehab near {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Certainly. Clinical supervision and mental health assistance form integral components of {topic_1} rehab near {geo}. These services guarantee participant safety and comprehensive care coordination during treatment.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Is transitioning from residential care to {topic_1} rehab near {geo} possible?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Definitely. Many individuals utilize {topic_1} rehab near {geo} as an intermediate step following inpatient treatment. Such transitions preserve therapeutic gains while gradually expanding personal autonomy.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What methods does {topic_1} rehab near {geo} use for relapse prevention?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Treatment emphasizes developing coping mechanisms, enhancing emotional intelligence, and practicing real-life applications. These strategies fortify recovery foundations while participants maintain connections to their everyday environments.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <FaqAccordion html={props.faqs___con} />
               </div>
             </div>
           </div>

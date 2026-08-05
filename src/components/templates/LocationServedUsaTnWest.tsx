@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 import { resolvePhone } from "@/lib/phone";
+import FaqAccordion from '../FaqAccordion';
 
 export default function LocationServedUsaTnWest({ fields = {}, relatedLinks }: TemplateProps) {
   const { phone, telHref } = resolvePhone(fields);
@@ -32,7 +33,7 @@ export default function LocationServedUsaTnWest({ fields = {}, relatedLinks }: T
         <div className="elementor-element elementor-element-80f2f9d cb-id-headline elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
             <h1 className="elementor-heading-title elementor-size-default">
-              {topic_1} {topic_2} near {geo} (Substance Abuse Intervention)
+              {props.h1}
             </h1>
           </div>
         </div>
@@ -241,52 +242,7 @@ export default function LocationServedUsaTnWest({ fields = {}, relatedLinks }: T
         </div>
         <div className="elementor-element elementor-element-c3ca80f elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
           <div className="elementor-widget-container">
-            <p>
-              Comprehensive, intensive treatment options near {geo} bridge the gap between inpatient stays and standard weekly appointments, offering structured care without residential requirements. Partial hospitalization programs ({topic_1}) serve as essential stepping stones for individuals navigating complex recovery challenges – ongoing addiction battles, unstable mental health conditions, and vulnerable early sobriety periods – frequently creating experiences of 
-              <strong>
-                emotional turbulence, physical depletion, and uncertainty about next steps
-              </strong>
-              . Choosing the right {topic_1} involves both critical clinical considerations and deeply meaningful personal decisions. Recognizing how overwhelming this choice can feel, we acknowledge these common worries:
-            </p>
-            <ul>
-              <li>
-                <p>
-                  Will {topic_1} provide adequate intensity for my specific needs?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Can I handle returning home every night during treatment?
-                </p>
-              </li>
-              <li>
-                <p>
-                  What guarantees coordinated care instead of scattered services?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Does my budget allow for this specialized level of treatment?
-                </p>
-              </li>
-            </ul>
-            <p>
-              These important questions reflect genuine understanding of this decision’s significance. Effective treatment must be 
-              <strong>
-                well-structured, clinically comprehensive, and customized to your unique situation
-              </strong>
-              , moving beyond one-size-fits-all approaches.
-            </p>
-            <p>
-              At 
-              <Link href="/">
-                District Behavioral Health Group
-              </Link>
-              , our {topic_1} near {geo} delivers hospital-level clinical excellence within a structured, supportive environment. Expert professionals from various specialties – psychiatrists, therapists, and medical staff – work together on all elements of your treatment plan, guaranteeing integrated care delivery. Intensive therapeutic intervention blends effectively with your capacity to preserve meaningful relationships outside treatment settings.
-            </p>
-            <p>
-              Continue reading below.
-            </p>
+            {props.h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />}
           </div>
         </div>
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
@@ -301,11 +257,22 @@ export default function LocationServedUsaTnWest({ fields = {}, relatedLinks }: T
                     <path d="M6 1V11M1 6H11" stroke="currentColor" strokeWidth="2" strokeLinecap="round"></path>
                   </svg>
                 </button>
-                <div className="blog-section-content" id="blog-content-6a5783183ed78" aria-hidden="true">
-                  <div className="blog-section-content-inner">
-                    {props.blog_section_1___con && <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />}
+                {(props.blog_section_1___head || props.blog_section_1___con) && (
+                  <div className="blog-section-content" id="blog-content-6a578317117da" aria-hidden="true">
+                    <div className='blog-section-content-inner'>
+                      <div className="e-con-inner">
+                        <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                          <div className="elementor-widget-container">
+                            {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
+                            {props.blog_section_1___con && (
+                              <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </div>
@@ -4024,9 +3991,7 @@ export default function LocationServedUsaTnWest({ fields = {}, relatedLinks }: T
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
               <div className="elementor-shortcode">
-                <div className="custom-accordion">
-                  {props.faqs___con && <div dangerouslySetInnerHTML={{ __html: props.faqs___con }} />}
-                </div>
+                <FaqAccordion html={props.faqs___con} />
               </div>
             </div>
           </div>
