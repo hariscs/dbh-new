@@ -937,6 +937,24 @@ body.rtl .elementor-108125 .elementor-element.elementor-element-e9d3fce { left: 
 #elementor-popup-modal-104913 .dialog-message { width: 85vw; height: 100vh; align-items: flex-start; }
 .opened-icon { background: url("/images/b30c514f09eea6294dc8a058dc26aa20.webp"); width: 20px; height: 20px; }
 .opened-icon.hidden, .closed-icon.hidden { display: none; }
+/* FAQ accordion (FaqAccordion component). The Elementor export only emitted these rules
+   into the per-route page.css of pages that happened to ship a static accordion, so routes
+   that rendered their FAQs as a flat HTML dump (los-angeles, tn, ny, ...) had no styling
+   for them at all. Now that the accordion is one shared component, its styles are global —
+   the .opened-icon/.closed-icon rules above already were. Copied verbatim from the 13
+   page.css files that carried them (all byte-identical). */
+.custom-accordion__item, .accordion-item__content { background-color: transparent; }
+.custom-accordion__item { border: 1px solid rgb(235, 245, 255); border-radius: 12px; margin-bottom: 17px; }
+.accordion-item__title { font-family: var(--font-poppins), sans-serif; font-style: normal; font-weight: 700; color: rgb(51, 51, 51); font-size: 24px; line-height: 32px; }
+.accordion-item__content { color: rgb(51, 51, 51); font-family: var(--font-poppins), sans-serif; font-size: 15px; font-style: normal; font-weight: 400; line-height: 22.5px; border-bottom-left-radius: 24px; border-bottom-right-radius: 24px; padding: 0px 20px; max-height: 0px; overflow: hidden; }
+.accordion-item__content p { margin-block: 0px; line-height: 24px; font-weight: 400; font-size: 17px !important; }
+.custom-accordion__item.active { background-color: rgb(235, 245, 255); }
+.custom-accordion__item.active .accordion-item__header { border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; }
+.custom-accordion__item.active .accordion-item__content { max-height: fit-content; padding: 0px 20px 24px; }
+.custom-accordion .accordion-item__icon:hover { cursor: pointer; }
+.closed-icon { background: url("/images/6f472f96b8c3a13c7af3a00330fcea44.webp"); width: 24px; height: 24px; }
+.accordion-item__header { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-direction: row; padding: 24px 20px 20px; border-radius: 24px; transition: 0.4s ease-out; cursor: pointer; }
+.accordion-item__header:hover { cursor: pointer; }
 .read-more-toggle { display: inline-flex; align-items: center; gap: 0.5rem; background: rgb(46, 106, 161); color: rgb(255, 255, 255); border: none; font-size: 16px; font-weight: 600; transition: 0.3s; box-shadow: rgba(24, 134, 251, 0.2) 0px 4px 6px; position: relative; overflow: hidden; line-height: 26px; font-family: var(--font-montserrat); padding: 14px 30px; border-radius: 50px; }
 .read-more-toggle::before { content: ""; position: absolute; top: 0px; left: -100%; width: 100%; height: 100%; background: rgb(46, 106, 161); transition: left 0.5s; }
 .read-more-toggle:hover { transform: translateY(-2px); box-shadow: rgba(24, 134, 251, 0.3) 0px 6px 12px; background: rgb(46, 106, 161); }

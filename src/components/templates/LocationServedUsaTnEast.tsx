@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 import { resolvePhone } from "@/lib/phone";
+import FaqAccordion from '../FaqAccordion';
 
 export default function LocationServedUsaTnEast({ fields = {}, relatedLinks }: TemplateProps) {
   const { phone, telHref } = resolvePhone(fields);
@@ -32,7 +33,7 @@ export default function LocationServedUsaTnEast({ fields = {}, relatedLinks }: T
         <div className="elementor-element elementor-element-80f2f9d cb-id-headline elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
             <h1 className="elementor-heading-title elementor-size-default">
-              {topic_1} {topic_2} near {geo} (Substance Abuse Intervention)
+              {props.h1}
             </h1>
           </div>
         </div>
@@ -241,52 +242,7 @@ export default function LocationServedUsaTnEast({ fields = {}, relatedLinks }: T
         </div>
         <div className="elementor-element elementor-element-c3ca80f elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
           <div className="elementor-widget-container">
-            <p>
-              Comprehensive, intensive treatment near {geo} that bridges the gap between inpatient hospitalization and weekly outpatient sessions might be exactly what you’re looking for if full residential care feels too restrictive. Partial hospitalization programs ({topic_1}) function as an essential middle ground, connecting higher levels of care with community-based therapy, though the challenging circumstances that lead individuals to this treatment option (ongoing addiction struggles, mental health crises, and early recovery challenges) frequently result in 
-              <strong>
-                emotional exhaustion, physical drain, and uncertainty about next steps
-              </strong>
-              . Choosing the right {topic_1} involves both critical medical considerations and deeply individual factors. Recognizing these complex concerns shapes our treatment philosophy:
-            </p>
-            <ul>
-              <li>
-                <p>
-                  Will {topic_1} provide sufficient intensity for my specific needs?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Can I handle transitioning home every night?
-                </p>
-              </li>
-              <li>
-                <p>
-                  What guarantees do I have that my care team will work together instead of in isolation?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Does this treatment level fit within my financial reality?
-                </p>
-              </li>
-            </ul>
-            <p>
-              These important considerations reflect your thoughtful approach to this vital treatment choice. Effective treatment must be 
-              <strong>
-                systematically structured, clinically comprehensive, and customized to your specific needs
-              </strong>
-              , avoiding one-size-fits-all methodologies.
-            </p>
-            <p>
-              At 
-              <Link href="/">
-                District Behavioral Health Group
-              </Link>
-              , our {topic_1} near {geo} delivers hospital-grade clinical excellence within a structured, compassionate environment. Multi-disciplinary licensed specialists, including psychiatrists, counselors, and healthcare providers, work together to coordinate every element of your care plan, providing complete therapeutic support. Accessing intensive therapeutic services while maintaining vital community connections becomes entirely possible.
-            </p>
-            <p>
-              Continue reading below.
-            </p>
+            {props.h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />}
           </div>
         </div>
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
@@ -303,104 +259,7 @@ export default function LocationServedUsaTnEast({ fields = {}, relatedLinks }: T
                 </button>
                 <div className="blog-section-content" id="blog-content-6a5783157b9d8" aria-hidden="true">
                   <div className="blog-section-content-inner">
-                    <h2>
-                      Partial Hospitalization Program ({topic_1}) Near {geo}
-                    </h2>
-                    <p>
-                      Individuals seeking structured recovery support may find value in exploring a 
-                      <strong>
-                        Partial Hospitalization Program ({topic_1}) near {geo}
-                      </strong>
-                      . These programs deliver intensive therapeutic care while enabling participants to return to their homes each night.
-                    </p>
-                    <p>
-                      Daily therapeutic intervention combined with medical supervision characterizes this treatment approach, yet participants maintain their ability to fulfill personal obligations and preserve meaningful relationships beyond the facility walls.
-                    </p>
-                    <h3>
-                      Understanding Partial Hospitalization Programs
-                    </h3>
-                    <p>
-                      People requiring consistent therapeutic intervention without full-time residential placement often benefit from Partial Hospitalization Programs. Daily treatment attendance followed by evening home return allows continued engagement with personal responsibilities and community connections.
-                    </p>
-                    <p>
-                      Treatment typically encompasses multiple therapy hours daily, incorporating individual sessions, group discussions, and skill development workshops. Recovery-focused education helps participants identify underlying factors while developing effective coping mechanisms for addiction or mental health concerns.
-                    </p>
-                    <h3>
-                      Key Elements of {topic_1} Treatment
-                    </h3>
-                    <p>
-                      Comprehensive service offerings within PHPs near {geo} target both emotional wellness and behavioral transformation.
-                    </p>
-                    <p>
-                      Treatment components frequently feature:
-                    </p>
-                    <ul>
-                      <li>
-                        <p>
-                          Licensed clinician-led individual therapy sessions
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Peer-based group therapy emphasizing mutual support and responsibility
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Family-inclusive counseling designed to enhance support networks
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Clinical medication oversight when therapeutically indicated
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Skill-building workshops focusing on relapse prevention and healthy coping
-                        </p>
-                      </li>
-                    </ul>
-                    <p>
-                      Wellness-oriented activities targeting stress reduction and holistic well-being may complement core therapeutic services in many programs.
-                    </p>
-                    <h3>
-                      When a {topic_1} May Be the Right Choice
-                    </h3>
-                    <p>
-                      Individuals requiring more intensive support than weekly outpatient sessions but not needing residential supervision often find PHPs well-suited to their needs. Recent residential treatment graduates seeking continued guidance during community reintegration may particularly benefit from this level of care.
-                    </p>
-                    <p>
-                      Consistent daily therapy combined with clinical oversight helps participants maintain recovery focus while developing confidence in navigating real-world challenges independently.
-                    </p>
-                    <h3>
-                      Benefits of Local {topic_1} Treatment
-                    </h3>
-                    <p>
-                      Local {topic_1} selection near {geo} facilitates consistent treatment attendance and strengthens connections with community-based resources. Geographic proximity enables ongoing family involvement while providing opportunities to practice recovery skills within familiar environments.
-                    </p>
-                    <p>
-                      Professional therapeutic support combined with community engagement typically fosters development of resilient, long-term recovery practices.
-                    </p>
-                    <h3>
-                      Support at District Behavioral Health Group
-                    </h3>
-                    <p>
-                      <Link href="/">
-                        District Behavioral Health
-                      </Link>
-                       Group provides 
-                      <strong>
-                        Partial Hospitalization Programs near {geo}
-                      </strong>
-                       emphasizing evidence-based interventions delivered with compassionate care. Treatment programs support individuals navigating addiction and mental health challenges while promoting stability across all life domains.
-                    </p>
-                    <p>
-                      Personalized treatment planning combined with structured therapeutic intervention and continuous guidance helps participants establish solid foundations for sustained recovery success.
-                    </p>
-                    <p>
-                      Individuals or families considering treatment options can connect with our team to explore available services and initiate their journey toward wellness and healing.
-                    </p>
+                    {props.blog_section_1___con && <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />}
                   </div>
                 </div>
               </div>
@@ -4232,104 +4091,7 @@ export default function LocationServedUsaTnEast({ fields = {}, relatedLinks }: T
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
               <div className="elementor-shortcode">
-                <div className="custom-accordion">
-                  <div className="custom-accordion__item active">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Does {topic_1} rehab near {geo} require overnight stays?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon hidden"></div>
-                        <div className="opened-icon"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content">
-                      <p>
-                        Actually, this is a non-residential treatment option that provides comprehensive daily care. Participants engage in therapeutic activities throughout the day before returning to their homes each evening.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Which individuals typically select {topic_1} rehab near {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Many people seeking intensive daily structure and professional clinical guidance gravitate toward {topic_1} programs near {geo}. Those worried about potential relapse frequently find this level of care beneficial.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What level of organization exists in {topic_1} rehab near {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Treatment facilities near {geo} maintain structured daily schedules featuring various therapeutic sessions. Such organization promotes consistent routines and personal responsibility.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Are medical services available through {topic_1} rehab near {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Certainly. Clinical oversight and mental health services are integral components of {topic_1} rehab near {geo}. These elements provide safety assurance and comprehensive care coordination during treatment.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Is transitioning possible from inpatient treatment to {topic_1} rehab near {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Definitely. Many individuals utilize {topic_1} rehab near {geo} as a gradual transition following residential care. Such programs support continued progress while fostering greater personal autonomy.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What methods does {topic_1} rehab near {geo} use to reduce relapse risk?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Treatment emphasizes developing effective coping strategies, building emotional intelligence, and practicing real-life skills. These methods enhance recovery stability while people maintain connections to their everyday environments.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <FaqAccordion html={props.faqs___con} />
               </div>
             </div>
           </div>

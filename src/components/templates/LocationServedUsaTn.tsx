@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 import { resolvePhone } from "@/lib/phone";
+import FaqAccordion from '../FaqAccordion';
 
 export default function LocationServedUsaTn({ fields = {}, relatedLinks }: TemplateProps) {
   const { phone, telHref } = resolvePhone(fields);
@@ -33,7 +34,7 @@ export default function LocationServedUsaTn({ fields = {}, relatedLinks }: Templ
         <div className="elementor-element elementor-element-80f2f9d cb-id-headline elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
             <h1 className="elementor-heading-title elementor-size-default">
-              {geo} {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
+              {props.h1}
             </h1>
           </div>
         </div>
@@ -4059,8 +4060,10 @@ export default function LocationServedUsaTn({ fields = {}, relatedLinks }: Templ
         <div className="elementor-element elementor-element-c3b914c e-con-full e-flex e-con e-child">
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
-        {props.faqs___con && <div dangerouslySetInnerHTML={{ __html: props.faqs___con }} />}
-      </div>
+              <div className="elementor-shortcode">
+                <FaqAccordion html={props.faqs___con} />
+              </div>
+            </div>
           </div>
         </div>
       </div>

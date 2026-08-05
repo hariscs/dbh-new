@@ -48,7 +48,7 @@ export default function LocationServedUsaZoloft(props: Record<string, string>) {
           <div className="elementor-element elementor-element-06e6a27 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
             <div className="elementor-widget-container">
               <h2 className="elementor-heading-title elementor-size-default">
-                Zoloft (Sertraline) {topic_2}: Quitting, Symptoms, & Timeline
+                {props.h1}
               </h2>
             </div>
           </div>

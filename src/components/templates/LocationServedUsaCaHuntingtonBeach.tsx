@@ -3,6 +3,7 @@ import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
+import FaqAccordion from '@/components/FaqAccordion';
 import { resolvePhone } from "@/lib/phone";
 
 export default function LocationServedUsaCaHuntingtonBeach({ fields = {}, relatedLinks }: TemplateProps) {
@@ -3950,136 +3951,7 @@ export default function LocationServedUsaCaHuntingtonBeach({ fields = {}, relate
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
               <div className="elementor-shortcode">
-                <div className="custom-accordion">
-                  <div className="custom-accordion__item active">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Does my insurance provide coverage for {topic_1} treatment {near_in} {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon hidden"></div>
-                        <div className="opened-icon"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content">
-                      <p>
-                        Most major insurance providers typically offer coverage for {topic_1} treatment {near_in} {geo}, including comprehensive clinical services and mental health support. Our intake specialists can verify your specific benefits to confirm your plan’s coverage for treatment services {near_in} {geo}.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Essential items needed for {topic_1} treatment {near_in} {geo} – what should I bring?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Comfortable attire, necessary personal items, and current prescription medications represent the basic requirements you’ll need. Since your residence remains at home {near_in} {geo}, only materials needed for therapeutic sessions are required.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        After {topic_1} treatment completion {near_in} {geo}, what’s the next step?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Standard outpatient care or community support group participation usually follows {topic_1} program completion {near_in} {geo}. This continuity approach helps maintain your progress while fully returning to everyday life {near_in} {geo}.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Must I leave my job to participate {near_in} {topic_1} treatment {near_in} {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Not at all – {topic_1} programs {near_in} {geo} are designed with flexible scheduling, offering morning or evening session options. Your employment {near_in} {geo} can continue while dedicating essential time to your recovery process.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Expected timeframe for {topic_1} services {near_in} {geo} – how long?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Treatment programs {near_in} {geo} generally range from several weeks to multiple months, depending on individual requirements and therapeutic goals. Your treatment team {near_in} {geo} will determine the ideal duration as you advance through care.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Daily structure within {geo} {topic_1} treatment – what’s it like?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Organized programming {near_in} {geo} {topic_1} features scheduled individual counseling and group therapy sessions. Clinical support remains available throughout these activities to assist with challenges unique to {geo}.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Anxiety about therapy participation during {geo} treatment – is this expected?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Nervousness about sharing personal experiences is perfectly normal for individuals new to {geo} {topic_1} programs, and our clinical team fully recognizes this response. Treatment progression honors your comfort zone throughout your experience {near_in} {geo}.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Other options when CBT proves ineffective during {geo} {topic_1} treatment?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Different therapeutic approaches are routinely explored, and our {geo} programs utilize multiple evidence-based treatment options. Team collaboration will identify the most effective therapeutic method for your healing journey {near_in} {geo}.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <FaqAccordion html={props.faqs___con} />
               </div>
             </div>
           </div>

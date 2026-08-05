@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 import { resolvePhone } from "@/lib/phone";
+import FaqAccordion from '../FaqAccordion';
 
 export default function LocationServedUsaFlLantana({ fields = {}, relatedLinks }: TemplateProps) {
   const { phone, telHref } = resolvePhone(fields);
@@ -32,7 +33,7 @@ export default function LocationServedUsaFlLantana({ fields = {}, relatedLinks }
         <div className="elementor-element elementor-element-80f2f9d cb-id-headline elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
             <h1 className="elementor-heading-title elementor-size-default">
-              {geo} {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
+              {props.h1}
             </h1>
           </div>
         </div>
@@ -241,52 +242,7 @@ export default function LocationServedUsaFlLantana({ fields = {}, relatedLinks }
         </div>
         <div className="elementor-element elementor-element-c3ca80f elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
           <div className="elementor-widget-container">
-            <p>
-              Individuals seeking thorough, concentrated treatment {near_in} {geo} that provides more than standard weekly sessions while avoiding full residential commitment may find partial hospitalization programs ({topic_1}) serve as the essential bridge between inpatient residential treatment and typical outpatient care, although the conditions that bring people to this treatment level (active addiction, mental health challenges, and early recovery fragility) frequently leave them feeling 
-              <strong>
-                emotionally exhausted, physically depleted, and uncertain about their next moves
-              </strong>
-              . Choosing the right {topic_1} constitutes both a crucial clinical decision and deeply personal choice. Recognizing what makes this choice challenging is something we understand:
-            </p>
-            <ul>
-              <li>
-                <p>
-                  Will {topic_1} provide adequate intensity for my specific needs?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Am I emotionally ready to go home every night?
-                </p>
-              </li>
-              <li>
-                <p>
-                  How can I be sure the treatment team works together effectively, rather than leaving me overlooked?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Can I realistically afford this level of care?
-                </p>
-              </li>
-            </ul>
-            <p>
-              These concerns reflect a thoughtful understanding of this decision’s importance. Care that is 
-              <strong>
-                structured, clinically comprehensive, and customized to your specific needs
-              </strong>
-               is what you deserve, not one-size-fits-all programming.
-            </p>
-            <p>
-              With 
-              <Link href="/">
-                District Behavioral Health Group
-              </Link>
-              , {topic_1} treatment {near_in} {geo} delivers hospital-level clinical excellence within a structured, supportive environment. Multidisciplinary licensed experts, including psychiatrists, therapists, and medical staff, coordinate every element of your care plan to ensure complete integration. Accessing the treatment intensity you need happens while maintaining vital connections to your community and daily life.
-            </p>
-            <p>
-              Read more information below.
-            </p>
+            {props.h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />}
           </div>
         </div>
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
@@ -3980,9 +3936,9 @@ export default function LocationServedUsaFlLantana({ fields = {}, relatedLinks }
         </div>
         <div className="elementor-element elementor-element-c3b914c e-con-full e-flex e-con e-child">
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
-            <div className="elementor-widget-container">
-        {props.faqs___con && <div dangerouslySetInnerHTML={{ __html: props.faqs___con }} />}
-      </div>
+            <div className="elementor-shortcode">
+              <FaqAccordion html={props.faqs___con} />
+            </div>
           </div>
         </div>
       </div>

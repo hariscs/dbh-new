@@ -3,6 +3,7 @@ import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
+import FaqAccordion from '@/components/FaqAccordion';
 import { resolvePhone } from "@/lib/phone";
 
 export default function LocationServedUsaCaLosAngeles({ fields = {}, relatedLinks }: TemplateProps) {
@@ -240,52 +241,7 @@ export default function LocationServedUsaCaLosAngeles({ fields = {}, relatedLink
         </div>
         <div className="elementor-element elementor-element-c3ca80f elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
           <div className="elementor-widget-container">
-            <p>
-              Comprehensive, intensive treatment {near_in} {geo} that bridges the gap between inpatient care and weekly outpatient sessions might be exactly what you’re seeking, especially if residential placement isn’t the right fit. Bridging inpatient residential treatment and traditional outpatient services, partial hospitalization programs ({topic_1}) serve individuals navigating active addiction, mental health crises, and early recovery challenges that frequently leave people feeling 
-              <strong>
-                emotionally exhausted, physically depleted, and uncertain about their next moves
-              </strong>
-              . Both a crucial clinical decision and deeply personal choice, choosing the right {topic_1} program requires careful consideration. Recognizing why this choice feels overwhelming is something we completely understand:
-            </p>
-            <ul>
-              <li>
-                <p>
-                  Will {topic_1} provide adequate intensity for where I am right now?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Am I ready to handle returning home every night?
-                </p>
-              </li>
-              <li>
-                <p>
-                  How can I be sure the treatment team will coordinate my care effectively without me falling through the cracks?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Can I realistically afford this level of treatment?
-                </p>
-              </li>
-            </ul>
-            <p>
-              These concerns reflect a thoughtful understanding of how important this decision truly is. What you deserve is 
-              <strong>
-                structured, clinically comprehensive, and personalized treatment
-              </strong>
-               that addresses your specific needs, not one-size-fits-all approaches.
-            </p>
-            <p>
-              At 
-              <Link href="/">
-                District Behavioral Health Group
-              </Link>
-              , our {topic_1} services {near_in} {geo} deliver hospital-level clinical excellence within a structured, supportive environment. Multidisciplinary licensed professionals, including psychiatrists, therapists, and medical staff, collaborate closely to coordinate every element of your treatment plan for complete care. Getting the intensive treatment you need happens while maintaining vital connections to your community and support systems.
-            </p>
-            <p>
-              Keep reading to learn more.
-            </p>
+            {props.h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />}
           </div>
         </div>
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
@@ -4202,7 +4158,7 @@ export default function LocationServedUsaCaLosAngeles({ fields = {}, relatedLink
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
               <div className="elementor-shortcode">
-                {props.faqs___con && <div dangerouslySetInnerHTML={{ __html: props.faqs___con }} />}
+                <FaqAccordion html={props.faqs___con} />
               </div>
             </div>
           </div>

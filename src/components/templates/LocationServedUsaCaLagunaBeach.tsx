@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 import { resolvePhone } from "@/lib/phone";
+import FaqAccordion from '../FaqAccordion';
 
 export default function LocationServedUsaCaLagunaBeach({ fields = {}, relatedLinks }: TemplateProps) {
   const { phone, telHref } = resolvePhone(fields);
@@ -240,52 +241,7 @@ export default function LocationServedUsaCaLagunaBeach({ fields = {}, relatedLin
         </div>
         <div className="elementor-element elementor-element-c3ca80f elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
           <div className="elementor-widget-container">
-            <p>
-              Intensive treatment options {near_in} {geo} that offer more comprehensive support than standard weekly therapy while remaining less restrictive than residential care may be exactly what you’re seeking. Partial hospitalization programs ({topic_1}) function as an essential intermediate step between inpatient residential treatment and traditional outpatient services, yet the challenging circumstances that bring individuals to this treatment level (ongoing addiction struggles, unstable mental health conditions, and vulnerable early recovery phases) frequently generate 
-              <strong>
-                profound emotional fatigue, complete physical exhaustion, and deep confusion about next steps
-              </strong>
-              . Choosing the right {topic_1} constitutes both a vital clinical decision and deeply personal commitment. Recognizing why this choice feels overwhelming proves essential:
-            </p>
-            <ul>
-              <li>
-                <p>
-                  Will {topic_1} offer sufficient treatment intensity for my specific needs?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Can I handle transitioning back to my home environment nightly?
-                </p>
-              </li>
-              <li>
-                <p>
-                  How well does the clinical team coordinate comprehensive care without losing patients between services?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Will this treatment level remain within my financial means?
-                </p>
-              </li>
-            </ul>
-            <p>
-              These concerns reflect a thoughtful understanding of this decision’s gravity. Programming that delivers 
-              <strong>
-                organized structure, complete clinical depth, and personalized attention to your specific circumstances
-              </strong>
-               should be standard, never settling for one-size-fits-all approaches.
-            </p>
-            <p>
-              Within 
-              <Link href="/">
-                District Behavioral Health Group
-              </Link>
-              , {topic_1} programming {near_in} {geo} delivers hospital-grade clinical rigor inside a supportive, carefully structured setting. Expert interdisciplinary teams, featuring psychiatrists, licensed therapists, and specialized medical staff, work together on developing your individualized treatment approach for maximum therapeutic benefit. Accessing essential treatment depth while maintaining vital connections to your community and personal life becomes entirely achievable.
-            </p>
-            <p>
-              Keep reading for more details.
-            </p>
+            {props.h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />}
           </div>
         </div>
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
@@ -4155,7 +4111,7 @@ export default function LocationServedUsaCaLagunaBeach({ fields = {}, relatedLin
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
               <div className="elementor-shortcode">
-                {props.faqs___con && <div dangerouslySetInnerHTML={{ __html: props.faqs___con }} />}
+                <FaqAccordion html={props.faqs___con} />
               </div>
             </div>
           </div>

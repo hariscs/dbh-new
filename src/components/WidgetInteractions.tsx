@@ -134,6 +134,28 @@ export default function WidgetInteractions() {
         return;
       }
 
+      // FAQ accordion (.custom-accordion, rendered by FaqAccordion). Like the read-more
+      // button, the export shipped markup + CSS but no script, so no row ever opened.
+      // Single-open: clicking a row closes its siblings, matching the one-item-active
+      // state the export ships. The inline display:none on closed bodies has to be
+      // cleared explicitly — the .active class alone can't override it.
+      const faqHeader = target.closest(".custom-accordion .accordion-item__header");
+      if (faqHeader) {
+        const item = faqHeader.closest(".custom-accordion__item");
+        const accordion = faqHeader.closest(".custom-accordion");
+        if (!item || !accordion) return;
+        const opening = !item.classList.contains("active");
+        for (const row of accordion.querySelectorAll(".custom-accordion__item")) {
+          const on = row === item && opening;
+          row.classList.toggle("active", on);
+          const body = row.querySelector(".accordion-item__content");
+          if (body instanceof HTMLElement) body.style.display = on ? "" : "none";
+          row.querySelector(".closed-icon")?.classList.toggle("hidden", on);
+          row.querySelector(".opened-icon")?.classList.toggle("hidden", !on);
+        }
+        return;
+      }
+
       const accTitle = target.closest(
         ".elementor-accordion .elementor-tab-title, .elementor-toggle .elementor-tab-title"
       );

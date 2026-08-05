@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 import { resolvePhone } from "@/lib/phone";
+import FaqAccordion from '../FaqAccordion';
 
 export default function LocationServedUsaFlCentral({ fields = {}, relatedLinks }: TemplateProps) {
   const { phone, telHref } = resolvePhone(fields);
@@ -31,7 +32,7 @@ export default function LocationServedUsaFlCentral({ fields = {}, relatedLinks }
         <div className="elementor-element elementor-element-80f2f9d cb-id-headline elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
             <h1 className="elementor-heading-title elementor-size-default">
-              {topic_1} {topic_2} near {geo} (Substance Abuse Intervention)
+              {props.h1}
             </h1>
           </div>
         </div>
@@ -3978,104 +3979,7 @@ export default function LocationServedUsaFlCentral({ fields = {}, relatedLinks }
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
               <div className="elementor-shortcode">
-                <div className="custom-accordion">
-                  <div className="custom-accordion__item active">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Must {topic_1} rehab near {geo} include overnight accommodations?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon hidden"></div>
-                        <div className="opened-icon"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content">
-                      <p>
-                        Outpatient programming characterizes {topic_1} rehab near {geo}, delivering intensive daily therapeutic interventions. Evening departures allow participants to return home after completing comprehensive treatment sessions during daytime hours.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Who commonly chooses {topic_1} rehab near {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Structured daily support appeals to many people considering {topic_1} rehab near {geo} alongside continuous professional clinical supervision. Elevated relapse risk concerns often motivate individuals toward this treatment option.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        How structured is {topic_1} rehab near {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Comprehensive daily schedules define treatment facilities near {geo} through multiple therapeutic intervention sessions. Routine establishment and accountability enhancement benefit from this organizational approach.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Do {topic_1} rehab programs near {geo} provide medical support?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Absolutely. Professional clinical supervision and thorough mental health support represent essential elements within {topic_1} rehab near {geo}. Safety assurance and coordinated treatment planning result from these comprehensive services.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Can people transition from inpatient care to {topic_1} rehab near {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Absolutely. Intermediate recovery steps frequently involve {topic_1} rehab near {geo} after completing residential treatment programs. Therapeutic progress preservation occurs while personal independence gradually increases through these transitions.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        How does {topic_1} rehab near {geo} address relapse prevention?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Coping mechanism development, emotional regulation skills, and practical life application form the treatment foundation. Recovery stability strengthens through these approaches while participants maintain their community connections and daily routines.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <FaqAccordion html={props.faqs___con} />
               </div>
             </div>
           </div>

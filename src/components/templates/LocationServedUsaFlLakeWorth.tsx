@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 import { resolvePhone } from "@/lib/phone";
+import FaqAccordion from '../FaqAccordion';
 
 export default function LocationServedUsaFlLakeWorth({ fields = {}, relatedLinks }: TemplateProps) {
   const { phone, telHref } = resolvePhone(fields);
@@ -31,7 +32,7 @@ export default function LocationServedUsaFlLakeWorth({ fields = {}, relatedLinks
         <div className="elementor-element elementor-element-80f2f9d cb-id-headline elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
             <h1 className="elementor-heading-title elementor-size-default">
-              {geo} {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
+              {props.h1}
             </h1>
           </div>
         </div>
@@ -257,108 +258,7 @@ export default function LocationServedUsaFlLakeWorth({ fields = {}, relatedLinks
                 </button>
                 <div className="blog-section-content" id="blog-content-6a5783351b9cf" aria-hidden="true">
                   <div className="blog-section-content-inner">
-                    <h2>
-                      Comprehensive Partial Hospitalization Program ({topic_1}) Services {near_in} {geo}
-                    </h2>
-                    <p>
-                      Locating a 
-                      <strong>
-                        Partial Hospitalization Program ({topic_1}) {near_in} {geo}
-                      </strong>
-                       represents a crucial milestone for people requiring structured therapeutic support throughout their recovery journey. These specialized programs cater to individuals needing more comprehensive care than traditional outpatient services while avoiding the necessity of round-the-clock inpatient supervision.
-                    </p>
-                    <p>
-                      Daily therapeutic sessions and clinical oversight characterize these programs, with participants returning to their homes each evening. Such arrangements enable people to access concentrated treatment while preserving vital connections to family members and personal obligations.
-                    </p>
-                    <h3>
-                      Understanding Partial Hospitalization Programs
-                    </h3>
-                    <p>
-                      Structured day treatment defines a Partial Hospitalization Program, delivering comprehensive care during daytime hours without overnight facility stays. Daily attendance spans multiple hours across several weekdays, customized according to each person’s therapeutic requirements.
-                    </p>
-                    <p>
-                      Step-down care following inpatient or residential treatment commonly utilizes PHPs, although they also serve individuals requiring enhanced support beyond conventional outpatient therapy approaches.
-                    </p>
-                    <p>
-                      Comprehensive treatment encompasses therapy sessions, medical supervision, and skill development activities supporting both mental wellness and addiction recovery goals.
-                    </p>
-                    <h3>
-                      Core {topic_1} Service Components
-                    </h3>
-                    <p>
-                      Diverse therapeutic interventions within Partial Hospitalization Programs target both emotional regulation and behavioral modification challenges.
-                    </p>
-                    <p>
-                      Standard {topic_1} offerings encompass:
-                    </p>
-                    <ul>
-                      <li>
-                        <p>
-                          One-on-one counseling with credentialed mental health professionals
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Collaborative group therapy fostering mutual support and personal responsibility
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Relationship-focused family therapy enhancing communication patterns
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Clinical medication oversight when therapeutically indicated
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Skill-building workshops emphasizing coping strategies and relapse prevention techniques
-                        </p>
-                      </li>
-                    </ul>
-                    <p>
-                      Holistic wellness components like mindfulness training or stress reduction methodologies may complement core programming to enhance overall recovery outcomes.
-                    </p>
-                    <h3>
-                      Ideal {topic_1} Candidates
-                    </h3>
-                    <p>
-                      Individuals requiring structured therapeutic intervention while maintaining safe home environments may find {topic_1} services {near_in} {geo} particularly beneficial. Transitional support following inpatient care often proves valuable for those still requiring consistent professional guidance and therapeutic oversight.
-                    </p>
-                    <p>
-                      Daily structure combined with clinical supervision makes PHPs especially effective for people managing co-occurring substance use disorders and mental health conditions. Integrated treatment approaches enable providers to simultaneously address multiple therapeutic challenges.
-                    </p>
-                    <h3>
-                      Key {topic_1} Treatment Benefits
-                    </h3>
-                    <p>
-                      Balanced intensive care with personal autonomy represents the primary advantage of {topic_1} participation. Comprehensive daytime treatment occurs alongside opportunities to practice recovery skills within natural environments.
-                    </p>
-                    <p>
-                      Maintained connections to family and community networks remain possible through {topic_1} participation. These relationships frequently prove essential for establishing lasting stability and reinforcing healthy behavioral changes.
-                    </p>
-                    <h3>
-                      District Behavioral Health Group Programming
-                    </h3>
-                    <p>
-                      Specialized 
-                      <strong>
-                        Partial Hospitalization Programs {near_in} {geo}
-                      </strong>
-                       at 
-                      <Link href="/">
-                        District Behavioral Health
-                      </Link>
-                       Group support people overcoming addiction and mental health obstacles. Evidence-based therapeutic approaches combined with individualized treatment strategies ensure appropriate support for each participant’s unique needs.
-                    </p>
-                    <p>
-                      Daily structured care delivered by our dedicated clinical professionals aims to equip individuals with essential tools for sustained recovery and enhanced quality of life.
-                    </p>
-                    <p>
-                      Those considering treatment alternatives can rely on our experienced team to provide guidance through each step of the healing process.
-                    </p>
+                    {props.blog_section_1___con && <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />}
                   </div>
                 </div>
               </div>
@@ -4227,104 +4127,7 @@ export default function LocationServedUsaFlLakeWorth({ fields = {}, relatedLinks
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
               <div className="elementor-shortcode">
-                <div className="custom-accordion">
-                  <div className="custom-accordion__item active">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Understanding the components of {topic_1} rehab {near_in} {geo}
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon hidden"></div>
-                        <div className="opened-icon"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content">
-                      <p>
-                        Comprehensive daytime programming {near_in} {geo} combines therapeutic interventions with professional clinical supervision. Evening hours allow participants to return home while maintaining intensive treatment engagement.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Determining ideal candidates for {topic_1} rehab {near_in} {geo}
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Intensive outpatient programming {near_in} {geo} serves individuals requiring daily therapeutic support without round-the-clock residential placement. Particularly beneficial for those transitioning from higher levels of inpatient care.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Typical duration expectations for {topic_1} rehab {near_in} {geo}
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Treatment timelines depend on individual progress and specific clinical requirements. Most participants engage for multiple weeks before moving to less intensive care options.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Therapeutic modalities available within {topic_1} rehab programs
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Programming encompasses group therapeutic sessions, one-on-one counseling, and practical skill development activities. Core treatment elements address trigger management, emotional wellness, and structured daily living.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Balancing life obligations with {topic_1} rehab {near_in} {geo}
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Absolutely. Structured programming {near_in} {geo} enables participants to honor certain personal commitments while making recovery the primary focus. Treatment schedules accommodate both therapeutic needs and essential life responsibilities.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Next steps following {topic_1} rehab completion
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Graduation typically leads to continued outpatient services or structured aftercare programming. Progressive care transitions support sustained recovery momentum and promote lasting behavioral changes.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <FaqAccordion html={props.faqs___con} />
               </div>
             </div>
           </div>

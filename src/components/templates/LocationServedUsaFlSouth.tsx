@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 import { resolvePhone } from "@/lib/phone";
+import FaqAccordion from '../FaqAccordion';
 
 export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: TemplateProps) {
   const { phone, telHref } = resolvePhone(fields);
@@ -30,7 +31,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
         <div className="elementor-element elementor-element-80f2f9d cb-id-headline elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
             <h1 className="elementor-heading-title elementor-size-default">
-              {geo} {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
+              {props.h1}
             </h1>
           </div>
         </div>
@@ -240,16 +241,6 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
         <div className="elementor-element elementor-element-c3ca80f elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
           <div className="elementor-widget-container">
             {props.h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />}
-            <p>
-              Via 
-              <Link href="/">
-                District Behavioral Health Group
-              </Link>
-              , {topic_1} programming {near_in} {geo} delivers hospital-grade clinical rigor within supportive, structured settings. Credentialed interdisciplinary teams, featuring psychiatrists, counselors, and medical staff, work collaboratively across all treatment plan components to guarantee integrated care. Accessing essential treatment depth while maintaining vital connections to your community life becomes achievable.
-            </p>
-            <p>
-              Keep reading for more details.
-            </p>
           </div>
         </div>
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
@@ -3892,104 +3883,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
               <div className="elementor-shortcode">
-                <div className="custom-accordion">
-                  <div className="custom-accordion__item active">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Components of {topic_1} rehab {near_in} {geo} explained
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon hidden"></div>
-                        <div className="opened-icon"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content">
-                      <p>
-                        Structured daytime programming {near_in} {geo} {topic_1} rehab combines therapeutic interventions with clinical supervision. Evening hours allow clients to return home while maintaining intensive treatment engagement.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Ideal candidates for {topic_1} rehab {near_in} {geo}
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Individuals requiring consistent daily support without residential placement find {topic_1} rehab {near_in} {geo} beneficial. Particularly effective for those transitioning down from inpatient levels of care.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Duration expectations for {topic_1} rehab {near_in} {geo}
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Individual progress and clinical assessments determine program duration. Several weeks of participation typically occur before clients advance to less intensive treatment options.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Therapeutic modalities available {near_in} {topic_1} rehab
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Group sessions, individual counseling, and skills development comprise {topic_1} rehab programming. Managing emotional wellness, trigger identification, and establishing healthy routines receive primary focus.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Balancing life obligations with {topic_1} rehab {near_in} {geo}
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Maintaining certain personal commitments remains possible during {topic_1} rehab {near_in} {geo} participation. Structured scheduling creates balance between recovery priorities and life responsibilities.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Next steps following {topic_1} rehab completion
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Outpatient services or continued support programming typically follow {topic_1} rehab graduation. Step-down methodologies support sustained progress and lasting recovery stability.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <FaqAccordion html={props.faqs___con} />
               </div>
             </div>
           </div>

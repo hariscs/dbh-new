@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 import { resolvePhone } from "@/lib/phone";
+import FaqAccordion from '../FaqAccordion';
 
 export default function LocationServedUsaCaNorthern({ fields = {}, relatedLinks }: TemplateProps) {
   const { phone, telHref } = resolvePhone(fields);
@@ -240,52 +241,7 @@ export default function LocationServedUsaCaNorthern({ fields = {}, relatedLinks 
         </div>
         <div className="elementor-element elementor-element-c3ca80f elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
           <div className="elementor-widget-container">
-            <p>
-              Seeking structured, intensive treatment near {geo} that provides more support than weekly therapy sessions while avoiding residential placement? Partial hospitalization programs ({topic_1}) serve as a critical bridge connecting residential inpatient care with outpatient therapy, addressing the challenging conditions that bring individuals to this point—active addiction, destabilized mental health, and early recovery vulnerability—which often result in feelings of 
-              <strong>
-                mental exhaustion, physical depletion, and uncertainty about future steps
-              </strong>
-              . Selecting an appropriate {topic_1} represents both a significant clinical and personal choice. Understanding the difficulty of this decision, we recognize these common concerns:
-            </p>
-            <ul>
-              <li>
-                <p>
-                  Concerns about {topic_1} providing insufficient intensity for current struggles?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Uncertainty about readiness to return home each evening?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Questions regarding treatment team coordination versus potential gaps in care?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Realistic affordability considerations for this care level?
-                </p>
-              </li>
-            </ul>
-            <p>
-              Recognizing these worries demonstrates a thoughtful approach to understanding this important step’s significance. Quality treatment should be 
-              <strong>
-                structured, clinically comprehensive, and tailored to individual requirements
-              </strong>
-              , rather than following generic programming approaches.
-            </p>
-            <p>
-              Through 
-              <Link href="/">
-                District Behavioral Health Group
-              </Link>
-              , our {topic_1} near {geo} provides hospital-level clinical intensity within a structured, nurturing environment. Licensed multidisciplinary professionals, including psychiatrists, therapists, and medical personnel, collaborate on every aspect of your treatment plan, ensuring comprehensive care coordination. Receiving necessary treatment depth while preserving meaningful connections to your external life becomes achievable.
-            </p>
-            <p>
-              Continue reading below.
-            </p>
+            {props.h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />}
           </div>
         </div>
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
@@ -4254,9 +4210,7 @@ export default function LocationServedUsaCaNorthern({ fields = {}, relatedLinks 
         </div>
         <div className="elementor-element elementor-element-c3b914c e-con-full e-flex e-con e-child">
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
-            <div className="elementor-widget-container">
-        {props.faqs___con && <div dangerouslySetInnerHTML={{ __html: props.faqs___con }} />}
-      </div>
+            <FaqAccordion html={props.faqs___con} />
           </div>
         </div>
       </div>

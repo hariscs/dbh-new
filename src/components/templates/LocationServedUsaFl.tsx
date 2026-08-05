@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 import { resolvePhone } from "@/lib/phone";
+import FaqAccordion from '../FaqAccordion';
 
 export default function LocationServedUsaFl({ fields = {}, relatedLinks }: TemplateProps) {
   const { phone, telHref } = resolvePhone(fields);
@@ -30,7 +31,7 @@ export default function LocationServedUsaFl({ fields = {}, relatedLinks }: Templ
         <div className="elementor-element elementor-element-80f2f9d cb-id-headline elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
             <h1 className="elementor-heading-title elementor-size-default">
-              Florida {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
+              {props.h1}
             </h1>
           </div>
         </div>
@@ -235,7 +236,7 @@ export default function LocationServedUsaFl({ fields = {}, relatedLinks }: Templ
         <div className="elementor-element elementor-element-5f43a3f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
             <h2 className="elementor-heading-title elementor-size-default">
-              {topic_1} {topic_2} Programs at District Behavioral Health Group {near_in} Florida
+              {props.h2___head}
             </h2>
           </div>
         </div>
@@ -4004,168 +4005,7 @@ export default function LocationServedUsaFl({ fields = {}, relatedLinks }: Templ
           <div className="elementor-element elementor-element-08875b4 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
               <div className="elementor-shortcode">
-                <div className="custom-accordion">
-                  <div className="custom-accordion__item active">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Do insurance providers typically cover outpatient treatment programs {near_in} Florida?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon hidden"></div>
-                        <div className="opened-icon"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content">
-                      <p>
-                        Major insurance networks frequently include coverage for Florida outpatient treatment services, including specialized options such as PHP and IOP programs. Our verification team will determine precisely which treatment services receive authorization under your specific plan {near_in} Florida.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Is it necessary to quit my job for Florida outpatient treatment participation?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Maintaining your career becomes feasible through Florida outpatient treatment programs designed with flexibility {near_in} mind. Scheduling flexibility across different time slots enables your healing journey to coordinate with work responsibilities {near_in} Florida.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        How long should I anticipate spending {near_in} Florida outpatient treatment?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Treatment duration {near_in} Florida typically spans several weeks to multiple months based on personal needs and progress. Your care team collaborates with you to establish appropriate timelines for recovery {near_in} Florida.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        How does a standard day unfold during Florida outpatient treatment?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Daily activities {near_in} Florida outpatient programs feature one-on-one counseling appointments and therapeutic group sessions emphasizing practical coping strategies. Residential independence continues as you attend regularly scheduled treatment appointments {near_in} Florida.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What financial investment is required for Florida outpatient treatment?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Treatment expenses {near_in} Florida vary according to insurance coverage and the specific intensity of care needed. Our financial advisors provide detailed explanations of anticipated treatment expenses {near_in} Florida.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Does outpatient treatment {near_in} Florida deliver effective outcomes?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Research demonstrates that Florida outpatient treatment programs substantially enhance sustained recovery success rates. Expert clinical support combined with peer connections through this treatment model assists people {near_in} reconstructing their lives {near_in} Florida.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What should I expect if counseling sessions feel challenging {near_in} Florida?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Initial therapy discomfort occurs frequently {near_in} Florida, but our mental health professionals customize their approach to match individual comfort zones and preparedness levels. Establishing trust and emotional security precedes intensive therapeutic exploration during treatment {near_in} Florida.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What strategies help when group sessions feel intimidating {near_in} Florida outpatient programs?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Anxiety about group involvement {near_in} Florida represents a natural response, since these settings create supportive connections between individuals experiencing comparable struggles. Simply listening without verbal contribution remains acceptable until confidence builds with other group members {near_in} Florida.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What distinguishes IOP from standard Florida outpatient treatment options?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        More frequent session schedules define Intensive {topic_1} Programs (IOP) {near_in} Florida for people needing enhanced clinical oversight. Standard outpatient treatment {near_in} Florida offers adaptable timing, making it suitable for continued care following initial treatment phases.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Does Florida outpatient treatment handle dual-diagnosis situations effectively?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p>
-                        Comprehensive care for concurrent mental health challenges including depression or trauma frequently occurs within Florida outpatient treatment programs. Coordinated focus on both psychological wellness and substance use creates the most favorable recovery environment {near_in} Florida.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <FaqAccordion html={props.faqs___con} />
               </div>
             </div>
           </div>
