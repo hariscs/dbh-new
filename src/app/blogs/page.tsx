@@ -30,14 +30,12 @@ export default async function Page({
   return (
     <>
       <Header fields={data?.fields} />
-      (
       <Blogs
         fields={data?.fields ?? {}}
         blogs={blogs}
         currentPage={currentPage}
         totalPages={totalPages}
       />
-    )
     </>
   );
 }
