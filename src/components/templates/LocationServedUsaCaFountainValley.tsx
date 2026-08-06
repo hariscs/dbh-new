@@ -33,7 +33,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
         <div className="elementor-element elementor-element-80f2f9d cb-id-headline elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
             <h1 className="elementor-heading-title elementor-size-default">
-              {geo} {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
+              {props.h1}
             </h1>
           </div>
         </div>
@@ -245,11 +245,12 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
             {props.h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />}
           </div>
         </div>
+        {(props.blog_section_1___con) ? 
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
           <div className="elementor-widget-container">
             <div className="elementor-shortcode">
               <div className="blog-section-wrapper">
-                <button className="read-more-toggle" aria-expanded="false" aria-controls="blog-content-6a5783539d06c">
+                <button className="read-more-toggle" aria-expanded="false" aria-controls="blog-content-6a5783c881e09">
                   <span className="toggle-text">
                     Read More
                   </span>
@@ -257,116 +258,27 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                     <path d="M6 1V11M1 6H11" stroke="currentColor" strokeWidth="2" strokeLinecap="round"></path>
                   </svg>
                 </button>
-                <div className="blog-section-content" id="blog-content-6a5783539d06c" aria-hidden="true">
-                  <div className="blog-section-content-inner">
-                    <h2>
-                      Partial Hospitalization Program ({topic_1}) {near_in} {geo}
-                    </h2>
-                    <p>
-                      Seeking a 
-                      <strong>
-                        Partial Hospitalization Program ({topic_1}) {near_in} {geo}
-                      </strong>
-                       marks an important step for individuals needing structured support during their healing process. Those requiring more intensive care than standard outpatient treatment but not needing 24-hour inpatient monitoring find these specialized programs particularly beneficial.
-                    </p>
-                    <p>
-                      Comprehensive therapeutic activities and professional supervision define these programs, lasting several hours daily while allowing participants to sleep at home each night. This structure provides intensive treatment benefits while maintaining important family relationships and personal responsibilities.
-                    </p>
-                    <h3>
-                      Understanding Partial Hospitalization Programs
-                    </h3>
-                    <p>
-                      Intensive day-based treatment characterizes a Partial Hospitalization Program, offering comprehensive therapeutic services during daytime hours without overnight facility stays. Several hours each day, typically across multiple weekly sessions, form the standard participation schedule based on individual treatment needs.
-                    </p>
-                    <p>
-                      Transitional care after inpatient or residential programs frequently incorporates PHPs, though they equally serve those needing more intensive intervention than traditional outpatient care offers.
-                    </p>
-                    <p>
-                      Integrated therapeutic methods usually blend individual counseling, medical monitoring, and practical skill-building exercises that support both psychological wellness and substance recovery objectives.
-                    </p>
-                    <h3>
-                      Services Available Through {topic_1}
-                    </h3>
-                    <p>
-                      Extensive therapeutic interventions addressing emotional and behavioral challenges typically anchor Partial Hospitalization Programs.
-                    </p>
-                    <p>
-                      Core {topic_1} services include:
-                    </p>
-                    <ul>
-                      <li>
-                        <p>
-                          Individual therapy sessions with licensed mental health specialists
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Group counseling sessions fostering peer support and accountability
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Family-centered therapy focused on strengthening relationships and communication skills
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Medication monitoring and adjustment when clinically appropriate
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Educational workshops emphasizing coping techniques and relapse prevention strategies
-                        </p>
-                      </li>
-                    </ul>
-                    <p>
-                      Complementary wellness elements such as mindfulness training or anxiety management techniques may strengthen overall treatment effectiveness {near_in} select programs.
-                    </p>
-                    <h3>
-                      Ideal Candidates for {topic_1} Services
-                    </h3>
-                    <p>
-                      Intensive treatment requirements coupled with capacity for safe independent living make {topic_1} {near_in} {geo} appropriate for numerous individuals. Bridge support for those transitioning from residential care while maintaining need for regular therapeutic guidance also finds value {near_in} this model.
-                    </p>
-                    <p>
-                      Organized programming with clinical supervision makes PHPs particularly effective for individuals managing co-occurring addiction and mental health disorders. Coordinated treatment of multiple conditions becomes achievable through this integrated methodology.
-                    </p>
-                    <h3>
-                      Benefits of {topic_1} Treatment Approach
-                    </h3>
-                    <p>
-                      High-level care combined with maintained independence represents {topic_1}’s primary strength. Intensive daily programming paired with chances to apply recovery principles {near_in} real-world settings establishes ideal therapeutic conditions.
-                    </p>
-                    <p>
-                      Personal and family bonds stay preserved through {topic_1} involvement. Sustainable recovery foundation and healthy lifestyle development frequently rely on sustaining these crucial connections.
-                    </p>
-                    <h3>
-                      Treatment Services at District Behavioral Health Group
-                    </h3>
-                    <p>
-                      Specialized 
-                      <strong>
-                        Partial Hospitalization Programs {near_in} {geo}
-                      </strong>
-                       helping individuals navigate addiction and mental health difficulties are offered through 
-                      <Link href="/">
-                        District Behavioral Health
-                      </Link>
-                       Group. Research-supported treatment approaches paired with personalized care planning ensure suitable assistance for each individual’s specific circumstances.
-                    </p>
-                    <p>
-                      Structured daily programming provided by our experienced clinical team focuses on helping people build vital skills for lasting recovery and improved life satisfaction.
-                    </p>
-                    <p>
-                      Support for your next treatment decision is available when you or a loved one explores therapeutic options.
-                    </p>
+                {(props.blog_section_1___head || props.blog_section_1___con) && (
+                  <div className="blog-section-content" id="blog-content-6a578317117da" aria-hidden="true">
+                    <div className='blog-section-content-inner'>
+                      <div className="e-con-inner">
+                        <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                          <div className="elementor-widget-container">
+                            {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
+                            {props.blog_section_1___con && (
+                              <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </div>
         </div>
+        : ""}
         <div className="elementor-element elementor-element-9d78afe video-widget-sty elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-video" data-settings="{&quot;youtube_url&quot;:&quot;https:\\/\\/youtu.be\\/3YIXhadnuqE?si=hpBLPRkhvx4ENkAi&quot;,&quot;lazy_load&quot;:&quot;yes&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
           <div className="elementor-widget-container">
             <div className="elementor-wrapper elementor-open-inline">
@@ -380,13 +292,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-c166bcb elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
-            <h2 className="elementor-heading-title elementor-size-default">
-              Why 
-              <b>
-                Trust Us
-              </b>
-               With Your Care
-            </h2>
+            <h2 className="elementor-heading-title elementor-size-default">Why <b>Trust Us</b> With Your Care</h2>
           </div>
         </div>
         <div className="elementor-element elementor-element-f42ed1f e-con-full e-flex e-con e-child">
@@ -600,7 +506,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
         </div>
       </div>
     </div>
-    <div className="elementor-element elementor-element-6edd7e6 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+    <div className="elementor-element elementor-element-6edd7e6 e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-2c4400c e-con-full e-flex e-con e-child">
           <div className="elementor-element elementor-element-e4dc282 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -636,7 +542,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                       <div className="elementor-widget-container">
                         <div className="elementor-loop-container elementor-grid" role="list">
                           <div className="elementor elementor-75 e-loop-item e-loop-item-2057 post-2057 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -652,7 +558,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.renaissancerecovery.com/drug/rehab/tennessee/davidson-county/nashville/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Renaissance Recovery Nashville, TN
+                                              {brand} Nashville, TN
                                             </a>
                                           </h1>
                                         </div>
@@ -674,7 +580,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                       <div className="elementor-element elementor-element-7c4fb1a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {topic_1} | IOP | OP
+                                            PHP | IOP | OP
                                           </h2>
                                         </div>
                                       </div>
@@ -698,7 +604,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                             </div>
                           </div>
                           <div className="elementor elementor-75 e-loop-item e-loop-item-68 post-68 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -714,7 +620,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.renaissancerecovery.com/drug/rehab/california/orange-county/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Renaissance Recovery {address_county}, {state}
+                                              {brand} {address_county}, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -722,7 +628,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {geo}, {state}
+                                            Fountain Valley, CA
                                           </h2>
                                         </div>
                                       </div>
@@ -736,7 +642,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                       <div className="elementor-element elementor-element-7c4fb1a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {topic_1} | IOP | OP
+                                            PHP | IOP | OP
                                           </h2>
                                         </div>
                                       </div>
@@ -760,7 +666,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                             </div>
                           </div>
                           <div className="elementor elementor-75 e-loop-item e-loop-item-67 post-67 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -776,7 +682,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.renaissancerecovery.com/drug/rehab/florida/palm-beach/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Renaissance Recovery Palm Beach, FL
+                                              {brand} Palm Beach, FL
                                             </a>
                                           </h1>
                                         </div>
@@ -798,7 +704,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                       <div className="elementor-element elementor-element-7c4fb1a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {topic_1} | IOP | OP
+                                            PHP | IOP | OP
                                           </h2>
                                         </div>
                                       </div>
@@ -822,7 +728,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                             </div>
                           </div>
                           <div className="elementor elementor-75 e-loop-item e-loop-item-69 post-69 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -838,7 +744,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.gratitudelodge.com/drug-rehab/california/los-angeles/long-beach/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Gratitude Lodge – Long Beach, {state}
+                                              Gratitude Lodge – Long Beach, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -846,7 +752,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            Long Beach, {state}
+                                            Long Beach, CA
                                           </h2>
                                         </div>
                                       </div>
@@ -884,7 +790,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                             </div>
                           </div>
                           <div className="elementor elementor-75 e-loop-item e-loop-item-3015 post-3015 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -900,7 +806,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.gratitudelodge.com/drug-rehab/california/orange-county/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Gratitude Lodge – {address_county}, {state}
+                                              Gratitude Lodge – {address_county}, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -908,7 +814,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {address_county}, {state}
+                                            {address_county}, CA
                                           </h2>
                                         </div>
                                       </div>
@@ -946,7 +852,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                             </div>
                           </div>
                           <div className="elementor elementor-75 e-loop-item e-loop-item-3014 post-3014 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -962,7 +868,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.gratitudelodge.com/drug-rehab/california/orange-county/newport-beach/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Gratitude Lodge – Newport Beach, {state}
+                                              Gratitude Lodge – Newport Beach, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -970,7 +876,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            Newport Beach, {state}
+                                            Newport Beach, CA
                                           </h2>
                                         </div>
                                       </div>
@@ -1008,7 +914,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                             </div>
                           </div>
                           <div className="elementor elementor-75 e-loop-item e-loop-item-3013 post-3013 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -1024,7 +930,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.gratitudelodge.com/drug-rehab/california/los-angeles/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Gratitude Lodge – Los Angeles, {state}
+                                              Gratitude Lodge – Los Angeles, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -1032,7 +938,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            Los Angeles, {state}
+                                            Los Angeles, CA
                                           </h2>
                                         </div>
                                       </div>
@@ -1070,7 +976,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                             </div>
                           </div>
                           <div className="elementor elementor-75 e-loop-item e-loop-item-448 post-448 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -1086,7 +992,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://californiadetox.com/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              California Detox – {address_county}, {state}
+                                              California Detox – {address_county}, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -1094,7 +1000,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            Laguna Beach, {state}
+                                            Laguna Beach, CA
                                           </h2>
                                         </div>
                                       </div>
@@ -1132,7 +1038,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                             </div>
                           </div>
                           <div className="elementor elementor-75 e-loop-item e-loop-item-450 post-450 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -1148,7 +1054,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://connectionsoc.com/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Connections Mental Health – {address_county}, {state}
+                                              Connections Mental Health – {address_county}, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -1156,7 +1062,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            Orange, {state} | Tustin, {state} | Villa Park, {state}
+                                            Orange, CA | Tustin, CA | Villa Park, CA
                                           </h2>
                                         </div>
                                       </div>
@@ -1194,7 +1100,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                             </div>
                           </div>
                           <div className="elementor elementor-75 e-loop-item e-loop-item-452 post-452 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -1210,7 +1116,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://alliancerecovery.com/drug/los-angeles-ca/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Alliance Recovery – Los Angeles, {state}
+                                              Alliance Recovery – Los Angeles, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -1218,7 +1124,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            Los Angeles, {state} | {geo}, {state}
+                                            Los Angeles, CA | Fountain Valley, CA
                                           </h2>
                                         </div>
                                       </div>
@@ -1232,7 +1138,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
                                       <div className="elementor-element elementor-element-7c4fb1a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {topic_1} | IOP | OP
+                                            PHP | IOP | OP
                                           </h2>
                                         </div>
                                       </div>
@@ -1281,34 +1187,7 @@ export default function LocationServedUsaCaFountainValley({ fields = {}, related
           </div>
           <div className="elementor-element elementor-element-3073b2e elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
             <div className="elementor-widget-container">
-              <p>
-                Intensive outpatient {topic_1} treatment {near_in} {geo} operates through comprehensive daytime therapeutic sessions paired with evening returns home, fostering recovery development within authentic life circumstances. Such programming enables participants to remain anchored {near_in} familiar surroundings while accessing essential clinical support throughout initial or transitional recovery phases. Staying within {geo} additionally facilitates meaningful engagement of family members and local support networks throughout the healing journey.
-              </p>
-              <ul>
-                <li>
-                  Develop effective strategies for navigating real-world challenges {near_in} {geo}
-                </li>
-                <li>
-                  Preserve essential daily structures that promote stability and sustained growth
-                </li>
-                <li>
-                  Access comprehensive therapeutic frameworks without requiring residential placement
-                </li>
-                <li>
-                  Enhance personal responsibility while maintaining vital community connections
-                </li>
-              </ul>
-              <p>
-                Within the 
-                <Link href="/">
-                  District Behavioral Health
-                </Link>
-                 network and {topic_1} treatment options provided through 
-                <a href="https://www.renaissancerecovery.com/drug/rehab/sober-living/">
-                  Renaissance Recovery
-                </a>
-                , participants access specialized care tailored to their specific circumstances {near_in} {geo}. Community-based treatment ensures recovery competencies are thoroughly integrated and maintained within participants’ actual living environments.
-              </p>
+              {props.why_rehab_works___con && <div dangerouslySetInnerHTML={{ __html: props.why_rehab_works___con }} />}
             </div>
           </div>
           <div className="elementor-element elementor-element-e771d5c elementor-widget-mobile__width-inherit e-transform elementor-mobile-align-justify elementor-widget elementor-widget-button animated fadeIn" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_transform_translateY_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-5,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="button.default">

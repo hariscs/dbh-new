@@ -27,7 +27,7 @@ export default function LocationServedUsaCa({ fields = {}, relatedLinks }: Templ
         <div className="elementor-element elementor-element-80f2f9d cb-id-headline elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
             <h1 className="elementor-heading-title elementor-size-default">
-              California {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
+              {props.h1}
             </h1>
           </div>
         </div>
@@ -241,11 +241,40 @@ export default function LocationServedUsaCa({ fields = {}, relatedLinks }: Templ
             {props.h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />}
           </div>
         </div>
+        {(props.blog_section_1___con) ? 
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
           <div className="elementor-widget-container">
-            <div className="elementor-shortcode"></div>
+            <div className="elementor-shortcode">
+              <div className="blog-section-wrapper">
+                <button className="read-more-toggle" aria-expanded="false" aria-controls="blog-content-6a578317117da">
+                  <span className="toggle-text">
+                    Read More
+                  </span>
+                  <svg className="toggle-icon" width={12} height={12} viewBox="0 0 12 12" fill="none">
+                    <path d="M6 1V11M1 6H11" stroke="currentColor" strokeWidth="2" strokeLinecap="round"></path>
+                  </svg>
+                </button>
+                {(props.blog_section_1___head || props.blog_section_1___con) && (
+                  <div className="blog-section-content" id="blog-content-6a578317117da" aria-hidden="true">
+                    <div className='blog-section-content-inner'>
+                      <div className="e-con-inner">
+                        <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                          <div className="elementor-widget-container">
+                            {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
+                            {props.blog_section_1___con && (
+                              <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </div>
+        : ""}
         <div className="elementor-element elementor-element-9d78afe video-widget-sty elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-video" data-settings="{&quot;youtube_url&quot;:&quot;https:\\/\\/youtu.be\\/3YIXhadnuqE?si=hpBLPRkhvx4ENkAi&quot;,&quot;lazy_load&quot;:&quot;yes&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
           <div className="elementor-widget-container">
             <div className="elementor-wrapper elementor-open-inline">
@@ -259,13 +288,7 @@ export default function LocationServedUsaCa({ fields = {}, relatedLinks }: Templ
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-c166bcb elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
-            <h2 className="elementor-heading-title elementor-size-default">
-              Why 
-              <b>
-                Trust Us
-              </b>
-               With Your Care
-            </h2>
+            <h2 className="elementor-heading-title elementor-size-default">Why <b>Trust Us</b> With Your Care</h2>
           </div>
         </div>
         <div className="elementor-element elementor-element-f42ed1f e-con-full e-flex e-con e-child">
@@ -3888,20 +3911,9 @@ export default function LocationServedUsaCa({ fields = {}, relatedLinks }: Templ
         </div>
       </div>
     </div>
-          {(props.blog_section_1___head || props.blog_section_1___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
-                {props.blog_section_1___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* blog_section_1 is rendered above, collapsed behind the .read-more-toggle button
+          (elementor-element-ea84fce). It used to also render here, so the same copy appeared
+          twice on every page: once inside the toggle and once expanded at the bottom. */}
       {(props.blog_section_2___head || props.blog_section_2___con) && (
         <div className="elementor-element e-flex e-con-boxed e-con e-parent">
           <div className="e-con-inner">

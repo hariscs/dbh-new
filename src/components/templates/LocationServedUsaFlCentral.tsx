@@ -244,6 +244,7 @@ export default function LocationServedUsaFlCentral({ fields = {}, relatedLinks }
             {props.h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />}
           </div>
         </div>
+        {(props.blog_section_1___con) ?
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
           <div className="elementor-widget-container">
             <div className="elementor-shortcode">
@@ -265,6 +266,7 @@ export default function LocationServedUsaFlCentral({ fields = {}, relatedLinks }
             </div>
           </div>
         </div>
+        : ""}
         <div className="elementor-element elementor-element-9d78afe video-widget-sty elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-video" data-settings="{&quot;youtube_url&quot;:&quot;https:\\/\\/youtu.be\\/3YIXhadnuqE?si=hpBLPRkhvx4ENkAi&quot;,&quot;lazy_load&quot;:&quot;yes&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
           <div className="elementor-widget-container">
             <div className="elementor-wrapper elementor-open-inline">
@@ -278,13 +280,7 @@ export default function LocationServedUsaFlCentral({ fields = {}, relatedLinks }
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-c166bcb elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
-            <h2 className="elementor-heading-title elementor-size-default">
-              Why 
-              <b>
-                Trust Us
-              </b>
-               With Your Care
-            </h2>
+            <h2 className="elementor-heading-title elementor-size-default">Why <b>Trust Us</b> With Your Care</h2>
           </div>
         </div>
         <div className="elementor-element elementor-element-f42ed1f e-con-full e-flex e-con e-child">
@@ -498,7 +494,7 @@ export default function LocationServedUsaFlCentral({ fields = {}, relatedLinks }
         </div>
       </div>
     </div>
-    <div className="elementor-element elementor-element-6edd7e6 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+    <div className="elementor-element elementor-element-6edd7e6 e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-2c4400c e-con-full e-flex e-con e-child">
           <div className="elementor-element elementor-element-e4dc282 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -550,7 +546,7 @@ export default function LocationServedUsaFlCentral({ fields = {}, relatedLinks }
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.renaissancerecovery.com/drug/rehab/tennessee/davidson-county/nashville/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Renaissance Recovery Nashville, TN
+                                              {brand} Nashville, TN
                                             </a>
                                           </h1>
                                         </div>
@@ -572,7 +568,7 @@ export default function LocationServedUsaFlCentral({ fields = {}, relatedLinks }
                                       <div className="elementor-element elementor-element-7c4fb1a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {topic_1} | IOP | OP
+                                            PHP | IOP | OP
                                           </h2>
                                         </div>
                                       </div>
@@ -612,7 +608,7 @@ export default function LocationServedUsaFlCentral({ fields = {}, relatedLinks }
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.renaissancerecovery.com/drug/rehab/california/orange-county/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Renaissance Recovery {address_county}, CA
+                                              {brand} {address_county}, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -634,7 +630,7 @@ export default function LocationServedUsaFlCentral({ fields = {}, relatedLinks }
                                       <div className="elementor-element elementor-element-7c4fb1a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {topic_1} | IOP | OP
+                                            PHP | IOP | OP
                                           </h2>
                                         </div>
                                       </div>
@@ -674,7 +670,7 @@ export default function LocationServedUsaFlCentral({ fields = {}, relatedLinks }
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.renaissancerecovery.com/drug/rehab/florida/palm-beach/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Renaissance Recovery Palm Beach, {state}
+                                              {brand} Palm Beach, FL
                                             </a>
                                           </h1>
                                         </div>
@@ -682,7 +678,7 @@ export default function LocationServedUsaFlCentral({ fields = {}, relatedLinks }
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            Lantana, {state} | Lake Worth, {state} 
+                                            Lantana, FL | Lake Worth, FL 
                                           </h2>
                                         </div>
                                       </div>
@@ -696,7 +692,7 @@ export default function LocationServedUsaFlCentral({ fields = {}, relatedLinks }
                                       <div className="elementor-element elementor-element-7c4fb1a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {topic_1} | IOP | OP
+                                            PHP | IOP | OP
                                           </h2>
                                         </div>
                                       </div>
@@ -1092,7 +1088,7 @@ export default function LocationServedUsaFlCentral({ fields = {}, relatedLinks }
                             </div>
                           </div>
                           <div className="elementor elementor-75 e-loop-item e-loop-item-452 post-452 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -1130,7 +1126,7 @@ export default function LocationServedUsaFlCentral({ fields = {}, relatedLinks }
                                       <div className="elementor-element elementor-element-7c4fb1a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {topic_1} | IOP | OP
+                                            PHP | IOP | OP
                                           </h2>
                                         </div>
                                       </div>

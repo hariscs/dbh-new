@@ -1,8 +1,10 @@
 import "./page.css";
-// Also load the alcohol template's styles: this route renders either template depending on
-// the page's builder `fields.template` (see LocationServedByTemplate). Both stylesheets are
-// scoped to their own Elementor page id (.elementor-691 / .elementor-2841), so they coexist.
+// Also load the alcohol and CRO2 template styles: this route renders whichever template the
+// page's builder `fields.template` selects (see LocationServedByTemplate). Each stylesheet is
+// scoped to its own Elementor page id (.elementor-691 / .elementor-2841 / .elementor-978),
+// so they coexist without a route file per template.
 import "../alcohol/[slug]/page.css";
+import "./cro2.css";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import LocationServedByTemplate from "@/components/templates/LocationServedByTemplate";

@@ -134,6 +134,43 @@ export default function WidgetInteractions() {
         return;
       }
 
+      // Elementor video widget with a custom thumbnail (`show_image_overlay`). The export
+      // ships an empty .elementor-video plus the overlay div, and Elementor's own JS swaps in
+      // the iframe when the overlay is clicked — that script wasn't ported, so the thumbnail
+      // sat there doing nothing. Build the embed on click, from the widget's data-settings.
+      const videoOverlay = target.closest(".elementor-custom-embed-image-overlay");
+      if (videoOverlay) {
+        const widget = videoOverlay.closest<HTMLElement>(".elementor-widget-video");
+        const holder = widget?.querySelector(".elementor-video");
+        if (!widget || !holder) return;
+        let settings: { youtube_url?: string; controls?: string } = {};
+        try {
+          settings = JSON.parse(widget.dataset.settings ?? "{}");
+        } catch {
+          return;
+        }
+        const url = settings.youtube_url ?? "";
+        // accept both youtu.be/<id> and youtube.com/watch?v=<id>
+        const id = url.match(/(?:youtu\.be\/|[?&]v=)([\w-]{6,})/)?.[1];
+        if (!id) return;
+        const params = new URLSearchParams({
+          autoplay: "1",
+          rel: "0",
+          controls: settings.controls === "yes" ? "1" : "0",
+        });
+        const frame = document.createElement("iframe");
+        frame.className = "elementor-video-iframe";
+        frame.src = `https://www.youtube.com/embed/${id}?${params}`;
+        frame.title = "YouTube video player";
+        frame.allow =
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        frame.allowFullscreen = true;
+        frame.setAttribute("frameborder", "0");
+        holder.replaceChildren(frame);
+        videoOverlay.remove();
+        return;
+      }
+
       // FAQ accordion (.custom-accordion, rendered by FaqAccordion). Like the read-more
       // button, the export shipped markup + CSS but no script, so no row ever opened.
       // Single-open: clicking a row closes its siblings, matching the one-item-active

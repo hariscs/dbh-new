@@ -414,7 +414,11 @@
 .elementor-11 .elementor-element.elementor-element-9063354 { --width: 24%; }
 .elementor-11 .elementor-element.elementor-element-c5af6ef { --width: 24%; }
 .elementor-11 .elementor-element.elementor-element-9b81e48 { --width: 869px; }
-.elementor-11 .elementor-element.elementor-element-163162f { --width: 100%; }
+/* Live scopes this to @media(min-width:768px); the export flattened it to top level, so
+   --width:100% also applied on mobile. That widened the carousel container past the
+   viewport (452px slides on a 390px screen instead of 350px), which is what made the
+   slides look broken there. */
+@media (min-width: 768px) { .elementor-11 .elementor-element.elementor-element-163162f { --width: 100%; } }
 .elementor-11 .elementor-element.elementor-element-0d27ce3 { --width: 50%; }
 .elementor-11 .elementor-element.elementor-element-7fe38d2 { --width: 56%; }}
 @media (max-width: 1024px) and (min-width: 768px) {.elementor-11 .elementor-element.elementor-element-5766699 { --width: 76%; }
@@ -558,7 +562,9 @@
 .elementor-11 .elementor-element.elementor-element-8cbb148 { --gap: 0px 0px; --row-gap: 0px; --column-gap: 0px; --padding-top: 50px; --padding-bottom: 50px; --padding-left: 20px; --padding-right: 20px; }
 .elementor-11 .elementor-element.elementor-element-ed34a8e .elementor-heading-title { font-size: 16px; }
 .elementor-11 .elementor-element.elementor-element-6cc019d .elementor-heading-title { font-size: 20px; line-height: 1.4em; }
-.elementor-11 .elementor-element.elementor-element-163162f { --margin-top: 0px; --margin-bottom: 0px; --margin-left: 0px; --margin-right: 0px; --padding-top: 0px; --padding-bottom: 0px; --padding-left: 0px; --padding-right: 0px; }
+/* Live scopes this to @media(max-width:767px); flattened by the export, it was zeroing the
+   desktop margins set at the top of this file too. */
+@media (max-width: 767px) { .elementor-11 .elementor-element.elementor-element-163162f { --margin-top: 0px; --margin-bottom: 0px; --margin-left: 0px; --margin-right: 0px; --padding-top: 0px; --padding-bottom: 0px; --padding-left: 0px; --padding-right: 0px; } }
 .elementor-11 .elementor-element.elementor-element-87250e1 { --swiper-slides-to-display: 1; }
 .elementor-11 .elementor-element.elementor-element-0d27ce3 { --margin-top: 20px; --margin-bottom: 0px; --margin-left: 0px; --margin-right: 0px; }
 .elementor-11 .elementor-element.elementor-element-a9a82a4 { --padding-top: 50px; --padding-bottom: 50px; --padding-left: 20px; --padding-right: 20px; }
@@ -574,9 +580,33 @@
 @media (min-width: 1024px) and (max-width: 1366px) {.author-loop .elementor-grid { gap: 24px !important; }}
 .interlinking-section:has(.interlinking-shortcode__widget .elementor-shortcode:empty) { height: 0px; margin-bottom: 0px; visibility: hidden !important; }
 .banner_head strong { color: rgb(46, 106, 161); }
-.diff_col .swiper-wrapper .swiper-slide:nth-child(2n) .diff_main .e-con-inner { flex-direction: column-reverse; }
-.diff_col .swiper-wrapper .swiper-slide:nth-child(2n) .diff_main .e-con-inner .diff_title { background: rgb(46, 106, 161); }
-.diff_col .swiper-wrapper .swiper-slide:nth-child(2n) .diff_main .e-con-inner .diff_title h1.elementor-heading-title.elementor-size-default { color: white; }
+/* Carousels here are initialised lazily (IntersectionObserver in Carousels.tsx) to keep
+   Swiper off the critical path. Until that runs, nothing constrains slide width, so on
+   mobile each slide sized to its content (~452px) inside a 350px container and spilled out
+   sideways — which is what makes the section look broken before it initialises. Constrain
+   the slides to the container up front; once Swiper runs it writes an inline width, which
+   takes precedence over this rule, so the initialised behaviour is unchanged. */
+@media (max-width: 767px) {
+  /* Clip the un-initialised carousel instead of resizing it. Slides are content-sized
+     (~452px) until Swiper runs and writes their inline width, and the overflow is what
+     spills across the page on mobile. Sizing the slides here is not an option: any
+     flex-basis set on them outranks the inline width Swiper applies afterwards, which
+     breaks the initialised carousel. Clipping affects only the pre-init frame. */
+  .diff_col .swiper { overflow: hidden; }
+}
+
+/* "What makes us different" carousel: alternate slides put the title above the image on a
+   dark background. Live uses :nth-child(even), but only because WordPress inlines a <style>
+   element as the first child of .swiper-wrapper there — that shifts every slide's index by
+   one, so "even" actually selects the 1st, 3rd and 5th slides. Our export has no such
+   <style>, so :nth-child(even) selected the wrong half and the pattern rendered inverted.
+   :nth-of-type counts only the sibling <div>s, which gives the same slides live styles
+   whether or not a non-element node is present. */
+.diff_col .swiper-wrapper .swiper-slide:nth-of-type(odd) .diff_main .e-con-inner { flex-direction: column-reverse; }
+.diff_col .swiper-wrapper .swiper-slide:nth-of-type(odd) .diff_main .e-con-inner .diff_title { background: rgb(46, 106, 161); }
+.diff_col .swiper-wrapper .swiper-slide:nth-of-type(odd) .diff_main .e-con-inner .diff_title h1.elementor-heading-title.elementor-size-default { color: white; }
+/* Present on live but dropped from the export. */
+.diff_main .elementor-widget-theme-post-featured-image.elementor-widget-image:hover img.attachment-large.size-large { transform: scale(1.1); transition: transform 1.7s ease; }
 .diff_main .elementor-widget-theme-post-featured-image.elementor-widget-image { width: 100%; height: 100%; object-fit: cover; display: block; overflow: hidden; border-radius: 12px; }
 @media screen and (min-device-width: 1300px) and (max-device-width: 1400px) {.diff_title h1.elementor-heading-title.elementor-size-default { font-size: 15px !important; line-height: 23px !important; }}
 .elementor-75 .elementor-element.elementor-element-2c0bd73 { --display: flex; --flex-direction: column; --container-widget-width: 100%; --container-widget-height: initial; --container-widget-flex-grow: 0; --container-widget-align-self: initial; --flex-wrap-mobile: wrap; --border-radius: 20px 20px 20px 20px; --padding-top: 10px; --padding-bottom: 10px; --padding-left: 10px; --padding-right: 10px; }
@@ -787,3 +817,4 @@ button:focus, button:hover{ outline: none !important; box-shadow: none; border: 
   content-visibility: visible;
   contain-intrinsic-size: none;
 }
+@media(max-width: 480px){ .elementor-75 { width:100%; overflow:hidden } }

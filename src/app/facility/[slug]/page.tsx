@@ -35,7 +35,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   return (
     <>
       <Header fields={data.fields} />
-      (
       <FacilityDetail
         facilityName={clean(f.facility_name as string) || undefined}
         facilityLocation={clean(f.facility_location as string) || undefined}
@@ -43,7 +42,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         exteriorsGallery={asGallery(f.facility_exteriors_gallery)}
         highlightsGallery={asGallery(f.location_highlights_gallery)}
       />
-    )
     </>
   );
 }

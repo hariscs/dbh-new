@@ -33,7 +33,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
         <div className="elementor-element elementor-element-80f2f9d cb-id-headline elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
             <h1 className="elementor-heading-title elementor-size-default">
-              {geo} {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)
+              {props.h1}
             </h1>
           </div>
         </div>
@@ -245,6 +245,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
             {props.h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />}
           </div>
         </div>
+        {(props.blog_section_1___con) ?
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
           <div className="elementor-widget-container">
             <div className="elementor-shortcode">
@@ -257,116 +258,27 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                     <path d="M6 1V11M1 6H11" stroke="currentColor" strokeWidth="2" strokeLinecap="round"></path>
                   </svg>
                 </button>
-                <div className="blog-section-content" id="blog-content-6a578352df682" aria-hidden="true">
-                  <div className="blog-section-content-inner">
-                    <h2>
-                      Partial Hospitalization Program ({topic_1}) {near_in} {geo}
-                    </h2>
-                    <p>
-                      Locating a 
-                      <strong>
-                        Partial Hospitalization Program ({topic_1}) {near_in} {geo}
-                      </strong>
-                       marks an essential step forward for individuals seeking intensive therapeutic support during their healing process. People requiring more substantial intervention than standard outpatient appointments while avoiding 24-hour residential care find these specialized treatment options particularly beneficial.
-                    </p>
-                    <p>
-                      Intensive therapeutic activities and professional oversight define these programs, extending across several hours daily while allowing clients to maintain residence at home each night. This framework establishes an ideal balance between receiving focused clinical attention and sustaining important family relationships plus personal responsibilities.
-                    </p>
-                    <h3>
-                      Understanding Partial Hospitalization Programs
-                    </h3>
-                    <p>
-                      Comprehensive daytime treatment characterizes a Partial Hospitalization Program, providing extensive clinical support during business hours without overnight facility stays. Several hours each day, distributed throughout multiple weekly appointments, generally constitute the participation requirements according to individualized care plans.
-                    </p>
-                    <p>
-                      Transitional services following residential or inpatient treatment frequently incorporate PHPs, though they equally assist people needing more intensive intervention than traditional outpatient programs deliver.
-                    </p>
-                    <p>
-                      Integrated therapeutic methodologies typically blend individual counseling, clinical monitoring, and practical skill training that supports both psychological wellness and substance use recovery objectives.
-                    </p>
-                    <h3>
-                      Services Available Through {topic_1}
-                    </h3>
-                    <p>
-                      Extensive therapeutic interventions addressing emotional and behavioral challenges usually establish the cornerstone of Partial Hospitalization Programs.
-                    </p>
-                    <p>
-                      Typical {topic_1} components include:
-                    </p>
-                    <ul>
-                      <li>
-                        <p>
-                          Individual therapy sessions with licensed behavioral health specialists
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Group-based treatment sessions fostering peer connection and personal accountability
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Family-oriented therapy designed to strengthen household relationships and communication skills
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Medication monitoring and coordination when clinically appropriate
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Educational workshops focusing on adaptive coping mechanisms and relapse prevention techniques
-                        </p>
-                      </li>
-                    </ul>
-                    <p>
-                      Supplementary wellness elements such as mindfulness training or anxiety management techniques may strengthen comprehensive treatment outcomes {near_in} select programs.
-                    </p>
-                    <h3>
-                      Ideal Candidates for {topic_1} Services
-                    </h3>
-                    <p>
-                      Intensive treatment requirements alongside the capacity for safe independent living make {topic_1} {near_in} {geo} appropriate for numerous individuals. Bridge services for those transitioning from residential programs while maintaining need for regular therapeutic engagement also derive significant value from this model.
-                    </p>
-                    <p>
-                      Organized programming coupled with clinical supervision makes PHPs particularly effective for individuals managing co-occurring addiction concerns and psychiatric conditions. Coordinated treatment of multiple disorders becomes achievable through this integrated methodology.
-                    </p>
-                    <h3>
-                      Benefits of {topic_1} Treatment Approach
-                    </h3>
-                    <p>
-                      Concentrated clinical care combined with personal independence represents {topic_1}’s primary strength. Thorough daytime intervention paired with chances to apply recovery principles {near_in} real-world environments generates optimal therapeutic conditions.
-                    </p>
-                    <p>
-                      Social and familial bonds stay preserved through {topic_1} engagement. Sustainable recovery foundations and healthy habit development frequently rely on maintaining these crucial support networks.
-                    </p>
-                    <h3>
-                      Treatment Services at District Behavioral Health Group
-                    </h3>
-                    <p>
-                      Extensive 
-                      <strong>
-                        Partial Hospitalization Programs {near_in} {geo}
-                      </strong>
-                       helping individuals navigate addiction and mental health difficulties are offered through 
-                      <Link href="/">
-                        District Behavioral Health
-                      </Link>
-                       Group. Research-supported treatment approaches paired with personalized care planning guarantee suitable assistance for each client’s specific circumstances.
-                    </p>
-                    <p>
-                      Organized daily programming provided by our experienced clinical team focuses on helping participants build fundamental skills for lasting recovery and improved life satisfaction.
-                    </p>
-                    <p>
-                      Professional support for your continued wellness journey becomes available when you or a loved one explores treatment options.
-                    </p>
+                {(props.blog_section_1___head || props.blog_section_1___con) && (
+                  <div className="blog-section-content" id="blog-content-6a578352df682" aria-hidden="true">
+                    <div className='blog-section-content-inner'>
+                      <div className="e-con-inner">
+                        <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                          <div className="elementor-widget-container">
+                            {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
+                            {props.blog_section_1___con && (
+                              <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </div>
         </div>
+        : ""}
         <div className="elementor-element elementor-element-9d78afe video-widget-sty elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-video" data-settings="{&quot;youtube_url&quot;:&quot;https:\\/\\/youtu.be\\/3YIXhadnuqE?si=hpBLPRkhvx4ENkAi&quot;,&quot;lazy_load&quot;:&quot;yes&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
           <div className="elementor-widget-container">
             <div className="elementor-wrapper elementor-open-inline">
@@ -380,13 +292,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-c166bcb elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
-            <h2 className="elementor-heading-title elementor-size-default">
-              Why 
-              <b>
-                Trust Us
-              </b>
-               With Your Care
-            </h2>
+            <h2 className="elementor-heading-title elementor-size-default">Why <b>Trust Us</b> With Your Care</h2>
           </div>
         </div>
         <div className="elementor-element elementor-element-f42ed1f e-con-full e-flex e-con e-child">
@@ -600,7 +506,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
         </div>
       </div>
     </div>
-    <div className="elementor-element elementor-element-6edd7e6 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+    <div className="elementor-element elementor-element-6edd7e6 e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-2c4400c e-con-full e-flex e-con e-child">
           <div className="elementor-element elementor-element-e4dc282 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -652,7 +558,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.renaissancerecovery.com/drug/rehab/tennessee/davidson-county/nashville/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Renaissance Recovery Nashville, TN
+                                              {brand} Nashville, TN
                                             </a>
                                           </h1>
                                         </div>
@@ -674,7 +580,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                       <div className="elementor-element elementor-element-7c4fb1a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {topic_1} | IOP | OP
+                                            PHP | IOP | OP
                                           </h2>
                                         </div>
                                       </div>
@@ -714,7 +620,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.renaissancerecovery.com/drug/rehab/california/orange-county/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Renaissance Recovery {address_county}, {state}
+                                              {brand} {address_county}, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -722,7 +628,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            Fountain Valley, {state}
+                                            Fountain Valley, CA
                                           </h2>
                                         </div>
                                       </div>
@@ -736,7 +642,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                       <div className="elementor-element elementor-element-7c4fb1a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {topic_1} | IOP | OP
+                                            PHP | IOP | OP
                                           </h2>
                                         </div>
                                       </div>
@@ -776,7 +682,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.renaissancerecovery.com/drug/rehab/florida/palm-beach/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Renaissance Recovery Palm Beach, FL
+                                              {brand} Palm Beach, FL
                                             </a>
                                           </h1>
                                         </div>
@@ -798,7 +704,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                       <div className="elementor-element elementor-element-7c4fb1a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {topic_1} | IOP | OP
+                                            PHP | IOP | OP
                                           </h2>
                                         </div>
                                       </div>
@@ -838,7 +744,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.gratitudelodge.com/drug-rehab/california/los-angeles/long-beach/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Gratitude Lodge – Long Beach, {state}
+                                              Gratitude Lodge – Long Beach, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -846,7 +752,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            Long Beach, {state}
+                                            Long Beach, CA
                                           </h2>
                                         </div>
                                       </div>
@@ -900,7 +806,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.gratitudelodge.com/drug-rehab/california/orange-county/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Gratitude Lodge – {address_county}, {state}
+                                              Gratitude Lodge – {address_county}, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -908,7 +814,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {address_county}, {state}
+                                            {address_county}, CA
                                           </h2>
                                         </div>
                                       </div>
@@ -962,7 +868,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.gratitudelodge.com/drug-rehab/california/orange-county/newport-beach/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Gratitude Lodge – {geo}, {state}
+                                              Gratitude Lodge – Newport Beach, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -970,7 +876,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {geo}, {state}
+                                            Newport Beach, CA
                                           </h2>
                                         </div>
                                       </div>
@@ -1024,7 +930,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.gratitudelodge.com/drug-rehab/california/los-angeles/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Gratitude Lodge – Los Angeles, {state}
+                                              Gratitude Lodge – Los Angeles, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -1032,7 +938,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            Los Angeles, {state}
+                                            Los Angeles, CA
                                           </h2>
                                         </div>
                                       </div>
@@ -1086,7 +992,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://californiadetox.com/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              California Detox – {address_county}, {state}
+                                              California Detox – {address_county}, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -1094,7 +1000,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            Laguna Beach, {state}
+                                            Laguna Beach, CA
                                           </h2>
                                         </div>
                                       </div>
@@ -1148,7 +1054,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://connectionsoc.com/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Connections Mental Health – {address_county}, {state}
+                                              Connections Mental Health – {address_county}, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -1156,7 +1062,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            Orange, {state} | Tustin, {state} | Villa Park, {state}
+                                            Orange, CA | Tustin, CA | Villa Park, CA
                                           </h2>
                                         </div>
                                       </div>
@@ -1194,7 +1100,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                             </div>
                           </div>
                           <div className="elementor elementor-75 e-loop-item e-loop-item-452 post-452 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -1210,7 +1116,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://alliancerecovery.com/drug/los-angeles-ca/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Alliance Recovery – Los Angeles, {state}
+                                              Alliance Recovery – Los Angeles, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -1218,7 +1124,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            Los Angeles, {state} | Fountain Valley, {state}
+                                            Los Angeles, CA | Fountain Valley, CA
                                           </h2>
                                         </div>
                                       </div>
@@ -1232,7 +1138,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                       <div className="elementor-element elementor-element-7c4fb1a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {topic_1} | IOP | OP
+                                            PHP | IOP | OP
                                           </h2>
                                         </div>
                                       </div>
@@ -1281,34 +1187,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
           </div>
           <div className="elementor-element elementor-element-3073b2e elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
             <div className="elementor-widget-container">
-              <p>
-                Intensive outpatient {topic_1} treatment {near_in} {geo} operates through comprehensive daytime therapeutic sessions while enabling participants to maintain their home life each night, fostering recovery development within authentic daily circumstances. Such programming supports people {near_in} staying anchored to their familiar surroundings while accessing essential clinical intervention during critical or transitional recovery phases. Staying within {geo} additionally facilitates meaningful engagement of family members and community support networks throughout the healing journey.
-              </p>
-              <ul>
-                <li>
-                  Develop effective strategies for navigating real-world challenges {near_in} {geo}
-                </li>
-                <li>
-                  Preserve existing routines that promote emotional stability and sustained growth
-                </li>
-                <li>
-                  Access structured therapeutic intervention without requiring residential placement
-                </li>
-                <li>
-                  Enhance personal responsibility while maintaining vital community connections
-                </li>
-              </ul>
-              <p>
-                Via the 
-                <Link href="/">
-                  District Behavioral Health
-                </Link>
-                 network and {topic_1} treatment services provided through 
-                <a href="https://www.renaissancerecovery.com/drug/rehab/sober-living/">
-                  Renaissance Recovery
-                </a>
-                , participants access specialized care tailored to their unique circumstances {near_in} {geo}. Community-based treatment methodology ensures recovery competencies become integrated into practical daily application rather than remaining theoretical concepts.
-              </p>
+              {props.why_rehab_works___con && <div dangerouslySetInnerHTML={{ __html: props.why_rehab_works___con }} />}
             </div>
           </div>
           <div className="elementor-element elementor-element-e771d5c elementor-widget-mobile__width-inherit e-transform elementor-mobile-align-justify elementor-widget elementor-widget-button animated fadeIn" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_transform_translateY_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-5,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="button.default">
@@ -4038,20 +3917,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
         </div>
       </div>
     </div>
-          {(props.blog_section_1___head || props.blog_section_1___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
-                {props.blog_section_1___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* blog_section_1 renders above, collapsed behind the .read-more-toggle button. */}
       {(props.blog_section_2___head || props.blog_section_2___con) && (
         <div className="elementor-element e-flex e-con-boxed e-con e-parent">
           <div className="e-con-inner">

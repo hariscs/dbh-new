@@ -22,12 +22,10 @@ export default async function Page() {
   return (
     <>
       <Header fields={data?.fields} />
-      (
       <>
         <OurFacilities {...(data?.fields ?? {})} />
         <FacilitiesMarquee />
       </>
-    )
     </>
   );
 }

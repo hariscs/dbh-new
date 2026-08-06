@@ -771,6 +771,13 @@ header.sticky-header.elementor-sticky--effects .menu-cta { transform: scale(1); 
 #elementor-popup-modal-104913 .dbh-mega-sidebar { position: sticky; top: 45px; z-index: 2; background: var(--mm-sidebar-bg); box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 4px; flex: 0 0 auto; width: 100%; flex-flow: row; overflow: auto hidden; padding: 10px 12px; gap: 6px; justify-content: flex-start; scrollbar-width: thin; }
 #elementor-popup-modal-104913 .dbh-mega-tab { flex: 0 0 auto; width: auto; padding: 10px 16px; border-left: none; border-bottom: 2px solid transparent; border-radius: 6px; font-size: 13px; white-space: nowrap; }
 #elementor-popup-modal-104913 .dbh-mega-tab.is-active { border-left: none; border-bottom-color: var(--mm-accent); background: rgb(255, 255, 255); }
+/* Exempt the active tab from `button:focus, button:hover { border: 0px !important }` in
+   src/app/page.css, which otherwise strips the underline as soon as the tab is focused or
+   hovered. !important is required to beat that declaration; the id-scoped selector (1-3-0)
+   then outranks its `button:focus` (0-1-1) among the !important declarations. */
+#elementor-popup-modal-104913 .dbh-mega-tab.is-active:focus,
+#elementor-popup-modal-104913 .dbh-mega-tab.is-active:focus-visible,
+#elementor-popup-modal-104913 .dbh-mega-tab.is-active:hover { border-bottom: 2px solid var(--mm-accent) !important; }
 #elementor-popup-modal-104913 .dbh-mega-panel-body { width: 100%}
 #elementor-popup-modal-104913 .dbh-mega-content { padding: 20px; gap: 14px; }
 #elementor-popup-modal-104913 .dbh-mega-content__heading { font-size: 16px; }
@@ -787,14 +794,24 @@ header.sticky-header.elementor-sticky--effects .menu-cta { transform: scale(1); 
 .dbh-mobile-modal.is-open .dbh-mobile-drawer { transform: translateX(0); }
 .dbh-mobile-drawer__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--mm-card-border, #e5e7eb); position: sticky; top: 0; background: inherit; z-index: 3; }
 .dbh-mobile-logo img { width: auto; height: 40px; }
-.dbh-mobile-close { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; border: none; background: transparent; cursor: pointer; border-radius: 8px; flex: 0 0 auto; }
-.dbh-mobile-close:hover { background: rgba(0, 0, 0, 0.05); }
+/* Drawer header controls: an outlined call button next to a solid close button, both round. */
+.dbh-mobile-drawer__actions { display: flex; align-items: center; gap: 12px; flex: 0 0 auto; }
+.dbh-mobile-call { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; flex: 0 0 auto; border-radius: 50%; border: 1px solid rgb(46, 106, 161); background: rgb(255, 255, 255); color: rgb(46, 106, 161); text-decoration: none; transition: background-color 0.2s, color 0.2s; }
+.dbh-mobile-call:hover, .dbh-mobile-call:focus { background: rgb(46, 106, 161); color: rgb(255, 255, 255); }
+/* Parent-scoped (0-2-0) so it outranks the theme's `[type="button"], button { border:1px
+   solid #c36; border-radius:3px; padding:.5rem 1rem }` reset, which base.css repeats in
+   minified form further down the file and would otherwise win on source order. */
+.dbh-mobile-drawer__actions .dbh-mobile-close { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; border: none; background: rgb(46, 106, 161); color: rgb(255, 255, 255); cursor: pointer; border-radius: 50%; flex: 0 0 auto; transition: background-color 0.2s; }
+.dbh-mobile-drawer__actions .dbh-mobile-close:hover { background: rgb(36, 86, 133); }
 button.elementor-icon { background: none; border: 0; padding: 0; margin: 0; cursor: pointer; color: inherit; line-height: 0; }
 body.dbh-menu-open { overflow: hidden; }
 /* Theme sets a global `button:hover/:focus { background:#c36 }` — neutralize it for the menu controls. */
 button.elementor-icon:hover, button.elementor-icon:focus, button.elementor-icon:active { background-color: transparent; color: inherit; }
 #elementor-popup-modal-104913 button:hover, #elementor-popup-modal-104913 button:focus { background-color: transparent; color: inherit; }
-#elementor-popup-modal-104913 .dbh-mobile-close:hover, #elementor-popup-modal-104913 .dbh-mobile-close:focus { background-color: rgba(0, 0, 0, 0.05); }
+/* Id-scoped so it outranks the `#elementor-popup-modal-104913 button:hover` reset above,
+   which would otherwise strip the close button back to transparent on hover/focus. */
+#elementor-popup-modal-104913 .dbh-mobile-close, #elementor-popup-modal-104913 .dbh-mobile-close:hover, #elementor-popup-modal-104913 .dbh-mobile-close:focus { background-color: rgb(46, 106, 161); color: rgb(255, 255, 255); }
+#elementor-popup-modal-104913 .dbh-mobile-close:hover { background-color: rgb(36, 86, 133); }
 /* Back button shown at the top of a mobile submenu panel. */
 #elementor-popup-modal-104913 .dbh-megaback { display: flex; align-items: center; gap: 8px; width: 100%; padding: 14px 16px; border: 0; border-bottom: 1px solid var(--mm-card-border); background: transparent; font-size: 14px; font-weight: 600; color: var(--mm-accent, #006cae); cursor: pointer; }
 @media (max-width: 1024px) {.dbh-mega-panel { left: 0px; right: 0px; width: 100%; transform: none; border-radius: 0px; max-height: 80vh; overflow-y: auto; }
@@ -937,6 +954,36 @@ body.rtl .elementor-108125 .elementor-element.elementor-element-e9d3fce { left: 
 #elementor-popup-modal-104913 .dialog-message { width: 85vw; height: 100vh; align-items: flex-start; }
 .opened-icon { background: url("/images/b30c514f09eea6294dc8a058dc26aa20.webp"); width: 20px; height: 20px; }
 .opened-icon.hidden, .closed-icon.hidden { display: none; }
+/* Counter numbers on the location-served templates ("Lives Treated", "States Served", ...).
+   Elementor centres a counter with two flex spacers — .elementor-counter-number-prefix and
+   .elementor-counter-number-suffix, both flex-grow:1 — around a flex-grow:0 number. The export
+   dropped the prefix span and its rule, so only the suffix grew and the number was pushed left.
+   Setting flex-grow directly rather than via --counter-suffix-grow is deliberate: each widget's
+   own page.css rule (.elementor-1990 .elementor-element.elementor-element-60bb154 …, 0-4-0) resets
+   that variable to 1, so overriding the variable loses. Scoped to .elementor-1990 so the counters
+   on ClientOutcomesPageDev, which relies on the default left-aligned layout, are unaffected. */
+.elementor-1990 .elementor-counter .elementor-counter-number-wrapper { justify-content: center; }
+.elementor-1990 .elementor-counter .elementor-counter-number-suffix { flex-grow: 0; }
+.elementor-1990 .elementor-counter .elementor-counter-number { flex-grow: 0; }
+
+/* Elementor video widget with a custom thumbnail overlay ("A Story of Hope & Recovery" on
+   the author pages, and the video widgets on the location templates). The geo routes carry
+   these rules in their own page.css, but the authors route does not — so its overlay had no
+   positioning context and the iframe no sizing. They are framework-level and identical
+   wherever they appear, so they live here; the per-route copies are harmless duplicates.
+   `position: relative` on the wrapper is what the absolutely-positioned overlay anchors to,
+   and --video-aspect-ratio gets a 16:9 default for widgets whose route CSS omits it. */
+.elementor-widget-video .elementor-widget-container, .elementor-widget-video:not(:has(.elementor-widget-container)) { overflow: hidden; transform: translateZ(0px); }
+.elementor-widget-video .elementor-wrapper { position: relative; aspect-ratio: var(--video-aspect-ratio, 1.77777); }
+/* The injected iframe sits inside .elementor-video; without an explicit height there its
+   own height:100% has nothing to resolve against and it falls back to the HTML default of
+   150px. */
+.elementor-widget-video .elementor-wrapper .elementor-video { height: 100%; width: 100%; }
+.elementor-widget-video .elementor-wrapper iframe, .elementor-widget-video .elementor-wrapper video { background-color: rgb(0, 0, 0); border: none; display: flex; height: 100%; width: 100%; }
+.elementor-widget-video .elementor-open-inline .elementor-custom-embed-image-overlay { background-position: 50% center; background-size: cover; inset: 0px; position: absolute; }
+.elementor-widget-video .elementor-custom-embed-image-overlay { cursor: pointer; text-align: center; }
+.elementor-widget-video .elementor-custom-embed-image-overlay img { aspect-ratio: var(--video-aspect-ratio, 1.77777); display: block; object-fit: cover; object-position: center center; width: 100%; }
+
 /* FAQ accordion (FaqAccordion component). The Elementor export only emitted these rules
    into the per-route page.css of pages that happened to ship a static accordion, so routes
    that rendered their FAQs as a flat HTML dump (los-angeles, tn, ny, ...) had no styling
@@ -955,6 +1002,25 @@ body.rtl .elementor-108125 .elementor-element.elementor-element-e9d3fce { left: 
 .closed-icon { background: url("/images/6f472f96b8c3a13c7af3a00330fcea44.webp"); width: 24px; height: 24px; }
 .accordion-item__header { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-direction: row; padding: 24px 20px 20px; border-radius: 24px; transition: 0.4s ease-out; cursor: pointer; }
 .accordion-item__header:hover { cursor: pointer; }
+/* Read-more blog section. The .read-more-toggle button below was already global, but the
+   panel it controls was only ever emitted into the per-route page.css of routes whose
+   export happened to include the widget — so on ca/[slug] the panel had no max-height:0,
+   meaning it rendered permanently expanded and toggling [aria-hidden] did nothing visible.
+   The block is shared by 21 templates, so its styles belong here. Copied verbatim from the
+   20 page.css files that carried them (all byte-identical). */
+.blog-section-content { max-height: 0px; overflow-y: scroll; border-left: 4px solid rgb(46, 106, 161); border-radius: 8px; transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+.blog-section-content[aria-hidden="false"] { max-height: 1000px; margin-top: 1.5rem; }
+.blog-section-content-inner { padding: 1.5rem; background: rgb(248, 249, 250); animation: 0.5s ease 0s 1 normal none running fadeIn; }
+.blog-section-content-inner p { margin-bottom: 1rem; line-height: 1.7; color: rgb(56, 56, 56); font-family: var(--font-montserrat); }
+.blog-section-content-inner li { font-family: var(--font-montserrat); color: rgb(56, 56, 56); }
+.blog-section-content-inner p:last-child { margin-bottom: 0px; }
+.blog-section-content[aria-hidden="false"]::-webkit-scrollbar { width: 6px; }
+.blog-section-content[aria-hidden="false"]::-webkit-scrollbar-thumb { background: rgb(67, 153, 175); border-radius: 4px; }
+.blog-section-content[aria-hidden="false"]::after { content: ""; position: sticky; bottom: 0px; left: 0px; width: 100%; height: 15px; display: inline-block; pointer-events: none; background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.95)); }
+.blog-section-content-inner ul, .blog-section-content-inner ol { margin-block: 0.9rem; }
+div.blog-section-content-inner h2 { font-family: var(--font-montserrat), sans-serif; color: rgb(39, 63, 82); font-size: 32px; font-weight: 700; line-height: 43px; }
+div.blog-section-content-inner h3 { font-family: var(--font-montserrat), sans-serif; color: rgb(39, 63, 82); font-size: 24px; font-weight: 700; line-height: 36px; }
+div.blog-section-content-inner a { font-family: var(--font-montserrat), sans-serif; color: rgb(39, 63, 82); }
 .read-more-toggle { display: inline-flex; align-items: center; gap: 0.5rem; background: rgb(46, 106, 161); color: rgb(255, 255, 255); border: none; font-size: 16px; font-weight: 600; transition: 0.3s; box-shadow: rgba(24, 134, 251, 0.2) 0px 4px 6px; position: relative; overflow: hidden; line-height: 26px; font-family: var(--font-montserrat); padding: 14px 30px; border-radius: 50px; }
 .read-more-toggle::before { content: ""; position: absolute; top: 0px; left: -100%; width: 100%; height: 100%; background: rgb(46, 106, 161); transition: left 0.5s; }
 .read-more-toggle:hover { transform: translateY(-2px); box-shadow: rgba(24, 134, 251, 0.3) 0px 6px 12px; background: rgb(46, 106, 161); }
