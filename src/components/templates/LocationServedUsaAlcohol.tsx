@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import ElementorTableOfContents from '@/components/ElementorTableOfContents';
 import Link from 'next/link';
 import { RelatedLinks } from '@/components/RelatedLinks';
 import { resolvePhone } from "@/lib/phone";
@@ -978,78 +979,7 @@ export default function LocationServedUsaAlcohol(props: Record<string, string>) 
                   </div>
                 </div>
                 <div id="elementor-toc__8fec590" className="elementor-toc__body elementor-toc__list-items--collapsible">
-                  <ol className="elementor-toc__list-wrapper">
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-0" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          What is Alcohol Use Disorder?
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-1" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          When Is It Time for Treatment?
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-2" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Symptoms and Causes
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-3" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Diagnosis and Tests
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-4" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Management and Treatment
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-5" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Outlook / Prognosis
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-6" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Prevention
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-7" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Living With AUD
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-8" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          FAQs
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-9" className="elementor-toc__list-item-text elementor-toc__top-level elementor-item-active">
-                          Get Treatment for Alcohol {topic_2} at District Behavioral Health
-                        </Link>
-                      </div>
-                    </li>
-                  </ol>
+                  <ElementorTableOfContents container=".content-area" />
                 </div>
               </div>
             </div>

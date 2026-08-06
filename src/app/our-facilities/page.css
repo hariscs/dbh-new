@@ -1113,3 +1113,48 @@ body.rtl .elementor-2998 .elementor-element.elementor-element-bcd827b { left: 30
   object-fit: cover;
   pointer-events: none;
 }
+
+/* Card type label ("Treatment Center" / "Sober Living Houses"), the mobile-only variant of
+   the pair each facility card carries. It sits on a #333 background, but its white text came
+   only from
+     .page-id-2998 .elementor-element-1005220 .elementor-widget-mobile__width-inherit:not(:last-child)
+       .elementor-button.elementor-size-sm .elementor-button-content-wrapper span { color:#fff }
+   which is scoped to one container and depends on :not(:last-child) — so 4 of the 10 cards
+   fell through it and rendered #333 text on a #333 button, i.e. invisible.
+
+   Keyed on the structural marker (a button widget hidden on desktop) rather than the widget
+   ids, because every card has its own: f66c50c, d2bc3fa, 2b1778b, c669a19, c0fda7d, 13ab984,
+   f1b6ab3, 5f7bc4d, 5c1bdc5, ca882ba. Anchoring on the page root covers all of them, and any
+   card added later, without listing ids. The one other .elementor-hidden-desktop element on
+   this page (8dcae1e) is not a button, so .elementor-widget-button keeps it out of scope. */
+.elementor-2998 .elementor-widget-button.elementor-hidden-desktop .elementor-button-text { color: rgb(255, 255, 255); }
+
+/* Facility cards in 1005220 on tablet. The container is a wrapping flex row: on desktop two
+   cards fit per row (646px each in 1345px), and on mobile they are already full width. In
+   between, the cards keep a ~half-width size (413px) that no longer fits two per row in the
+   860px container, so each row rendered one card with the other half left empty.
+   Give them the full row on tablet. flex-basis is set alongside width because the cards'
+   own per-widget rules size them via flex, which would otherwise win. */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .elementor-2998 .elementor-element.elementor-element-1005220 > .e-con {
+    width: 100%;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+
+/* Facility cards without a slider use a single static image. Its per-breakpoint heights are
+   500px desktop / 180px tablet / 250px mobile, while the slider cards next to them are held
+   at 500px from 620px up (min-height:500px !important on the carousel slides). On tablet
+   that left the plain-image cards ~320px shorter than their slider siblings in the same row.
+   Match the slider height so the row reads consistently.
+
+   .elementor-widget-image and .elementor-widget-image-carousel are separate class tokens, so
+   this reaches only the static-image cards and leaves the carousels alone. The images already
+   carry object-fit:cover, so the extra height crops rather than stretches them. */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .elementor-2998 .elementor-element.elementor-element-1005220 .elementor-widget-image img {
+    height: 500px;
+    object-fit: cover;
+  }
+}

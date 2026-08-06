@@ -41,7 +41,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
       <Header fields={data.fields} />
 
-      (
       <AuthorDetail
         firstName={firstName || undefined}
         lastName={lastName || undefined}
@@ -52,8 +51,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         linkedin={linkedin || null}
         bio={clean(f.bio) || undefined}
       />
-    )
-
     </>
 
   );

@@ -243,11 +243,12 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
             {props.h2___con && <div dangerouslySetInnerHTML={{ __html: props.h2___con }} />}
           </div>
         </div>
+        {(props.blog_section_1___con) ? 
         <div className="elementor-element elementor-element-ea84fce elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
           <div className="elementor-widget-container">
             <div className="elementor-shortcode">
               <div className="blog-section-wrapper">
-                <button className="read-more-toggle" aria-expanded="false" aria-controls="blog-content-6a578335d3fb5">
+                <button className="read-more-toggle" aria-expanded="false" aria-controls="blog-content-6a5783c881e09">
                   <span className="toggle-text">
                     Read More
                   </span>
@@ -255,15 +256,27 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
                     <path d="M6 1V11M1 6H11" stroke="currentColor" strokeWidth="2" strokeLinecap="round"></path>
                   </svg>
                 </button>
-                <div className="blog-section-content" id="blog-content-6a578335d3fb5" aria-hidden="true">
-                  <div className="blog-section-content-inner">
-                    {props.blog_section_1___con && <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />}
+                {(props.blog_section_1___con) && (
+                  <div className="blog-section-content" id="blog-content-6a578317117da" aria-hidden="true">
+                    <div className='blog-section-content-inner'>
+                      <div className="e-con-inner">
+                        <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                          <div className="elementor-widget-container">
+                            {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
+                            {props.blog_section_1___con && (
+                              <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </div>
         </div>
+        : ""}
         <div className="elementor-element elementor-element-9d78afe video-widget-sty elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-video" data-settings="{&quot;youtube_url&quot;:&quot;https:\\/\\/youtu.be\\/3YIXhadnuqE?si=hpBLPRkhvx4ENkAi&quot;,&quot;lazy_load&quot;:&quot;yes&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
           <div className="elementor-widget-container">
             <div className="elementor-wrapper elementor-open-inline">
@@ -277,13 +290,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-c166bcb elementor-widget elementor-widget-heading" data-widget_type="heading.default">
           <div className="elementor-widget-container">
-            <h2 className="elementor-heading-title elementor-size-default">
-              Why 
-              <b>
-                Trust Us
-              </b>
-               With Your Care
-            </h2>
+            <h2 className="elementor-heading-title elementor-size-default">Why <b>Trust Us</b> With Your Care</h2>
           </div>
         </div>
         <div className="elementor-element elementor-element-f42ed1f e-con-full e-flex e-con e-child">
@@ -406,7 +413,62 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
         <div className="elementor-element elementor-element-39c59b9 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
           <div className="elementor-widget-container">
             <div className="elementor-shortcode">
-              {props.facility_image_slider___con && <div dangerouslySetInnerHTML={{ __html: props.facility_image_slider___con }} />}
+              <div className="g-wrap" id="dmg-gallery-1">
+                <div className="dmg-grid">
+                  <div className="g-item">
+                    <Image src="/images/e3ff331a2a5604c280bb4e77f097aeac.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
+                    <div className="g-overlay"></div>
+                    <div className="g-line"></div>
+                    <div className="g-corner"></div>
+                  </div>
+                  <div className="g-item">
+                    <Image src="/images/d568211904d8538882d895f7bc6ab25e.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
+                    <div className="g-overlay"></div>
+                    <div className="g-line"></div>
+                    <div className="g-corner"></div>
+                  </div>
+                  <div className="g-item">
+                    <Image src="/images/26493349f84c0c5ce91ce31a6773b846.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
+                    <div className="g-overlay"></div>
+                    <div className="g-line"></div>
+                    <div className="g-corner"></div>
+                  </div>
+                  <div className="g-item">
+                    <Image src="/images/6a341c3f03b8e72eb5a9feb6df87d656.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
+                    <div className="g-overlay"></div>
+                    <div className="g-line"></div>
+                    <div className="g-corner"></div>
+                  </div>
+                  <div className="g-item">
+                    <Image src="/images/8182a0d37cb967bc1479e1afc0af8e15.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
+                    <div className="g-overlay"></div>
+                    <div className="g-line"></div>
+                    <div className="g-corner"></div>
+                  </div>
+                  <div className="g-item">
+                    <Image src="/images/b4937313007bffe7a5a245961ca2f6d9.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
+                    <div className="g-overlay"></div>
+                    <div className="g-line"></div>
+                    <div className="g-corner"></div>
+                  </div>
+                  <div className="g-item">
+                    <Image src="/images/c8cf9accc8fb330423b91a194a72c909.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
+                    <div className="g-overlay"></div>
+                    <div className="g-line"></div>
+                    <div className="g-corner"></div>
+                  </div>
+                  <div className="g-item">
+                    <Image src="/images/c27e6e0e5ced79116b4fcfbce0f35be6.webp" alt="Gallery image" width={0} height={0} sizes="100vw" style={{width:"100%",height:"auto"}} />
+                    <div className="g-overlay"></div>
+                    <div className="g-line"></div>
+                    <div className="g-corner"></div>
+                  </div>
+                </div>
+                <div className="dmg-fade"></div>
+                <button className="g-toggle dmg-toggle" type="button">
+                  Show all photos ↓
+                </button>
+              </div>
               <div id="dmg-lb">
                 <div id="dmg-lb-box">
                   <button id="dmg-lb-close" type="button" aria-label="Close">
@@ -442,7 +504,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
         </div>
       </div>
     </div>
-    <div className="elementor-element elementor-element-6edd7e6 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+    <div className="elementor-element elementor-element-6edd7e6 e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-2c4400c e-con-full e-flex e-con e-child">
           <div className="elementor-element elementor-element-e4dc282 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -478,7 +540,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
                       <div className="elementor-widget-container">
                         <div className="elementor-loop-container elementor-grid" role="list">
                           <div className="elementor elementor-75 e-loop-item e-loop-item-2057 post-2057 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -494,7 +556,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.renaissancerecovery.com/drug/rehab/tennessee/davidson-county/nashville/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Renaissance Recovery Nashville, TN
+                                              {brand} Nashville, TN
                                             </a>
                                           </h1>
                                         </div>
@@ -516,7 +578,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
                                       <div className="elementor-element elementor-element-7c4fb1a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {topic_1} | IOP | OP
+                                            PHP | IOP | OP
                                           </h2>
                                         </div>
                                       </div>
@@ -540,7 +602,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
                             </div>
                           </div>
                           <div className="elementor elementor-75 e-loop-item e-loop-item-68 post-68 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -556,7 +618,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.renaissancerecovery.com/drug/rehab/california/orange-county/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Renaissance Recovery {address_county}, CA
+                                              {brand} {address_county}, CA
                                             </a>
                                           </h1>
                                         </div>
@@ -578,7 +640,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
                                       <div className="elementor-element elementor-element-7c4fb1a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {topic_1} | IOP | OP
+                                            PHP | IOP | OP
                                           </h2>
                                         </div>
                                       </div>
@@ -602,7 +664,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
                             </div>
                           </div>
                           <div className="elementor elementor-75 e-loop-item e-loop-item-67 post-67 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -618,7 +680,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
                                         <div className="elementor-widget-container">
                                           <h1 className="elementor-heading-title elementor-size-default">
                                             <a href="https://www.renaissancerecovery.com/drug/rehab/florida/palm-beach/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
-                                              Renaissance Recovery Palm Beach, {state}
+                                              {brand} Palm Beach, FL
                                             </a>
                                           </h1>
                                         </div>
@@ -626,7 +688,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
                                       <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            Lantana, {state} | Lake Worth, {state} 
+                                            Lantana, FL | Lake Worth, FL 
                                           </h2>
                                         </div>
                                       </div>
@@ -640,7 +702,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
                                       <div className="elementor-element elementor-element-7c4fb1a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {topic_1} | IOP | OP
+                                            PHP | IOP | OP
                                           </h2>
                                         </div>
                                       </div>
@@ -664,7 +726,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
                             </div>
                           </div>
                           <div className="elementor elementor-75 e-loop-item e-loop-item-69 post-69 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -726,7 +788,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
                             </div>
                           </div>
                           <div className="elementor elementor-75 e-loop-item e-loop-item-3015 post-3015 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -788,7 +850,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
                             </div>
                           </div>
                           <div className="elementor elementor-75 e-loop-item e-loop-item-3014 post-3014 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -1036,7 +1098,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
                             </div>
                           </div>
                           <div className="elementor elementor-75 e-loop-item e-loop-item-452 post-452 our_locations type-our_locations status-publish has-post-thumbnail hentry">
-                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
                                   <div className="elementor-element elementor-element-72b120d elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
@@ -1074,7 +1136,7 @@ export default function LocationServedUsaFlSouth({ fields = {}, relatedLinks }: 
                                       <div className="elementor-element elementor-element-7c4fb1a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                         <div className="elementor-widget-container">
                                           <h2 className="elementor-heading-title elementor-size-default">
-                                            {topic_1} | IOP | OP
+                                            PHP | IOP | OP
                                           </h2>
                                         </div>
                                       </div>
