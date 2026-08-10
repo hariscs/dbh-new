@@ -2,19 +2,23 @@ import Image from "next/image";
 import Link from "next/link";
 import PrimaryNav from "@/components/PrimaryNav";
 import { resolvePhone } from "@/lib/phone";
+import { fetchMenu } from "@/lib/wordpress";
 
 /**
  * The header renders from each page rather than the root layout, because the
  * call-us number comes from that page's builder fields and Next layouts cannot
  * read page data without opting the whole site out of static rendering.
  */
-export default function Header({
+export default async function Header({
   fields,
 }: {
   /** the page's builder fields; omit on routes without page data to use the fallback number */
   fields?: Record<string, string> | null;
 }) {
   const { phone, telHref } = resolvePhone(fields);
+  // One fetch per page render in source terms only — Next dedupes it within a render
+  // and caches it across them, so the 72 routes rendering Header share one response.
+  const menu = await fetchMenu();
   // role="banner" is set explicitly: the page owns the header now, so it renders inside
   // <main>, and a <header> descended from <main> would otherwise stop exposing the
   // banner landmark it had when the layout rendered it as a sibling of <main>.
@@ -34,7 +38,7 @@ export default function Header({
               <div className="elementor-shortcode">
                 <nav id="dbh-primary-nav" className="dbh-nav">
                   <ul id="menu-mega-menu-district-behavioral-health" className="dbh-nav__list">
-                    <PrimaryNav />
+                    <PrimaryNav items={menu} />
                   </ul>
                 </nav>
               </div>

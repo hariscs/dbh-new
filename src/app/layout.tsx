@@ -11,6 +11,7 @@ import DeferredStylesheet from "@/components/DeferredStylesheet";
 import Footer from "@/components/Footer";
 import MobileMenu from "@/components/MobileMenu";
 import CtmRouteSwap from "@/components/CtmRouteSwap";
+import { fetchMenu } from "@/lib/wordpress";
 
 export const metadata: Metadata = {
   title: "dbh-test",
@@ -43,7 +44,11 @@ const avenir = localFont({
   variable: "--font-avenir",
 });
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  // Unlike the page fields the note below refers to, the menu is global and fetched
+  // with a revalidate window, so awaiting it here keeps routes statically rendered.
+  // MobileMenu is a client component and cannot fetch it itself.
+  const menu = await fetchMenu();
   return (
     <html lang="en" className={`${montserrat.variable} ${poppins.variable} ${avenir.variable}`}>
       <head>
@@ -61,7 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* <Header /> is rendered by each page, not here: the call-us number comes
             from that page's builder fields, and a layout cannot read page data
             without making every route dynamic. See src/lib/phone.ts. */}
-        <MobileMenu />
+        <MobileMenu items={menu} />
         <main>{children}</main>
         <Footer />
         <WidgetInteractions />

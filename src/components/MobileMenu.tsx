@@ -4,12 +4,13 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import PrimaryNav from "@/components/PrimaryNav";
 import { FALLBACK_TEL_HREF } from "@/lib/phone";
+import type { MenuTopLevel } from "@/lib/wordpress";
 
 // Mobile off-canvas menu. Markup duplicated from Header.tsx desktop nav
 // (Option A) with wrapper ids removed and mm-panel-*/mega-group-* ids
 // suffixed `-m` to avoid duplicate ids in the DOM. Open/close wiring +
 // scroll lock are added in Chunk 2.
-export default function MobileMenu() {
+export default function MobileMenu({ items }: { items?: MenuTopLevel[] | null }) {
   const [open, setOpen] = useState(false);
   // The call button's number comes from the page's builder `tel_phone` field, but this
   // component is rendered by the layout, which cannot read page data without making every
@@ -119,7 +120,7 @@ export default function MobileMenu() {
         </div>
         <nav className="dbh-nav">
                   <ul className="dbh-nav__list">
-            <PrimaryNav idSuffix="-m" withBack />
+            <PrimaryNav items={items} idSuffix="-m" withBack />
           </ul>
                 </nav>
       </aside>
