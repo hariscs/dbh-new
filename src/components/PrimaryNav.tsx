@@ -440,7 +440,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                             </p>
                             <Link className="dbh-mega-blog-item" href="/location-served/usa/adderall-addiction-treatment/how-long-in-your-system/">
                               <div className="dbh-mega-blog-item__thumb">
-                                <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/01/featured-placeholder-bg.png" alt="Adderall/How long in your system" width={80} height={60} />
+                                <Image src="https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/01/featured-placeholder-bg.png" alt="Adderall/How long in your system" width={80} height={60} />
                               </div>
                               <div className="dbh-mega-blog-item__text">
                                 <span className="dbh-mega-blog-item__title">
@@ -451,7 +451,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                             </Link>
                             <Link className="dbh-mega-blog-item" href="/location-served/usa/adderall-addiction-treatment/withdrawal/">
                               <div className="dbh-mega-blog-item__thumb">
-                                <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/01/featured-placeholder-bg.png" alt="Adderall/Withdrawal (DrugUse Blog National)" width={80} height={60} />
+                                <Image src="https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/01/featured-placeholder-bg.png" alt="Adderall/Withdrawal (DrugUse Blog National)" width={80} height={60} />
                               </div>
                               <div className="dbh-mega-blog-item__text">
                                 <span className="dbh-mega-blog-item__title">
@@ -462,7 +462,7 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                             </Link>
                             <Link className="dbh-mega-blog-item" href="/location-served/usa/alcohol/addiction/">
                               <div className="dbh-mega-blog-item__thumb">
-                                <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/01/featured-placeholder-bg.png" alt="Alcohol/Addiction (DrugUse Blog National)" width={80} height={60} />
+                                <Image src="https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/01/featured-placeholder-bg.png" alt="Alcohol/Addiction (DrugUse Blog National)" width={80} height={60} />
                               </div>
                               <div className="dbh-mega-blog-item__text">
                                 <span className="dbh-mega-blog-item__title">
@@ -791,7 +791,8 @@ export default function PrimaryNav({ idSuffix = "", withBack = false }: { idSuff
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </div>
+
                         </div>
                       </div>
                     </li>

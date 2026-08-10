@@ -16,13 +16,13 @@ export default function PpcMetaChatStandard(props: Record<string, string>) {
       <div className="elementor-background-slideshow swiper swiper-fade swiper-initialized swiper-horizontal swiper-pointer-events swiper-rtl swiper-watch-progress" dir="rtl">
         <div className="swiper-wrapper" id="swiper-wrapper-25b0f4e945ad66f2" aria-live="off" style={{"transitionDuration":"0ms","transform":"none"}}>
           <div className="elementor-background-slideshow__slide swiper-slide swiper-slide-visible swiper-slide-active" role="group" aria-label="1 / 5" style={{"width":"1920px","transitionDuration":"0ms","opacity":"1","transform":"translate3d(9600px, 0px, 0px)","visibility":"visible"}}>
-            <div className="elementor-background-slideshow__slide__image" style={{"backgroundImage":"url(\"https://districtbehavioralhealth.com/wp-content/uploads/2026/04/dsc01532-1-68b85efa39ddc.webp\")"}}></div>
+            <div className="elementor-background-slideshow__slide__image" style={{"backgroundImage":"url(\"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/04/dsc01532-1-68b85efa39ddc.webp\")"}}></div>
           </div>
           <div className="elementor-background-slideshow__slide swiper-slide swiper-slide-next" role="group" aria-label="2 / 5" style={{"width":"1920px","transitionDuration":"0ms","opacity":"0","transform":"translate3d(11520px, 0px, 0px)","visibility":"visible"}}>
-            <div className="elementor-background-slideshow__slide__image" style={{"backgroundImage":"url(\"https://districtbehavioralhealth.com/wp-content/uploads/2026/04/dsc01589-1-68b85f0780e31.webp\")"}}></div>
+            <div className="elementor-background-slideshow__slide__image" style={{"backgroundImage":"url(\"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/04/dsc01589-1-68b85f0780e31.webp\")"}}></div>
           </div>
           <div className="elementor-background-slideshow__slide swiper-slide" role="group" aria-label="3 / 5" style={{"width":"1920px","transitionDuration":"0ms","opacity":"0","transform":"translate3d(13440px, 0px, 0px)","visibility":"visible"}}>
-            <div className="elementor-background-slideshow__slide__image" style={{"backgroundImage":"url(\"https://districtbehavioralhealth.com/wp-content/uploads/2026/04/dsc01106-2-68b85f021f569.webp\")"}}></div>
+            <div className="elementor-background-slideshow__slide__image" style={{"backgroundImage":"url(\"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/04/dsc01106-2-68b85f021f569.webp\")"}}></div>
           </div>
           <div className="elementor-background-slideshow__slide swiper-slide" role="group" aria-label="4 / 5" style={{"width":"1920px","transitionDuration":"0ms","opacity":"0","transform":"translate3d(15360px, 0px, 0px)","visibility":"visible"}}>
             <div className="elementor-background-slideshow__slide__image" style={{"backgroundImage":"url(\"/images/ea6de27ebfef0247ea87b311fe7113ec.webp\")"}}></div>
@@ -392,7 +392,7 @@ export default function PpcMetaChatStandard(props: Record<string, string>) {
               <div className="elementor-element elementor-element-687f732c elementor-widget elementor-widget-video" data-settings="{&quot;autoplay&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;hosted&quot;,&quot;start&quot;:5}" data-widget_type="video.default">
                 <div className="elementor-widget-container">
                   <div className="e-hosted-video elementor-wrapper elementor-open-inline">
-                    <video className="elementor-video" src="https://districtbehavioralhealth.com/wp-content/uploads/2026/04/Inside-Connections-Mental-Health_-Our-Inpatient-Residential-Treatment-Center-in-Tustin-California.mp4#t=5" autoPlay loop muted playsInline controlsList="nodownload"></video>
+                    <video className="elementor-video" src="https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/04/Inside-Connections-Mental-Health_-Our-Inpatient-Residential-Treatment-Center-in-Tustin-California.mp4#t=5" autoPlay loop muted playsInline controlsList="nodownload"></video>
                   </div>
                 </div>
               </div>
