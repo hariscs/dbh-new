@@ -21,7 +21,7 @@ if [ ! -f "$APP_DIR/shared/.env.local" ]; then
     echo "    seeded from $APP_DIR/.env"
   else
     cat > "$APP_DIR/shared/.env.local" <<'ENVFILE'
-WORDPRESS_URL=https://districtbehavioralhealth.com
+WORDPRESS_URL=https://cms.districtbehavioralhealth.com
 WORDPRESS_REVALIDATE_SECONDS=60
 REVALIDATE_SECRET=CHANGE-ME
 ENVFILE

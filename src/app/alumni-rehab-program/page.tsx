@@ -21,7 +21,7 @@ export default async function Page() {
   return (
     <>
       <Header fields={data?.fields} />
-      <AlumniRehabProgram {...(data?.fields ?? {})} />
+      <AlumniRehabProgram {...(data?.fields ?? {})} createdAt={data?.meta.createdAt ?? ""} />
     </>
   );
 }

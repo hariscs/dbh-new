@@ -46,7 +46,7 @@ export const section0: Author[] = [
     role: ["Executive Director (East Coast)"],
     linkedin: "https://www.linkedin.com/in/reese-morgan-8b0b08a2/",
     pills: [
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -62,11 +62,11 @@ export const section0: Author[] = [
     role: ["Chief Executive Officer"],
     linkedin: null,
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -82,11 +82,11 @@ export const section0: Author[] = [
     role: ["Director of Outreach"],
     linkedin: "https://www.linkedin.com/in/kevin-cataldi-a71983140/",
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
 ]
@@ -105,8 +105,8 @@ export const section1: Author[] = [
     role: ["Clinical Director","LMFT"],
     head: {"src":"/images/215eb374a296541ca83b54c4b7509a9a.webp","alt":"Frame 2147227288","w":232,"h":219,"cls":"attachment-full size-full wp-image-103924"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -122,9 +122,9 @@ export const section1: Author[] = [
     role: ["Program Director","CADC-II"],
     head: {"src":"/images/0cc31948d3e8536d7b1ae3cc5a2ff0bd.webp","alt":"Frame 2147227375","w":232,"h":219,"cls":"attachment-full size-full wp-image-103925"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -140,7 +140,7 @@ export const section1: Author[] = [
     role: ["Clinical Director (Florida)","Ph.D"],
     head: {"src":"/images/5ae49913045dad10e0c384df0f567b66.webp","alt":"image 128 2","w":232,"h":219,"cls":"attachment-full size-full wp-image-103953"},
     pills: [
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -156,7 +156,7 @@ export const section1: Author[] = [
     role: ["Program Administrator","CADC ll"],
     head: {"src":"/images/aa4f9faaf6b9de6fa074fe5edac40195.webp","alt":"image 126 2","w":232,"h":219,"cls":"attachment-full size-full wp-image-103954"},
     pills: [
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
     ],
   },
   {
@@ -172,9 +172,9 @@ export const section1: Author[] = [
     role: ["Clinical Director","LMFT"],
     head: {"src":"/images/08f679f8d347adbe45ee2f09ca84d5a6.webp","alt":"image 125","w":232,"h":219,"cls":"attachment-full size-full wp-image-103955"},
     pills: [
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
     ],
   },
   {
@@ -190,7 +190,7 @@ export const section1: Author[] = [
     role: ["Community Director","SUDRC"],
     head: {"src":"/images/d290f10365a49cd3c31e66c718d1fa34.webp","alt":"Will Dunbar AR Community Director scaled","w":2560,"h":1707,"cls":"attachment-full size-full wp-image-103867"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
     ],
   },
 ]
@@ -209,7 +209,7 @@ export const section2: Author[] = [
     role: ["Clinical Therapist (Florida)","LMHC"],
     head: {"src":"/images/ad137fa83e683ddbd66169ca864c8973.webp","alt":"brooke whitfield fattovich clinical therapist renaissance recovery florida blue background 1.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103926"},
     pills: [
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -225,7 +225,7 @@ export const section2: Author[] = [
     role: ["Clinical Therapist (California)"],
     head: {"src":"/images/fab054e23bcac21a744ee836f447c939.webp","alt":"image 123","w":232,"h":219,"cls":"attachment-full size-full wp-image-103956"},
     pills: [
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
     ],
   },
   {
@@ -241,7 +241,7 @@ export const section2: Author[] = [
     role: ["Therapist","AMFT"],
     head: {"src":"/images/9309236093e7d72f7860a60d52cf87c1.webp","alt":"Krista Muldoon RR Therapist.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103928"},
     pills: [
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -257,7 +257,7 @@ export const section2: Author[] = [
     role: ["Therapist","APCC, AMFT"],
     head: {"src":"/images/ac12bb7c23f978598a6aa4a9994480e4.webp","alt":"Valanda German RR Lead Therapist.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103929"},
     pills: [
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -273,7 +273,7 @@ export const section2: Author[] = [
     role: ["Therapist","ASW"],
     head: {"src":"/images/b38eee9f1ea022c75002855710347988.webp","alt":"Tonya Parker RR Therapist scaled 1.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103930"},
     pills: [
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -289,7 +289,7 @@ export const section2: Author[] = [
     role: ["Therapist","AMFT"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -305,7 +305,7 @@ export const section2: Author[] = [
     role: ["Therapist","AMFT"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
     ],
   },
   {
@@ -321,7 +321,7 @@ export const section2: Author[] = [
     role: ["Therapist","APCC"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
     ],
   },
   {
@@ -337,7 +337,7 @@ export const section2: Author[] = [
     role: ["Associate Therapist","APCC,AMFT"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
     ],
   },
   {
@@ -353,7 +353,7 @@ export const section2: Author[] = [
     role: ["Therapist","AMFT"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
     ],
   },
   {
@@ -369,7 +369,7 @@ export const section2: Author[] = [
     role: ["Therapist","APCC"],
     head: {"src":"/images/d5084bf7e5a8a62937df88bea5cc2f52.webp","alt":"Martin Lopez AR Therapist scaled","w":2560,"h":1707,"cls":"attachment-full size-full wp-image-103843"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
     ],
   },
   {
@@ -385,7 +385,7 @@ export const section2: Author[] = [
     role: ["Therapist","AMFT"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
     ],
   },
   {
@@ -401,7 +401,7 @@ export const section2: Author[] = [
     role: ["Therapist","AMFT"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
     ],
   },
   {
@@ -417,7 +417,7 @@ export const section2: Author[] = [
     role: ["Therapist","AMFT"],
     head: {"src":"/images/0d71d43f7e8c28fc465501a44ab7af60.webp","alt":"image 122 2","w":232,"h":219,"cls":"attachment-full size-full wp-image-103957"},
     pills: [
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
     ],
   },
 ]
@@ -436,7 +436,7 @@ export const section3: Author[] = [
     role: ["Case Manager","RADT"],
     head: {"src":"/images/5f8b9f0eacedd1add199663a3a75f49e.webp","alt":"Marcus Harper RR Case Manager.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103931"},
     pills: [
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -452,7 +452,7 @@ export const section3: Author[] = [
     role: ["Case Manager (Florida)"],
     head: {"src":"/images/17af00bae8e644a5cb672a914cce3410.webp","alt":"cassandra hill case manager renaissance recovery florida.webp 1","w":232,"h":219,"cls":"attachment-full size-full wp-image-103962"},
     pills: [
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -468,7 +468,7 @@ export const section3: Author[] = [
     role: ["Case Manager","SUDRC"],
     head: {"src":"/images/4b9aa089d82d82ce214e18b2b31d789a.webp","alt":"Jonathan Bacak RR Case Manager.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103933"},
     pills: [
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -484,7 +484,7 @@ export const section3: Author[] = [
     role: ["Case Manager"],
     head: {"src":"/images/b170be850e575803b6c9b732d46144ef.webp","alt":"carey yath renaissance recovery 2.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103934"},
     pills: [
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -500,7 +500,7 @@ export const section3: Author[] = [
     role: ["Case Manager","CADC-I"],
     head: {"src":"/images/5699a14cfa083b10306f094a8fbc01f0.webp","alt":"Abigail Lira AR Case Manager scaled","w":2560,"h":1707,"cls":"attachment-full size-full wp-image-103810"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
     ],
   },
   {
@@ -516,7 +516,7 @@ export const section3: Author[] = [
     role: ["Case Managers","RADT"],
     head: {"src":"/images/2788ab7cb528fccf943a53fc38a388be.webp","alt":"Amber Mcginley AR Case Manager scaled","w":2560,"h":1707,"cls":"attachment-full size-full wp-image-103812"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
     ],
   },
   {
@@ -532,7 +532,7 @@ export const section3: Author[] = [
     role: ["Case Managers","RAC"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
     ],
   },
   {
@@ -548,7 +548,7 @@ export const section3: Author[] = [
     role: ["Case Manager","CPRM"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
     ],
   },
   {
@@ -564,8 +564,8 @@ export const section3: Author[] = [
     role: ["Case Manager","RADT"],
     head: {"src":"/images/d22b480b79725e0b03e6f6f4366298aa.webp","alt":"image 124","w":232,"h":219,"cls":"attachment-full size-full wp-image-103959"},
     pills: [
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
     ],
   },
   {
@@ -581,7 +581,7 @@ export const section3: Author[] = [
     role: ["Case Manager","SUDRC"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
     ],
   },
   {
@@ -597,7 +597,7 @@ export const section3: Author[] = [
     role: ["Case Manager","RADT"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
     ],
   },
   {
@@ -613,7 +613,7 @@ export const section3: Author[] = [
     role: ["Case Manager","RADT"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
     ],
   },
   {
@@ -629,7 +629,7 @@ export const section3: Author[] = [
     role: ["Case Manager","RADT"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
     ],
   },
   {
@@ -645,7 +645,7 @@ export const section3: Author[] = [
     role: ["Case Manager","CADC-III"],
     head: {"src":"/images/e9435fca421cb17dccba5f5c42cbda77.webp","alt":"image 121","w":232,"h":219,"cls":"attachment-full size-full wp-image-103960"},
     pills: [
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
     ],
   },
   {
@@ -661,7 +661,7 @@ export const section3: Author[] = [
     role: ["Case Manager","SUDCC-II"],
     head: {"src":"/images/0e429802df2e9960cd98d827108c8c2e.webp","alt":"Ricky Albillar RR Case Manager.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103985"},
     pills: [
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -677,7 +677,7 @@ export const section3: Author[] = [
     role: ["Case Manager","SUDCC"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
     ],
   },
   {
@@ -693,7 +693,7 @@ export const section3: Author[] = [
     role: ["Case Managers","CADC-ll"],
     head: {"src":"/images/772f597f70a606d09a080cec2cfa1e98.webp","alt":"image 119","w":232,"h":219,"cls":"attachment-full size-full wp-image-103961"},
     pills: [
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
     ],
   },
 ]
@@ -712,7 +712,7 @@ export const section4: Author[] = [
     role: ["Operations Lead","SUDRC"],
     head: {"src":"/images/f63e12221e6a1e22895ddbd206b20a19.webp","alt":"image 129","w":232,"h":219,"cls":"attachment-full size-full wp-image-103968"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
     ],
   },
   {
@@ -728,7 +728,7 @@ export const section4: Author[] = [
     role: ["Director of Operations (Florida RR FL)","CRRA"],
     head: {"src":"/images/00257d52275f9ceaf73662d97db3431d.webp","alt":"Richie Mintz CRRA Director of Operations","w":550,"h":550,"cls":"attachment-full size-full wp-image-92269"},
     pills: [
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -744,11 +744,11 @@ export const section4: Author[] = [
     role: ["Chief Operating Officer"],
     head: {"src":"/images/4f25f2d85b16662d7aec2f117e1f127b.webp","alt":"KolbySeger RenaissanceRecovery.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103937"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -764,7 +764,7 @@ export const section4: Author[] = [
     role: ["Operations Manager","CADC 1"],
     head: {"src":"/images/5d2c3339a6f7e0e5a59df4af426175ab.webp","alt":"Kayla Matino RR Operations Manager.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103935"},
     pills: [
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -780,7 +780,7 @@ export const section4: Author[] = [
     role: ["Operations Lead","RADT"],
     head: {"src":"/images/cced885ce091579d49f67b82dda32f35.webp","alt":"Leah McGuire Berning RR Operations Lead.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103936"},
     pills: [
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -796,7 +796,7 @@ export const section4: Author[] = [
     role: ["Lead Behavioral Health Technician","RADT"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
     ],
   },
   {
@@ -812,7 +812,7 @@ export const section4: Author[] = [
     role: ["Operations","RADT"],
     head: {"src":"/images/6cd167f98f6123e6d93dc3eb494f4fbe.webp","alt":"Celia Taylor AR Operations scaled","w":2560,"h":1707,"cls":"attachment-full size-full wp-image-103816"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
     ],
   },
   {
@@ -828,7 +828,7 @@ export const section4: Author[] = [
     role: ["Operations Manager"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
     ],
   },
   {
@@ -844,7 +844,7 @@ export const section4: Author[] = [
     role: ["Operations Team","RAC"],
     head: {"src":"/images/e7fee0f5a252475fd3a7b56148df4c1f.webp","alt":"image 120","w":232,"h":219,"cls":"attachment-full size-full wp-image-103963"},
     pills: [
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
     ],
   },
   {
@@ -860,8 +860,8 @@ export const section4: Author[] = [
     role: ["Director of  Operations"],
     head: {"src":"/images/e152e4933468e4898e2aa5386dac47e4.webp","alt":"image 114","w":232,"h":219,"cls":"attachment-full size-full wp-image-103965"},
     pills: [
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
     ],
   },
   {
@@ -877,7 +877,7 @@ export const section4: Author[] = [
     role: ["Operations Team","RADT"],
     head: {"src":"/images/48b643d2eac013eeb91470a381503154.webp","alt":"image 117","w":232,"h":219,"cls":"attachment-full size-full wp-image-103966"},
     pills: [
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
     ],
   },
   {
@@ -893,11 +893,11 @@ export const section4: Author[] = [
     role: ["Facilities Director"],
     head: {"src":"/images/dfcbb422aa8e6875b63d70fe7b40e9e6.webp","alt":"chases","w":232,"h":219,"cls":"attachment-full size-full wp-image-104211"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -913,7 +913,7 @@ export const section4: Author[] = [
     role: ["RADT"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
 ]
@@ -932,11 +932,11 @@ export const section5: Author[] = [
     role: ["Writer"],
     head: {"src":"/images/d7b11fac2b8dd1dcc96e0f111f345a86.webp","alt":"AmyLeifeste RenaissanceRecovery.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103939"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -952,11 +952,11 @@ export const section5: Author[] = [
     role: ["Medical Reviewer"],
     head: {"src":"/images/1a3fbe3310821c21fafd114d67f359a3.webp","alt":"Ysabella Esteban medical reviewer renaissance recovery background.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103940"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -972,11 +972,11 @@ export const section5: Author[] = [
     role: ["Medical Reviewer"],
     head: {"src":"/images/2edbaeb2b94f58c6de1f483c2e5343ef.webp","alt":"saira zulfiqar medical reviewer renaissance recovery.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103967"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -992,11 +992,11 @@ export const section5: Author[] = [
     role: ["Content Operations Manager"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -1012,11 +1012,11 @@ export const section5: Author[] = [
     role: ["Writers"],
     head: {"src":"/images/881a86c38177aa5de498bfaa8645f6bf.webp","alt":"KarenaMathis RenaissanceRecovery.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103938"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
 ]
@@ -1035,11 +1035,11 @@ export const section6: Author[] = [
     role: ["Vice President of Business Development"],
     head: {"src":"/images/9e241164d1f8d6367287ab8eb7b22ad5.webp","alt":"image 116","w":232,"h":219,"cls":"attachment-full size-full wp-image-103969"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -1055,11 +1055,11 @@ export const section6: Author[] = [
     role: ["Admissions Counselor"],
     head: {"src":"/images/38700cb23767bb4ade66c936903ea9bf.webp","alt":"MeliaWells RenaissanceRecovery.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103942"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -1075,11 +1075,11 @@ export const section6: Author[] = [
     role: ["Admissions Counselor"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -1095,11 +1095,11 @@ export const section6: Author[] = [
     role: ["Admissions Director"],
     head: {"src":"/images/614d9b6b0d6c037d5987d06450932061.webp","alt":"DallasJones RenaissanceRecovery.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103943"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -1115,11 +1115,11 @@ export const section6: Author[] = [
     role: ["Admissions Counselor"],
     head: {"src":"/images/22c2e51619c107e71f0b3615c54a7891.webp","alt":"CynthiaChacon RenaissanceRecovery.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103944"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -1135,11 +1135,11 @@ export const section6: Author[] = [
     role: ["Admissions Counselor"],
     head: {"src":"/images/8d8b42c4e6d6e65dd4ec37d11aa8c39c.webp","alt":"robert manning admissions renaissance recovery background.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103945"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -1155,11 +1155,11 @@ export const section6: Author[] = [
     role: ["Alumni Coordinator"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -1175,8 +1175,8 @@ export const section6: Author[] = [
     role: ["Admissions Counselor"],
     head: {"src":"/images/74ffa16d8585a6632809e88faa2707bd.webp","alt":"placeholder img","w":600,"h":600,"cls":"attachment-full size-full wp-image-103529"},
     pills: [
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
     ],
   },
   {
@@ -1192,7 +1192,7 @@ export const section6: Author[] = [
     role: ["Admissions Counselor"],
     head: {"src":"/images/d281bd043f79c0012bffaa21f801c631.webp","alt":"james bilotti admissions alliance recovery background scaled","w":2560,"h":1707,"cls":"attachment-full size-full wp-image-103821"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
     ],
   },
   {
@@ -1208,11 +1208,11 @@ export const section6: Author[] = [
     role: ["Admissions Counselor"],
     head: {"src":"/images/250e41cbc0dd3a1bec977381134cf293.webp","alt":"JosephSanchez RenaissanceRecovery.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103941"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -1228,7 +1228,7 @@ export const section6: Author[] = [
     role: ["Admssion Counseior"],
     head: {"src":"/images/3aaf67089727870553131937667fbd1c.webp","alt":"TaylorBerry AllianceRecovery scaled","w":2560,"h":2560,"cls":"attachment-full size-full wp-image-103863"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
     ],
   },
 ]
@@ -1247,11 +1247,11 @@ export const section7: Author[] = [
     role: ["Human Resources Director"],
     head: {"src":"/images/ae512d0bcb98e55a9f0cd1fd7b658d3b.webp","alt":"Jamie Courtney all units Human Resources Director.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103948"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -1267,11 +1267,11 @@ export const section7: Author[] = [
     role: ["Human Resources Coordinator","B.S"],
     head: {"src":"/images/ea258a974b2e7b3f697f7423740bea8b.webp","alt":"Alijah Lott RR Human Resources Coordinator.webp","w":232,"h":219,"cls":"attachment-full size-full wp-image-103947"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -1287,7 +1287,7 @@ export const section7: Author[] = [
     role: ["Client Advocate (Florida)"],
     head: {"src":"/images/731d7536439767c3186e1dc8989d4c95.webp","alt":"nicholas rodriguez client advocate renaissance recovery florida blue background blue background 1.webp 1","w":232,"h":219,"cls":"attachment-full size-full wp-image-103971"},
     pills: [
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
   {
@@ -1303,11 +1303,11 @@ export const section7: Author[] = [
     role: ["Clinical Outreach Specialist"],
     head: {"src":"/images/03a6145b88368be686a3c0193545dcb4.webp","alt":"image 115","w":232,"h":219,"cls":"attachment-full size-full wp-image-103970"},
     pills: [
-      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
-      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
-      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
-      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
-      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
+      {"href":"https://alliancerecovery.com/","pillClass":"alliance-recovery-unit-pill","color":"#007583","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/ar-logo-icon.svg","alt":"Alliance Recovery"},
+      {"href":"http://californiadetox.com/","pillClass":"california-detox-unit-pill","color":"#195a7b","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/cad-logo-icon.svg","alt":"California Detox"},
+      {"href":"https://connectionsoc.com/","pillClass":"connections-mental-health-unit-pill","color":"#5b9093","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/coc-logo-icon.svg","alt":"Connections Mental Health"},
+      {"href":"http://gratitudelodge.com/","pillClass":"gratitude-lodge-unit-pill","color":"#198aff","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/gl-logo-icon.svg","alt":"Gratitude Lodge"},
+      {"href":"https://renaissancerecovery.com/","pillClass":"renaissance-recovery-unit-pill","color":"#195b7e","icon":"https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/rr-logo-icon.svg","alt":"Renaissance Recovery"},
     ],
   },
 ]

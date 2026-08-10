@@ -20,7 +20,7 @@ export default function OurFacilities(props: Record<string, string>) {
           <div className="e-con-inner">
             <div className="elementor-element elementor-element-d04e376 elementor-widget-mobile__width-auto elementor-absolute elementor-widget elementor-widget-image" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/03/2.svg" alt="2" width={461} height={537} className="attachment-full size-full wp-image-103718" />
+                <Image src="https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/03/2.svg" alt="District Behavioral Health- Our Facilities Page Hero Image - 2" width={461} height={537} className="attachment-full size-full wp-image-103718" />
               </div>
             </div>
             <div className="elementor-element elementor-element-b30b95d e-flex e-con-boxed e-con e-child">
@@ -35,14 +35,14 @@ export default function OurFacilities(props: Record<string, string>) {
                 <div className="elementor-element elementor-element-09771c5 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
                   <div className="elementor-widget-container">
                     
-									Every decision we make about our recovery facilities has our residents in mind. Taking the first steps to recovery is a challenging time. We cant to be a place that feels like home for our residents and provides them the sense of comfort and safety that they need to get through it.								
+									Every decision we make about our recovery facilities has our residents in mind. Taking the first steps to recovery is a challenging time. We want to be a place that feels like home for our residents and provides them the sense of comfort and safety that they need to get through it.								
                   </div>
                 </div>
               </div>
             </div>
             <div className="elementor-element elementor-element-8526e63 elementor-absolute elementor-widget elementor-widget-image" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/03/Gemini_Generated_Image_bxqa8zbxqa8zbxqa-2.svg" alt="Gemini Generated Image bxqa8zbxqa8zbxqa 2" width={461} height={537} className="attachment-full size-full wp-image-103717" />
+                <Image src="https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/03/Gemini_Generated_Image_bxqa8zbxqa8zbxqa-2.svg" alt="District Behavioral Health- Our Facilities Page Hero Image" width={461} height={537} className="attachment-full size-full wp-image-103717" />
               </div>
             </div>
           </div>

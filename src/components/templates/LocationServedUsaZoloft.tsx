@@ -2,8 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks } from '@/components/RelatedLinks';
+import { formatPostCategory, formatPostDate } from "@/lib/postMeta";
 
 export default function LocationServedUsaZoloft(props: Record<string, string>) {
+  const postDate = formatPostDate(props.createdAt);
+  const postCategory = formatPostCategory(props);
   const topic_2 = props.topic_2 ?? "Withdrawal";
   const address_county = props.address_county ?? "Orange County";
   return (
@@ -16,19 +19,22 @@ export default function LocationServedUsaZoloft(props: Record<string, string>) {
     <div className="elementor-element elementor-element-a8b11d6 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-891497c e-con-full e-flex e-con e-child">
+          {postCategory && (
           <div className="elementor-element elementor-element-62491a6 elementor-widget elementor-widget-button" data-widget_type="button.default">
             <div className="elementor-widget-container">
               <div className="elementor-button-wrapper">
                 <Link className="elementor-button elementor-button-link elementor-size-sm" href="#">
                   <span className="elementor-button-content-wrapper">
                     <span className="elementor-button-text">
-                      Category
+                      {postCategory}
                     </span>
                   </span>
                 </Link>
               </div>
             </div>
           </div>
+          )}
+          {postCategory && postDate && (
           <div className="elementor-element elementor-element-37ee55a elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
             <div className="elementor-widget-container">
               <p>
@@ -36,13 +42,16 @@ export default function LocationServedUsaZoloft(props: Record<string, string>) {
               </p>
             </div>
           </div>
+          )}
+          {postDate && (
           <div className="elementor-element elementor-element-4710631 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
             <div className="elementor-widget-container">
               <h2 className="elementor-heading-title elementor-size-default">
-                April 28, 2026
+                {postDate}
               </h2>
             </div>
           </div>
+          )}
         </div>
         <div className="elementor-element elementor-element-01eaf37 e-con-full e-flex e-con e-child">
           <div className="elementor-element elementor-element-06e6a27 elementor-widget elementor-widget-heading" data-widget_type="heading.default">

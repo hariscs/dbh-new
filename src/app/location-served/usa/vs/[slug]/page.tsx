@@ -47,7 +47,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   return (
     <>
       <Header fields={data.fields} />
-      <LocationServedUsaVs {...data.fields} />
+      <LocationServedUsaVs {...data.fields} createdAt={data.meta.createdAt} />
     </>
   );
 }
