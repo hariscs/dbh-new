@@ -70,6 +70,34 @@ jobs:
           printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
 
+      - name: Ensure server disk space
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+        run: |
+          set -euo pipefail
+          ssh -i ~/.ssh/deploy_key "$SSH_USER@$SSH_HOST" \
+            "sudo env APP_DIR='$APP_DIR' MIN_FREE_MB='$MIN_FREE_MB' bash -seuo pipefail" <<'REMOTE'
+          rm -f /tmp/release-*.tar.gz
+
+          CURRENT="$(readlink -f "$APP_DIR/current" 2>/dev/null || true)"
+          if [ -d "$APP_DIR/releases" ]; then
+            cd "$APP_DIR/releases"
+            for old in */; do
+              [ -d "$old" ] || continue
+              [ "$(readlink -f "$old")" = "$CURRENT" ] && continue
+              rm -rf -- "$old"
+            done
+          fi
+
+          FREE_MB=$(df -Pm "$APP_DIR" | awk 'NR==2 {print $4}')
+          if [ "$FREE_MB" -lt "$MIN_FREE_MB" ]; then
+            echo "::error::Only ${FREE_MB}MB free at $APP_DIR after cleanup, need ${MIN_FREE_MB}MB."
+            du -sh "$APP_DIR"/* /var/www/* 2>/dev/null | sort -rh | head -10
+            exit 1
+          fi
+          REMOTE
+
       - name: Upload artifact to server
         env:
           SSH_HOST: ${{ secrets.SSH_HOST }}
