@@ -1034,7 +1034,7 @@ export default function LocationServedNationalCro2({ fields = {}, relatedLinks }
 </div>
 <div className="elementor-element elementor-element-04bfe17 elementor-widget elementor-widget-image" data-id="04bfe17" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
 <div className="elementor-widget-container">
-<Image src="/images/2e83ae949b5c845fac279f422eca9e19.webp" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-708" alt="" /> </div>
+<Image src="https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/decrease_bar.png" width={366} height={257} className="attachment-thumbnail size-thumbnail wp-image-708" alt="" /> </div>
 </div>
 </div>
 </div>
