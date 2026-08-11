@@ -479,7 +479,7 @@ button.swiper-pagination-bullet { border: none; margin: 0px; padding: 0px; box-s
 .swiper-zoom-container { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; text-align: center; }
 .swiper-zoom-container > canvas, .swiper-zoom-container > img, .swiper-zoom-container > svg { max-width: 100%; max-height: 100%; object-fit: contain; }
 .swiper-slide-zoomed { cursor: move; }
-.swiper-lazy-preloader { width: 42px; height: 42px; position: absolute; left: 50%; top: 50%; margin-left: -21px; margin-top: -21px; z-index: 10; transform-origin: 50% center; box-sizing: border-box; border-top-style: ; border-top-width: ; border-right-color: ; border-right-style: ; border-right-width: ; border-bottom-color: ; border-bottom-style: ; border-bottom-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 50%; border-top-color: transparent; }
+.swiper-lazy-preloader { width: 42px; height: 42px; position: absolute; left: 50%; top: 50%; margin-left: -21px; margin-top: -21px; z-index: 10; transform-origin: 50% center; box-sizing: border-box; border-radius: 50%; border-top-color: transparent; }
 .swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader, .swiper:not(.swiper-watch-progress) .swiper-lazy-preloader { animation: 1s linear 0s infinite normal none running swiper-preloader-spin; }
 .swiper-lazy-preloader-white { --swiper-preloader-color: #fff; }
 .swiper-lazy-preloader-black { --swiper-preloader-color: #000; }
@@ -717,7 +717,7 @@ header.sticky-header.elementor-sticky--effects .menu-cta { transform: scale(1); 
 .dbh-nav__item:last-child > .dbh-mega-panel, .dbh-nav__item.panel-align-right > .dbh-mega-panel { left: auto; right: 0px; transform: none; }
 .dbh-nav__item:last-child.is-open > .dbh-mega-panel, .dbh-nav__item.panel-align-right.is-open > .dbh-mega-panel { transform: translateY(0px); }
 .dbh-mega-panel__inner { display: flex; flex-direction: row; align-items: stretch; min-height: 415px; }
-.dbh-mega-sidebar { flex: 0 0 var(--mm-sidebar-w); display: flex; flex-direction: column; background: rgb(226, 238, 250); padding: 40px 0px 40px 20px; justify-content: center; }
+.dbh-mega-sidebar { flex: 0 0 var(--mm-sidebar-w); display: flex; flex-direction: column; background: rgb(226, 238, 250); padding: 40px 0px 40px 20px;}
 .dbh-mega-tab { display: flex; align-items: center; width: 100%; padding: 16px 24px; background: transparent; border-top: none; border-right: none; border-bottom: none; border-image: initial; border-left: 3px solid transparent; font-size: 14px; font-weight: 600; color: var(--mm-text-dark); text-align: left; cursor: pointer; transition: background 0.15s, color 0.15s, border-color 0.15s; white-space: nowrap; line-height: 1.3; }
 .dbh-mega-tab:hover { background: color-mix(in srgb, var(--mm-sidebar-bg) 70%, white); color: var(--mm-accent); }
 .dbh-mega-tab.is-active { background: var(--mm-tab-active-bg); color: var(--mm-accent); border-left-color: var(--mm-accent); }
@@ -727,7 +727,10 @@ header.sticky-header.elementor-sticky--effects .menu-cta { transform: scale(1); 
 .dbh-mega-content__heading { font-size: 22px; font-weight: 700; color: var(--mm-text-dark); margin: 0px 0px 4px; text-transform: uppercase; line-height: 1.2; }
 .dbh-mega-cards--image { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .dbh-mega-cards--plain { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.dbh-mega-cards--columns { display: grid; grid-template-columns: repeat(3, 1fr); min-width: max-content; gap: 20px; }
+/* No min-width: max-content here — the panel is capped at --mm-panel-max-w and clips
+   its overflow, so sizing the grid to its widest content hid the third column once the
+   menu grew past four columns. WordPress's own mega-menu.css has never had it. */
+.dbh-mega-cards--columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .dbh-mega-col { display: flex; flex-direction: column; min-width: 180px; }
 .dbh-mega-col__heading { font-size: 14px; font-weight: 700; color: var( --e-global-color-primary ); text-transform: uppercase; letter-spacing: 0.04em; margin: 0px 0px 10px; padding-top: 4px; }
 .dbh-mega-card { display: flex; flex-direction: column; border: 1px solid var(--mm-card-border); border-radius: var(--mm-card-radius); text-decoration: none; overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; background: var(--mm-panel-bg); }
@@ -813,7 +816,7 @@ button.elementor-icon:hover, button.elementor-icon:focus, button.elementor-icon:
 #elementor-popup-modal-104913 .dbh-mobile-close, #elementor-popup-modal-104913 .dbh-mobile-close:hover, #elementor-popup-modal-104913 .dbh-mobile-close:focus { background-color: rgb(46, 106, 161); color: rgb(255, 255, 255); }
 #elementor-popup-modal-104913 .dbh-mobile-close:hover { background-color: rgb(36, 86, 133); }
 /* Back button shown at the top of a mobile submenu panel. */
-#elementor-popup-modal-104913 .dbh-megaback { display: flex; align-items: center; gap: 8px; width: 100%; padding: 14px 16px; border: 0; border-bottom: 1px solid var(--mm-card-border); background: transparent; font-size: 14px; font-weight: 600; color: var(--mm-accent, #006cae); cursor: pointer; }
+#elementor-popup-modal-104913 .dbh-megaback { display: flex; align-items: center; gap: 8px; width: 100%; padding: 14px 16px; border: 0; border-bottom: 1px solid var(--mm-card-border); background: transparent; font-size: 14px; font-weight: 600; color: var(--mm-accent, #006cae); cursor: pointer; position:sticky; top:0; background-color: #FFF; z-index:99}
 @media (max-width: 1024px) {.dbh-mega-panel { left: 0px; right: 0px; width: 100%; transform: none; border-radius: 0px; max-height: 80vh; overflow-y: auto; }
 .dbh-nav__item.is-open > .dbh-mega-panel { transform: none; }
 .dbh-mega-panel__inner { flex-direction: column; }
@@ -1290,7 +1293,6 @@ footer .site-navigation ul.menu a{padding:5px 15px}
     flex-direction: column;
     background: #e2eefa;
     padding: 40px 0 40px 20px;
-    justify-content: center;
 }
 .dbh-mega-tab {
     display: flex;
@@ -1321,7 +1323,8 @@ footer .site-navigation ul.menu a{padding:5px 15px}
 .dbh-mega-panel-body {
     flex: 1;
     min-width: 0;
-    position: relative}
+    position: relative;
+}
 .dbh-mega-content {
     display: none;
     flex-direction: column;
@@ -1355,7 +1358,6 @@ footer .site-navigation ul.menu a{padding:5px 15px}
     
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    min-width: max-content;
     gap: 20px;
 }
 .dbh-mega-col {

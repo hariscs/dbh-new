@@ -170,7 +170,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className="elementor-element elementor-element-64a7b95 e-flex e-con-boxed e-con e-parent e-lazyloaded">
+        <div className="elementor-element elementor-element-64a7b95 e-flex e-con-boxed e-con e-parent e-lazyloaded elementor elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile">
           <div className="e-con-inner">
             <div className="elementor-element elementor-element-0fe1ace elementor-widget elementor-widget-heading" data-widget_type="heading.default">
               <div className="elementor-widget-container">

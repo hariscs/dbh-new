@@ -362,4 +362,12 @@ body:not(.rtl) .elementor-2841 .elementor-element.elementor-element-1546c37.elem
    flex row) so it has travel room; sticky naturally stops at the parent's bottom (sticky_parent). */
 @media (min-width: 768px) {
   .elementor-2841 .elementor-element.elementor-element-ce0cea7 { position: sticky; top: 150px; align-self: flex-start; }
+  
+}
+
+@media (max-width:600px){
+   .elementor-author-box--align-left .elementor-author-box { 
+      display: block !important;
+      text-align: center;
+  }
 }

@@ -15,8 +15,7 @@ export default function PrivacyPolicyPillar() {
                   <div className="elementor-element elementor-element-c7ce012 banner_head elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                     <div className="elementor-widget-container">
                       <h2 className="elementor-heading-title elementor-size-default">
-                        Distric Behavioral Health
-                        <strong>Privacy Policy</strong>
+                        District Behavioral Health <strong>Privacy Policy</strong>
                       </h2>
                     </div>
                   </div>

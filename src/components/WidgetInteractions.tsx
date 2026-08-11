@@ -53,6 +53,36 @@ export default function WidgetInteractions() {
       const target = e.target instanceof Element ? e.target : null;
       if (!target) return;
 
+      // Mega-menu tabs. The panel markup ships tab buttons wired to their content by
+      // `data-tab` -> content `id`, but nothing in the app acted on them, so every panel
+      // was stuck showing its first tab. Ported from the theme's mega-menu.js.
+      //
+      // Switching `is-active` is all that is needed: `.dbh-mega-content.is-active` is what
+      // reveals the panel, and the Featured Blogs sidebar follows from
+      // `:has(.dbh-mega-content.is-active[data-show-blogs="1"])` in CSS. The theme also
+      // toggles a `.has-blogs` class here; it is unused by our stylesheet, so it is omitted.
+      //
+      // Matching `.dbh-nav` rather than `#dbh-primary-nav` covers the off-canvas copy too,
+      // which renders the same markup without the id.
+      const tab = target.closest<HTMLElement>(".dbh-nav .dbh-mega-tab");
+      if (tab) {
+        const panel = tab.closest(".dbh-mega-panel");
+        const groupId = tab.dataset.tab;
+        if (panel && groupId) {
+          for (const other of panel.querySelectorAll(".dbh-mega-tab")) {
+            const on = other === tab;
+            other.classList.toggle("is-active", on);
+            other.setAttribute("aria-selected", String(on));
+          }
+          for (const content of panel.querySelectorAll(".dbh-mega-content")) {
+            const on = content.id === groupId;
+            content.classList.toggle("is-active", on);
+            content.setAttribute("aria-hidden", String(!on));
+          }
+        }
+        return; // never fall through to the close-on-outside-click check below
+      }
+
       // Close open mega menus when clicking outside them, OR on a real navigation link
       // inside one (a page link, not the popup toggle) so the menu closes on click.
       const megaLink = target.closest<HTMLAnchorElement>(".has-mega-menu a[href]");

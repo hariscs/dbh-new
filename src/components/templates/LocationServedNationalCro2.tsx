@@ -201,6 +201,9 @@ export default function LocationServedNationalCro2({ fields = {}, relatedLinks }
 </div>
 </div>
 
+{/* The h2 band and the CTA band below it both hang off h2___con: with no body copy
+    the band renders as a lone heading beside an empty column, so both are dropped. */}
+{props.h2___con && (<>
 <div className="elementor-element elementor-element-4200b6d8 e-flex e-con-boxed e-con e-parent" data-id="4200b6d8" data-element_type="container" data-e-type="container">
 <div className="e-con-inner">
 <div className="elementor-element elementor-element-2924c224 e-con-full e-flex e-con e-child" data-id="2924c224" data-element_type="container" data-e-type="container">
@@ -287,6 +290,7 @@ export default function LocationServedNationalCro2({ fields = {}, relatedLinks }
 </div>
 </div>
 </div>
+</>)}
 
 <div className="elementor-element elementor-element-c45d933 table-of-content-headings empty-container-sty e-flex e-con-boxed e-con e-parent" data-id="c45d933" data-element_type="container" data-e-type="container">
 <div className="e-con-inner">
@@ -1030,7 +1034,7 @@ export default function LocationServedNationalCro2({ fields = {}, relatedLinks }
 </div>
 <div className="elementor-element elementor-element-04bfe17 elementor-widget elementor-widget-image" data-id="04bfe17" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
 <div className="elementor-widget-container">
-<Image src="/images/2e83ae949b5c845fac279f422eca9e19.webp" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-708" alt="" /> </div>
+<Image src="https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/decrease_bar.png" width={366} height={257} className="attachment-thumbnail size-thumbnail wp-image-708" alt="" /> </div>
 </div>
 </div>
 </div>

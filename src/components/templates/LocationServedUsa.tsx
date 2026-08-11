@@ -1611,7 +1611,7 @@ export default function LocationServedUsa({ fields = {}, relatedLinks }: Templat
                     </div>
                     <div className="elementor-element elementor-element-04bfe17 elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <Image src="/images/2e83ae949b5c845fac279f422eca9e19.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-708" />
+                        <Image src="https://cms.districtbehavioralhealth.com/wp-content/uploads/2026/02/decrease_bar.png" alt="" width={366} height={257} className="attachment-thumbnail size-thumbnail wp-image-708" />
                       </div>
                     </div>
                   </div>

@@ -65,9 +65,7 @@ export default function LocationServedUsaAlcohol(props: Record<string, string>) 
                   dangerouslySetInnerHTML={{ __html: props.h1 }}
                 />
               ) : (
-                <h2 className="elementor-heading-title elementor-size-default">
-                  Alcohol {topic_2} Treatment Program at District Behavioral Health
-                </h2>
+                ""
               )}
             </div>
           </div>
