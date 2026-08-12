@@ -2482,3 +2482,42 @@ ul { display: block; list-style-type: disc; margin-block-start: 1em; margin-bloc
 @media (max-width: 767px) { .dbh-ti-shimmer__card:nth-child(2) { display: none; } }
 @media (prefers-reduced-motion: reduce) { .dbh-ti-shimmer__card::after { animation: none; } }
 
+/* JotForm embeds take a few seconds to render and until then the iframe is a blank
+   gap, so the page looks broken rather than busy. JotformResizer.tsx puts this class
+   on each form iframe and removes it once the form reports itself rendered.
+
+   Painted on the iframe's own background rather than an overlay: an iframe shows its
+   CSS background until its document paints, then the document covers it. That means no
+   extra DOM inside markup React rendered, and nothing to unwind — dropping the class is
+   enough. The embeds carry an inline height, so the shimmer already fills the space the
+   form will occupy and resolving it causes no layout shift.
+
+   Drawn as a skeleton of form rows rather than one flat block, so it reads as "a form is
+   coming" instead of "something is broken". Three background layers: the sweep, a label
+   bar, and an input box. The label and input layers each paint their shape inside a
+   ROW_PITCH-tall band and repeat down the y-axis, so one rule fills an embed of any
+   height without knowing the form's field count. Only the sweep's position animates —
+   the keyframe restates the other two so they stay put. */
+.dbh-jf-loading {
+  background-color: #f4f6f9;
+  background-image:
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.85), transparent),
+    linear-gradient(to bottom, #dde3ec 0 12px, transparent 12px),
+    linear-gradient(to bottom, transparent 0 24px, #ffffff 24px 70px, transparent 70px);
+  background-size:
+    45% 100%,
+    120px 96px,
+    calc(100% - 56px) 96px;
+  background-position:
+    -60% 0,
+    28px 32px,
+    28px 32px;
+  background-repeat: no-repeat, repeat-y, repeat-y;
+  border-radius: 12px;
+  animation: dbh-jf-shimmer 1.5s ease-in-out infinite;
+}
+@keyframes dbh-jf-shimmer {
+  100% { background-position: 165% 0, 28px 32px, 28px 32px; }
+}
+@media (prefers-reduced-motion: reduce) { .dbh-jf-loading { animation: none; } }
+
