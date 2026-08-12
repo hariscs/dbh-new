@@ -10,7 +10,17 @@ export const dynamicParams = true;
 
 const BASE_PATH = "authors";
 
-const clean = (v?: string) => (v ?? "").trim();
+/**
+ * The builder API serializes an unset ACF field as the literal string "false", not "" —
+ * `featured_image: "false"` is how an author with no headshot comes across. That is
+ * truthy, so passing it straight through reaches next/image as a src and throws
+ * "Failed to parse src \"false\"", turning the page into a 500 rather than falling back
+ * to the placeholder avatar. Treat it as absent.
+ */
+const clean = (v?: string) => {
+  const s = (v ?? "").trim();
+  return s === "false" ? "" : s;
+};
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
