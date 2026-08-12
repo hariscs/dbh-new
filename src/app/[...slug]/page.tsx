@@ -37,7 +37,7 @@ const ROUTED_SEGMENTS = new Set([
   "alumni-rehab-program", "api", "authors", "blogs", "bu-review-counts",
   "client-outcomes-page-dev", "contact-us", "difference", "elementor-656", "facility",
   "location-served", "meet-the-team", "newsroom", "our-facilities", "our_locations",
-  "ppc", "privacy-policy", "quiz", "rehab-admission", "review-us", "thank-you",
+  "ppc", "privacy-policy", "quiz", "rehab-admission", "review-us", "reviews", "thank-you",
 ]);
 
 const segmentsOf = (link: string): string[] => {
