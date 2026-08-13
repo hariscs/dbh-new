@@ -33,8 +33,11 @@ rather than renumbering.
 
 ## Roadmap
 
-> TODO (confirm): these are the interview's broad strokes; split or reorder into
-> concrete items before spec'ing them.
+Most ongoing work is not roadmap features: it is small ad-hoc changes (content
+updates, page tweaks, image swaps). Those run through `/fix`, not this list.
+The items below are the occasional larger efforts.
+
+> TODO (confirm): broad strokes; split into concrete items before spec'ing.
 
 - [ ] 12. Additional WP-driven pages and templates as content needs arise (new
   location, condition, or PPC pages)

@@ -33,8 +33,9 @@ Already shipped (see `build-plan.md` for the checklist):
 - ISR (60s) plus an on-demand revalidation webhook
 - CallTrackingMetrics phone-number swapping, Jotform embeds, TrustIndex widget
 
-Next up: more WP-driven pages/templates, performance/SEO work, deploy/infra
-improvements.
+Ongoing work is mostly maintenance: small content updates, page tweaks, and
+image changes handled as ad-hoc fixes. Occasional larger efforts: more WP-driven
+pages/templates, performance/SEO work, deploy/infra improvements.
 
 ## 4. Data - What are we storing?
 
@@ -61,11 +62,10 @@ direct revenue features.
 ## 7. UI/UX - How should this look and feel?
 
 The design replicates the original Elementor/WordPress site: pages carry over
-Elementor markup and per-page-id scoped stylesheets. Visual changes should match
-the existing look, not introduce a new design system.
-
-> TODO (confirm): whether pixel-parity with the old WordPress site remains a hard
-> requirement for new pages, or new pages may diverge.
+Elementor markup and per-page-id scoped stylesheets. Pixel-perfect parity with
+the original site is a hard requirement, for new pages and for changes to
+existing ones. Visual work happens against reference images or the live original,
+never a new design system.
 
 ## 8. Deployment - Where and how will this ship?
 
