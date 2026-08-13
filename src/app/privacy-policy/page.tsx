@@ -16,11 +16,12 @@ export async function generateMetadata(): Promise<import("next").Metadata> {
   };
 }
 
-export default function Page() {
+export default async function Page() {
+  const data = await fetchPageData("privacy-policy");
   return (
     <>
-      <Header />
-      <PrivacyPolicy />
+      <Header fields={data?.fields} />
+      <PrivacyPolicy fields={data?.fields ?? {}} />
     </>
   );
 }
