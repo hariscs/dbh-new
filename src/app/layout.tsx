@@ -15,7 +15,7 @@ import { fetchMenu, SITE_URL } from "@/lib/wordpress";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "District Behavioral Health | Mental Health & Addiction Treatment",
+  title: "District Behavioral Health | Addiction & Mental Health Care",
   description:
     "District Behavioral Health offers compassionate, evidence-based mental health and addiction treatment. Reach out today to start your recovery journey.",
   icons: {

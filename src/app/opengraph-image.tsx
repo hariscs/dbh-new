@@ -41,10 +41,32 @@ export default function OpengraphImage() {
       >
         District Behavioral Health
       </div>
-      <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
-        <div style={{ display: "flex", width: 64, height: 6, background: "#2E6AA1" }} />
-        <div style={{ display: "flex", color: "#B2C4D7", fontSize: 30 }}>
-          districtbehavioralhealth.com
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
+          <div style={{ display: "flex", width: 64, height: 6, background: "#2E6AA1" }} />
+          <div style={{ display: "flex", color: "#B2C4D7", fontSize: 30 }}>
+            districtbehavioralhealth.com
+          </div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            background: "#2E6AA1",
+            color: "#FFFFFF",
+            fontSize: 28,
+            fontWeight: 600,
+            padding: "18px 36px",
+            borderRadius: 999,
+          }}
+        >
+          Get Help Today →
         </div>
       </div>
     </div>,
