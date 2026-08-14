@@ -11,15 +11,24 @@ import DeferredStylesheet from "@/components/DeferredStylesheet";
 import Footer from "@/components/Footer";
 import MobileMenu from "@/components/MobileMenu";
 import CtmRouteSwap from "@/components/CtmRouteSwap";
-import { fetchMenu } from "@/lib/wordpress";
+import { fetchMenu, SITE_URL } from "@/lib/wordpress";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "District Behavioral Health | Mental Health & Addiction Treatment",
   description:
     "District Behavioral Health offers compassionate, evidence-based mental health and addiction treatment. Reach out today to start your recovery journey.",
   icons: {
     icon: [{ url: "/favicon.png", type: "image/png", sizes: "512x512" }],
     apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }],
+  },
+  openGraph: {
+    type: "website",
+    siteName: "District Behavioral Health",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
