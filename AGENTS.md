@@ -110,9 +110,13 @@ Package manager: pnpm (see `packageManager` in `package.json`).
 - Dev server: `pnpm dev` (http://localhost:3000; needs `WORDPRESS_URL` in `.env.local`)
 - Build: `pnpm build`
 - Production server: `pnpm start`
-- Lint: `pnpm lint`
+- Typecheck: `pnpm typecheck` (`tsc --noEmit`)
 
-There is no test or typecheck command yet, so no test gate applies. Testing is
+Do not run or set up ESLint. There is no lint step in this project: `next lint`
+was removed in Next 16, no eslint config file exists, and the owner does not
+want one. The verification gates are the typecheck and the build.
+
+There is no test command yet, so no test gate applies. Testing is
 opt-in: run `/tests` or `$tests` to add a runner and record the real test
 command here. Deploys to staging run automatically from pushes to `main` via
 `.github/workflows/deploy-staging.yml`.

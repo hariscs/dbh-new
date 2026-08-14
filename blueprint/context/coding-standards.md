@@ -83,8 +83,9 @@ conditions, PPC). New scaled content should use the template system.
 
 No test runner is configured; testing is opt-in and currently **off**. The
 opt-in switch is a `test` command in the Commands section of `AGENTS.md`.
-Until one exists, verify logic-bearing changes with the build, lint, and
-browser/manual evidence; there is no unit-test gate. Run `/tests` to add a
+Until one exists, verify logic-bearing changes with `pnpm typecheck`, the
+build, and browser/manual evidence; there is no unit-test gate. Never run or
+configure ESLint - this project has no lint step by choice. Run `/tests` to add a
 stack-native runner (Vitest for this stack) when the project decides to opt in;
 adding it mid-feature without asking is not allowed.
 
@@ -117,7 +118,8 @@ code and assuming it works.
 ## Comments
 
 Write code that explains itself; comment only what the code cannot say.
-Over-commenting is a common AI tell, so resist it.
+Over-commenting is a common AI tell, so resist it. Default to **zero comments**
+in new code; put rationale in chat, not in the file.
 
 - Comment the **why**, not the **what**. Delete any comment that restates the code.
 - No banner/header blocks, section dividers, or step-by-step narration of obvious
