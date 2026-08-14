@@ -31,8 +31,13 @@ const normalize = (path: string) => {
 
 const toUrl = (path: string) => (path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`);
 
+let lastGood: MetadataRoute.Sitemap | null = null;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const links = (await fetchAllPageLinks()) ?? [];
+  const links = await fetchAllPageLinks();
+  if (!links) {
+    return lastGood ?? STATIC_ROUTES.map((path) => ({ url: toUrl(path) }));
+  }
   const seen = new Set<string>();
   const entries: MetadataRoute.Sitemap = [];
 
@@ -52,5 +57,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     entries.push({ url: toUrl(path) });
   }
 
+  lastGood = entries;
   return entries;
 }

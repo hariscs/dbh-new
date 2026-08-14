@@ -76,7 +76,7 @@ export async function fetchAllPageLinks(): Promise<PageLink[] | null> {
       for (let page = 1; page <= 10; page++) {
         const res = await fetch(
           `${WORDPRESS_URL}/wp-json/wp/v2/${base}?per_page=100&page=${page}&_fields=link,modified_gmt`,
-          { next: { revalidate: 3600 }, signal: AbortSignal.timeout(5000) }
+          { next: { revalidate: 3600 }, signal: AbortSignal.timeout(30000) }
         );
         if (!res.ok) {
           if (res.status === 400 && page > 1) break;

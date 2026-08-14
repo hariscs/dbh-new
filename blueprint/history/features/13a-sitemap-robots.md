@@ -1,7 +1,13 @@
 # Feature: Sitemap and robots.txt
 
 **From build-plan:** feature 13a
-**Status:** not started
+**Status:** complete (2026-08-14)
+
+> Extras shipped with this feature: apex canonical rewrite in `fetchPageData`
+> (live pages were shipping cms.-domain canonicals), 30s inventory timeout plus
+> last-good sitemap cache after a slow-WordPress fallback was observed, pnpm
+> pin bumped off the broken 11.12.0 release, dead `lint` script replaced with
+> `typecheck`.
 
 ## Goal
 
