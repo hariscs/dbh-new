@@ -13,6 +13,16 @@ type BuilderPageData = {
   meta: { slug: string; parent: string; updatedAt: string; createdAt: string };
 };
 
+const toApexCanonical = (canonical: string) => {
+  if (!canonical) return canonical;
+  try {
+    const path = new URL(canonical).pathname.replace(/\/+$/, "");
+    return path ? `${SITE_URL}${path}` : `${SITE_URL}/`;
+  } catch {
+    return canonical;
+  }
+};
+
 export async function fetchPageData(path: string): Promise<BuilderPageData | null> {
   if (!path) return null;
   try {
@@ -21,7 +31,9 @@ export async function fetchPageData(path: string): Promise<BuilderPageData | nul
       { next: { revalidate: REVALIDATE } }
     );
     if (!res.ok) return null;
-    return (await res.json()) as BuilderPageData;
+    const data = (await res.json()) as BuilderPageData;
+    if (data?.seo?.canonical) data.seo.canonical = toApexCanonical(data.seo.canonical);
+    return data;
   } catch {
     return null;
   }
@@ -50,6 +62,43 @@ const toRelative = (link: string) => {
     return link;
   }
 };
+
+export const SITE_URL = "https://districtbehavioralhealth.com";
+
+export type PageLink = { path: string; updatedAt: string };
+
+const SITEMAP_REST_BASES = ["pages", "facility", "authors", "our_locations", "difference"];
+
+export async function fetchAllPageLinks(): Promise<PageLink[] | null> {
+  const links: PageLink[] = [];
+  try {
+    for (const base of SITEMAP_REST_BASES) {
+      for (let page = 1; page <= 10; page++) {
+        const res = await fetch(
+          `${WORDPRESS_URL}/wp-json/wp/v2/${base}?per_page=100&page=${page}&_fields=link,modified_gmt`,
+          { next: { revalidate: 3600 }, signal: AbortSignal.timeout(5000) }
+        );
+        if (!res.ok) {
+          if (res.status === 400 && page > 1) break;
+          return null;
+        }
+        const batch = (await res.json()) as Array<{ link?: string; modified_gmt?: string }>;
+        if (!Array.isArray(batch)) return null;
+        for (const p of batch) {
+          if (!p?.link) continue;
+          links.push({
+            path: toRelative(p.link),
+            updatedAt: p.modified_gmt ? `${p.modified_gmt}Z` : "",
+          });
+        }
+        if (batch.length < 100) break;
+      }
+    }
+    return links.length ? links : null;
+  } catch {
+    return null;
+  }
+}
 
 export type InterlinkItem = { href: string; title: string };
 

@@ -43,5 +43,13 @@ The items below are the occasional larger efforts.
   location, condition, or PPC pages)
 - [ ] 13. Performance and SEO pass - Core Web Vitals, caching, metadata, and
   structured data improvements
+  - [ ] 13a. Sitemap and robots.txt - `src/app/sitemap.ts` built from the
+    WordPress page inventory plus `src/app/robots.ts` with the sitemap pointer
+  - [ ] 13b. Social share metadata - `metadataBase`, Open Graph and Twitter
+    tags from Builder SEO data, default share image
+  - [ ] 13c. Structured data - JSON-LD for facilities/locations
+    (LocalBusiness), blog posts (Article), and breadcrumbs
+  - [ ] 13d. Performance pass - measure Core Web Vitals, then targeted caching
+    and loading fixes
 - [ ] 14. Deploy and infra improvements - production pipeline hardening and
   automatic CI checks
