@@ -130,7 +130,7 @@ export default function Page({ relatedLinks }: TemplateProps) {
           <div className="e-con-inner">
             <div className="elementor-element elementor-element-b6c2357 elementor-widget__width-initial elementor-widget elementor-widget-image" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="/images/2e27a58f13b0872741e0f6cd0cbaefea.webp" alt="District-Behavioral-Health-Group-Big-Logo-Size" width={840} height={259} sizes="(max-width: 767px) 300px, 840px" className="attachment-full size-full wp-image-461" />
+                <Image src="/images/2e27a58f13b0872741e0f6cd0cbaefea.webp" alt="District-Behavioral-Health-Group-Big-Logo-Size" width={840} height={259} sizes="(max-width: 767px) 40vw, (max-width: 1600px) 42vw, 671px" className="attachment-full size-full wp-image-461" />
               </div>
             </div>
           </div>
