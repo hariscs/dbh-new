@@ -17,7 +17,7 @@ const toApexCanonical = (canonical: string) => {
   if (!canonical) return canonical;
   try {
     const path = new URL(canonical).pathname.replace(/\/+$/, "");
-    return path ? `${SITE_URL}${path}` : `${SITE_URL}/`;
+    return `${SITE_URL}${path}/`;
   } catch {
     return canonical;
   }

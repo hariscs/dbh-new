@@ -6,6 +6,11 @@ const nextConfig: NextConfig = {
   // node_modules), so the deploy artifact is self-contained and the server never
   // has to run `pnpm install` or `next build`.
   output: 'standalone',
+
+  // WordPress appends a trailing slash by default, so every pre-migration
+  // backlink and nearly every hardcoded internal href uses that form. Serving it
+  // as canonical keeps those direct hits instead of 308 hops.
+  trailingSlash: true,
   experimental: {
     inlineCss: true,
   },
