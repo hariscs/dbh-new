@@ -29,7 +29,7 @@ const normalize = (path: string) => {
   return clean === "" ? "/" : clean;
 };
 
-const toUrl = (path: string) => (path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`);
+const toUrl = (path: string) => (path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}/`);
 
 let lastGood: MetadataRoute.Sitemap | null = null;
 

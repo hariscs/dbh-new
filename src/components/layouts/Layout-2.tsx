@@ -994,7 +994,7 @@ export default function Layout2({ children }: Props) {
           <div className="elementor-element elementor-element-dc5d096 menu-cta elementor-hidden-mobile elementor-align-right elementor-widget elementor-widget-button" data-widget_type="button.default">
             <div className="elementor-widget-container">
               <div className="elementor-button-wrapper">
-                <Link className="elementor-button elementor-button-link elementor-size-sm" href="/contact">
+                <Link className="elementor-button elementor-button-link elementor-size-sm" href="/contact-us/">
                   <span className="elementor-button-content-wrapper">
                     <span className="elementor-button-text">
                       Contact Us
@@ -1041,7 +1041,7 @@ export default function Layout2({ children }: Props) {
           <div className="elementor-element elementor-element-21a23f0 menu-cta elementor-hidden-mobile elementor-align-right elementor-widget elementor-widget-button" data-widget_type="button.default">
             <div className="elementor-widget-container">
               <div className="elementor-button-wrapper">
-                <Link className="elementor-button elementor-button-link elementor-size-sm" href="/contact">
+                <Link className="elementor-button elementor-button-link elementor-size-sm" href="/contact-us/">
                   <span className="elementor-button-content-wrapper">
                     <span className="elementor-button-text">
                       Contact Us
