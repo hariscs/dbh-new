@@ -2497,7 +2497,7 @@ A Lifelong Support System.
                           <div className="elementor-element elementor-element-27c5878 e-con-full diff_img e-flex e-con e-child">
                             <div className="elementor-element elementor-element-f3c991a elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
                               <div className="elementor-widget-container">
-                                <Image src="/images/a62de2564eb46de6aff8e70d5b2942ba.webp" alt="Rectangle 686" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-245" />
+                                <Image src="/images/Rectangle-686.png" alt="Rectangle 686" width={385} height={455} className="attachment-thumbnail size-thumbnail wp-image-245" />
                               </div>
                             </div>
                           </div>
@@ -2519,7 +2519,7 @@ A Lifelong Support System.
                           <div className="elementor-element elementor-element-27c5878 e-con-full diff_img e-flex e-con e-child">
                             <div className="elementor-element elementor-element-f3c991a elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
                               <div className="elementor-widget-container">
-                                <Image src="/images/490c0cb38a324ba3d412bf170f2fb423.webp" alt="Rectangle 686 1" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-246" />
+                                <Image src="/images/Rectangle-686-1.png" alt="Rectangle 686 1" width={385} height={455} className="attachment-thumbnail size-thumbnail wp-image-246" />
                               </div>
                             </div>
                           </div>
@@ -2541,7 +2541,7 @@ A Lifelong Support System.
                           <div className="elementor-element elementor-element-27c5878 e-con-full diff_img e-flex e-con e-child">
                             <div className="elementor-element elementor-element-f3c991a elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
                               <div className="elementor-widget-container">
-                                <Image src="/images/bbaf2dfb2b805bd5f573402a0488ac9f.webp" alt="Rectangle 686 2" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-243" />
+                                <Image src="/images/Rectangle-686-2.png" alt="Rectangle 686 2" width={385} height={455} className="attachment-thumbnail size-thumbnail wp-image-243" />
                               </div>
                             </div>
                           </div>
@@ -2565,7 +2565,7 @@ A Lifelong Support System.
                           <div className="elementor-element elementor-element-27c5878 e-con-full diff_img e-flex e-con e-child">
                             <div className="elementor-element elementor-element-f3c991a elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
                               <div className="elementor-widget-container">
-                                <Image src="/images/05da463fa68c0eb1270975d9dc44bf89.webp" alt="Rectangle 686 3" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-244" />
+                                <Image src="/images/Rectangle-686-3.png" alt="Rectangle 686 3" width={385} height={455} className="attachment-thumbnail size-thumbnail wp-image-244" />
                               </div>
                             </div>
                           </div>
@@ -2589,7 +2589,7 @@ A Lifelong Support System.
                           <div className="elementor-element elementor-element-27c5878 e-con-full diff_img e-flex e-con e-child">
                             <div className="elementor-element elementor-element-f3c991a elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
                               <div className="elementor-widget-container">
-                                <Image src="/images/abcd0284ec10e69586676d19223c2c49.webp" alt="image 5" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-248" />
+                                <Image src="/images/image-5.png" alt="image 5" width={385} height={455} className="attachment-thumbnail size-thumbnail wp-image-248" />
                               </div>
                             </div>
                           </div>
