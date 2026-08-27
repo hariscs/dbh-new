@@ -94,7 +94,7 @@ a.type = "text/javascript";
 a.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + "js.talkfurther.com/talkfurther_init.min.js";
 a.async = true;
 b.parentNode.insertBefore(a, b);
-})();}var E=['scroll','click','touchstart','keydown','pointerdown'];function H(){go();for(var k=0;k<E.length;k++)removeEventListener(E[k],H);}for(var k=0;k<E.length;k++)addEventListener(E[k],H,{passive:true,once:true});}());` }} />
+})();}var E=['scroll','click','touchstart','keydown','pointerdown'];function H(){go();for(var k=0;k<E.length;k++)removeEventListener(E[k],H);}for(var k=0;k<E.length;k++)addEventListener(E[k],H,{passive:true,once:true});setTimeout(H,1000);}());` }} />
         <Script id="body-style-guard" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `(function(){var i=false;['click','touchstart','keydown'].forEach(function(e){document.addEventListener(e,function(){i=true;},{once:true,capture:true});});var o=new MutationObserver(function(){if(i)return;if(document.body.style.overflow==='hidden')document.body.style.overflow='';if(document.body.style.touchAction==='none')document.body.style.touchAction='';});o.observe(document.body,{attributes:true,attributeFilter:['style']});}());` }} />
       </body>
     </html>
