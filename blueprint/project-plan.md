@@ -73,9 +73,22 @@ never a new design system.
   host's proxy
 - Build: `pnpm build` on the GitHub Actions runner (never on the server); the
   self-contained `.next/standalone` artifact is shipped to `/var/www/dbh` on EC2,
-  managed by pm2 (`deploy/ecosystem.config.cjs`), keeping 2 releases
+  managed by pm2 (`deploy/ecosystem.config.cjs`), keeping 2 releases on
+  production and 1 on staging
 - Env vars: `WORDPRESS_URL`, `WORDPRESS_REVALIDATE_SECONDS`, `REVALIDATE_SECRET`,
-  optional `WORDPRESS_SITE_NAME`, `WORDPRESS_INTERLINKING_TIMEOUT_MS`
+  optional `WORDPRESS_SITE_NAME`, `WORDPRESS_INTERLINKING_TIMEOUT_MS`. Build-time
+  `SITE_URL` and `ROBOTS_ALLOW` set the site identity and whether the build is
+  indexable; both default to production behaviour when unset
 - Health check: `GET /` on the app port
+- Environments: two, both deployed by branch, both on the same EC2 box. `main`
+  deploys production (the apex domain, `/var/www/dbh`, port 3001, pm2 app
+  `dbh`) via `.github/workflows/deploy-production.yml`. `staging` deploys
+  staging.districtbehavioralhealth.com (`/var/www/dbh-staging`, port 3002, pm2
+  app `dbh-staging`) behind HTTP basic auth, via
+  `.github/workflows/deploy-staging.yml` using the `staging` GitHub Environment
+  for its secrets. Because they share a machine, both workflows refuse to deploy
+  unless `$APP_DIR/shared/ENVIRONMENT` matches the environment they expect. Both
+  read the same production WordPress. Staging sets `SITE_URL` to its own host
+  and `ROBOTS_ALLOW=false`; production builds keep the defaults
 - Domains: apex domain serves this app from EC2; WordPress backend lives at the
   `cms.` subdomain

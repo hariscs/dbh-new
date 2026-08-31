@@ -28,8 +28,10 @@ rather than renumbering.
   `POST /api/revalidate`
 - [x] 10. Third-party integrations - CallTrackingMetrics number swapping, Jotform
   embeds with resizing, TrustIndex reviews widget, gallery/marquee interactions
-- [x] 11. Staging deploy pipeline - GitHub Actions build to standalone artifact,
-  deploy to EC2 with pm2, release retention, and health check
+- [x] 11. Production deploy pipeline - GitHub Actions build to standalone
+  artifact, deploy to EC2 with pm2, release retention, and health check.
+  Originally named "staging" after the pre-launch hostname; it has always
+  deployed the apex domain.
 
 ## Roadmap
 
@@ -53,3 +55,9 @@ The items below are the occasional larger efforts.
     and loading fixes
 - [ ] 14. Deploy and infra improvements - production pipeline hardening and
   automatic CI checks
+  - [ ] 14a. Staging environment - a `staging` branch deploying to
+    staging.districtbehavioralhealth.com, behind basic auth, so changes are
+    validated before reaching production. Runs on the same EC2 box as
+    production under a separate app dir, port, and pm2 app name. Makes
+    `SITE_URL` and robots indexing environment-driven and splits the one
+    workflow into `deploy-production.yml` and `deploy-staging.yml`.

@@ -118,5 +118,12 @@ want one. The verification gates are the typecheck and the build.
 
 There is no test command yet, so no test gate applies. Testing is
 opt-in: run `/tests` or `$tests` to add a runner and record the real test
-command here. Deploys to staging run automatically from pushes to `main` via
-`.github/workflows/deploy-staging.yml`.
+command here.
+
+Deploys are automatic and branch-based. Pushes to `main` deploy production
+(the apex domain) via `.github/workflows/deploy-production.yml`. Pushes to
+`staging` deploy staging.districtbehavioralhealth.com via
+`.github/workflows/deploy-staging.yml`, which uses the `staging` GitHub
+Environment for its secrets. The two workflow files are mirrors: only the
+trigger, concurrency group, release retention, disk guard, and build env differ,
+so changes to one usually belong in both.

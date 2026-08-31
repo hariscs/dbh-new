@@ -1,30 +1,27 @@
-# Mirror of deploy-production.yml. Keep the two in sync: only the trigger,
-# concurrency group, retention, disk guard, and build env should ever differ.
-name: Deploy to staging
+name: Deploy to production
 
 on:
   push:
-    branches: [staging]
+    branches: [main]
   workflow_dispatch:
 
 concurrency:
-  group: deploy-staging
+  group: deploy-production
   cancel-in-progress: false
 
 env:
-  APP_DIR: /var/www/dbh-staging
-  APP_PORT: '3002'
-  HEALTH_URL: http://127.0.0.1:3002/
-  KEEP_RELEASES: '1'
-  MIN_FREE_MB: '4000'
-  PM2_APP: dbh-staging
-  EXPECTED_ENV: staging
+  APP_DIR: /var/www/dbh
+  APP_PORT: '3001'
+  HEALTH_URL: http://127.0.0.1:3001/
+  KEEP_RELEASES: '2'
+  MIN_FREE_MB: '2200'
+  PM2_APP: dbh
+  EXPECTED_ENV: production
 
 jobs:
   deploy:
     runs-on: ubuntu-24.04
     timeout-minutes: 25
-    environment: staging
 
     steps:
       - uses: actions/checkout@v5
@@ -53,8 +50,8 @@ jobs:
           WORDPRESS_URL: ${{ secrets.WORDPRESS_URL }}
           WORDPRESS_REVALIDATE_SECONDS: ${{ secrets.WORDPRESS_REVALIDATE_SECONDS }}
           REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
-          SITE_URL: https://staging.districtbehavioralhealth.com
-          ROBOTS_ALLOW: 'false'
+          SITE_URL: https://districtbehavioralhealth.com
+          ROBOTS_ALLOW: 'true'
         run: pnpm build
 
       - name: Assemble deploy artifact

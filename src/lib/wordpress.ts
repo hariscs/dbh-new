@@ -63,7 +63,10 @@ const toRelative = (link: string) => {
   }
 };
 
-export const SITE_URL = "https://districtbehavioralhealth.com";
+// Defaults to production so a build with no SITE_URL set behaves exactly as it
+// always has. Only staging overrides it; getting this wrong on production would
+// rewrite every canonical and sitemap entry.
+export const SITE_URL = process.env.SITE_URL ?? "https://districtbehavioralhealth.com";
 
 export type PageLink = { path: string; updatedAt: string };
 
