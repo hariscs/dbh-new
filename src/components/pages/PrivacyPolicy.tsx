@@ -6,8 +6,10 @@ import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 
 export default function PrivacyPolicyPillar({
   fields = {},
+  heading = "Privacy Policy",
 }: {
   fields?: Record<string, string>;
+  heading?: string;
 }) {
   return (
     <Layout4>
@@ -20,7 +22,7 @@ export default function PrivacyPolicyPillar({
                   <div className="elementor-element elementor-element-c7ce012 banner_head elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                     <div className="elementor-widget-container">
                       <h2 className="elementor-heading-title elementor-size-default">
-                        District Behavioral Health <strong>Privacy Policy</strong>
+                        District Behavioral Health <strong>{heading}</strong>
                       </h2>
                     </div>
                   </div>
@@ -39,7 +41,7 @@ export default function PrivacyPolicyPillar({
                     <div className="elementor-widget-container">
                       <h2 className="elementor-heading-title elementor-size-default">
                         Distric Behavioral Health
-                        <strong>Privacy Policy</strong>
+                        <strong>{heading}</strong>
                       </h2>
                     </div>
                   </div>

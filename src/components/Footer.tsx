@@ -172,6 +172,13 @@ export default function Footer() {
                         </span>
                       </Link>
                     </li>
+                    <li className="elementor-icon-list-item elementor-inline-item">
+                      <Link href="/terms-of-service/">
+                        <span className="elementor-icon-list-text">
+                          Terms of Service
+                        </span>
+                      </Link>
+                    </li>
                   </ul>
                 </div>
               </div>
