@@ -681,9 +681,10 @@ header.sticky-header.elementor-sticky--effects .menu-cta { transform: scale(1); 
 .elementor-117 .elementor-element.elementor-element-9be6cab { --display: flex; }
 .elementor-117 .elementor-element.elementor-element-3a61439 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) { padding-block-end: calc(40px); }
 .elementor-117 .elementor-element.elementor-element-3a61439 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child) { margin-block-start: calc(40px); }
-.elementor-117 .elementor-element.elementor-element-3a61439 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item { margin-inline: calc(40px); }
-.elementor-117 .elementor-element.elementor-element-3a61439 .elementor-icon-list-items.elementor-inline-items { margin-inline: calc(-40px); }
-.elementor-117 .elementor-element.elementor-element-3a61439 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item::after { inset-inline-end: calc(-40px); }
+.elementor-117 .elementor-element.elementor-element-3a61439 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item { margin-inline: calc(20px); }
+.elementor-117 .elementor-element.elementor-element-3a61439 .elementor-icon-list-items.elementor-inline-items { margin-inline: calc(-20px); }
+.elementor-117 .elementor-element.elementor-element-3a61439 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item::after { inset-inline-end: calc(-20px); }
+.elementor-117 .elementor-element.elementor-element-3a61439 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:not(:last-child)::after { content: ""; border-color: #C9C9C9; }
 .elementor-117 .elementor-element.elementor-element-3a61439 { --e-icon-list-icon-size: 14px; --icon-vertical-offset: 0px; }
 .elementor-117 .elementor-element.elementor-element-3a61439 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-117 .elementor-element.elementor-element-3a61439 .elementor-icon-list-item > a { font-family: var(--font-montserrat), sans-serif; font-size: 18px; font-weight: 400; line-height: 20px; }
 .elementor-117 .elementor-element.elementor-element-3a61439 .elementor-icon-list-text { color: var( --e-global-color-text ); transition: color 0.3s; }
