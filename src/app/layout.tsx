@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import "./base.css";
+import "./exit-intent-popup.css";
 import Carousels from "@/components/Carousels";
 import WidgetInteractions from "@/components/WidgetInteractions";
 import GalleryInteractions from "@/components/GalleryInteractions";
@@ -11,6 +12,7 @@ import DeferredStylesheet from "@/components/DeferredStylesheet";
 import Footer from "@/components/Footer";
 import MobileMenu from "@/components/MobileMenu";
 import CtmRouteSwap from "@/components/CtmRouteSwap";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 import { fetchMenu, SITE_URL } from "@/lib/wordpress";
 
 export const metadata: Metadata = {
@@ -87,6 +89,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <Carousels />
         <JotformResizer />
         <CtmRouteSwap />
+        <ExitIntentPopup />
         <Script id="third-party-loader" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `(function(){var L=false;function go(){if(L)return;L=true;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MGF7WNCV');(function () {
 var a = document.createElement("script");
 var b = document.getElementsByTagName("script")[0];
