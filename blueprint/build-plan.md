@@ -61,3 +61,7 @@ The items below are the occasional larger efforts.
     production under a separate app dir, port, and pm2 app name. Makes
     `SITE_URL` and robots indexing environment-driven and splits the one
     workflow into `deploy-production.yml` and `deploy-staging.yml`.
+    Code merged in PR #17 (2026-09-01); server rollout still pending (no
+    `staging` branch, hostname not in DNS as of 2026-09-11). Check off once
+    staging is live. Spec archived at
+    `blueprint/history/features/14a-staging-environment.md`.
