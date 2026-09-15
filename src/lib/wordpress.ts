@@ -41,7 +41,7 @@ export async function fetchPageData(path: string): Promise<BuilderPageData | nul
 
 export type BlogItem = { id: number; title: string; href: string };
 
-export const BLOGS_PER_PAGE = 6;
+const BLOGS_PER_PAGE = 6;
 
 const stripTags = (s: string) => s.replace(/<[^>]*>/g, "");
 
@@ -212,9 +212,9 @@ export async function fetchBlogs(
  * is why `cardStyle` exists on MenuTab and nowhere else.
  */
 
-export type MenuCardStyle = "image" | "plain" | "columns";
+type MenuCardStyle = "image" | "plain" | "columns";
 
-export type MenuImage = { url: string; alt: string; width: number; height: number };
+type MenuImage = { url: string; alt: string; width: number; height: number };
 
 export type MenuFeaturedBlog = {
   id: number;

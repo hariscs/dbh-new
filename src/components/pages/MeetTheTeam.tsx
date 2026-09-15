@@ -279,7 +279,7 @@ export default function Page() {
                           </div>
                           <div className="elementor-element elementor-element-1b744bfd elementor-widget elementor-widget-image" data-widget_type="image.default">
                             <div className="elementor-widget-container">
-                              <Image src="/images/f8ce11ad862d301faaf9ef4c0fa1b9c0.webp" alt="shutterstock 2023831943 1" width={807} height={579} className="attachment-full size-full wp-image-109134" />
+                              <Image src="/images/f8ce11ad862d301faaf9ef4c0fa1b9c0.webp" alt="shutterstock 2023831943 1" width={807} height={579} sizes="(max-width: 767px) 65vw, (max-width: 1024px) 70vw, 700px" className="attachment-full size-full wp-image-109134" />
                             </div>
                           </div>
                         </div>

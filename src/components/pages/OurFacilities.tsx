@@ -1534,7 +1534,7 @@ District Recovery Community
               <div className="elementor-element elementor-element-493a542 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                 <div className="elementor-element elementor-element-5b3badf elementor-widget elementor-widget-image" data-widget_type="image.default">
                   <div className="elementor-widget-container">
-                    <Image src="/images/2f131a3d55d7ad2927cf9e1a317a7016.webp" alt="AR Hollywood3" width={1280} height={840} className="attachment-full size-full wp-image-108320" />
+                    <Image src="/images/2f131a3d55d7ad2927cf9e1a317a7016.webp" alt="AR Hollywood3" width={1280} height={840} sizes="(max-width: 767px) 85vw, (max-width: 1024px) 92vw, 640px" className="attachment-full size-full wp-image-108320" />
                   </div>
                 </div>
                 <div className="elementor-element elementor-element-7683d5b e-con-full e-flex e-con e-child">
@@ -1605,7 +1605,7 @@ Alliance Recovery
               <div className="elementor-element elementor-element-84560b1 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                 <div className="elementor-element elementor-element-3b80f93 elementor-widget elementor-widget-image" data-widget_type="image.default">
                   <div className="elementor-widget-container">
-                    <Image src="/images/9066b19ad0a8d80ff6e3bc5a7398a8de.webp" alt="DSC4849 scaled 1" width={1920} height={1280} className="attachment-full size-full wp-image-108321" />
+                    <Image src="/images/9066b19ad0a8d80ff6e3bc5a7398a8de.webp" alt="DSC4849 scaled 1" width={1920} height={1280} sizes="(max-width: 767px) 85vw, (max-width: 1024px) 92vw, 640px" className="attachment-full size-full wp-image-108321" />
                   </div>
                 </div>
                 <div className="elementor-element elementor-element-7d49bf7 e-con-full e-flex e-con e-child">
@@ -1678,7 +1678,7 @@ Connections OC
               <div className="elementor-element elementor-element-dcba492 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                 <div className="elementor-element elementor-element-fe5dd77 elementor-widget elementor-widget-image" data-widget_type="image.default">
                   <div className="elementor-widget-container">
-                    <Image src="/images/073305fcbd894eb90999a57efe3e1e61.webp" alt="GetMedia 32" width={1024} height={636} className="attachment-full size-full wp-image-108322" />
+                    <Image src="/images/073305fcbd894eb90999a57efe3e1e61.webp" alt="GetMedia 32" width={1024} height={636} sizes="(max-width: 767px) 85vw, (max-width: 1024px) 92vw, 640px" className="attachment-full size-full wp-image-108322" />
                   </div>
                 </div>
                 <div className="elementor-element elementor-element-a040c70 e-con-full e-flex e-con e-child">
@@ -1750,7 +1750,7 @@ Connections OC
               <div className="elementor-element elementor-element-6da18f3 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                 <div className="elementor-element elementor-element-cb61d91 elementor-widget elementor-widget-image" data-widget_type="image.default">
                   <div className="elementor-widget-container">
-                    <Image src="/images/2f43479901b1d212345cb20423f244ef.webp" alt="detox laguna beach residential treatment ocean view from patio 10" width={1920} height={1280} className="attachment-full size-full wp-image-108323" />
+                    <Image src="/images/2f43479901b1d212345cb20423f244ef.webp" alt="detox laguna beach residential treatment ocean view from patio 10" width={1920} height={1280} sizes="(max-width: 767px) 85vw, (max-width: 1024px) 92vw, 640px" className="attachment-full size-full wp-image-108323" />
                   </div>
                 </div>
                 <div className="elementor-element elementor-element-3dce983 e-con-full e-flex e-con e-child">
@@ -1821,7 +1821,7 @@ California Detox
               <div className="elementor-element elementor-element-b918b17 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                 <div className="elementor-element elementor-element-6e54319 elementor-widget elementor-widget-image" data-widget_type="image.default">
                   <div className="elementor-widget-container">
-                    <Image src="/images/99f03baa8c47ce95085026cdf56a39e6.webp" alt="200817 GratitudeLodge Kline 010" width={1920} height={1277} className="attachment-full size-full wp-image-108324" />
+                    <Image src="/images/99f03baa8c47ce95085026cdf56a39e6.webp" alt="200817 GratitudeLodge Kline 010" width={1920} height={1277} sizes="(max-width: 767px) 85vw, (max-width: 1024px) 92vw, 640px" className="attachment-full size-full wp-image-108324" />
                   </div>
                 </div>
                 <div className="elementor-element elementor-element-87d1c09 e-con-full e-flex e-con e-child">
@@ -1894,7 +1894,7 @@ Gratitude Lodge
               <div className="elementor-element elementor-element-20ec6cc e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                 <div className="elementor-element elementor-element-6f1b412 elementor-widget elementor-widget-image" data-widget_type="image.default">
                   <div className="elementor-widget-container">
-                    <Image src="/images/819b6fc3c7ae3e23333b38d618301843.webp" alt="230531 GratitudeLodge 024" width={1920} height={1277} className="attachment-full size-full wp-image-108325" />
+                    <Image src="/images/819b6fc3c7ae3e23333b38d618301843.webp" alt="230531 GratitudeLodge 024" width={1920} height={1277} sizes="(max-width: 767px) 85vw, (max-width: 1024px) 92vw, 640px" className="attachment-full size-full wp-image-108325" />
                   </div>
                 </div>
                 <div className="elementor-element elementor-element-2cf4264 e-con-full e-flex e-con e-child">
@@ -1967,7 +1967,7 @@ Gratitude Lodge
               <div className="elementor-element elementor-element-63e3e12 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                 <div className="elementor-element elementor-element-c8de02a elementor-widget elementor-widget-image" data-widget_type="image.default">
                   <div className="elementor-widget-container">
-                    <Image src="/images/8d2e64f0da76139e33e23c3a542bc43e.webp" alt="24 03 26 GratitudeLodge 021" width={1920} height={1277} className="attachment-full size-full wp-image-108326" />
+                    <Image src="/images/8d2e64f0da76139e33e23c3a542bc43e.webp" alt="24 03 26 GratitudeLodge 021" width={1920} height={1277} sizes="(max-width: 767px) 85vw, (max-width: 1024px) 92vw, 640px" className="attachment-full size-full wp-image-108326" />
                   </div>
                 </div>
                 <div className="elementor-element elementor-element-4ed7f7c e-con-full e-flex e-con e-child">
@@ -2038,7 +2038,7 @@ Gratitude Lodge
               <div className="elementor-element elementor-element-634740a e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                 <div className="elementor-element elementor-element-e6831a4 elementor-widget elementor-widget-image" data-widget_type="image.default">
                   <div className="elementor-widget-container">
-                    <Image src="/images/38f41d988b82bf107819782b31970f91.webp" alt="24 03 26 GratitudeLodge 001" width={1920} height={1277} className="attachment-full size-full wp-image-108327" />
+                    <Image src="/images/38f41d988b82bf107819782b31970f91.webp" alt="24 03 26 GratitudeLodge 001" width={1920} height={1277} sizes="(max-width: 767px) 85vw, (max-width: 1024px) 92vw, 640px" className="attachment-full size-full wp-image-108327" />
                   </div>
                 </div>
                 <div className="elementor-element elementor-element-abbcf8b e-con-full e-flex e-con e-child">

@@ -9,7 +9,7 @@ export type BusinessUnitPill = {
   alt: string
 }
 
-export type AuthorHeadshot = {
+type AuthorHeadshot = {
   src: string
   alt: string
   w: number
@@ -32,7 +32,7 @@ export type Author = {
   head?: AuthorHeadshot
 }
 
-export const section0: Author[] = [
+const section0: Author[] = [
   {
     exec: true,
     postId: "92304",
@@ -91,7 +91,7 @@ export const section0: Author[] = [
   },
 ]
 
-export const section1: Author[] = [
+const section1: Author[] = [
   {
     exec: false,
     postId: "92216",
@@ -195,7 +195,7 @@ export const section1: Author[] = [
   },
 ]
 
-export const section2: Author[] = [
+const section2: Author[] = [
   {
     exec: false,
     postId: "92241",
@@ -422,7 +422,7 @@ export const section2: Author[] = [
   },
 ]
 
-export const section3: Author[] = [
+const section3: Author[] = [
   {
     exec: false,
     postId: "92224",
@@ -698,7 +698,7 @@ export const section3: Author[] = [
   },
 ]
 
-export const section4: Author[] = [
+const section4: Author[] = [
   {
     exec: false,
     postId: "92254",
@@ -918,7 +918,7 @@ export const section4: Author[] = [
   },
 ]
 
-export const section5: Author[] = [
+const section5: Author[] = [
   {
     exec: false,
     postId: "92206",
@@ -1021,7 +1021,7 @@ export const section5: Author[] = [
   },
 ]
 
-export const section6: Author[] = [
+const section6: Author[] = [
   {
     exec: false,
     postId: "92315",
@@ -1233,7 +1233,7 @@ export const section6: Author[] = [
   },
 ]
 
-export const section7: Author[] = [
+const section7: Author[] = [
   {
     exec: false,
     postId: "92246",

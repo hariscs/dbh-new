@@ -134,7 +134,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
           </div>
           <div className="elementor-element elementor-element-884600e elementor-widget-tablet__width-inherit elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
             <div className="elementor-widget-container">
-              <Image src="/images/7927292c42a939b271b2474c40de4536.webp" alt="" width={1320} height={647} className="attachment-full size-full wp-image-104199" />
+              <Image src="/images/7927292c42a939b271b2474c40de4536.webp" alt="" width={1320} height={647} sizes="(max-width: 767px) 92vw, (max-width: 1024px) 100vw, 1320px" className="attachment-full size-full wp-image-104199" />
             </div>
           </div>
         </div>
@@ -153,7 +153,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
           <div className="elementor-element elementor-element-6284591 elementor-grid-1 elementor-widget__width-inherit elementor-grid-tablet-1 elementor-grid-mobile-1 elementor-widget elementor-widget-loop-grid" data-settings="{&quot;template_id&quot;:&quot;2852&quot;,&quot;columns&quot;:1,&quot;row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;columns_tablet&quot;:1,&quot;_skin&quot;:&quot;post&quot;,&quot;columns_mobile&quot;:&quot;1&quot;,&quot;edit_handle_selector&quot;:&quot;[data-elementor-type=\\&quot;loop-item\\&quot;]&quot;,&quot;row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="loop-grid.post">
             <div className="elementor-widget-container">
               <div className="elementor-loop-container elementor-grid" role="list">
-                <div className="elementor elementor-2852 e-loop-item e-loop-item-105046 post-105046 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-clonazepam-klonopin topic-2-addiction">
+                <div role="listitem" className="elementor elementor-2852 e-loop-item e-loop-item-105046 post-105046 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-clonazepam-klonopin topic-2-addiction">
                   <div className="elementor-element elementor-element-7dfb29a recent-articles e-flex e-con-boxed e-con e-parent">
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-fa3fef1 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"></div>
@@ -178,7 +178,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
                     </div>
                   </div>
                 </div>
-                <div className="elementor elementor-2852 e-loop-item e-loop-item-105008 post-105008 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-clonidine topic-2-addiction">
+                <div role="listitem" className="elementor elementor-2852 e-loop-item e-loop-item-105008 post-105008 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-clonidine topic-2-addiction">
                   <div className="elementor-element elementor-element-7dfb29a recent-articles e-flex e-con-boxed e-con e-parent">
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-fa3fef1 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"></div>
@@ -203,7 +203,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
                     </div>
                   </div>
                 </div>
-                <div className="elementor elementor-2852 e-loop-item e-loop-item-105048 post-105048 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-codeine topic-2-addiction">
+                <div role="listitem" className="elementor elementor-2852 e-loop-item e-loop-item-105048 post-105048 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-codeine topic-2-addiction">
                   <div className="elementor-element elementor-element-7dfb29a recent-articles e-flex e-con-boxed e-con e-parent">
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-fa3fef1 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"></div>
@@ -1017,7 +1017,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
             <div className="elementor-element elementor-element-5a4052d elementor-grid-1 elementor-widget__width-inherit elementor-grid-tablet-1 elementor-grid-mobile-1 elementor-widget elementor-widget-loop-grid" data-settings="{&quot;template_id&quot;:&quot;2852&quot;,&quot;columns&quot;:1,&quot;row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;columns_tablet&quot;:1,&quot;_skin&quot;:&quot;post&quot;,&quot;columns_mobile&quot;:&quot;1&quot;,&quot;edit_handle_selector&quot;:&quot;[data-elementor-type=\\&quot;loop-item\\&quot;]&quot;,&quot;row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="loop-grid.post">
               <div className="elementor-widget-container">
                 <div className="elementor-loop-container elementor-grid" role="list">
-                  <div className="elementor elementor-2852 e-loop-item e-loop-item-105046 post-105046 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-clonazepam-klonopin topic-2-addiction">
+                  <div role="listitem" className="elementor elementor-2852 e-loop-item e-loop-item-105046 post-105046 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-clonazepam-klonopin topic-2-addiction">
                     <div className="elementor-element elementor-element-7dfb29a recent-articles e-flex e-con-boxed e-con e-parent e-lazyloaded">
                       <div className="e-con-inner">
                         <div className="elementor-element elementor-element-fa3fef1 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"></div>
@@ -1042,7 +1042,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
                       </div>
                     </div>
                   </div>
-                  <div className="elementor elementor-2852 e-loop-item e-loop-item-105008 post-105008 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-clonidine topic-2-addiction">
+                  <div role="listitem" className="elementor elementor-2852 e-loop-item e-loop-item-105008 post-105008 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-clonidine topic-2-addiction">
                     <div className="elementor-element elementor-element-7dfb29a recent-articles e-flex e-con-boxed e-con e-parent e-lazyloaded">
                       <div className="e-con-inner">
                         <div className="elementor-element elementor-element-fa3fef1 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"></div>
@@ -1067,7 +1067,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
                       </div>
                     </div>
                   </div>
-                  <div className="elementor elementor-2852 e-loop-item e-loop-item-105048 post-105048 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-codeine topic-2-addiction">
+                  <div role="listitem" className="elementor elementor-2852 e-loop-item e-loop-item-105048 post-105048 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-codeine topic-2-addiction">
                     <div className="elementor-element elementor-element-7dfb29a recent-articles e-flex e-con-boxed e-con e-parent e-lazyloaded">
                       <div className="e-con-inner">
                         <div className="elementor-element elementor-element-fa3fef1 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"></div>
@@ -1141,7 +1141,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
                     <div className="elementor-element elementor-element-feb28e1 elementor-grid-3 elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-loop-grid" data-settings="{&quot;template_id&quot;:&quot;75&quot;,&quot;row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;_skin&quot;:&quot;post&quot;,&quot;columns&quot;:&quot;3&quot;,&quot;columns_tablet&quot;:&quot;2&quot;,&quot;columns_mobile&quot;:&quot;1&quot;,&quot;edit_handle_selector&quot;:&quot;[data-elementor-type=\\&quot;loop-item\\&quot;]&quot;,&quot;row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="loop-grid.post">
                       <div className="elementor-widget-container">
                         <div className="elementor-loop-container elementor-grid" role="list">
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-2057 post-2057 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-2057 post-2057 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -1203,7 +1203,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-68 post-68 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-68 post-68 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -1265,7 +1265,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-67 post-67 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-67 post-67 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -1327,7 +1327,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-69 post-69 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-69 post-69 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -1389,7 +1389,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-3015 post-3015 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-3015 post-3015 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -1451,7 +1451,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-3014 post-3014 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-3014 post-3014 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -1513,7 +1513,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-3013 post-3013 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-3013 post-3013 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -1575,7 +1575,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-448 post-448 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-448 post-448 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -1637,7 +1637,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-450 post-450 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-450 post-450 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -1699,7 +1699,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-452 post-452 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-452 post-452 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -1806,7 +1806,7 @@ export default function AlumniRehabProgram(props: Record<string, string>) {
             </div>
             <div className="elementor-element elementor-element-3024f69 elementor-widget elementor-widget-image" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="/images/f8ce11ad862d301faaf9ef4c0fa1b9c0.webp" alt="" width={807} height={579} className="attachment-full size-full wp-image-109134" />
+                <Image src="/images/f8ce11ad862d301faaf9ef4c0fa1b9c0.webp" alt="" width={807} height={579} sizes="(max-width: 767px) 65vw, (max-width: 1024px) 70vw, 700px" className="attachment-full size-full wp-image-109134" />
               </div>
             </div>
           </div>

@@ -11,9 +11,6 @@ const nextConfig: NextConfig = {
   // backlink and nearly every hardcoded internal href uses that form. Serving it
   // as canonical keeps those direct hits instead of 308 hops.
   trailingSlash: true,
-  experimental: {
-    inlineCss: true,
-  },
   images: {
     // Source images use content-hashed filenames, so a changed image produces a new
     // URL — the optimized output is safe to cache for a year (like /_next/static),
