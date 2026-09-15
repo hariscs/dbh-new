@@ -38,7 +38,7 @@ export type TemplateProps = {
   relatedLinks?: RelatedCard[] | null;
 };
 
-export type RelatedLinksIds = {
+type RelatedLinksIds = {
   /** outer `e-con e-parent` section */
   section: string;
   /** heading widget */
@@ -197,5 +197,3 @@ export function RelatedLinks({
     </div>
   );
 }
-
-export default RelatedLinks;

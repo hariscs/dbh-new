@@ -30,7 +30,7 @@ const HEADING = /<h([1-6])\b[^>]*>([\s\S]*?)<\/h\1\s*>/gi;
 
 const hasText = (html: string) => html.replace(/<[^>]*>/g, "").trim().length > 0;
 
-export function parseFaqs(html: string): FaqItem[] {
+function parseFaqs(html: string): FaqItem[] {
   if (!html) return [];
   const items: FaqItem[] = [];
   const matches = [...html.matchAll(HEADING)];

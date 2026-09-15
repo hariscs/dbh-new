@@ -111,6 +111,7 @@ Package manager: pnpm (see `packageManager` in `package.json`).
 - Build: `pnpm build`
 - Production server: `pnpm start`
 - Typecheck: `pnpm typecheck` (`tsc --noEmit`)
+- Dead code check: `pnpm knip` (unused files, exports, and dependencies; config in `knip.json`)
 
 Do not run or set up ESLint. There is no lint step in this project: `next lint`
 was removed in Next 16, no eslint config file exists, and the owner does not

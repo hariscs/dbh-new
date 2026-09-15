@@ -7,7 +7,8 @@
     "dev": "cross-env NODE_OPTIONS=--max-old-space-size=8192 next dev",
     "build": "node --max-old-space-size=8192 node_modules/next/dist/bin/next build",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "knip": "knip"
   },
   "dependencies": {
     "next": "^16.2.9",
@@ -16,12 +17,11 @@
     "swiper": "^11.2.6"
   },
   "devDependencies": {
-    "@types/node": "^25.9.3",
+    "@types/node": "^25.9.5",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "cross-env": "^10.1.0",
-    "eslint": "^10.5.0",
-    "eslint-config-next": "^16.2.9",
+    "knip": "^6.35.1",
     "typescript": "^6.0.3"
   },
   "browserslist": [
