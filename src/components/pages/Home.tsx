@@ -771,7 +771,7 @@ export default function Page({ relatedLinks }: TemplateProps) {
                                       <div className="elementor-element elementor-element-76e15be e-con-full image_wrapper_staff e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                         <div className="elementor-element elementor-element-f564518 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                           <div className="elementor-widget-container">
-                                            <Image src="/images/d290f10365a49cd3c31e66c718d1fa34.webp" alt="Will Dunbar AR Community Director scaled" width={2560} height={1707} className="attachment-full size-full wp-image-103867" />
+                                            <Image src="/images/d290f10365a49cd3c31e66c718d1fa34.webp" alt="Will Dunbar AR Community Director scaled" width={2560} height={1707} sizes="(max-width: 767px) 500px, 170px" className="attachment-full size-full wp-image-103867" />
                                           </div>
                                         </div>
                                       </div>
@@ -1976,7 +1976,7 @@ counselor I can be.
             <div className="elementor-element elementor-element-eee86ef e-con-full e-flex e-con e-child">
               <div className="elementor-element elementor-element-42e6859 elementor-widget elementor-widget-image" data-widget_type="image.default">
                 <div className="elementor-widget-container">
-                  <Image src="/images/f3f8379c772b6ba1a8e0950b60938b61.webp" alt="Group 830" width={854} height={837} className="attachment-full size-full wp-image-56" />
+                  <Image src="/images/f3f8379c772b6ba1a8e0950b60938b61.webp" alt="Group 830" width={854} height={837} sizes="(max-width: 1024px) 85vw, 710px" className="attachment-full size-full wp-image-56" />
                 </div>
               </div>
             </div>
@@ -2131,7 +2131,7 @@ counselor I can be.
             <div className="elementor-element elementor-element-8ddb10b e-con-full e-flex e-con e-child">
               <div className="elementor-element elementor-element-b937b24 elementor-widget elementor-widget-image" data-widget_type="image.default">
                 <div className="elementor-widget-container">
-                  <Image src="/images/ad1e939ae8064b39148ee2dbb04551d6.webp" alt="shutterstock 2757133793 1" width={1210} height={809} className="attachment-full size-full wp-image-109135" />
+                  <Image src="/images/ad1e939ae8064b39148ee2dbb04551d6.webp" alt="shutterstock 2757133793 1" width={1210} height={809} sizes="(max-width: 767px) 95vw, (max-width: 1024px) 100vw, 560px" className="attachment-full size-full wp-image-109135" />
                 </div>
               </div>
               <div className="elementor-element elementor-element-48fc06f elementor-align-left elementor-mobile-align-justify elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-button" data-widget_type="button.default">
@@ -2684,7 +2684,7 @@ A Lifelong Support System.
               </div>
               <div className="elementor-element elementor-element-99a5628 elementor-widget elementor-widget-image" data-widget_type="image.default">
                 <div className="elementor-widget-container">
-                  <Image src="/images/f8ce11ad862d301faaf9ef4c0fa1b9c0.webp" alt="shutterstock 2023831943 1" width={807} height={579} className="attachment-full size-full wp-image-109134" />
+                  <Image src="/images/f8ce11ad862d301faaf9ef4c0fa1b9c0.webp" alt="shutterstock 2023831943 1" width={807} height={579} sizes="(max-width: 767px) 65vw, (max-width: 1024px) 70vw, 700px" className="attachment-full size-full wp-image-109134" />
                 </div>
               </div>
             </div>

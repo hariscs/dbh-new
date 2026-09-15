@@ -58,7 +58,7 @@ function BusinessUnitPill({ pill }: { pill: Pill }) {
 
 function ExecutiveCard({ author }: { author: Author }) {
   return (
-                      <div className={author.wrapClass}>
+                      <div role="listitem" className={author.wrapClass}>
                         <div className="elementor-element elementor-element-7b68fbab e-transform author-card e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;_transform_translateY_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-5,&quot;sizes&quot;:[]},&quot;background_background&quot;:&quot;classic&quot;,&quot;_transform_translateX_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}">
                           <div className="e-con-inner">
                             <div className="elementor-element elementor-element-319deed9 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"></div>
@@ -136,7 +136,7 @@ function ExecutiveCard({ author }: { author: Author }) {
 
 function StandardCard({ author }: { author: Author }) {
   return (
-                      <div className={author.wrapClass}>
+                      <div role="listitem" className={author.wrapClass}>
                         <div className="elementor-element elementor-element-536f3889 e-con-full author-card team-member e-transform e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_transform_translateY_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-5,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}">
                           <div className="elementor-element elementor-element-615ef0ff e-con-full e-flex e-con e-child">
                             <div className="elementor-element elementor-element-9370d74 e-con-full top-content-area e-flex e-con e-child">

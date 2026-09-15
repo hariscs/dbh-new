@@ -116,27 +116,27 @@ export default function Page() {
         <div className="elementor-element elementor-element-e2f81f3 e-con-full e-grid e-con e-child">
           <div className="elementor-element elementor-element-8312184 elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="/images/292ee1397e7a6587865ec9939779a277.webp" alt="Frame 138 2" width={964} height={462} className="attachment-full size-full wp-image-709" />
+              <Image src="/images/292ee1397e7a6587865ec9939779a277.webp" alt="Frame 138 2" width={964} height={462} sizes="(max-width: 767px) 45vw, 250px" className="attachment-full size-full wp-image-709" />
             </div>
           </div>
           <div className="elementor-element elementor-element-4f96485 elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="/images/54ec747732d508ea61582710fc97ebe7.webp" alt="Frame 139" width={965} height={462} className="attachment-full size-full wp-image-710" />
+              <Image src="/images/54ec747732d508ea61582710fc97ebe7.webp" alt="Frame 139" width={965} height={462} sizes="(max-width: 767px) 45vw, 250px" className="attachment-full size-full wp-image-710" />
             </div>
           </div>
           <div className="elementor-element elementor-element-16f19fb elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="/images/1655130271393126c332bd92aadce65e.webp" alt="Frame 140" width={964} height={462} className="attachment-full size-full wp-image-711" />
+              <Image src="/images/1655130271393126c332bd92aadce65e.webp" alt="Frame 140" width={964} height={462} sizes="(max-width: 767px) 45vw, 250px" className="attachment-full size-full wp-image-711" />
             </div>
           </div>
           <div className="elementor-element elementor-element-c2ae493 elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="/images/bb324741da58d074cd8e21b590a4989a.webp" alt="Frame 141" width={965} height={462} className="attachment-full size-full wp-image-712" />
+              <Image src="/images/bb324741da58d074cd8e21b590a4989a.webp" alt="Frame 141" width={965} height={462} sizes="(max-width: 767px) 45vw, 250px" className="attachment-full size-full wp-image-712" />
             </div>
           </div>
           <div className="elementor-element elementor-element-42a1492 elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="/images/6a4e1281b93a98481e12670cd3f197f5.webp" alt="Frame 142" width={964} height={462} className="attachment-full size-full wp-image-713" />
+              <Image src="/images/6a4e1281b93a98481e12670cd3f197f5.webp" alt="Frame 142" width={964} height={462} sizes="(max-width: 767px) 45vw, 250px" className="attachment-full size-full wp-image-713" />
             </div>
           </div>
           <div className="elementor-element elementor-element-54a02da elementor-widget__width-inherit elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-image" data-widget_type="image.default">
@@ -146,7 +146,7 @@ export default function Page() {
           </div>
           <div className="elementor-element elementor-element-2970967 elementor-widget__width-inherit elementor-hidden-mobile elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="/images/d056c6e0048782ba62915e88361a85e8.webp" alt="Frame 143 1" width={965} height={462} className="attachment-full size-full wp-image-715" />
+              <Image src="/images/d056c6e0048782ba62915e88361a85e8.webp" alt="Frame 143 1" width={965} height={462} sizes="(max-width: 767px) 45vw, 250px" className="attachment-full size-full wp-image-715" />
             </div>
           </div>
           <div className="elementor-element elementor-element-116e0ed elementor-widget__width-inherit elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-image" data-widget_type="image.default">
@@ -156,7 +156,7 @@ export default function Page() {
           </div>
           <div className="elementor-element elementor-element-12ac1c5 elementor-widget__width-inherit elementor-hidden-mobile elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="/images/9cb688b63a38575308d8f7df9cc0619b.webp" alt="frame 143 68b8466835398" width={964} height={462} className="attachment-full size-full wp-image-717" />
+              <Image src="/images/9cb688b63a38575308d8f7df9cc0619b.webp" alt="frame 143 68b8466835398" width={964} height={462} sizes="(max-width: 767px) 45vw, 250px" className="attachment-full size-full wp-image-717" />
             </div>
           </div>
           <div className="elementor-element elementor-element-cf85d99 elementor-widget__width-inherit elementor-hidden-mobile elementor-widget elementor-widget-image" data-widget_type="image.default">

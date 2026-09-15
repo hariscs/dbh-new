@@ -541,7 +541,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                     <div className="elementor-element elementor-element-feb28e1 elementor-grid-3 elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-loop-grid" data-settings="{&quot;template_id&quot;:&quot;75&quot;,&quot;row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;_skin&quot;:&quot;post&quot;,&quot;columns&quot;:&quot;3&quot;,&quot;columns_tablet&quot;:&quot;2&quot;,&quot;columns_mobile&quot;:&quot;1&quot;,&quot;edit_handle_selector&quot;:&quot;[data-elementor-type=\\&quot;loop-item\\&quot;]&quot;,&quot;row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="loop-grid.post">
                       <div className="elementor-widget-container">
                         <div className="elementor-loop-container elementor-grid" role="list">
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-2057 post-2057 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-2057 post-2057 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -603,7 +603,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-68 post-68 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-68 post-68 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -665,7 +665,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-67 post-67 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-67 post-67 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -727,7 +727,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-69 post-69 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-69 post-69 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -789,7 +789,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-3015 post-3015 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-3015 post-3015 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -851,7 +851,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-3014 post-3014 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-3014 post-3014 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -913,7 +913,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-3013 post-3013 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-3013 post-3013 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -975,7 +975,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-448 post-448 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-448 post-448 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -1037,7 +1037,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-450 post-450 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-450 post-450 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -1099,7 +1099,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                               </div>
                             </div>
                           </div>
-                          <div className="elementor elementor-75 e-loop-item e-loop-item-452 post-452 our_locations type-our_locations status-publish has-post-thumbnail hentry">
+                          <div role="listitem" className="elementor elementor-75 e-loop-item e-loop-item-452 post-452 our_locations type-our_locations status-publish has-post-thumbnail hentry">
                             <div className="elementor-element elementor-element-2c0bd73 loca_box e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-fd7bae9 e-con-full e-flex e-con e-child">
@@ -1177,7 +1177,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
         <div className="elementor-element elementor-element-ec00ee7 e-con-full e-flex e-con e-child">
           <div className="elementor-element elementor-element-ad45f6f elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="/images/dae2fce2fda13cd54c26597bee0bedcb.webp" alt="" width={766} height={622} className="attachment-full size-full wp-image-2286" />
+              <Image src="/images/dae2fce2fda13cd54c26597bee0bedcb.webp" alt="" width={766} height={622} sizes="(max-width: 767px) 92vw, (max-width: 1024px) 45vw, 570px" className="attachment-full size-full wp-image-2286" />
             </div>
           </div>
           <div className="elementor-element elementor-element-f76530f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -1311,7 +1311,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
         <div className="elementor-element elementor-element-0f52835 e-con-full e-flex e-con e-child">
           <div className="elementor-element elementor-element-5d98258 elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="/images/189eb7a83e7756a3ef88152a6e9bc2ad.webp" alt="" width={766} height={430} className="attachment-full size-full wp-image-2294" />
+              <Image src="/images/189eb7a83e7756a3ef88152a6e9bc2ad.webp" alt="" width={766} height={430} sizes="(max-width: 767px) 90vw, (max-width: 1024px) 80vw, 670px" className="attachment-full size-full wp-image-2294" />
             </div>
           </div>
         </div>
@@ -3392,7 +3392,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
         <div className="elementor-element elementor-element-faf3b59 e-con-full e-flex e-con e-child">
           <div className="elementor-element elementor-element-28fd4cb elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="/images/073063dbe90bf7b6bd953cb49ef99e4c.webp" alt="" width={721} height={751} className="attachment-full size-full wp-image-2384" />
+              <Image src="/images/073063dbe90bf7b6bd953cb49ef99e4c.webp" alt="" width={721} height={751} sizes="(max-width: 767px) 92vw, (max-width: 1024px) 100vw, 680px" className="attachment-full size-full wp-image-2384" />
             </div>
           </div>
         </div>
@@ -4054,7 +4054,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
             </div>
             <div className="elementor-element elementor-element-73d0878 elementor-widget elementor-widget-image" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="/images/1d48e8c366af4b11012c8592253f89dc.webp" alt="" width={840} height={68} className="attachment-full size-full wp-image-2635" />
+                <Image src="/images/1d48e8c366af4b11012c8592253f89dc.webp" alt="" width={840} height={68} sizes="(max-width: 767px) 80vw, (max-width: 1024px) 85vw, 800px" className="attachment-full size-full wp-image-2635" />
               </div>
             </div>
           </div>
@@ -4217,13 +4217,13 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                       <div className="elementor-element elementor-element-71994bc elementor-grid-3 elementor-grid-tablet-1 elementor-grid-mobile-1 elementor-widget elementor-widget-loop-grid" data-settings="{&quot;template_id&quot;:&quot;107941&quot;,&quot;columns&quot;:3,&quot;columns_tablet&quot;:1,&quot;row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:60,&quot;sizes&quot;:[]},&quot;row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:30,&quot;sizes&quot;:[]},&quot;row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;_skin&quot;:&quot;post&quot;,&quot;columns_mobile&quot;:&quot;1&quot;,&quot;edit_handle_selector&quot;:&quot;[data-elementor-type=\\&quot;loop-item\\&quot;]&quot;}" data-widget_type="loop-grid.post">
                         <div className="elementor-widget-container">
                           <div className="elementor-loop-container elementor-grid" role="list">
-                            <div className="elementor elementor-107941 e-loop-item e-loop-item-103866 post-103866 authors type-authors status-publish hentry category-clinical-team business-unit-alliance-recovery">
+                            <div role="listitem" className="elementor elementor-107941 e-loop-item e-loop-item-103866 post-103866 authors type-authors status-publish hentry category-clinical-team business-unit-alliance-recovery">
                               <div className="elementor-element elementor-element-37295b3 single-staff-fac e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                 <div className="e-con-inner">
                                   <div className="elementor-element elementor-element-76e15be e-con-full image_wrapper_staff e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                     <div className="elementor-element elementor-element-f564518 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                       <div className="elementor-widget-container">
-                                        <Image src="/images/d290f10365a49cd3c31e66c718d1fa34.webp" alt="" width={2560} height={1707} className="attachment-full size-full wp-image-103867" />
+                                        <Image src="/images/d290f10365a49cd3c31e66c718d1fa34.webp" alt="" width={2560} height={1707} sizes="(max-width: 767px) 500px, 170px" className="attachment-full size-full wp-image-103867" />
                                       </div>
                                     </div>
                                   </div>
@@ -4274,7 +4274,7 @@ export default function LocationServedUsaCaNewportBeach({ fields = {}, relatedLi
                                 </div>
                               </div>
                             </div>
-                            <div className="elementor elementor-107941 e-loop-item e-loop-item-103858 post-103858 authors type-authors status-publish hentry category-clinical-team business-unit-california-detox business-unit-connections-mental-health business-unit-gratitude-lodge">
+                            <div role="listitem" className="elementor elementor-107941 e-loop-item e-loop-item-103858 post-103858 authors type-authors status-publish hentry category-clinical-team business-unit-california-detox business-unit-connections-mental-health business-unit-gratitude-lodge">
                               <div className="elementor-element elementor-element-37295b3 single-staff-fac e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                 <div className="e-con-inner">
                                   <div className="elementor-element elementor-element-76e15be e-con-full image_wrapper_staff e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -4358,7 +4358,7 @@ resilience, and long-lasting recovery.
                                 </div>
                               </div>
                             </div>
-                            <div className="elementor elementor-107941 e-loop-item e-loop-item-103846 post-103846 authors type-authors status-publish hentry category-clinical-team business-unit-gratitude-lodge">
+                            <div role="listitem" className="elementor elementor-107941 e-loop-item e-loop-item-103846 post-103846 authors type-authors status-publish hentry category-clinical-team business-unit-gratitude-lodge">
                               <div className="elementor-element elementor-element-37295b3 single-staff-fac e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                 <div className="e-con-inner">
                                   <div className="elementor-element elementor-element-76e15be e-con-full image_wrapper_staff e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -4462,7 +4462,7 @@ programs nationwide, however home is {near_in} Southern California with Gratitud
                   <div className="elementor-element elementor-element-211dd5e elementor-grid-3 elementor-grid-tablet-1 elementor-grid-mobile-1 elementor-widget elementor-widget-loop-grid" data-settings="{&quot;template_id&quot;:&quot;107941&quot;,&quot;columns&quot;:3,&quot;columns_tablet&quot;:1,&quot;row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:60,&quot;sizes&quot;:[]},&quot;row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:30,&quot;sizes&quot;:[]},&quot;row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;alternate_template&quot;:&quot;yes&quot;,&quot;_skin&quot;:&quot;post&quot;,&quot;columns_mobile&quot;:&quot;1&quot;,&quot;edit_handle_selector&quot;:&quot;[data-elementor-type=\\&quot;loop-item\\&quot;]&quot;}" data-widget_type="loop-grid.post">
                     <div className="elementor-widget-container">
                       <div className="elementor-loop-container elementor-grid" role="list">
-                        <div className="elementor elementor-107941 e-loop-item e-loop-item-92302 post-92302 authors type-authors status-publish has-post-thumbnail hentry category-executive-team business-unit-alliance-recovery business-unit-california-detox business-unit-connections-mental-health business-unit-gratitude-lodge business-unit-renaissance-recovery intent-high topic-staff">
+                        <div role="listitem" className="elementor elementor-107941 e-loop-item e-loop-item-92302 post-92302 authors type-authors status-publish has-post-thumbnail hentry category-executive-team business-unit-alliance-recovery business-unit-california-detox business-unit-connections-mental-health business-unit-gratitude-lodge business-unit-renaissance-recovery intent-high topic-staff">
                           <div className="elementor-element elementor-element-37295b3 single-staff-fac e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div className="e-con-inner">
                               <div className="elementor-element elementor-element-76e15be e-con-full image_wrapper_staff e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -4588,7 +4588,7 @@ programs nationwide, however home is {near_in} Southern California with Gratitud
                             </div>
                           </div>
                         </div>
-                        <div className="elementor elementor-107941 e-loop-item e-loop-item-92304 post-92304 authors type-authors status-publish has-post-thumbnail hentry category-executive-team business-unit-renaissance-recovery intent-high topic-staff">
+                        <div role="listitem" className="elementor elementor-107941 e-loop-item e-loop-item-92304 post-92304 authors type-authors status-publish has-post-thumbnail hentry category-executive-team business-unit-renaissance-recovery intent-high topic-staff">
                           <div className="elementor-element elementor-element-37295b3 single-staff-fac e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div className="e-con-inner">
                               <div className="elementor-element elementor-element-76e15be e-con-full image_wrapper_staff e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -4678,7 +4678,7 @@ programs nationwide, however home is {near_in} Southern California with Gratitud
                   <div className="elementor-element elementor-element-439c913 elementor-grid-3 elementor-grid-tablet-1 elementor-grid-mobile-1 elementor-widget elementor-widget-loop-grid" data-settings="{&quot;template_id&quot;:&quot;107941&quot;,&quot;columns&quot;:3,&quot;columns_tablet&quot;:1,&quot;row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:60,&quot;sizes&quot;:[]},&quot;row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:30,&quot;sizes&quot;:[]},&quot;row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;_skin&quot;:&quot;post&quot;,&quot;columns_mobile&quot;:&quot;1&quot;,&quot;edit_handle_selector&quot;:&quot;[data-elementor-type=\\&quot;loop-item\\&quot;]&quot;}" data-widget_type="loop-grid.post">
                     <div className="elementor-widget-container">
                       <div className="elementor-loop-container elementor-grid" role="list">
-                        <div className="elementor elementor-107941 e-loop-item e-loop-item-103856 post-103856 authors type-authors status-publish hentry category-therapists business-unit-connections-mental-health">
+                        <div role="listitem" className="elementor elementor-107941 e-loop-item e-loop-item-103856 post-103856 authors type-authors status-publish hentry category-therapists business-unit-connections-mental-health">
                           <div className="elementor-element elementor-element-37295b3 single-staff-fac e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div className="e-con-inner">
                               <div className="elementor-element elementor-element-76e15be e-con-full image_wrapper_staff e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -4735,7 +4735,7 @@ programs nationwide, however home is {near_in} Southern California with Gratitud
                             </div>
                           </div>
                         </div>
-                        <div className="elementor elementor-107941 e-loop-item e-loop-item-103850 post-103850 authors type-authors status-publish hentry category-therapists business-unit-alliance-recovery">
+                        <div role="listitem" className="elementor elementor-107941 e-loop-item e-loop-item-103850 post-103850 authors type-authors status-publish hentry category-therapists business-unit-alliance-recovery">
                           <div className="elementor-element elementor-element-37295b3 single-staff-fac e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div className="e-con-inner">
                               <div className="elementor-element elementor-element-76e15be e-con-full image_wrapper_staff e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -4792,7 +4792,7 @@ programs nationwide, however home is {near_in} Southern California with Gratitud
                             </div>
                           </div>
                         </div>
-                        <div className="elementor elementor-107941 e-loop-item e-loop-item-103845 post-103845 authors type-authors status-publish hentry category-therapists business-unit-alliance-recovery">
+                        <div role="listitem" className="elementor elementor-107941 e-loop-item e-loop-item-103845 post-103845 authors type-authors status-publish hentry category-therapists business-unit-alliance-recovery">
                           <div className="elementor-element elementor-element-37295b3 single-staff-fac e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div className="e-con-inner">
                               <div className="elementor-element elementor-element-76e15be e-con-full image_wrapper_staff e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -4870,7 +4870,7 @@ programs nationwide, however home is {near_in} Southern California with Gratitud
                   <div className="elementor-element elementor-element-acdd00b elementor-grid-3 elementor-grid-tablet-1 elementor-grid-mobile-1 elementor-widget elementor-widget-loop-grid" data-settings="{&quot;template_id&quot;:&quot;107941&quot;,&quot;columns&quot;:3,&quot;columns_tablet&quot;:1,&quot;row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:60,&quot;sizes&quot;:[]},&quot;row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:30,&quot;sizes&quot;:[]},&quot;row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;_skin&quot;:&quot;post&quot;,&quot;columns_mobile&quot;:&quot;1&quot;,&quot;edit_handle_selector&quot;:&quot;[data-elementor-type=\\&quot;loop-item\\&quot;]&quot;}" data-widget_type="loop-grid.post">
                     <div className="elementor-widget-container">
                       <div className="elementor-loop-container elementor-grid" role="list">
-                        <div className="elementor elementor-107941 e-loop-item e-loop-item-103864 post-103864 authors type-authors status-publish hentry category-case-managers business-unit-gratitude-lodge">
+                        <div role="listitem" className="elementor elementor-107941 e-loop-item e-loop-item-103864 post-103864 authors type-authors status-publish hentry category-case-managers business-unit-gratitude-lodge">
                           <div className="elementor-element elementor-element-37295b3 single-staff-fac e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div className="e-con-inner">
                               <div className="elementor-element elementor-element-76e15be e-con-full image_wrapper_staff e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -4990,7 +4990,7 @@ counselor I can be.
                             </div>
                           </div>
                         </div>
-                        <div className="elementor elementor-107941 e-loop-item e-loop-item-103855 post-103855 authors type-authors status-publish hentry category-case-managers business-unit-gratitude-lodge">
+                        <div role="listitem" className="elementor elementor-107941 e-loop-item e-loop-item-103855 post-103855 authors type-authors status-publish hentry category-case-managers business-unit-gratitude-lodge">
                           <div className="elementor-element elementor-element-37295b3 single-staff-fac e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div className="e-con-inner">
                               <div className="elementor-element elementor-element-76e15be e-con-full image_wrapper_staff e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -5047,7 +5047,7 @@ counselor I can be.
                             </div>
                           </div>
                         </div>
-                        <div className="elementor elementor-107941 e-loop-item e-loop-item-103853 post-103853 authors type-authors status-publish hentry category-case-managers business-unit-renaissance-recovery">
+                        <div role="listitem" className="elementor elementor-107941 e-loop-item e-loop-item-103853 post-103853 authors type-authors status-publish hentry category-case-managers business-unit-renaissance-recovery">
                           <div className="elementor-element elementor-element-37295b3 single-staff-fac e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div className="e-con-inner">
                               <div className="elementor-element elementor-element-76e15be e-con-full image_wrapper_staff e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -5125,7 +5125,7 @@ counselor I can be.
                   <div className="elementor-element elementor-element-3099204 elementor-grid-3 elementor-grid-tablet-1 elementor-grid-mobile-1 elementor-widget elementor-widget-loop-grid" data-settings="{&quot;template_id&quot;:&quot;107941&quot;,&quot;columns&quot;:3,&quot;columns_tablet&quot;:1,&quot;row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:60,&quot;sizes&quot;:[]},&quot;row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:30,&quot;sizes&quot;:[]},&quot;row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;_skin&quot;:&quot;post&quot;,&quot;columns_mobile&quot;:&quot;1&quot;,&quot;edit_handle_selector&quot;:&quot;[data-elementor-type=\\&quot;loop-item\\&quot;]&quot;}" data-widget_type="loop-grid.post">
                     <div className="elementor-widget-container">
                       <div className="elementor-loop-container elementor-grid" role="list">
-                        <div className="elementor elementor-107941 e-loop-item e-loop-item-104212 post-104212 authors type-authors status-publish hentry category-operations business-unit-renaissance-recovery">
+                        <div role="listitem" className="elementor elementor-107941 e-loop-item e-loop-item-104212 post-104212 authors type-authors status-publish hentry category-operations business-unit-renaissance-recovery">
                           <div className="elementor-element elementor-element-37295b3 single-staff-fac e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div className="e-con-inner">
                               <div className="elementor-element elementor-element-76e15be e-con-full image_wrapper_staff e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -5182,7 +5182,7 @@ counselor I can be.
                             </div>
                           </div>
                         </div>
-                        <div className="elementor elementor-107941 e-loop-item e-loop-item-104209 post-104209 authors type-authors status-publish hentry category-operations business-unit-alliance-recovery business-unit-california-detox business-unit-connections-mental-health business-unit-gratitude-lodge business-unit-renaissance-recovery">
+                        <div role="listitem" className="elementor elementor-107941 e-loop-item e-loop-item-104209 post-104209 authors type-authors status-publish hentry category-operations business-unit-alliance-recovery business-unit-california-detox business-unit-connections-mental-health business-unit-gratitude-lodge business-unit-renaissance-recovery">
                           <div className="elementor-element elementor-element-37295b3 single-staff-fac e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div className="e-con-inner">
                               <div className="elementor-element elementor-element-76e15be e-con-full image_wrapper_staff e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -5232,7 +5232,7 @@ counselor I can be.
                             </div>
                           </div>
                         </div>
-                        <div className="elementor elementor-107941 e-loop-item e-loop-item-103860 post-103860 authors type-authors status-publish hentry category-operations business-unit-gratitude-lodge">
+                        <div role="listitem" className="elementor elementor-107941 e-loop-item e-loop-item-103860 post-103860 authors type-authors status-publish hentry category-operations business-unit-gratitude-lodge">
                           <div className="elementor-element elementor-element-37295b3 single-staff-fac e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div className="e-con-inner">
                               <div className="elementor-element elementor-element-76e15be e-con-full image_wrapper_staff e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
