@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import "./base.css";
-import "./exit-intent-popup.css";
 import Carousels from "@/components/Carousels";
 import WidgetInteractions from "@/components/WidgetInteractions";
 import GalleryInteractions from "@/components/GalleryInteractions";
