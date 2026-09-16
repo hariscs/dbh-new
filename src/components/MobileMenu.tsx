@@ -103,7 +103,7 @@ export default function MobileMenu({ items }: { items?: MenuTopLevel[] | null })
       <aside className="dbh-mobile-drawer">
         <div className="dbh-mobile-drawer__head">
           <Link href="/" className="dbh-mobile-logo">
-            <Image src="/images/27be6d13936a8bc6dbcfb656bcd95b80.webp" alt="District Behavioral Health" width={840} height={259} />
+            <Image src="/images/27be6d13936a8bc6dbcfb656bcd95b80.webp" alt="District Behavioral Health" width={840} height={259} sizes="130px" />
           </Link>
           <div className="dbh-mobile-drawer__actions">
             <a className="dbh-mobile-call" href={telHref} aria-label="Call us">

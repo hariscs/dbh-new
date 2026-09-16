@@ -789,4 +789,9 @@ button:focus, button:hover{ outline: none !important; box-shadow: none; border: 
   content-visibility: visible;
   contain-intrinsic-size: none;
 }
-@media(max-width: 480px){ .elementor-75 { width:100%; overflow:hidden } }
+@media(max-width: 480px){ .elementor-75 { width:100%; overflow:hidden } }@media (max-width: 1024px) {
+  .elementor-11 .elementor-element.elementor-element-0fab87b:not(.elementor-motion-effects-element-type-background), .elementor-11 .elementor-element.elementor-element-0fab87b > .elementor-motion-effects-container > .elementor-motion-effects-layer { background-image: url("/images/d61e008e7716fcc7d92b35a3249568f7-1440.webp"); }
+}
+@media (max-width: 767px) {
+  .elementor-11 .elementor-element.elementor-element-0fab87b:not(.elementor-motion-effects-element-type-background), .elementor-11 .elementor-element.elementor-element-0fab87b > .elementor-motion-effects-container > .elementor-motion-effects-layer { background-image: url("/images/d61e008e7716fcc7d92b35a3249568f7-1024.webp"); }
+}

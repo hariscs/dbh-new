@@ -192,6 +192,7 @@ function Card({ card }: { card: MenuCard }) {
           <Image
             src={card.cardImage.url}
             alt={card.cardImage.alt}
+            sizes="300px"
             width={card.cardImage.width || 280}
             height={card.cardImage.height || 180}
           />
