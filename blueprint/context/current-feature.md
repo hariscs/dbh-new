@@ -59,6 +59,37 @@ in `<head>` that commit 8e42846 dropped on 2026-08-12.
 - [x] Step 1 - background variants and menu card sizes
 - [x] Step 2 - GTM gate at interaction or 10 s after load; direct CTM script
 - [x] Step 3 - run CTM after hydration (fixes React #418 seen in PSI on 2026-09-17)
+- [x] Step 4 - purge dead rules from the homepage stylesheet
+- [x] Step 5 - X-Frame-Options and COOP headers from next.config
+- [x] Step 6 - drop the invalid list roles on the interlinking cards
+
+### Steps 4 to 6 - remaining report lines (plan approved 2026-09-17)
+
+- **Step 4.** `src/app/page.css` lost 37 rules (8 KB raw, 0.6 KB gzipped) whose
+  Elementor element ids or scopes (`.elementor-200`, motion-effects chrome, 18
+  element ids) no longer exist in `Home.tsx`. The purge script skipped classes
+  inside `:not()`, kept every runtime-added family, and treated a bare quoted id
+  in the sources as a use, because `RelatedLinks` builds
+  `elementor-element-${id}` from props (a first pass without that rule dropped
+  the interlinking section's styles and shortened the page by 500 px). Note: the 21.9 KB chunk PSI flags as 69%
+  unused is base.css, not this file; what is unused there on the homepage is used
+  by other routes (mega menu, blog accordion, facility gallery), so a site-wide
+  split is a separate decision.
+- **Step 5.** `next.config.ts` `headers()` adds `X-Frame-Options: SAMEORIGIN`
+  and `Cross-Origin-Opener-Policy: same-origin-allow-popups` on every route.
+  HSTS, nosniff and Referrer-Policy already come from nginx on the box; HSTS
+  keeps no `includeSubDomains` or `preload` on purpose while the `cms.`
+  certificate renewal is unresolved.
+- **Step 6.** `RelatedLinks.tsx` no longer sets `role="list"` / `role="listitem"`;
+  `listitem` is not allowed on `article`, and `ul`/`li` would need 36 duplicated
+  route stylesheets rewritten.
+- Non-composited animations: no change. Six local runs found zero animated
+  elements; the report's 19 cannot be attributed without the PSI element list.
+
+**Done when:** full-page screenshots at 1440, 900 and 390 px before and after the
+purge differ by zero pixels; local `curl -I` shows both headers; the rendered
+homepage has no `role="list"` in the interlinking section; typecheck and build
+pass.
 
 ### Step 3 - CTM after hydration
 

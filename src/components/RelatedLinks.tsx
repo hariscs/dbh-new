@@ -82,11 +82,10 @@ function Cards({ cards, visibleCount }: { cards: RelatedCard[]; visibleCount: nu
   return (
     <div className="elementor-shortcode">
       <div className="cards-wrapper">
-        <div className="cards" role="list">
+        <div className="cards">
           {cards.map((card, i) => (
             <article
               className="card"
-              role="listitem"
               style={{ display: i < visibleCount ? 'block' : 'none' }}
               key={`${card.href}-${i}`}
             >
