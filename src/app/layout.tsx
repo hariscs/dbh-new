@@ -67,7 +67,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="en" className={`${montserrat.variable} ${poppins.variable} ${avenir.variable}`}>
       <head>
-      <script async src="https://224733.tctm.co/t.js" />
+      <link rel="preload" as="script" href="https://224733.tctm.co/t.js" />
       <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?ver=7.0.1" />
         <link rel="stylesheet" href="https://cdn.trustindex.io/assets/widget-presetted-css/v2/80-light-background.css" />

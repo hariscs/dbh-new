@@ -58,6 +58,20 @@ in `<head>` that commit 8e42846 dropped on 2026-08-12.
 
 - [x] Step 1 - background variants and menu card sizes
 - [x] Step 2 - GTM gate at interaction or 10 s after load; direct CTM script
+- [x] Step 3 - run CTM after hydration (fixes React #418 seen in PSI on 2026-09-17)
+
+### Step 3 - CTM after hydration
+
+The head `<script async>` from Step 2 let `t.js` rewrite phone-number text
+before React hydrated under PSI's slow-4G run, producing React error #418 and
+a full client-side regeneration of the tree (Style & Layout 624 ms, TBT still
+330 ms). The head tag is now a `<link rel="preload" as="script">` so the bytes
+still arrive early, and `CtmRouteSwap.tsx` appends the script from a mount
+effect, after hydration.
+
+**Done when:** local devtools-throttled Lighthouse shows `t.js` preloaded
+early, CTM's `p.js` beacon after hydration, and no console errors. Verified
+2026-09-17: t.js at 0.6 s, p.js at 4.8 s, TBT 157 ms, no errors.
 
 **Step 2 done when:** a local mobile Lighthouse run requests `t.js` but not
 `gtm.js` or `clarity.js`, TBT drops well under 200 ms, and in a browser GTM

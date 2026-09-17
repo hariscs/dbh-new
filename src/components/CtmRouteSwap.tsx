@@ -10,9 +10,19 @@ declare global {
 
 const RETRY_INTERVAL_MS = 250;
 const MAX_WAIT_MS = 30_000;
+const CTM_SRC = "https://224733.tctm.co/t.js";
+function loadCtm() {
+  if (document.querySelector(`script[src="${CTM_SRC}"]`)) return;
+  const s = document.createElement("script");
+  s.src = CTM_SRC;
+  s.async = true;
+  document.head.appendChild(s);
+}
 
 export default function CtmRouteSwap() {
   const pathname = usePathname();
+
+  useEffect(loadCtm, []);
 
   useEffect(() => {
     let waited = 0;
