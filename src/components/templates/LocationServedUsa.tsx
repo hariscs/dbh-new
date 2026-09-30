@@ -129,7 +129,7 @@ export default function LocationServedUsa({ fields = {}, relatedLinks }: Templat
                           </svg>
                         </span>
                         <span className="elementor-icon-list-text">
-                          In network with most major insurances
+                          Most major insurance accepted
                         </span>
                       </li>
                     </ul>
