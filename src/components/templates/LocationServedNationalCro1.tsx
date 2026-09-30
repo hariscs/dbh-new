@@ -133,7 +133,7 @@ export default function LocationServedNationalCro1({ fields = {}, relatedLinks }
                           </svg>
                         </span>
                         <span className="elementor-icon-list-text">
-                          In network with most major insurances
+                          Most major insurance accepted
                         </span>
                       </li>
                     </ul>
