@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks } from '@/components/RelatedLinks';
+import ElementorTableOfContents from '@/components/ElementorTableOfContents';
 import { formatPostCategory, formatPostDate } from "@/lib/postMeta";
 
 export default function LocationServedUsaVs(props: Record<string, string>) {
@@ -231,611 +232,120 @@ export default function LocationServedUsaVs(props: Record<string, string>) {
         </div>
         <div className="elementor-element elementor-element-3db8da9 e-con-full content-area e-flex e-con e-child">
           <div className="elementor-element elementor-element-ac45da2 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-            <div className="elementor-widget-container">
-              <h2>
-                Vyvanse or Adderall: What’s the Difference?
-              </h2>
-              <p>
-                Vyvanse and Adderall are two commonly prescribed stimulant medications for the treatment of ADHD. Both are in the same class of drugs and serve the same purpose of increasing attention, decreasing impulsivity, and assisting in day-to-day functioning. Although their intent is similar, their mechanisms of action in the body, their length of time in the body, their side effects, and their cost can all be quite different. 
-              </p>
-              <p>
-                Knowledge of these differences allows patients and caregivers to make decisions in partnership with their healthcare provider. This blog will simplify the differences between Vyvanse and Adderall by breaking them down into plain terms.
-              </p>
-              <h2>
-                <span>
-                  What Are Vyvanse and Adderall?
-                </span>
-              </h2>
-              <p>
-                Vyvanse and Adderall are both used as part of a treatment program to control symptoms of attention-deficit hyperactivity disorder in adults and children 6 years of age and older [1]. They are a category of medications that help the brain focus, control impulses, and settle down hyperactivity. 
-              </p>
-              <p>
-                Adderall is a mixed-salts formulation of amphetamine, and Vyvance is lisdexamfetamine, an “activated pro-drug” that is inert until metabolized in the body. So, Vyvanse is usually “smoother” and longer-acting, and Adderall can be more immediate. The two types are typically diagnosed based on the patient’s symptoms, lifestyle, and response to treatment.
-              </p>
-              <h3>
-                <span>
-                  Key Similarities Between the Two Medications
-                </span>
-              </h3>
-              <p>
-                Vyvanse and Adderall are similar, as both stimulant medications are prescribed to treat ADHD. They affect the brain chemicals dopamine and norepinephrine, which relate to attention, focus, and behavior inhibition. 
-              </p>
-              <p>
-                Similarities include:
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    The FDA approves both to treat ADHD in children, teens, and adults.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Both are effective in helping with focus, attention, and impulse control.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    They fall under the category of controlled substances due to “potential for abuse”.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Both can have side effects such as insomnia, loss of appetite, or dry mouth.
-                  </p>
-                </li>
-              </ul>
-              <h2>
-                <span>
-                  Vyvanse vs. Adderall Dosages
-                </span>
-              </h2>
-              <p>
-                Vyvanse and Adderall differ not only in their work but also in how they are prescribed. Vyvanse is taken once a day in the morning because it is designed to last for up to 14 hours [2]. It comes in capsule and chewable tablet forms, with strengths ranging from 10 mg to 70 mg. 
-              </p>
-              <p>
-                Adderall, on the other hand, is available in two versions: immediate-release (IR) and extended-release (XR). The IR form is typically dosed two to three times daily, while the XR requires once daily dosing. Ultimately, the physician chooses between them based on the patient’s age, symptoms, and the duration of medication effects needed during the day.
-              </p>
-              <h3>
-                <span>
-                  How Doctors Decide the Right Dosage
-                </span>
-              </h3>
-              <p>
-                <strong>
-                  Doctors will start with a low dose of Vyvanse or Adderall and titrate depending upon response. 
-                </strong>
-                The dosage is based on age, weight, general health, and severity of ADHD symptoms. They also take into account the duration of the effect during the day and the side effects. Regular appointments enable the doctors to fine-tune the dosage for each patient so that they receive maximum benefit with few side effects.
-              </p>
-              <p>
-                Key factors doctors consider include:
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    <strong>
-                      Age/ Weight:
-                    </strong>
-                     Younger patients often require smaller doses.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Severity of ADHD symptoms:
-                    </strong>
-                     If symptoms are more robust, higher doses may be necessary.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Response to treatment: 
-                    </strong>
-                    The degree to which the patient’s attention and behavior are addressed.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Side effects:
-                    </strong>
-                     dosage should be adjusted if one has trouble sleeping, or loses appetite, etc.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Other health conditions or medications: 
-                    </strong>
-                    to prevent detrimental interaction.
-                  </p>
-                </li>
-              </ul>
-              <h3>
-                <span>
-                  Immediate-Release vs. Extended-Release Options
-                </span>
-              </h3>
-              <p>
-                Adderall is available in immediate-release (IR) and extended-release (XR) forms. The IR version is fast-acting but has a duration of effect of 4-6 hours, necessitating several doses per day. The XR version also lasts longer, around 10-12 hours, making it much more practical for those requiring all-day coverage. Vyvanse, by comparison, acts like an extended-release medicine because it is designed to work gradually throughout the day.
-              </p>
-              <p>
-                Key points to know:
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    <strong>
-                      Immediate-release (IR):
-                    </strong>
-                     starts working fast but wears off sooner.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Extended-release (XR): 
-                    </strong>
-                    lasts longer, usually just one dose per day.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Vyvanse: 
-                    </strong>
-                    works like an XR option and does not come in an IR form.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Choice depends on lifestyle needs: 
-                    </strong>
-                    some patients prefer quick relief, while others need all-day support.
-                  </p>
-                </li>
-              </ul>
-              <h2>
-                <span>
-                  Vyvanse vs. Adderall Side Effects
-                </span>
-              </h2>
-              <p>
-                Both Adderall and Vyvanse are stimulants, so they may also affect similar conditions. These may range from insomnia, appetite loss, dry mouth, and increased heart rate. These medications can also make some people feel anxious, fidgety, or irritable. 
-              </p>
-              <p>
-                While Vyvanse has a steadier effect, Adderall highs and lows may feel more intense throughout the day. These medicines should generally not be used in patients with serious heart problems or for whom an increase in blood pressure or heart rate would be problematic [3]. Doctors usually check medical history and adjust treatment to reduce risks.
-              </p>
-              <h3>
-                <span>
-                  Common Side Effects Shared by Both
-                </span>
-              </h3>
-              <p>
-                Vyvanse and Adderall have most of the same side effects. The influence of these can be mild or annoying, and they are dose- and person-dependent. Side effects are usually self-limiting as the body adapts, although a few may be persistent and require medical attention.
-              </p>
-              <p>
-                Possible side effects are:
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    Difficulty sleeping or insomnia
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Loss of appetite; potential loss of weight
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Xerostomia or polydipsia
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Elevated heart rate
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Feeling nervous, restless, or anxious
-                  </p>
-                </li>
-              </ul>
-              <h2>
-                <span>
-                  Vyvanse Costs
-                </span>
-              </h2>
-              <p>
-                Vyvanse is typically also a higher cost than other ADHD medicines because it currently has no generic available. If paid out-of-pocket, the cost is several hundred dollars monthly, and prices vary by pharmacy or site. This is not out of pocket, though there may still be a copay fee, and insurance can reduce the fee. 
-              </p>
-              <p>
-                Some use patient assistance programs or coupons provided by the manufacturer to lower the cost of the medication. Physicians and pharmacists can also provide recommendations for ways to avoid or diminish costs, including checking prices at various pharmacies or looking into assistance programs.
-              </p>
-              <h3>
-                <span>
-                  Generic Availability and Alternatives
-                </span>
-              </h3>
-              <p>
-                Unlike Adderall, Vyvanse does not yet have a generic version available in the United States, which makes it more costly for many patients. Adderall is available in generic form, and this often provides a more affordable option for those managing ADHD[4]. In some cases, doctors may also recommend other stimulant or non-stimulant medications as alternatives if Vyvanse is too expensive or not well-tolerated.
-              </p>
-              <h2>
-                <span>
-                  Adderall Costs
-                </span>
-              </h2>
-              <p>
-                Adderall is typically more affordable than Vyvanse because it is sold as both a brand-name and a generic medication. About cost, the treatment is significantly cheaper in its generic form, and prices vary depending on dose, pharmacy, and insurance. Furthermore, Adderall is covered by most insurance plans, but patients might have a copay. Although without insurance, the cost remains expensive, discount programs and pharmacy savings cards can help lower these costs. It can be beneficial for patients to price check between pharmacies to ensure they are getting the best price that fits their budget.
-              </p>
-              <h3>
-                <span>
-                  Generic Versions and Cost Savings
-                </span>
-              </h3>
-              <p>
-                Adderall is available in generic form, which makes it more affordable than Vyvanse. Generic versions operate identically to the brand-named drug but generally are much less expensive. Suppose the brand name is not completely covered under their insurance plan. In that case, the generic option is often selected to minimize costs.
-              </p>
-              <h2>
-                <span>
-                  Are Vyvanse and Adderall Addictive?
-                </span>
-              </h2>
-              <p>
-                Vyvanse and Adderall can both be addictive as they are both stimulant medications that increase certain brain chemicals associated with attention and reward. They are safe and effective treatments for ADHD when used precisely as directed.
-              </p>
-              <p>
-                But, if taken in higher than prescribed dosages or taken without a prescription, it has the potential to lead to dependence or addiction. Signs of trouble can be a craving for the medication, taking the medication more than prescribed, or having a sense of need without the prescription. This is why doctors closely follow their patients and may require follow-up appointments to ensure safe use.
-              </p>
-              <h3>
-                <span>
-                  Signs of Misuse and Abuse
-                </span>
-              </h3>
-              <p>
-                Vyvanse or Adderall misuse refers to when the medication is used in a way other than how a physician instructed. They may take it more often, in larger doses, or use it without a prescription. In the long run, this results in health issues, dependence, or ultimately addiction.
-              </p>
-              <p>
-                Common signs of misuse include:
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    Needing to take additional doses for concentration or energy
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Utilizing the drug to pull all-nighters or study longer
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Finishing prescriptions sooner than anticipated
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Feeling unable to manage daily life without the drug
-                  </p>
-                </li>
-              </ul>
-              <h3>
-                <span>
-                  Safe Use Guidelines to Prevent Addiction
-                </span>
-              </h3>
-              <p>
-                Vyvanse and Adderall can be safe and effective when used exactly as prescribed. Using opioids as directed by a physician reduces the risk of misuse or addiction. Patients must not adjust their own dose without guidance, and should maintain regular follow-up with their physician. Safely storing the medication to keep others from using it is also critical.
-              </p>
-              <p>
-                Helpful safety tips include:
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    Take the medicine only as prescribed by your doctor
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Do not share your prescription with anyone else
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Avoid taking higher or extra doses for focus or energy
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Keep the medication in a secure place away from others
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Talk to your doctor if you notice side effects or cravings
-                  </p>
-                </li>
-              </ul>
-              <h2>
-                <span>
-                  Is Vyvanse Stronger Than Adderall?
-                </span>
-              </h2>
-              <p>
-                Vyvanse and Adderall are both good medications for ADHD, but they are slightly different in terms of how they function in the body. Vyvanse has been described as smoother and longer-acting, as it is a pro-drug that only becomes active once the body processes it.
-              </p>
-              <p>
-                Adderall may have a faster onset but also wears off faster, especially when compared to immediate-release versions. While some perceive that Adderall hits harder initially, others report that Vyvanse offers steadier attention levels over the day. 
-              </p>
-              <p>
-                The selection of one versus the other is patient-dependent, needs time for coverage, and depends on how the patient’s body responds to treatment. It is up to the doctors to choose which is more desirable based on the medical history and everyday life.
-              </p>
-              <h3>
-                <span>
-                  Duration of Action: Vyvanse vs. Adderall
-                </span>
-              </h3>
-              <p>
-                <strong>
-                  Vyvanse
-                </strong>
-                :
-              </p>
-              <p>
-                Vyvanse has a long duration of effect, typically 10-14 hours. Being a pro-drug, there is some time needed for it to “activate” in the body, resulting in a very smooth and consistent effect over the course of the day. One morning dose is often sufficient for most patients.
-              </p>
-              <p>
-                <strong>
-                  Adderall
-                </strong>
-                :
-              </p>
-              <p>
-                Adderall comes in two forms: immediate-release (IR) and extended-release (XR). The IR version usually lasts about 4 to 6 hours, so it may require multiple doses a day. The XR version is longer-acting and effective for 10 to 12 hours, but it may not feel as smooth as Vyvanse for some patients.
-              </p>
-              <h3>
-                <span>
-                  Patient Experiences and Effectiveness Reports
-                </span>
-              </h3>
-              <p>
-                Most patients share their personal experiences with Vyvanse and Adderall, which provide a clearer picture of each medication’s functionality in everyday life. Vyvanse is described by some as a “smoother” experience with less fluctuation. In contrast, Adderall is preferred by those who like the quicker onset and harder lift.
-              </p>
-              <p>
-                It is individual-dependent, and what works great for some may not work the same for others. These reports are taken into account by doctors, along with medical necessity, to determine the optimal treatment.
-              </p>
-              <h2>
-                <span>
-                  Vyvanse and Adderall Interactions
-                </span>
-              </h2>
-              <p>
-                Vyvanse and Adderall are two stimulant medications that are not typically prescribed to be taken at the same time. They should not be taken together as this may exacerbate symptoms such as high blood pressure, rapid heartbeat, anxiety, and/or sleep difficulty. 
-              </p>
-              <p>
-                Physicians may occasionally “switch” a patient from one drug to another; however, two are not regularly prescribed simultaneously. You must be very vigilant in informing your physician of all medicines and supplements you are taking to prevent dangerous co-administration. Anyone who experiences any unusual symptoms while taking either medication should immediately consult his or her physician.
-              </p>
-              <h2>
-                <span>
-                  FAQs
-                </span>
-              </h2>
-              <p>
-                <strong>
-                  <span>
-                    Is Vyvanse better for you than Adderall?
-                  </span>
-                </strong>
-              </p>
-              <p>
-                <span>
-                  Some people may prefer Vyvanse because it provides a smoother, longer-lasting effect, while others might choose Adderall for its immediate onset. Determining which is “better” depends on individual health needs and medical advice.
-                </span>
-              </p>
-              <p>
-                <span>
-                  D
-                </span>
-                <strong>
-                  <span>
-                    oes Vyvanse give you energy like Adderall?
-                  </span>
-                </strong>
-              </p>
-              <p>
-                <span>
-                  Both Vyvanse and Adderall can increase focus and alertness, which may be experienced as a boost in energy. However, they are not energy boosters; rather, they are prescription medications that influence brain chemistry to improve attention.
-                </span>
-              </p>
-              <p>
-                <strong>
-                  <span>
-                    Have you lost more weight on Vyvanse or Adderall?
-                  </span>
-                </strong>
-              </p>
-              <p>
-                <span>
-                  Both Vyvanse and Adderall can cause appetite suppression and, occasionally, weight loss, though the extent of this effect varies from person to person. Neither medication should be used solely for weight loss purposes.
-                </span>
-              </p>
-              <p>
-                <strong>
-                  <span>
-                    Why is Vyvanse so popular?
-                  </span>
-                </strong>
-              </p>
-              <p>
-                <span>
-                  Vyvanse is popular for several reasons: it provides a steady effect, has a lower potential for misuse, and is FDA-approved for both ADHD and binge eating disorder. Additionally, it is convenient and works effectively for many patients.
-                </span>
-              </p>
-              <h2>
-                <span>
-                  Get ADHD Treatment at District Behavioral Health
-                </span>
-              </h2>
-              <p>
-                <span>
-                  At District Behavioral Health Group, we provide evidence-based care for ADHD and related conditions. Our expert team helps patients and families navigate treatment choices like Vyvanse and Adderall with safety and confidence.
-                </span>
-              </p>
-              <p>
-                <span>
-                  Our ADHD care programs include:
-                </span>
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    <strong>
-                      <span>
-                        Comprehensive Evaluation:
-                      </span>
-                    </strong>
-                    <span>
-                       In-depth assessment to understand symptoms, lifestyle needs, and treatment options.
-                    </span>
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      <span>
-                        Medication Management:
-                      </span>
-                    </strong>
-                    <span>
-                       Safe, personalized plans for ADHD medicines, including ongoing monitoring and adjustments.
-                    </span>
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      <span>
-                        Behavioral Therapy: 
-                      </span>
-                    </strong>
-                    <span>
-                      Practical strategies to improve focus, organization, and daily functioning.
-                    </span>
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      <span>
-                        Family Support:
-                      </span>
-                    </strong>
-                    <span>
-                       Education and guidance for parents and caregivers to create supportive routines.
-                    </span>
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      <span>
-                        Long-Term Care: 
-                      </span>
-                    </strong>
-                    <span>
-                      Regular check-ins to track progress and adjust treatment as needed.
-                    </span>
-                  </p>
-                </li>
-              </ul>
-              <p>
-                <span>
-                  To explore safe and effective ADHD treatment options, call our caring team today at (888) 
-                </span>
-                <strong>
-                  <span>
-                    707-6073
-                  </span>
-                </strong>
-                <span>
-                  .
-                </span>
-              </p>
-              <p>
-                <strong>
-                  <span>
-                    Sources:
-                  </span>
-                </strong>
-              </p>
-              <p>
-                <span>
-                  [1] 
-                </span>
-                <a href="https://medlineplus.gov/druginfo/meds/a607047.html#why" target="_blank" rel="noopener noreferrer">
-                  <span>
-                    https://medlineplus.gov/druginfo/meds/a607047.html#why
-                  </span>
-                </a>
-              </p>
-              <p>
-                <span>
-                  [2] 
-                </span>
-                <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/011522s043lbl.pdf" target="_blank" rel="noopener noreferrer">
-                  <span>
-                    https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/011522s043lbl.pdf
-                  </span>
-                </a>
-              </p>
-              <p>
-                <span>
-                  [3]
-                </span>
-                <a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-safety-review-update-medications-used-treat-attention" target="_blank" rel="noopener noreferrer">
-                  <span>
-                    https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-safety-review-update-medications-used-treat-attention
-                  </span>
-                </a>
-              </p>
-              <p>
-                <span>
-                  [4] 
-                </span>
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7476499/" target="_blank" rel="noopener noreferrer">
-                  <span>
-                    https://pmc.ncbi.nlm.nih.gov/articles/PMC7476499/
-                  </span>
-                </a>
-              </p>
-              <p>
-                <span>
-                  [5] 
-                </span>
-                <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2007/011522s040lbl.pdf" target="_blank" rel="noopener noreferrer">
-                  <span>
-                    https://www.accessdata.fda.gov/drugsatfda_docs/label/2007/011522s040lbl.pdf
-                  </span>
-                </a>
-              </p>
-              <p>
-                <span>
-                  [6] 
-                </span>
-                <a href="https://www.fda.gov/safety/medical-product-safety-information/fda-updating-warnings-improve-safe-use-prescription-stimulants-used-treat-adhd-and-other-conditions" target="_blank" rel="noopener noreferrer">
-                  <span>
-                    https://www.fda.gov/safety/medical-product-safety-information/fda-updating-warnings-improve-safe-use-prescription-stimulants-used-treat-adhd-and-other-conditions
-                  </span>
-                </a>
-              </p>
-            </div>
+           <div className='elementor-widget-container'>
+            {(props.blog_section_1___head || props.blog_section_1___con) && (
+              <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+                <div className="e-con-inner">
+                  <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                    <div className="elementor-widget-container">
+                      {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
+                      {props.blog_section_1___con && (
+                        <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            {(props.blog_section_2___head || props.blog_section_2___con) && (
+              <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+                <div className="e-con-inner">
+                  <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                    <div className="elementor-widget-container">
+                      {props.blog_section_2___head && <h2>{props.blog_section_2___head}</h2>}
+                      {props.blog_section_2___con && (
+                        <div dangerouslySetInnerHTML={{ __html: props.blog_section_2___con }} />
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            {(props.blog_section_3___head || props.blog_section_3___con) && (
+              <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+                <div className="e-con-inner">
+                  <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                    <div className="elementor-widget-container">
+                      {props.blog_section_3___head && <h2>{props.blog_section_3___head}</h2>}
+                      {props.blog_section_3___con && (
+                        <div dangerouslySetInnerHTML={{ __html: props.blog_section_3___con }} />
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            {(props.blog_section_4___head || props.blog_section_4___con) && (
+              <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+                <div className="e-con-inner">
+                  <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                    <div className="elementor-widget-container">
+                      {props.blog_section_4___head && <h2>{props.blog_section_4___head}</h2>}
+                      {props.blog_section_4___con && (
+                        <div dangerouslySetInnerHTML={{ __html: props.blog_section_4___con }} />
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            {(props.blog_section_5___head || props.blog_section_5___con) && (
+              <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+                <div className="e-con-inner">
+                  <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                    <div className="elementor-widget-container">
+                      {props.blog_section_5___head && <h2>{props.blog_section_5___head}</h2>}
+                      {props.blog_section_5___con && (
+                        <div dangerouslySetInnerHTML={{ __html: props.blog_section_5___con }} />
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            {(props.blog_section_6___head || props.blog_section_6___con) && (
+              <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+                <div className="e-con-inner">
+                  <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                    <div className="elementor-widget-container">
+                      {props.blog_section_6___head && <h2>{props.blog_section_6___head}</h2>}
+                      {props.blog_section_6___con && (
+                        <div dangerouslySetInnerHTML={{ __html: props.blog_section_6___con }} />
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            {(props.blog_section_7___head || props.blog_section_7___con) && (
+              <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+                <div className="e-con-inner">
+                  <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                    <div className="elementor-widget-container">
+                      {props.blog_section_7___head && <h2>{props.blog_section_7___head}</h2>}
+                      {props.blog_section_7___con && (
+                        <div dangerouslySetInnerHTML={{ __html: props.blog_section_7___con }} />
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            {(props.blog_section_8___head || props.blog_section_8___con) && (
+              <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+                <div className="e-con-inner">
+                  <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                    <div className="elementor-widget-container">
+                      {props.blog_section_8___head && <h2>{props.blog_section_8___head}</h2>}
+                      {props.blog_section_8___con && (
+                        <div dangerouslySetInnerHTML={{ __html: props.blog_section_8___con }} />
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+           </div>
           </div>
           <div className="elementor-element elementor-element-09ec5af e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <div className="elementor-element elementor-element-48f9b88 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
@@ -943,85 +453,7 @@ export default function LocationServedUsaVs(props: Record<string, string>) {
                   </div>
                 </div>
                 <div id="elementor-toc__8fec590" className="elementor-toc__body elementor-toc__list-items--collapsible">
-                  <ol className="elementor-toc__list-wrapper">
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-0" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Vyvanse or Adderall: What’s the Difference?
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-1" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          What Are Vyvanse and Adderall?
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-2" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Vyvanse vs. Adderall Dosages
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-3" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Vyvanse vs. Adderall Side Effects
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-4" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Vyvanse Costs
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-5" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Adderall Costs
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-6" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Are Vyvanse and Adderall Addictive?
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-7" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Is Vyvanse Stronger Than Adderall?
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-8" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Vyvanse and Adderall Interactions
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-9" className="elementor-toc__list-item-text elementor-toc__top-level elementor-item-active">
-                          FAQs
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-10" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Get ADHD Treatment at District Behavioral Health
-                        </Link>
-                      </div>
-                    </li>
-                  </ol>
+                  <ElementorTableOfContents container=".content-area" />
                 </div>
               </div>
             </div>
@@ -1119,129 +551,17 @@ export default function LocationServedUsaVs(props: Record<string, string>) {
         </div>
       </div>
     </div>
-          {(props.blog_section_1___head || props.blog_section_1___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
-                {props.blog_section_1___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_2___head || props.blog_section_2___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_2___head && <h2>{props.blog_section_2___head}</h2>}
-                {props.blog_section_2___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_2___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_3___head || props.blog_section_3___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_3___head && <h2>{props.blog_section_3___head}</h2>}
-                {props.blog_section_3___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_3___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_4___head || props.blog_section_4___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_4___head && <h2>{props.blog_section_4___head}</h2>}
-                {props.blog_section_4___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_4___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_5___head || props.blog_section_5___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_5___head && <h2>{props.blog_section_5___head}</h2>}
-                {props.blog_section_5___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_5___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_6___head || props.blog_section_6___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_6___head && <h2>{props.blog_section_6___head}</h2>}
-                {props.blog_section_6___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_6___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_7___head || props.blog_section_7___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_7___head && <h2>{props.blog_section_7___head}</h2>}
-                {props.blog_section_7___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_7___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_8___head || props.blog_section_8___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_8___head && <h2>{props.blog_section_8___head}</h2>}
-                {props.blog_section_8___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_8___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      <RelatedLinks
-        variant="flat"
-        ids={{ section: '7a3a748', heading: 'b708b91', text: 'e92e876', shortcode: '51273dd' }}
-        heading="Related Blogs"
-        description="Check out our addiction recovery blog to learn more about substance use disorders and how to get effective treatment."
-        cards={[
-          { href: '/location-served/usa/lisdexamfetamine-vyvanse/withdrawal/', title: <>Vyvanse Withdrawal: Symptoms, Timeline, and Treatment</> },
-          { href: '/location-served/usa/lisdexamfetamine-vyvanse/high-dose-signs/', title: <>Signs Your Vyvanse Dose is Too High</> },
-          { href: '/location-served/usa/vs/focalin-vs-vyvanse/', title: <>Focalin vs. Adderall: Differences & Similarities</> },
-        ]}
-      />
+    <RelatedLinks
+      variant="flat"
+      ids={{ section: '7a3a748', heading: 'b708b91', text: 'e92e876', shortcode: '51273dd' }}
+      heading="Related Blogs"
+      description="Check out our addiction recovery blog to learn more about substance use disorders and how to get effective treatment."
+      cards={[
+        { href: '/location-served/usa/lisdexamfetamine-vyvanse/withdrawal/', title: <>Vyvanse Withdrawal: Symptoms, Timeline, and Treatment</> },
+        { href: '/location-served/usa/lisdexamfetamine-vyvanse/high-dose-signs/', title: <>Signs Your Vyvanse Dose is Too High</> },
+        { href: '/location-served/usa/vs/focalin-vs-vyvanse/', title: <>Focalin vs. Adderall: Differences & Similarities</> },
+      ]}
+    />
     <div className="elementor-element elementor-element-eef6312 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-90fd597 e-con-full e-flex e-con e-child">

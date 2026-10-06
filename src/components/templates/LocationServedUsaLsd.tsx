@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks } from '@/components/RelatedLinks';
+import ElementorTableOfContents from '@/components/ElementorTableOfContents';
 import { formatPostCategory, formatPostDate } from "@/lib/postMeta";
 
 export default function LocationServedUsaLsd(props: Record<string, string>) {
@@ -232,388 +233,34 @@ export default function LocationServedUsaLsd(props: Record<string, string>) {
         <div className="elementor-element elementor-element-3db8da9 e-con-full content-area e-flex e-con e-child">
           <div className="elementor-element elementor-element-ac45da2 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
             <div className="elementor-widget-container">
-              <p>
-                LSD, commonly called acid, is a powerful hallucinogenic drug that can produce profound psychological effects long after a trip ends. While it lacks the physical dependence profile of opioids or alcohol, repeated use creates psychological patterns that make stopping difficult and uncomfortable for many people.
-              </p>
-              <p>
-                This page covers what happens during LSD withdrawal, including the symptoms people experience, how long the process typically takes, and what treatment options can help someone recover safely.
-              </p>
-              <h2>
-                What Is LSD?
-              </h2>
-              <p>
-                <strong>
-                  LSD (lysergic acid diethylamide) is a synthetic hallucinogen derived from ergotamine, a compound found in ergot fungus
-                </strong>
-                . It ranks among the most potent mood-altering drugs known, producing dramatic changes in perception, thought, and emotion at doses measured in micrograms.
-              </p>
-              <p>
-                The drug primarily works by binding to serotonin receptors throughout the brain, triggering sensory distortion, emotional amplification, and altered consciousness [2]. The effects of LSD include seeing colors intensify, boundaries dissolve, and ordinary objects transform into something unrecognizable. These effects, called a trip, typically last 8 to 12 hours.
-              </p>
-              <p>
-                LSD is not considered physically addictive in the way that opioids or benzodiazepines are. The body doesn’t build physical chemical dependence that demands the drug to function normally. What it does produce is rapid tolerance, sometimes after just two or three uses in close succession, meaning that people need increasingly large doses to achieve the same effects [3]. That tolerance pattern, combined with psychological dependence, makes LSD use a genuine clinical concern.
-              </p>
-              <h2>
-                How Does LSD Cause {topic_2}?
-              </h2>
-              <p>
-                <strong>
-                  LSD isn’t physically addictive, so the mechanism behind acid withdrawal differs from what happens with alcohol or heroin. There are no seizures from sudden cessation, no sweating through sheets as the body purges toxins. The problem is psychological and neurological
-                </strong>
-                .
-              </p>
-              <p>
-                During active use, LSD floods the brain’s serotonin system. With repeated exposure, the brain begins to adjust, scaling back its sensitivity to serotonin receptors and altering the baseline activity of neural circuits involved in mood, perception, and emotional regulation. When someone stops using LSD after a period of heavy use, those same systems struggle to recalibrate.
-              </p>
-              <p>
-                The brain has learned to expect that chemical input. Without it, normal processing feels flat, confusing, or threatening. The neurological disruption that drives withdrawal symptoms of LSD is real, even if it doesn’t look like the shaking, vomiting, or physical agony associated with other drugs.
-              </p>
-              <h2>
-                Physical & Psychological LSD {topic_2} Symptoms
-              </h2>
-              <p>
-                What the withdrawal symptoms of LSD are depends heavily on how often someone used the drug and at what doses. LSD withdrawal symptoms are primarily psychological, although some physical discomfort can manifest, especially with heavy or long-term use.
-              </p>
-              <p>
-                <strong>
-                  Psychological withdrawal symptoms occur, including:
-                </strong>
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    <strong>
-                      Anxiety and panic
-                    </strong>
-                     – A persistent, sometimes overwhelming sense of dread that can spike without an obvious cause.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Depression
-                    </strong>
-                     – Emotional blunting, mood swings, hopelessness, or profound sadness that can last days or weeks.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Confusion and cognitive fog
-                    </strong>
-                     – Difficulty concentrating, processing information, or distinguishing memory from reality.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Flashbacks
-                    </strong>
-                     – Sudden, involuntary re-experiencing of previous trips. The visuals, emotions, and distorted thinking can intrude on normal daily functioning.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Depersonalization
-                    </strong>
-                     – A detached, dreamlike quality to experience, as though watching life from the outside.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Paranoia
-                    </strong>
-                     – In severe cases, people may develop paranoid thinking patterns that distort their perception of people and situations around them.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Psychosis
-                    </strong>
-                     – Rare but documented with heavy use, this involves a break from reality that mirrors symptoms of schizophrenia.
-                  </p>
-                </li>
-              </ul>
-              <p>
-                <strong>
-                  Physical withdrawal symptoms are less prominent but may include:
-                </strong>
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    Headaches.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Appetite suppression.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Fatigue and general malaise.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Insomnia and disrupted sleep architecture.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Elevated heart rate in the early days following use.
-                  </p>
-                </li>
-              </ul>
-              <p>
-                One condition that deserves particular attention is HPPD (hallucinogen-persisting perception disorder). This involves recurring visual disturbances, such as trailing effects, halos, and geometric patterns, that persist long after LSD use stops [4]. HPPD can last months or even years in some individuals and significantly impairs daily functioning.
-              </p>
-              <p>
-                It’s worth addressing a common question: Can someone die from LSD withdrawal? The physical process itself is not lethal. However, the psychological symptoms, particularly psychosis and suicidal ideation, can become life-threatening if left unmanaged. After heavy use, those who have destabilized their mental health through prolonged acid use face genuine danger during the withdrawal period. This is why professional support during LSD detox matters.
-              </p>
-              <h2>
-                LSD Effects & {topic_2} Timeline
-              </h2>
-              <p>
-                Understanding the LSD trip timeline helps clarify what withdrawal involves and why the LSD comedown can be so disorienting. Knowing how to come down off acid safely and what to expect along the way gives people a clearer picture of the recovery arc they’re entering.
-              </p>
-              <p>
-                The active trip timeline is as follows:
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    <strong>
-                      10 to 30 minutes post-ingestion
-                    </strong>
-                     – Initial euphoria, heightened sensory awareness, mild perceptual shifts.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      45 to 90 minutes
-                    </strong>
-                     – Physical effects emerge, such as elevated heart rate, dilated pupils, and possible nausea.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      60 to 90 minutes
-                    </strong>
-                     – Visual hallucinations begin, typically geometric patterns and color enhancement.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      90 minutes to 3 hours
-                    </strong>
-                     – Effects intensify toward peak. Ego dissolution, profound emotional experiences, and intense hallucinations.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      3 to 5 hours
-                    </strong>
-                     – The peak gradually softens. Reality begins reasserting itself.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      5 to 10 hours
-                    </strong>
-                     – Effects steadily diminish. Most people return to near-baseline.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      10 to 16 hours
-                    </strong>
-                     – Residual stimulant effects, emotional exhaustion, and mental fatigue.
-                  </p>
-                </li>
-              </ul>
-              <p>
-                That final phase, the LSD comedown, marks the beginning of the post-trip withdrawal experience. People often describe this as mental and physical exhaustion, difficulty feeling positive emotions, and lingering perceptual oddities. For those who use acid infrequently, this resolves within 24 to 48 hours. With regular use, the process is much more complex.
-              </p>
-              <p>
-                {topic_2} timeline for those who use the drug frequently unfolds like this:
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    <strong>
-                      Days 1 to 3
-                    </strong>
-                     – The acute phase. Anxiety runs high, sleep is poor, and emotional instability peaks. People may experience significant confusion and cognitive impairment. This is when flashbacks are most intense and frequent.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Days 4 to 7
-                    </strong>
-                     ­– Physical symptoms, such as fatigue, headaches, and appetite suppression, begin to ease. Psychological symptoms persist. Depression often deepens as the brain struggles to produce normal serotonin activity without the drug’s presence.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Week 2
-                    </strong>
-                     – Most physical discomfort has resolved. Emotional flatness, anxiety, and cognitive fog remain. Sleep patterns slowly normalize. Flashbacks may continue, although often with decreasing intensity.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Week 3 and beyond
-                    </strong>
-                     – Many individuals stabilize here. However, with heavy or long-term use, psychological symptoms, particularly anxiety, depression, and HPPD, can persist for months. Some people carry these effects for years without professional intervention.
-                  </p>
-                </li>
-              </ul>
-              <h2>
-                How Long Does LSD {topic_2} Typically Last?
-              </h2>
-              <p>
-                There is no universal detox timeline. Those using acid occasionally may experience minimal withdrawal, while someone who used high doses frequently over the years faces a much longer recovery timeline. Individual brain chemistry, mental health history, co-occurring substance use, and the presence of underlying psychiatric conditions all shape the experience.
-              </p>
-              <p>
-                For most people, the acute psychological withdrawal clears within 2 to 4 weeks. Subacute symptoms like emotional dysregulation, difficulty concentrating, and residual anxiety can linger for 1 to 3 months. HPPD sometimes requires specialized treatment that extends well beyond the initial withdrawal period.
-              </p>
-              <p>
-                Thinking of LSD withdrawal as a spectrum rather than a fixed event is a useful frame. On one end sits the person who took acid twice at concerts and feels a little flat for a few days. On the other end is someone with years of heavy use, a fragile baseline mental state, and possible HPPD. These are fundamentally different clinical pictures, and recognizing where on that spectrum a person falls guides every decision about how to approach recovery.
-              </p>
-              <h2>
-                {topic_2} Remedies & Medications
-              </h2>
-              <p>
-                There are no FDA-approved medications specifically designed for LSD withdrawal. Unlike opioid addiction, which has buprenorphine and methadone, or alcohol dependence, which has naltrexone and acamprosate, LSD detox lacks a dedicated pharmacological toolkit. That said, clinical management can still meaningfully reduce suffering and reduce risk.
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    <strong>
-                      Managing anxiety and acute distress
-                    </strong>
-                     – Benzodiazepines may be prescribed short-term to blunt severe anxiety, panic, and insomnia in the early withdrawal phase. They carry their own dependence risks, so prescribers use them cautiously and only when symptoms demand it.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Addressing persistent depression
-                    </strong>
-                     – Antidepressants, particularly SSRIs and SNRIs, can help stabilize mood during withdrawal. LSD disrupts serotonin function, so medications that support serotonergic activity provide a rational biological rationale for their use. Results vary, and these medications typically take several weeks to reach full effect.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Treating HPPD
-                    </strong>
-                     – Research is limited, but clonazepam has shown promise in clinical settings for reducing visual disturbances in people with HPPD [5]. Antipsychotic medications are sometimes used for severe cases, although some evidence suggests that certain antipsychotics may worsen HPPD in specific individuals.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Antipsychotics for severe symptoms
-                    </strong>
-                     ­– In rare cases where acid withdrawal triggers psychosis or paranoid breaks from reality, antipsychotic medications become essential. These are hospital-level interventions, not outpatient solutions.
-                  </p>
-                </li>
-              </ul>
-              <p>
-                Therapeutic interventions form the real backbone of long-term recovery. CBT (cognitive behavioral therapy) helps people identify the thought distortions that LSD use creates and builds practical coping mechanisms for managing triggers, cravings, and the psychological aftermath of heavy use. Motivational interviewing supports engagement with recovery for individuals who feel ambivalent about stopping. Group therapy provides peer accountability and reduces the isolation that often intensifies withdrawal symptoms.
-              </p>
-              <p>
-                Knowing how to come down off LSD safely means understanding that, while acid may produce withdrawal symptoms, the process is primarily psychological, and that psychological problems respond to psychological and behavioral interventions, not just medications. This is a fundamentally different recovery model than what most people picture when they think about drug detox during which people experience physical symptoms. There are no IVs, no medically supervised tapers of physical dependence. Instead, the work happens in therapy rooms, support groups, and the slow daily rebuilding of a mental landscape that LSD has reshaped. For many people, that realization is both unsettling and empowering.
-              </p>
-              <p>
-                Lifestyle factors improve overall well-being:
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    Regular exercise elevates endogenous serotonin and dopamine, supporting mood during recovery.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Consistent sleep schedules help restore circadian rhythms disrupted by LSD’s stimulant properties.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Nutrition, particularly protein, omega-3 fatty acids, and micronutrients involved in neurotransmitter synthesis, promotes neurological recovery.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Stress reduction practices like meditation and controlled breathing modulate the anxiety response that dominates early withdrawal.
-                  </p>
-                </li>
-              </ul>
-              <p>
-                Knowing how to come off acid safely ultimately means recognizing when self-managed approaches fall short. With heavy use, for those with co-occurring mental health conditions, or anyone experiencing underlying psychological factors like psychosis, suicidal ideation, or severe HPPD, professional medical supervision is essential.
-              </p>
-              <p>
-                Understanding how to recover from LSD means treating the psychological dimension with the same seriousness that physical dependence receives in other drug treatment contexts. The absence of seizures and dramatic physical symptoms doesn’t make acid detox simple. Psychological suffering is real suffering, and the neurological disruption underlying it demands a thoughtful, structured approach to care.
-              </p>
-              <p>
-                A professional LSD detox center provides the clinical assessment, medication management, and therapeutic support that make withdrawal manageable. Medical professionals can monitor for dangerous complications, adjust treatment in real time, and transition people into ongoing care that addresses the root causes of LSD use rather than just managing the symptoms of stopping. Support groups add another layer by connecting people with peers who understand what the withdrawal symptoms LSD users actually experience from the inside, which reduces shame and encourages continued engagement with recovery.
-              </p>
-              <p>
-                Knowing how to get off acid without putting yourself in danger requires honest self-assessment. If you’ve been using LSD heavily and consistently, the DIY approach can be risky. A clinical team can evaluate whether your symptoms warrant medication, identify co-occurring psychiatric conditions that might otherwise derail recovery, and build a treatment plan that extends beyond detox into the longer work of healing.
-              </p>
-              <p>
-                Recovery from LSD use is a neurological and psychological rebuilding process that takes time, patience, and often professional guidance, but it happens. People do stabilize, regain cognitive clarity, and build lives where LSD no longer has a hold.
-              </p>
-              {props.blog_section_4___con && <div dangerouslySetInnerHTML={{ __html: props.blog_section_4___con }} />}
-              <h2>
-                Sources
-              </h2>
-              <p>
-                [1] 
-                <a href="https://www.sciencedirect.com/topics/immunology-and-microbiology/lysergic-acid-diethylamide">
-                  https://www.sciencedirect.com/topics/immunology-and-microbiology/lysergic-acid-diethylamide
-                </a>
-              </p>
-              <p>
-                [2] 
-                <a href="https://www.sciencedirect.com/science/article/pii/S2772632023000338">
-                  https://www.sciencedirect.com/science/article/pii/S2772632023000338
-                </a>
-              </p>
-              <p>
-                [3] 
-                <a href="https://www.sciencedirect.com/science/chapter/edited-volume/abs/pii/B9780128002124000790">
-                  https://www.sciencedirect.com/science/chapter/edited-volume/abs/pii/B9780128002124000790
-                </a>
-              </p>
-              <p>
-                [4] 
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5870365/">
-                  https://pmc.ncbi.nlm.nih.gov/articles/PMC5870365/
-                </a>
-              </p>
-              <p>
-                [5] 
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5870365/">
-                  https://pmc.ncbi.nlm.nih.gov/articles/PMC5870365/
-                </a>
-              </p>
+              {(props.blog_section_1___head || props.blog_section_1___con) && (
+                <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+                  <div className="e-con-inner">
+                    <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                      <div className="elementor-widget-container">
+                        {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
+                        {props.blog_section_1___con && (
+                          <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {(props.blog_section_4___head || props.blog_section_4___con) && (
+                <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+                  <div className="e-con-inner">
+                    <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                      <div className="elementor-widget-container">
+                        {props.blog_section_4___head && <h2>{props.blog_section_4___head}</h2>}
+                        {props.blog_section_4___con && (
+                          <div dangerouslySetInnerHTML={{ __html: props.blog_section_4___con }} />
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
           <div className="elementor-element elementor-element-09ec5af e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -722,71 +369,7 @@ export default function LocationServedUsaLsd(props: Record<string, string>) {
                   </div>
                 </div>
                 <div id="elementor-toc__8fec590" className="elementor-toc__body elementor-toc__list-items--collapsible">
-                  <ol className="elementor-toc__list-wrapper">
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-0" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          What Is LSD?
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-1" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          How Does LSD Cause {topic_2}?
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-2" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Physical & Psychological LSD {topic_2} Symptoms
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-3" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          LSD Effects & {topic_2} Timeline
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-4" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          How Long Does LSD {topic_2} Typically Last?
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-5" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          {topic_2} Remedies & Medications
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-6" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          FAQs
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-7" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Get Treatment for LSD Addiction at District Behavioral Health Group
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-8" className="elementor-toc__list-item-text elementor-toc__top-level elementor-item-active">
-                          Sources
-                        </Link>
-                      </div>
-                    </li>
-                  </ol>
+                  <ElementorTableOfContents container=".content-area" />
                 </div>
               </div>
             </div>
@@ -884,127 +467,15 @@ export default function LocationServedUsaLsd(props: Record<string, string>) {
         </div>
       </div>
     </div>
-          {(props.blog_section_1___head || props.blog_section_1___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
-                {props.blog_section_1___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_2___head || props.blog_section_2___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_2___head && <h2>{props.blog_section_2___head}</h2>}
-                {props.blog_section_2___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_2___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_3___head || props.blog_section_3___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_3___head && <h2>{props.blog_section_3___head}</h2>}
-                {props.blog_section_3___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_3___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_4___head || props.blog_section_4___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_4___head && <h2>{props.blog_section_4___head}</h2>}
-                {props.blog_section_4___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_4___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_5___head || props.blog_section_5___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_5___head && <h2>{props.blog_section_5___head}</h2>}
-                {props.blog_section_5___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_5___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_6___head || props.blog_section_6___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_6___head && <h2>{props.blog_section_6___head}</h2>}
-                {props.blog_section_6___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_6___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_7___head || props.blog_section_7___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_7___head && <h2>{props.blog_section_7___head}</h2>}
-                {props.blog_section_7___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_7___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_8___head || props.blog_section_8___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_8___head && <h2>{props.blog_section_8___head}</h2>}
-                {props.blog_section_8___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_8___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      <RelatedLinks
-        variant="flat"
-        ids={{ section: '7a3a748', heading: 'b708b91', text: 'e92e876', shortcode: '51273dd' }}
-        heading="Related Blogs"
-        description="Check out our addiction recovery blog to learn more about substance use disorders and how to get effective treatment."
-        cards={[
-          { href: '/location-served/usa/lsd/ingredients/', title: <>How Is LSD Made?</> },
-        ]}
-      />
+    <RelatedLinks
+      variant="flat"
+      ids={{ section: '7a3a748', heading: 'b708b91', text: 'e92e876', shortcode: '51273dd' }}
+      heading="Related Blogs"
+      description="Check out our addiction recovery blog to learn more about substance use disorders and how to get effective treatment."
+      cards={[
+        { href: '/location-served/usa/lsd/ingredients/', title: <>How Is LSD Made?</> },
+      ]}
+    />
     <div className="elementor-element elementor-element-eef6312 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-90fd597 e-con-full e-flex e-con e-child">

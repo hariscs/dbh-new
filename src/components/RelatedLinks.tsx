@@ -87,7 +87,7 @@ function Cards({ cards, visibleCount }: { cards: RelatedCard[]; visibleCount: nu
             <article
               className="card"
               style={{ display: i < visibleCount ? 'block' : 'none' }}
-              key={`${card.href}-${i}`}
+              key={`rl-${i}-${card.href}`}
             >
               <Link href={card.href}>
                 <h3>
