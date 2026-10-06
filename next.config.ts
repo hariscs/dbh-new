@@ -11,6 +11,94 @@ const nextConfig: NextConfig = {
   // backlink and nearly every hardcoded internal href uses that form. Serving it
   // as canonical keeps those direct hits instead of 308 hops.
   trailingSlash: true,
+
+  // Rank Math redirects exported from WordPress (districtbehavioralhealth_rank-math-redirections
+  // CSV, 2026-10-06). WordPress owns these rules too, but this app serves the apex domain
+  // directly, so requests never reach WordPress to pick them up.
+  async redirects() {
+    return [
+      {
+        source: '/location-served/usa/adderall/',
+        destination: '/location-served/usa/adderall/how-long-in-your-system/',
+        permanent: true,
+      },
+      {
+        source: '/location-served/usa/alcohol/',
+        destination: '/location-served/usa/alcohol/how-long-in-your-system/',
+        permanent: true,
+      },
+      {
+        source: '/location-served/usa/dxm/',
+        destination: '/location-served/usa/alcohol/how-long-in-your-system/',
+        permanent: true,
+      },
+      {
+        source: '/location-served/usa/lsd/',
+        destination: '/location-served/usa/lsd/ingredients',
+        permanent: true,
+      },
+      {
+        source: '/location-served/usa/poppers/',
+        destination: '/location-served/usa/poppers/risks/',
+        permanent: true,
+      },
+      /*{
+        source: '/location-served/usa/dopamine/',
+        destination: '/location-served/usa/dopamine/benefits-&-working/',
+        permanent: true,
+      },*/
+      {
+        source: '/location-served/usa/ativan-lorazepam/',
+        destination: '/location-served/usa/ativan-lorazepam/how-long-in-your-system/',
+        permanent: true,
+      },
+      {
+        source: '/location-served/usa/vs/',
+        destination: '/location-served/usa/vs/dextroamphetamine-vs-adderall',
+        permanent: true,
+      },
+      {
+        source: '/location-served/usa/magic-mushrooms/',
+        destination: '/location-served/usa/magic-mushrooms/chocolate-bar-risks-dangers',
+        permanent: true,
+      },
+      /*{
+        source: '/location-served/usa/e-341-round-pill/',
+        destination: '/location-served/usa/e-341-round-pill/risks-&-warnings/',
+        permanent: true,
+      },*/
+      {
+        source: '/location-served/usa/mixing/',
+        destination: '/location-served/usa/mixing/risks-of-mixing-seroquel-and-alcohol',
+        permanent: true,
+      },
+      {
+        source: '/location-served/usa/e-404-orange-pill/',
+        destination: '/location-served/usa/e-404-orange-pill/uses-&-risks',
+        permanent: true,
+      },
+      {
+        source: '/location-served/usa/zoloft/',
+        destination: '/location-served/usa/zoloft/how-long-in-your-system',
+        permanent: true,
+      },
+      /*{
+        source: '/location-served/usa/lisdexamfetamine-vyvanse/',
+        destination: '/location-served/usa/lisdexamfetamine-vyvanse/uses-&-risks',
+        permanent: true,
+      },*/
+      {
+        source: '/location-served/usa/diphenhydramine-benadryl/',
+        destination: '/location-served/usa/diphenhydramine-benadryl/how-long-in-your-system',
+        permanent: true,
+      },
+      {
+        source: '/review-us/',
+        destination: 'https://g.page/r/CVhKyIaqnHCQEBM/review',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {

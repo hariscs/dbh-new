@@ -2,12 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RelatedLinks } from '@/components/RelatedLinks';
+import ElementorTableOfContents from '@/components/ElementorTableOfContents';
 import { formatPostCategory, formatPostDate } from "@/lib/postMeta";
 
 export default function LocationServedUsaZoloft(props: Record<string, string>) {
   const postDate = formatPostDate(props.createdAt);
   const postCategory = formatPostCategory(props);
-  const topic_2 = props.topic_2 ?? "Withdrawal";
   const address_county = props.address_county ?? "Orange County";
   return (
     <>
@@ -232,486 +232,118 @@ export default function LocationServedUsaZoloft(props: Record<string, string>) {
         <div className="elementor-element elementor-element-3db8da9 e-con-full content-area e-flex e-con e-child">
           <div className="elementor-element elementor-element-ac45da2 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
             <div className="elementor-widget-container">
-              <p>
-                Are you thinking about stopping Zoloft and wondering what your body and mind are in for? Zoloft withdrawal, clinically known as antidepressant discontinuation syndrome, can leave you 
-                <strong>
-                  feeling dizzy, emotionally volatile, and blindsided by sensations your body has never experienced before
-                </strong>
-                . Discontinuing antidepressant medications is a deeply personal choice, and it’s one that warrants robust support and honest information. We know the fears that tend to surface the moment that decision is made:
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    What if antidepressant withdrawal symptoms spiral out of control?
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Will my depression or anxiety come rushing back without antidepressant medications?
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    What are these strange brain zap sensations, and when will they stop?
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    How do I know if what I’m feeling is withdrawal or my mental health getting worse?
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Can I afford the help I need to do this safely?
-                  </p>
-                </li>
-              </ul>
-              <p>
-                Every one of those questions deserves a real answer. You deserve 
-                <strong>
-                  a discontinuation process that’s medically supervised, emotionally supported, and tailored to your history with the medication
-                </strong>
-                , not something you piece together from the internet at 2 a.m.
-              </p>
-              <p>
-                At District Behavioral Health Group in , we recognize that coming off Zoloft is rarely as simple as skipping a dose. Our licensed clinical team understands the neurological and emotional complexity of antidepressant withdrawal, and we build care plans that treat the whole person, not just the symptoms on paper.
-              </p>
-              <p>
-                Learn more below.
-              </p>
-              <h2>
-                Can Zoloft Be Stopped Cold Turkey?
-              </h2>
-              <p>
-                No. Stopping Zoloft cold turkey is unsafe and strongly discouraged by medical professionals. Zoloft, whose generic name is sertraline, belongs to a class of medications called SSRIs (selective serotonin reuptake inhibitors). These drugs work by increasing serotonin availability in the brain [1]. When someone takes Zoloft consistently for weeks or months, the brain recalibrates its chemistry in response to the drug’s presence. Stopping abruptly disrupts that balance without warning.
-              </p>
-              <p>
-                Sertraline is not a controlled substance, and the body doesn’t crave it the way it might crave alcohol or opioids. What happens instead is physical dependence [2]. The brain has adapted to functioning with elevated serotonin levels, and suddenly withdrawing that support can cause withdrawal symptoms. The result is what clinicians call antidepressant discontinuation syndrome, a collection of symptoms ranging from mildly uncomfortable to severe withdrawal symptoms that can be disabling.
-              </p>
-              <p>
-                Before stopping Zoloft or changing your dose, speak with your prescribing physician or psychiatrist. They can design a tapering schedule that reduces the side effects of stopping Zoloft. Antidepressant withdrawal effects tend to be much more pronounced when someone stops taking Zoloft too fast.
-              </p>
-              <h2>
-                {topic_2} Symptoms of Zoloft
-              </h2>
-              <p>
-                Zoloft withdrawal side effects can be emotional and physical. Not everyone will experience all withdrawal effects, and some people transition off the medication with minimal discomfort. Dosage, duration of use, personal brain chemistry, and how quickly the drug is tapered all influence the antidepressant withdrawal process.
-              </p>
-              <h3>
-                Emotional Symptoms
-              </h3>
-              <p>
-                The emotional side of Zoloft withdrawal can be some of the most disorienting to live through, partly because these antidepressant discontinuation symptoms resemble the very conditions Zoloft was prescribed to treat.
-              </p>
-              <p>
-                <strong>
-                  Common emotional symptoms include:
-                </strong>
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    Anxiety symptoms.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Depression symptoms.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Heightened nervousness.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Panic attacks.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Irritability and mood changes.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Difficulty concentrating.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Insomnia or disrupted sleep.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Vivid dreams.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Fatigue and emotional flatness.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Intrusive thoughts or intensified feelings of guilt.
-                  </p>
-                </li>
-              </ul>
-              <p>
-                Some people experience a surge of emotional intensity that feels disproportionate to what’s happening around them. Others feel emotionally numb or detached. These Zoloft withdrawal symptoms are temporary and do not necessarily signal that the underlying mental health condition has returned.
-              </p>
-              <h3>
-                Physical Symptoms
-              </h3>
-              <p>
-                The physical withdrawal symptoms of sertraline can be equally disruptive, resembling flu-like symptoms rather than a medication response.
-              </p>
-              <p>
-                <strong>
-                  Physical withdrawal syndrome involves:
-                </strong>
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    Nausea, vomiting, or stomach upset.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Dizziness and balance problems.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Headaches.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Brain zaps – brief, electric shock sensations in the head [3]
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Muscle aches and joint pain.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Excessive sweating.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Tremors or shakiness.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Heart palpitations.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Blurred vision.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Ringing in the ears (tinnitus).
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Changes in appetite.
-                  </p>
-                </li>
-              </ul>
-              <p>
-                Brain zaps are distinctive and alarming for people who haven’t encountered them before. They tend to worsen with rapid eye movement or sudden head turns, and while uncomfortable, they are not medically dangerous. Gradual tapering reduces their frequency and intensity.
-              </p>
-              <h2>
-                Why Does Zoloft {topic_2} Happen?
-              </h2>
-              <p>
-                Understanding the biology behind withdrawal from Zoloft makes the experience less frightening. Sertraline works by blocking the reabsorption (reuptake) of serotonin in the brain, keeping more serotonin active in the synaptic space between nerve cells. Over time, the brain treats this elevated serotonin availability as its new normal. Receptors adjust their sensitivity, and the serotonin system reconfigures itself around the medication’s presence.
-              </p>
-              <p>
-                When someone discontinues Zoloft, especially abruptly, the brain finds itself with far less serotonin activity than it has been relying on. It takes time for the system to recalibrate and begin regulating serotonin independently again. During that transition, the nervous system fires erratically, and they may begin to experience withdrawal symptoms that constitute Zoloft discontinuation syndrome.
-              </p>
-              <p>
-                Sertraline also has a relatively short half-life [4] compared to medications like fluoxetine (Prozac), which explains why stopping Zoloft tends to produce more pronounced and serious withdrawal symptoms than stopping some other SSRIs.
-              </p>
-              <h2>
-                Discontinuation vs. Relapse of Mental Health Symptoms
-              </h2>
-              <p>
-                One of the most important distinctions during the stopping Zoloft process is whether what you’re experiencing involves antidepressant withdrawal effects or a relapse. This matters enormously because the appropriate response to each is completely different.
-              </p>
-              <p>
-                Discontinuation symptoms emerge quickly, often within a few days of the last dose or a dose reduction, and typically resolve on their own within a few weeks. The most telling sign is timing: if symptoms appear shortly after changing the medication and begin improving after several days, they’re almost certainly withdrawal-related.
-              </p>
-              <p>
-                Relapse looks different. The return of depression or anxiety after coming off Zoloft tends to develop more gradually, usually weeks after the medication clears the system, and it doesn’t resolve with time alone. Relapse also mirrors the original symptom pattern more closely, rather than including the distinctly physical side effects of coming off Zoloft, like brain zaps or nausea.
-              </p>
-              <p>
-                If you’re uncertain which category your experience falls into, contact your prescriber promptly for a proper clinical assessment.
-              </p>
-              <h2>
-                How Long Does Zoloft {topic_2} Last?
-              </h2>
-              <p>
-                How long Zoloft withdrawal lasts varies widely, but most people experience symptoms for 1 to 4 weeks after their final dose. For those on lower doses for a short period, discomfort resolves within days. Others, particularly those on higher doses for extended periods, may experience weaning off Zoloft side effects that stretch for several months.
-              </p>
-              <p>
-                Several risk factors shape the duration. People on Zoloft for years tend to experience longer adjustment periods than those on it for a few months. Higher doses require slower tapering. The taper speed matters significantly. Gradual reduction produces shorter, milder withdrawal than a rapid step-down. Individual metabolism and genetics play a role, too.
-              </p>
-              <h3>
-                Zoloft {topic_2} Timeline
-              </h3>
-              <p>
-                Understanding the Zoloft withdrawal symptoms timeline helps set realistic expectations. Many people ask what happens when you stop taking Zoloft, and the answer depends heavily on the tapering process. Your doctor will reduce the sertraline dose in small increments every 1 to 2 weeks, depending on your starting dose and how your body responds. This gradual approach allows the brain to adjust steadily rather than be subjected to a sudden drop.
-              </p>
-              <p>
-                After the final sertraline dose, symptoms may begin within 2 to 4 days. Nausea, brain zaps, and mood shifts tend to surface during this window and reach their highest intensity before gradually easing. By weeks 2 to 4, most people notice significant improvement. Physical symptoms typically resolve first, while sleep disruption, depression, and anxiety may linger a bit longer.
-              </p>
-              <h3>
-                When Does Zoloft {topic_2} Peak?
-              </h3>
-              <p>
-                Zoloft withdrawal symptoms peak between 36 and 96 hours after the last dose or a significant dose reduction. This is the window where most people feel the worst of their physical symptoms, such as nausea, dizziness, and brain zaps. After peaking, symptoms generally begin a gradual decline, although the pace differs from person to person. For some, the descent is swift and smooth. For others, it’s more of a slow fade over 2 to 6 weeks.
-              </p>
-              <h2>
-                How to Cope with Zoloft {topic_2}
-              </h2>
-              <p>
-                Managing withdrawal from Zoloft effectively requires more than waiting it out. Active strategies make the process substantially more tolerable.
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    <strong>
-                      Work with your healthcare provider throughout the
-                    </strong>
-                    <strong>
-                      process
-                    </strong>
-                     – Your prescriber can slow the taper if symptoms become unmanageable, adjust medications, or recommend treatments for specific symptoms. Regular check-ins during weaning off Zoloft keep problems from escalating.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Keep your schedule consistent
-                    </strong>
-                     – Eat at regular times, maintain a consistent sleep schedule, and build movement into each day. Even a 20-minute walk can measurably improve mood and reduce anxiety.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Stay connected
-                    </strong>
-                     –Emotional symptoms make isolation feel appealing, but isolation amplifies them. Tell someone you trust what you’re going through. A partner, friend, or therapist provides support through the harder days.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Monitor your emotional state closely
-                    </strong>
-                     – Keep a brief daily log of symptoms, mood, and sleep. This gives you and your prescriber concrete data and helps distinguish a rough patch from a pattern that warrants intervention.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Practice intentional stress management
-                    </strong>
-                     – Mindfulness, breathing exercises, and gentle yoga help regulate the nervous system during this period. They reduce the overall burden of coming off sertraline without replacing medical management.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Avoid alcohol and stimulants
-                    </strong>
-                     – Both worsen side effects of coming off Zoloft and complicate the brain’s rebalancing process. This isn’t the time to stress-test your system.
-                  </p>
-                </li>
-              </ul>
-              <h2>
-                How to Come off Zoloft Safely
-              </h2>
-              <p>
-                The safest approach to stopping this SSRI antidepressant follows a few consistent principles that apply regardless of your specific situation.
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    <strong>
-                      Never stop without medical guidance
-                    </strong>
-                     – The urge to simply stop, especially when the medication’s side effects become frustrating, is understandable. Stopping the medication abruptly risks severe withdrawal, though. In vulnerable individuals, it can trigger a destabilizing relapse. Your prescriber is a necessary partner in this process.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Commit to a slow taper
-                    </strong>
-                     – The standard approach involves reducing the dose in small increments over weeks to months. Some people taper over 4 weeks. Others with longer treatment histories may need several months. Slower is almost always better when weaning off Zoloft.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Consider the switch option
-                    </strong>
-                     – When coming off Zoloft feels awful despite a careful taper, a situation many describe as coming off sertraline feels awful, doctors sometimes switch patients temporarily to fluoxetine. This plan considers your medical history, the duration and dosage of your Zoloft treatment, and any other factors unique to your health profile. If you’re wondering what happens if you stop taking Zoloft too quickly, this is exactly the scenario they’re trying to prevent. Because fluoxetine has a much longer half-life, it causes fewer discontinuation symptoms, allowing patients to discontinue the medication more easily.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Engage ongoing mental health support
-                    </strong>
-                     – Therapy during this period can help you process emotional turbulence, build coping tools, and monitor for genuine signs of relapse. CBT (cognitive behavioral therapy), a form of talk therapy, has a strong evidence base for supporting antidepressant transitions.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Give yourself time
-                    </strong>
-                     – The brain heals and the body adjusts incrementally. Recovery from withdrawal isn’t perfectly linear, but it does progress consistently. Most people come through Zoloft withdrawal without lasting effects, but patience is non-negotiable.
-                  </p>
-                </li>
-              </ul>
-              <h2>
-                FAQs
-              </h2>
-              <h3>
-                What is Zoloft used for?
-              </h3>
-              <p>
-                Zoloft (sertraline) is used to treat depression and major depressive disorder, obsessive compulsive disorder, anxiety disorders such as panic disorder, generalized anxiety disorder, and social anxiety disorder, PTSD (post-traumatic stress disorder), PMDD (premenstrual dysphoric disorder), and other mood disorders.
-              </p>
-              <h3>
-                What happens if you stop taking Zoloft cold turkey?
-              </h3>
-              <p>
-                Stopping Zoloft abruptly can trigger antidepressant discontinuation syndrome involving nausea, dizziness, brain zaps, and mood instability. In some individuals, abrupt cessation also raises the risk of relapse. Always consult your prescriber before stopping.
-              </p>
-              <h3>
-                What is the hardest antidepressant to come off of?
-              </h3>
-              <p>
-                SSRIs and SNRIs with shorter half-lives tend to produce the most intense discontinuation symptoms. Paroxetine (Paxil) and venlafaxine (Effexor) are frequently cited as the most difficult to taper. Sertraline sits in the middle. It’s easier than paroxetine for most, but more challenging than long-acting fluoxetine.
-              </p>
-              <h3>
-                How long until withdrawal symptoms from Zoloft?
-              </h3>
-              <p>
-                Most people begin noticing Zoloft withdrawal symptoms within 2 to 4 days of stopping or significantly reducing their dose, with symptoms peaking between 36 and 96 hours after the last dose.
-              </p>
-              <h3>
-                What does coming off Zoloft feel like?
-              </h3>
-              <p>
-                Coming off Zoloft commonly produces dizziness, nausea, brain zaps, mood swings, and a flu-like malaise. Some people describe emotional rawness or heightened sensitivity. These sensations are temporary and improve steadily with time.
-              </p>
-              <h3>
-                Can I just stop 50mg of sertraline?
-              </h3>
-              <p>
-                Stopping 50mg of sertraline without tapering is not recommended. Even at a relatively low dose, the brain has adapted to the medication’s presence, and abrupt discontinuation can cause withdrawal symptoms. Talk to your doctor about a brief step-down plan.
-              </p>
-              <h3>
-                How long until Zoloft is completely out of your system?
-              </h3>
-              <p>
-                Sertraline has a half-life of approximately 26 hours, and full elimination typically occurs within 4 to 6 days of the last dose. However, the brain continues adjusting for weeks after the drug has cleared.
-              </p>
-              <h3>
-                What happens if I don’t take sertraline for 2 days?
-              </h3>
-              <p>
-                Missing 2 consecutive doses of sertraline may trigger early withdrawal symptoms for some people, such as dizziness, irritability, nausea, and brain zaps, particularly after extended use. Contact your prescriber rather than restarting your dose without guidance.
-              </p>
-              <h2>
-                Get Treatment for Antidepressant Discontinuation Syndrome and Mental Health Conditions at District Behavioral Health Group
-              </h2>
-              <p>
-                We deliver effective, evidence-based treatment for antidepressant withdrawal and addiction at District Behavioral Health Group. Get care across the full continuum via our nationwide network of treatment providers.
-              </p>
-              <p>
-                Our comprehensive programming includes:
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    <strong>
-                      Medical detox
-                    </strong>
-                     – Supervised antidepressant withdrawal with a tapered reduction in dose under close medical supervision.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Crisis intervention and stabilization
-                    </strong>
-                     – Emotional support to help individuals in crisis restore safety and functioning.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      Inpatient and residential programs
-                    </strong>
-                     – 24/7 residential treatment, with tailored therapies, structured routines, and medical support in a setting with no distractions or triggers.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      PHP (partial hospitalization programs)
-                    </strong>
-                     – Full-time day treatment programs, providing individualized therapies and customized support.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      IOP (intensive outpatient programs)
-                    </strong>
-                     – Part-time day treatment programs, offering structure and accountability while you continue meeting your personal and professional commitments.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>
-                      OP (outpatient programs)
-                    </strong>
-                     ­– Ongoing outpatient treatment to help your transition from substance abuse to independent living.
-                  </p>
-                </li>
-              </ul>
-              <p>
-                Find out more about our addiction and mental health treatment programs by contacting our admissions team at 
-                <Link href="tel:888-995-4208">
-                  <strong>
-                    888-995-4208
-                  </strong>
-                </Link>
-                .
-              </p>
-              {props.blog_section_4___con && <div dangerouslySetInnerHTML={{ __html: props.blog_section_4___con }} />}
+              {(props.blog_section_1___head || props.blog_section_1___con) && (
+        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+          <div className="e-con-inner">
+            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+              <div className="elementor-widget-container">
+                {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
+                {props.blog_section_1___con && (
+                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+              )}
+              {(props.blog_section_2___head || props.blog_section_2___con) && (
+                <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+                  <div className="e-con-inner">
+                    <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                      <div className="elementor-widget-container">
+                        {props.blog_section_2___head && <h2>{props.blog_section_2___head}</h2>}
+                        {props.blog_section_2___con && (
+                          <div dangerouslySetInnerHTML={{ __html: props.blog_section_2___con }} />
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {(props.blog_section_3___head || props.blog_section_3___con) && (
+                <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+                  <div className="e-con-inner">
+                    <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                      <div className="elementor-widget-container">
+                        {props.blog_section_3___head && <h2>{props.blog_section_3___head}</h2>}
+                        {props.blog_section_3___con && (
+                          <div dangerouslySetInnerHTML={{ __html: props.blog_section_3___con }} />
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {(props.blog_section_4___head || props.blog_section_4___con) && (
+                <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+                  <div className="e-con-inner">
+                    <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                      <div className="elementor-widget-container">
+                        {props.blog_section_4___head && <h2>{props.blog_section_4___head}</h2>}
+                        {props.blog_section_4___con && (
+                          <div dangerouslySetInnerHTML={{ __html: props.blog_section_4___con }} />
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {(props.blog_section_5___head || props.blog_section_5___con) && (
+                <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+                  <div className="e-con-inner">
+                    <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                      <div className="elementor-widget-container">
+                        {props.blog_section_5___head && <h2>{props.blog_section_5___head}</h2>}
+                        {props.blog_section_5___con && (
+                          <div dangerouslySetInnerHTML={{ __html: props.blog_section_5___con }} />
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {(props.blog_section_6___head || props.blog_section_6___con) && (
+                <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+                  <div className="e-con-inner">
+                    <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                      <div className="elementor-widget-container">
+                        {props.blog_section_6___head && <h2>{props.blog_section_6___head}</h2>}
+                        {props.blog_section_6___con && (
+                          <div dangerouslySetInnerHTML={{ __html: props.blog_section_6___con }} />
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {(props.blog_section_7___head || props.blog_section_7___con) && (
+                <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+                  <div className="e-con-inner">
+                    <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                      <div className="elementor-widget-container">
+                        {props.blog_section_7___head && <h2>{props.blog_section_7___head}</h2>}
+                        {props.blog_section_7___con && (
+                          <div dangerouslySetInnerHTML={{ __html: props.blog_section_7___con }} />
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {(props.blog_section_8___head || props.blog_section_8___con) && (
+                <div className="elementor-element e-flex e-con-boxed e-con e-parent">
+                  <div className="e-con-inner">
+                    <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+                      <div className="elementor-widget-container">
+                        {props.blog_section_8___head && <h2>{props.blog_section_8___head}</h2>}
+                        {props.blog_section_8___con && (
+                          <div dangerouslySetInnerHTML={{ __html: props.blog_section_8___con }} />
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
           <div className="elementor-element elementor-element-09ec5af e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -820,78 +452,7 @@ export default function LocationServedUsaZoloft(props: Record<string, string>) {
                   </div>
                 </div>
                 <div id="elementor-toc__8fec590" className="elementor-toc__body elementor-toc__list-items--collapsible">
-                  <ol className="elementor-toc__list-wrapper">
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-0" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Can Zoloft Be Stopped Cold Turkey?
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-1" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          {topic_2} Symptoms of Zoloft
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-2" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Why Does Zoloft {topic_2} Happen?
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-3" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Discontinuation vs. Relapse of Mental Health Symptoms
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-4" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          How Long Does Zoloft {topic_2} Last?
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-5" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          How to Cope with Zoloft {topic_2}
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-6" className="elementor-toc__list-item-text elementor-toc__top-level elementor-item-active">
-                          How to Come off Zoloft Safely
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-7" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          FAQs
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-8" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Get Treatment for Antidepressant Discontinuation Syndrome and Mental Health Conditions at District Behavioral Health Group
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="elementor-toc__list-item">
-                      <div className="elementor-toc__list-item-text-wrapper">
-                        <Link href="#elementor-toc__heading-anchor-9" className="elementor-toc__list-item-text elementor-toc__top-level">
-                          Sources
-                        </Link>
-                      </div>
-                    </li>
-                  </ol>
+                  <ElementorTableOfContents container=".content-area" />
                 </div>
               </div>
             </div>
@@ -989,128 +550,17 @@ export default function LocationServedUsaZoloft(props: Record<string, string>) {
         </div>
       </div>
     </div>
-          {(props.blog_section_1___head || props.blog_section_1___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_1___head && <h2>{props.blog_section_1___head}</h2>}
-                {props.blog_section_1___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_1___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_2___head || props.blog_section_2___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_2___head && <h2>{props.blog_section_2___head}</h2>}
-                {props.blog_section_2___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_2___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_3___head || props.blog_section_3___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_3___head && <h2>{props.blog_section_3___head}</h2>}
-                {props.blog_section_3___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_3___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_4___head || props.blog_section_4___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_4___head && <h2>{props.blog_section_4___head}</h2>}
-                {props.blog_section_4___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_4___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_5___head || props.blog_section_5___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_5___head && <h2>{props.blog_section_5___head}</h2>}
-                {props.blog_section_5___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_5___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_6___head || props.blog_section_6___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_6___head && <h2>{props.blog_section_6___head}</h2>}
-                {props.blog_section_6___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_6___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_7___head || props.blog_section_7___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_7___head && <h2>{props.blog_section_7___head}</h2>}
-                {props.blog_section_7___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_7___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {(props.blog_section_8___head || props.blog_section_8___con) && (
-        <div className="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div className="e-con-inner">
-            <div className="elementor-element elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-              <div className="elementor-widget-container">
-                {props.blog_section_8___head && <h2>{props.blog_section_8___head}</h2>}
-                {props.blog_section_8___con && (
-                  <div dangerouslySetInnerHTML={{ __html: props.blog_section_8___con }} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      <RelatedLinks
-        variant="flat"
-        ids={{ section: '7a3a748', heading: 'b708b91', text: 'e92e876', shortcode: '51273dd' }}
-        heading="Related Blogs"
-        description="Check out our addiction recovery blog to learn more about substance use disorders and how to get effective treatment."
-        lazyloaded={false}
-        cards={[
-          { href: '/location-served/usa/zoloft/how-long-in-your-system/', title: <>How Long Does Zoloft Stay in Your System?</> },
-        ]}
-      />
+      
+    <RelatedLinks
+      variant="flat"
+      ids={{ section: '7a3a748', heading: 'b708b91', text: 'e92e876', shortcode: '51273dd' }}
+      heading="Related Blogs"
+      description="Check out our addiction recovery blog to learn more about substance use disorders and how to get effective treatment."
+      lazyloaded={false}
+      cards={[
+        { href: '/location-served/usa/zoloft/how-long-in-your-system/', title: <>How Long Does Zoloft Stay in Your System?</> },
+      ]}
+    />
     <div className="elementor-element elementor-element-eef6312 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-90fd597 e-con-full e-flex e-con e-child">
