@@ -35,7 +35,7 @@ export const dynamicParams = true;
 // If this drifts the only cost is prerendering — an unlisted page still renders on demand.
 const ROUTED_SEGMENTS = new Set([
   "alumni-rehab-program", "api", "authors", "blogs", "bu-review-counts",
-  "client-outcomes-page-dev", "contact-us", "difference", "elementor-656", "facility",
+  "client-outcomes-page-dev", "contact-us", "difference", "drug-index", "elementor-656", "facility",
   "location-served", "meet-the-team", "newsroom", "our-facilities", "our_locations",
   "ppc", "privacy-policy", "quiz", "rehab-admission", "review-us", "reviews", "terms-of-service",
   "thank-you",

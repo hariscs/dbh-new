@@ -52,7 +52,7 @@ const decodeEntities = (s: string) =>
     .replace(/&#8211;/g, "–")
     .replace(/&#8212;/g, "—")
     .replace(/&nbsp;/g, " ")
-    .replace(/&amp;/g, "&");
+    .replace(/&#0?38;|&amp;/g, "&");
 
 const toRelative = (link: string) => {
   try {
@@ -189,6 +189,50 @@ export async function fetchBlogs(
     return { blogs, totalPages };
   } catch {
     return { blogs: [], totalPages: 1 };
+  }
+}
+
+/* ── Drug index glossary ──────────────────────────────────────────────────── */
+
+export type DrugIndexItem = { href: string; title: string };
+
+// Public, unauthenticated endpoint — bounded the same way as the other per-request
+// WordPress calls (fetchInterlinking's INTERLINKING_TIMEOUT_MS, fetchMenu's
+// MENU_TIMEOUT_MS) so a slow WordPress degrades instead of holding the request open.
+const DRUG_INDEX_TIMEOUT_MS = Number(process.env.WORDPRESS_DRUG_INDEX_TIMEOUT_MS ?? "5000");
+
+const DRUG_INDEX_LINK_RE = /<a class="index-glossary__link" href="([^"]+)">([\s\S]*?)<\/a>/g;
+
+function parseDrugIndexItems(html: string): DrugIndexItem[] {
+  const items: DrugIndexItem[] = [];
+  for (const match of html.matchAll(DRUG_INDEX_LINK_RE)) {
+    const title = decodeEntities(stripTags(match[2])).trim();
+    if (!title) continue;
+    items.push({ href: toRelative(match[1]), title });
+  }
+  return items;
+}
+
+/**
+ * One letter's worth of drug-index glossary links, from the `builder/v1/drug-index`
+ * REST endpoint (`?di=<letter>`). Returns `[]` for a letter with no matches, `null`
+ * only when the request itself failed, so callers can tell "nothing starts with Q"
+ * apart from "WordPress is down."
+ */
+export async function fetchDrugIndexLetter(letter: string): Promise<DrugIndexItem[] | null> {
+  const upper = letter.trim().toUpperCase();
+  if (!/^[A-Z]$/.test(upper)) return null;
+  try {
+    const res = await fetch(
+      `${WORDPRESS_URL}/wp-json/builder/v1/drug-index?di=${encodeURIComponent(upper)}`,
+      { signal: AbortSignal.timeout(DRUG_INDEX_TIMEOUT_MS) }
+    );
+    if (!res.ok) return null;
+    const payload = (await res.json()) as { success?: boolean; data?: { html?: string } };
+    if (!payload?.success || typeof payload.data?.html !== "string") return null;
+    return parseDrugIndexItems(payload.data.html);
+  } catch {
+    return null;
   }
 }
 
