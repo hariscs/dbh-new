@@ -711,7 +711,7 @@ body.rtl .elementor-107941 .elementor-element.elementor-element-a35fc9c { left: 
 body:not(.rtl) .elementor-108125 .elementor-element.elementor-element-e9d3fce { right: 16px; }
 body.rtl .elementor-108125 .elementor-element.elementor-element-e9d3fce { left: 16px; }
 #button-wrapper { margin-top: 30px; text-align: center; }
-#button-wrapper button { font-family: var(--font-montserrat), sans-serif; cursor: pointer; background: rgb(255, 255, 255); color: rgb(39, 63, 82); font-weight: 700; border: none; border-radius: 200px; padding: 10px 20px; }
+#button-wrapper button { font-family: var(--font-montserrat), sans-serif; cursor: pointer; background: rgb(255, 255, 255); color: rgb(39, 63, 82); font-weight: 700; border: none; border-radius: 100px; padding: 10px 20px; }
 .elementor-element-featured-blogs { --display: flex; --flex-direction: column; --container-widget-width: 100%; --flex-wrap-mobile: wrap; --gap: 48px 48px; --row-gap: 48px; --column-gap: 48px; --padding-top: 40px; --padding-bottom: 80px; --padding-left: 20px; --padding-right: 20px; margin-top: -2px; }
 .elementor-element-featured-blogs:not(.elementor-motion-effects-element-type-background) { background-color: transparent; background-image: linear-gradient(92deg, var( --e-global-color-primary ) 0%, #6C8294 100%); }
 .elementor-element-featured-blogs-heading { text-align: center; }
