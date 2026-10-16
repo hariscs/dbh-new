@@ -688,6 +688,10 @@
 article.card { background: white; padding: 14px 10px; box-shadow: rgba(0, 0, 0, 0.13) 0px 0px 10px; border-radius: 10px; transition: transform 0.2s, box-shadow 0.2s; display: flex; justify-content: center; align-items: center; height: 100%; }
 article.card:hover { transform: translateY(-4px); box-shadow: rgba(0, 0, 0, 0.12) 0px 10px 28px; }
 article.card a { text-decoration: none; color: inherit; }
+article.card{ max-height:96px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(7.5px);display:flex;padding:24px 16px;justify-content:center;align-items:center;gap:32px;flex:1 0 0;transition:.3s }
+article.card a{ font-family:Poppins,sans-serif;color:#fff;text-align:center;font-size:16px;font-style:normal;font-weight:600;line-height:24px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden }
+article.card:hover{ background:#fff }
+article.card:hover a{ color:#2e6aa1 }
 article.card h3 { margin: 0px; font-weight: 500; font-size: 16px; text-align: center; font-family: var(--font-montserrat), sans-serif; }
 @media (max-width: 1025px) {.cards { grid-template-columns: repeat(2, 1fr); }}
 @media (max-width: 700px) {.cards { height: 217px; overflow: auto; grid-template-columns: repeat(1, 1fr); }
@@ -756,6 +760,7 @@ button:focus, button:hover{ outline: none !important; box-shadow: none; border: 
 }
 @media(max-width: 480px){ .elementor-75 { width:100%; overflow:hidden } }@media (max-width: 1024px) {
   .elementor-11 .elementor-element.elementor-element-0fab87b:not(.elementor-motion-effects-element-type-background), .elementor-11 .elementor-element.elementor-element-0fab87b > .elementor-motion-effects-container > .elementor-motion-effects-layer { background-image: url("/images/d61e008e7716fcc7d92b35a3249568f7-1440.webp"); }
+  article.card h3 { font-size:14px }
 }
 @media (max-width: 767px) {
   .elementor-11 .elementor-element.elementor-element-0fab87b:not(.elementor-motion-effects-element-type-background), .elementor-11 .elementor-element.elementor-element-0fab87b > .elementor-motion-effects-container > .elementor-motion-effects-layer { background-image: url("/images/d61e008e7716fcc7d92b35a3249568f7-1024.webp"); }
