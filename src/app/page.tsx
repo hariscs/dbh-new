@@ -20,7 +20,7 @@ export default async function Page() {
   return (
     <>
       <Header />
-      <Home relatedLinks={relatedLinks} />
+      <Home relatedLinks={relatedLinks.mainPages} relatedBlogs={relatedLinks.blogPages} />
     </>
   );
 }

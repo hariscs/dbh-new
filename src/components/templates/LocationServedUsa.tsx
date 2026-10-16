@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 import { resolvePhone } from "@/lib/phone";
 
-export default function LocationServedUsa({ fields = {}, relatedLinks }: TemplateProps) {
+export default function LocationServedUsa({ fields = {}, relatedLinks, relatedBlogs }: TemplateProps) {
   const { phone, telHref } = resolvePhone(fields);
   const props = fields;
   const geo = props.geo ?? "National";
@@ -1856,6 +1856,12 @@ export default function LocationServedUsa({ fields = {}, relatedLinks }: Templat
         { href: '/location-served/usa/ca/huntington-beach/sober-living/', title: <>Huntington Beach {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
         { href: '/location-served/usa/ca/fountain-valley/sober-living/', title: <>Fountain Valley {topic_1} {topic_2} (Substance Abuse Treatment & Intervention)</> },
       ]}
+    />
+    <RelatedLinks
+      variant="flat"
+      ids={{ section: 'featured-blogs', heading: 'featured-blogs-heading', shortcode: 'featured-blogs-shortcode' }}
+      heading="Featured Blogs"
+      cards={relatedBlogs ?? []}
     />
     <div className="elementor-element elementor-element-1d21950 e-flex e-con-boxed e-con e-parent" id="verifyinsurance" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
       <div className="e-con-inner">

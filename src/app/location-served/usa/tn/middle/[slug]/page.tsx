@@ -50,7 +50,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   return (
     <>
       <Header fields={data.fields} />
-      <LocationServedUsaTnMiddle fields={data.fields} relatedLinks={relatedLinks} />
+      <LocationServedUsaTnMiddle fields={data.fields} relatedLinks={relatedLinks.mainPages} relatedBlogs={relatedLinks.blogPages} />
     </>
   );
 }

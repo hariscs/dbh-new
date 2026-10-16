@@ -106,7 +106,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string[
       <LocationServedByTemplate
         fields={data.fields}
         createdAt={data.meta.createdAt}
-        relatedLinks={relatedLinks}
+        relatedLinks={relatedLinks.mainPages} relatedBlogs={relatedLinks.blogPages}
       />
     </>
   );
