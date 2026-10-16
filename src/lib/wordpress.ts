@@ -105,6 +105,13 @@ export async function fetchAllPageLinks(): Promise<PageLink[] | null> {
 
 export type InterlinkItem = { href: string; title: string };
 
+export type InterlinkData = {
+  mainPages: InterlinkItem[] | null;
+  blogPages: InterlinkItem[] | null;
+};
+
+const EMPTY_INTERLINK_DATA: InterlinkData = { mainPages: null, blogPages: null };
+
 // WordPress leaves the raw Yoast/SEO `%sitename%` token in some interlinking titles
 // (e.g. "%sitename% | Borderline Personality Disorder Treatment ..."), so substitute
 // the real site name rather than shipping the placeholder to the page.
@@ -117,45 +124,52 @@ const SITE_NAME = process.env.WORDPRESS_SITE_NAME ?? "District Behavioral Health
 // that one returning null triggers notFound(), so a timeout there would serve a 404.
 const INTERLINKING_TIMEOUT_MS = Number(process.env.WORDPRESS_INTERLINKING_TIMEOUT_MS ?? "5000");
 
+function parseInterlinkEntries(entries: unknown): InterlinkItem[] | null {
+  if (!Array.isArray(entries)) return null;
+  const seen = new Set<string>();
+  const items: InterlinkItem[] = [];
+  for (const entry of entries as Array<{ link?: string; title?: string }>) {
+    if (!entry?.link || !entry?.title) continue;
+    const href = toRelative(entry.link);
+    if (seen.has(href)) continue; // the feed repeats a link on some pages
+    const title = decodeEntities(stripTags(entry.title))
+      .replace(/%sitename%/gi, SITE_NAME)
+      .trim();
+    if (!title) continue;
+    seen.add(href);
+    items.push({ href, title });
+  }
+  return items.length ? items : null;
+}
+
 /**
  * Interlinking cards for a page, from the RRIL plugin.
  *
  * The endpoint takes the page's full WordPress path — including the slug, so
  * `location-served/usa/ca` 404s where `location-served/usa/ca/drug-rehab` resolves —
- * and returns a flat `[{ link, title }]` array with absolute URLs and encoded entities.
+ * and returns `{ main_pages: [{ link, title }], blog_pages: [{ link, title }] }` with
+ * absolute URLs and encoded entities.
  *
- * Returns `null` (not `[]`) whenever there is nothing usable, so callers can fall
+ * Each list is `null` (not `[]`) whenever there is nothing usable, so callers can fall
  * back to their hardcoded cards instead of rendering an empty section.
  */
-export async function fetchInterlinking(path: string): Promise<InterlinkItem[] | null> {
-  if (!path) return null;
+export async function fetchInterlinking(path: string): Promise<InterlinkData> {
+  if (!path) return EMPTY_INTERLINK_DATA;
   const encoded = path.split("/").filter(Boolean).map(encodeURIComponent).join("/");
-  if (!encoded) return null;
+  if (!encoded) return EMPTY_INTERLINK_DATA;
   try {
     const res = await fetch(`${WORDPRESS_URL}/wp-json/rril/v1/interlinking/${encoded}`, {
       next: { revalidate: REVALIDATE },
       signal: AbortSignal.timeout(INTERLINKING_TIMEOUT_MS),
     });
-    if (!res.ok) return null;
-    const data = await res.json();
-    if (!Array.isArray(data)) return null;
-
-    const seen = new Set<string>();
-    const items: InterlinkItem[] = [];
-    for (const entry of data as Array<{ link?: string; title?: string }>) {
-      if (!entry?.link || !entry?.title) continue;
-      const href = toRelative(entry.link);
-      if (seen.has(href)) continue; // the feed repeats a link on some pages
-      const title = decodeEntities(stripTags(entry.title))
-        .replace(/%sitename%/gi, SITE_NAME)
-        .trim();
-      if (!title) continue;
-      seen.add(href);
-      items.push({ href, title });
-    }
-    return items.length ? items : null;
+    if (!res.ok) return EMPTY_INTERLINK_DATA;
+    const data = (await res.json()) as { main_pages?: unknown; blog_pages?: unknown };
+    return {
+      mainPages: parseInterlinkEntries(data?.main_pages),
+      blogPages: parseInterlinkEntries(data?.blog_pages),
+    };
   } catch {
-    return null;
+    return EMPTY_INTERLINK_DATA;
   }
 }
 

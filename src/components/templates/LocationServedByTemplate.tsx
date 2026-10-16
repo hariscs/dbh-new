@@ -19,6 +19,7 @@ type TemplateContext = {
   fields: Record<string, string>;
   createdAt?: string;
   relatedLinks?: RelatedCard[] | null;
+  relatedBlogs?: RelatedCard[] | null;
 };
 
 /**
@@ -41,16 +42,16 @@ type TemplateContext = {
  */
 const TEMPLATES: Record<string, (ctx: TemplateContext) => ReactElement> = {
   // "CRO1, National (Rehab)" — sober-living, drug-rehab, iop-drug-rehab, ...
-  "cro1|national (rehab)": ({ fields, relatedLinks }) => (
-    <LocationServedNationalCro1 fields={fields} relatedLinks={relatedLinks} />
+  "cro1|national (rehab)": ({ fields, relatedLinks, relatedBlogs }) => (
+    <LocationServedNationalCro1 fields={fields} relatedLinks={relatedLinks} relatedBlogs={relatedBlogs} />
   ),
   // "Blog, CRO1" — this template's section is "Related Blogs", which stays hardcoded
   "blog|cro1": ({ fields, createdAt }) => (
     <LocationServedUsaAlcohol {...fields} createdAt={createdAt ?? ""} />
   ),
   // "CRO2, National (Rehab)" — anxiety, depression, ptsd, mat-therapy, ...
-  "cro2|national (rehab)": ({ fields, relatedLinks }) => (
-    <LocationServedNationalCro2 fields={fields} relatedLinks={relatedLinks} />
+  "cro2|national (rehab)": ({ fields, relatedLinks, relatedBlogs }) => (
+    <LocationServedNationalCro2 fields={fields} relatedLinks={relatedLinks} relatedBlogs={relatedBlogs} />
   ),
 };
 
@@ -69,11 +70,12 @@ export default function LocationServedByTemplate({
   fields,
   createdAt,
   relatedLinks,
+  relatedBlogs,
 }: TemplateContext) {
   const key = normalize(fields.template ?? "");
   const render = TEMPLATES[key];
 
-  if (render) return render({ fields, createdAt, relatedLinks });
+  if (render) return render({ fields, createdAt, relatedLinks, relatedBlogs });
 
   if (process.env.NODE_ENV !== "production") {
     console.warn(
@@ -82,5 +84,5 @@ export default function LocationServedByTemplate({
       )} (normalized: "${key}") — falling back to LocationServedUsa.`
     );
   }
-  return <LocationServedUsa fields={fields} relatedLinks={relatedLinks} />;
+  return <LocationServedUsa fields={fields} relatedLinks={relatedLinks} relatedBlogs={relatedBlogs} />;
 }

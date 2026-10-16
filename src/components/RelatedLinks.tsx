@@ -36,6 +36,8 @@ export type TemplateProps = {
   fields?: Record<string, string>;
   /** live interlinking cards; falls back to the template's hardcoded list when absent */
   relatedLinks?: RelatedCard[] | null;
+  /** live "Featured Blogs" cards; the section collapses when absent, no hardcoded fallback */
+  relatedBlogs?: RelatedCard[] | null;
 };
 
 type RelatedLinksIds = {

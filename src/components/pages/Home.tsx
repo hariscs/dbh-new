@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 import { resolvePhone } from "@/lib/phone";
 
-export default function Page({ relatedLinks }: TemplateProps) {
+export default function Page({ relatedLinks, relatedBlogs }: TemplateProps) {
   const { phone, telHref } = resolvePhone();
   return (
     <>
@@ -2657,6 +2657,12 @@ A Lifelong Support System.
             { href: '/location-served/usa/codeine-addiction-treatment/', title: <>Understanding Codeine Addiction</> },
             { href: '/location-served/usa/buprenorphine-addiction-treatment/', title: <>Buprenorphine Addiction: Clinical Guide</> },
           ]}
+        />
+        <RelatedLinks
+          variant="flat"
+          ids={{ section: 'featured-blogs', heading: 'featured-blogs-heading', shortcode: 'featured-blogs-shortcode' }}
+          heading="Featured Blogs"
+          cards={relatedBlogs ?? []}
         />
         <div className="elementor-element elementor-element-40ca6e0 e-con-full e-flex e-con e-parent e-lazyloaded" id="verify-ins" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
           <div className="elementor-element elementor-element-e29f0bd e-con-full e-flex e-con e-child">

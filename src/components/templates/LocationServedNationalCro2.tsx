@@ -25,7 +25,7 @@ import { resolvePhone } from '@/lib/phone';
  * pages, but the live CRO2 layout does not display it — the FAQ copy arrives inside
  * blog_section_1___con instead.
  */
-export default function LocationServedNationalCro2({ fields = {}, relatedLinks }: TemplateProps) {
+export default function LocationServedNationalCro2({ fields = {}, relatedLinks, relatedBlogs }: TemplateProps) {
   const { phone, telHref } = resolvePhone(fields);
   const props = fields;
   return (
@@ -1242,6 +1242,12 @@ export default function LocationServedNationalCro2({ fields = {}, relatedLinks }
         { href: '/location-served/usa/mood-disorder-treatment/', title: <>Mood Disorders: Symptoms, Diagnosis & Treatment at District Behavioral Health</> },
         { href: '/location-served/usa/paraphrenia-treatment/', title: <>What Is Paraphrenia: Symptoms, Causes, & Treatment</> },
       ]}
+    />
+    <RelatedLinks
+      variant="flat"
+      ids={{ section: 'featured-blogs', heading: 'featured-blogs-heading', shortcode: 'featured-blogs-shortcode' }}
+      heading="Featured Blogs"
+      cards={relatedBlogs ?? []}
     />
 <div className="elementor-element elementor-element-4ae2736 e-flex e-con-boxed e-con e-parent" data-id="4ae2736" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 <div className="e-con-inner">

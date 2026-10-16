@@ -6,7 +6,7 @@ import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 import { resolvePhone } from "@/lib/phone";
 import FaqAccordion from '../FaqAccordion';
 
-export default function LocationServedUsaCaLongBeach({ fields = {}, relatedLinks }: TemplateProps) {
+export default function LocationServedUsaCaLongBeach({ fields = {}, relatedLinks, relatedBlogs }: TemplateProps) {
   const { phone, telHref } = resolvePhone(fields);
   const props = fields;
   const geo = props.geo ?? "Long Beach";
@@ -3874,6 +3874,12 @@ export default function LocationServedUsaCaLongBeach({ fields = {}, relatedLinks
         { href: '/location-served/usa/ca/long-beach/personality-disorder/', title: <>{geo} Personality Disorder Treatment (Substance Abuse Treatment & Intervention)</> },
         { href: '/location-served/usa/ca/long-beach/neurodevelopment-disorder/', title: <>{geo} Neurodevelopment Disorder Treatment (Substance Abuse Treatment & Intervention)</> },
       ]}
+    />
+    <RelatedLinks
+      variant="flat"
+      ids={{ section: 'featured-blogs', heading: 'featured-blogs-heading', shortcode: 'featured-blogs-shortcode' }}
+      heading="Featured Blogs"
+      cards={relatedBlogs ?? []}
     />
     <div className="elementor-element elementor-element-c49a583 e-flex e-con-boxed e-con e-parent e-lazyloaded">
       <div className="e-con-inner">

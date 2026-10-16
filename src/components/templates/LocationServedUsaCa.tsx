@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { RelatedLinks, type TemplateProps } from '@/components/RelatedLinks';
 import FaqAccordion from '../FaqAccordion';
 
-export default function LocationServedUsaCa({ fields = {}, relatedLinks }: TemplateProps) {
+export default function LocationServedUsaCa({ fields = {}, relatedLinks, relatedBlogs }: TemplateProps) {
   const props = fields;
   const geo = props.geo ?? "National";
   const year = props.year ?? "2025";
@@ -4056,6 +4056,12 @@ export default function LocationServedUsaCa({ fields = {}, relatedLinks }: Templ
           { href: '/location-served/usa/codeine-addiction-treatment/', title: <>Understanding Codeine Addiction</> },
           { href: '/location-served/usa/buprenorphine-addiction-treatment/', title: <>Buprenorphine Addiction: Clinical Guide</> },
         ]}
+      />
+      <RelatedLinks
+        variant="flat"
+        ids={{ section: 'featured-blogs', heading: 'featured-blogs-heading', shortcode: 'featured-blogs-shortcode' }}
+        heading="Featured Blogs"
+        cards={relatedBlogs ?? []}
       />
     <div className="elementor-element elementor-element-c49a583 e-flex e-con-boxed e-con e-parent e-lazyloaded">
       <div className="e-con-inner">
