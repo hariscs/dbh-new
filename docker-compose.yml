@@ -1,0 +1,42 @@
+name: dbh
+
+services:
+  db:
+    image: postgres:16
+    ports:
+      - "127.0.0.1:5433:5432"
+    environment:
+      POSTGRES_DB: dbh
+      POSTGRES_USER: dbh
+      POSTGRES_PASSWORD: dbh
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dbh -d dbh"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # WordPress dump source for the importer. Starts only with `--profile import`.
+  wp-mysql:
+    image: mysql:8.0
+    profiles: [import]
+    command: --max-allowed-packet=1G
+    ports:
+      - "127.0.0.1:3307:3306"
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: wordpress
+    volumes:
+      - wpdata:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uwordpress -pwordpress"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  pgdata:
+  wpdata:

@@ -3,12 +3,15 @@
   "private": true,
   "packageManager": "pnpm@11.20.0",
   "scripts": {
-    "dev": "pnpm --dir frontend dev",
-    "build": "pnpm --dir frontend build",
-    "start": "pnpm --dir frontend start",
-    "typecheck": "pnpm --dir frontend typecheck",
-    "knip": "pnpm --dir frontend knip",
-    "dev:backend": "pnpm --dir backend dev",
-    "build:backend": "pnpm --dir backend build"
+    "dev": "pnpm --dir apps/frontend dev",
+    "build": "pnpm --dir apps/frontend build",
+    "start": "pnpm --dir apps/frontend start",
+    "typecheck": "pnpm --dir apps/frontend typecheck",
+    "knip": "pnpm --dir apps/frontend knip",
+    "dev:backend": "pnpm --dir apps/backend dev",
+    "build:backend": "pnpm --dir apps/backend build",
+    "db:up": "docker compose up -d db",
+    "db:down": "docker compose down",
+    "docker:build": "docker build -t dbh-backend ."
   }
 }

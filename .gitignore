@@ -6,11 +6,11 @@ node_modules/
 
 # next.js
 .next/
-/frontend/out/
+/apps/frontend/out/
 /docs/
 
 # production
-/frontend/build
+/apps/frontend/build
 
 # misc
 .DS_Store

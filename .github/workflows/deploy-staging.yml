@@ -35,19 +35,19 @@ jobs:
         with:
           node-version: '24'
           cache: pnpm
-          cache-dependency-path: frontend/pnpm-lock.yaml
+          cache-dependency-path: apps/frontend/pnpm-lock.yaml
 
       - name: Restore Next.js build cache
         uses: actions/cache@v4
         with:
-          path: frontend/.next/cache
-          key: next-${{ runner.os }}-${{ hashFiles('frontend/pnpm-lock.yaml') }}-${{ hashFiles('frontend/src/**', 'frontend/next.config.ts') }}
+          path: apps/frontend/.next/cache
+          key: next-${{ runner.os }}-${{ hashFiles('apps/frontend/pnpm-lock.yaml') }}-${{ hashFiles('apps/frontend/src/**', 'apps/frontend/next.config.ts') }}
           restore-keys: |
-            next-${{ runner.os }}-${{ hashFiles('frontend/pnpm-lock.yaml') }}-
+            next-${{ runner.os }}-${{ hashFiles('apps/frontend/pnpm-lock.yaml') }}-
             next-${{ runner.os }}-
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile --filter ./frontend
+        run: pnpm install --frozen-lockfile --filter ./apps/frontend
 
       - name: Build
         env:
@@ -56,16 +56,16 @@ jobs:
           REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
           SITE_URL: https://staging.districtbehavioralhealth.com
           ROBOTS_ALLOW: 'false'
-        working-directory: frontend
+        working-directory: apps/frontend
         run: pnpm build
 
       - name: Assemble deploy artifact
         run: |
           set -euo pipefail
-          cp -r frontend/public frontend/.next/standalone/
-          mkdir -p frontend/.next/standalone/.next
-          cp -r frontend/.next/static frontend/.next/standalone/.next/
-          tar -czf release.tar.gz -C frontend/.next/standalone .
+          cp -r apps/frontend/public apps/frontend/.next/standalone/
+          mkdir -p apps/frontend/.next/standalone/.next
+          cp -r apps/frontend/.next/static apps/frontend/.next/standalone/.next/
+          tar -czf release.tar.gz -C apps/frontend/.next/standalone .
 
       - name: Configure SSH
         env:
