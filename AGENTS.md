@@ -12,6 +12,11 @@ built with Next.js 16. WordPress (on the `cms.` subdomain) stays the content
 backend; this app renders its pages via a custom Builder API with SSG + ISR,
 and deploys as a standalone artifact to EC2 via GitHub Actions.
 
+**Repo layout:** pnpm workspace. The website lives in `frontend/`, and every `src/`,
+`public/`, `next.config.ts` and `knip.json` path in these docs is relative to it.
+`backend/` is the Payload CMS + Postgres backend replacing WordPress (see
+`backend/README.md`). Run commands from the repo root.
+
 This project is built with the **AI Blueprint**, a workflow layer, not an
 app skeleton. To start a new project, scaffold the app first in an empty folder
 (create-next-app, Vite, etc.), then overlay these files on top. Never run a
@@ -105,9 +110,10 @@ checks do not make the Blueprint unusable.
 
 ## Commands
 
-Package manager: pnpm (see `packageManager` in `package.json`).
+Package manager: pnpm (see `packageManager` in the root `package.json`).
 
-- Dev server: `pnpm dev` (http://localhost:3000; needs `WORDPRESS_URL` in `.env.local`)
+- Dev server: `pnpm dev` (http://localhost:3000; needs `WORDPRESS_URL` in `frontend/.env.local`)
+- Backend dev server: `pnpm dev:backend` (http://localhost:3003/admin)
 - Build: `pnpm build`
 - Production server: `pnpm start`
 - Typecheck: `pnpm typecheck` (`tsc --noEmit`)

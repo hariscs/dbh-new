@@ -32,18 +32,19 @@ jobs:
         with:
           node-version: '24'
           cache: pnpm
+          cache-dependency-path: frontend/pnpm-lock.yaml
 
       - name: Restore Next.js build cache
         uses: actions/cache@v4
         with:
-          path: .next/cache
-          key: next-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ hashFiles('src/**', 'next.config.ts') }}
+          path: frontend/.next/cache
+          key: next-${{ runner.os }}-${{ hashFiles('frontend/pnpm-lock.yaml') }}-${{ hashFiles('frontend/src/**', 'frontend/next.config.ts') }}
           restore-keys: |
-            next-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-
+            next-${{ runner.os }}-${{ hashFiles('frontend/pnpm-lock.yaml') }}-
             next-${{ runner.os }}-
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --filter ./frontend
 
       - name: Build
         env:
@@ -52,15 +53,16 @@ jobs:
           REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
           SITE_URL: https://districtbehavioralhealth.com
           ROBOTS_ALLOW: 'true'
+        working-directory: frontend
         run: pnpm build
 
       - name: Assemble deploy artifact
         run: |
           set -euo pipefail
-          cp -r public .next/standalone/
-          mkdir -p .next/standalone/.next
-          cp -r .next/static .next/standalone/.next/
-          tar -czf release.tar.gz -C .next/standalone .
+          cp -r frontend/public frontend/.next/standalone/
+          mkdir -p frontend/.next/standalone/.next
+          cp -r frontend/.next/static frontend/.next/standalone/.next/
+          tar -czf release.tar.gz -C frontend/.next/standalone .
 
       - name: Configure SSH
         env:
