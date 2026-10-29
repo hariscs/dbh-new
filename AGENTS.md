@@ -12,10 +12,10 @@ built with Next.js 16. WordPress (on the `cms.` subdomain) stays the content
 backend; this app renders its pages via a custom Builder API with SSG + ISR,
 and deploys as a standalone artifact to EC2 via GitHub Actions.
 
-**Repo layout:** pnpm workspace. The website lives in `frontend/`, and every `src/`,
+**Repo layout:** pnpm workspace. The website lives in `apps/frontend/`, and every `src/`,
 `public/`, `next.config.ts` and `knip.json` path in these docs is relative to it.
-`backend/` is the Payload CMS + Postgres backend replacing WordPress (see
-`backend/README.md`). Run commands from the repo root.
+`apps/backend/` is the Payload CMS + Postgres backend replacing WordPress (see
+`apps/backend/README.md`). Run commands from the repo root.
 
 This project is built with the **AI Blueprint**, a workflow layer, not an
 app skeleton. To start a new project, scaffold the app first in an empty folder
@@ -32,6 +32,48 @@ New here? `README.md` explains the whole workflow.
 - `blueprint/context/coding-standards.md` - conventions to follow
 - `blueprint/context/ai-interaction.md` - how to work with the user on this project
 - `blueprint/context/current-feature.md` - the one feature, fix, or rollback being built right now
+
+## Plan First (ALWAYS follow)
+
+- **Before any change, present a plan and stop.** List the files to touch, what changes in each,
+  the commands that will run, and anything that needs a decision. Then wait.
+- **End every plan with the question.** Ask whether to implement it as written or change it. Do
+  not assume either answer.
+- **Proceed only on an explicit go-ahead** ("go", "go ahead", "do it", "yes"). Any other reply is
+  a request for changes: revise the plan and present it again.
+- **Stay inside the approved plan.** If the work reveals something the plan did not cover, stop
+  and present the addition before doing it. Do not fold extra work into an approved step.
+- Questions and reviews are answered directly; they need no plan. The plan applies to anything
+  that edits files, installs packages, or changes state.
+
+## Commands and Git (ALWAYS follow)
+
+- **Never run git commands that change state** (`add`, `commit`, `reset`, `checkout`, `rebase`,
+  `merge`, `push`, `stash`) unless the user explicitly asks in that same message. Invoking a skill
+  that commits or merges (`/complete`, `/autopilot`) counts as asking. Read-only git (`status`,
+  `diff`, `log`) is fine.
+- **"Give me commits" means grouped commits handed over, not run.** Group by concern so no file is
+  staged partly, and give each group its own code block: the `git add` command with one path per
+  line, each line but the last ending in ` \`, then `git commit -m "<type>: <subject>"`. Quote
+  paths with spaces. Subject line only, no AI attribution.
+- **Nothing merges or pushes to `main` or `staging` without the user's explicit say.** Pushes there
+  deploy production and staging automatically. Work happens on short-lived branches.
+- **Do not run other state-changing commands until asked**: package installs, database writes,
+  container starts, file deletions, and anything touching a remote system (WordPress, EC2,
+  GitHub) happen only when the user has asked for the task that requires them. Verification
+  commands (typecheck, build, knip, read-only queries) may run freely.
+- **When in doubt, hand over the command** instead of running it.
+
+## Working Rules (ALWAYS follow)
+
+- **Read before you claim.** Read every function, route or query end to end before writing a
+  type, a contract, or a statement about what it does. Where the code is unread, say so; never
+  fill in from the name.
+- **Follow the data, not just the source.** When changing a value's format, type or shape, find
+  every site that reads, compares or renders it and change them in the same pass.
+- **One concern per task, no speculative changes.** Touch only the files the task requires. Do not
+  rename, reorder or reformat unrelated code; it pollutes diffs.
+- **No new dependencies without approval.** Check whether the package is already installed first.
 
 ## Workflow
 
@@ -112,8 +154,10 @@ checks do not make the Blueprint unusable.
 
 Package manager: pnpm (see `packageManager` in the root `package.json`).
 
-- Dev server: `pnpm dev` (http://localhost:3000; needs `WORDPRESS_URL` in `frontend/.env.local`)
+- Dev server: `pnpm dev` (http://localhost:3000; needs `WORDPRESS_URL` in `apps/frontend/.env.local`)
+- Backend database: `pnpm db:up` / `pnpm db:down` (Postgres in Docker, `docker-compose.yml`)
 - Backend dev server: `pnpm dev:backend` (http://localhost:3003/admin)
+- Backend image: `pnpm docker:build` (`Dockerfile`, `devops/`)
 - Build: `pnpm build`
 - Production server: `pnpm start`
 - Typecheck: `pnpm typecheck` (`tsc --noEmit`)

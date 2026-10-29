@@ -119,9 +119,10 @@ A new branch for every feature/fix. Name it **feature/[name]** or
 
 ## Commits
 
-- Ask before committing (don't auto-commit)
+- Don't run `git add`/`commit` yourself; hand over grouped commits as copy-paste blocks (format in
+  `AGENTS.md`, Commands and Git). Running `/complete` or `/autopilot` counts as asking to commit.
 - Use conventional commit messages (feat:, fix:, chore:, etc.)
-- Keep commits focused (one feature/fix per commit)
+- Keep commits focused (one concern per commit, no file staged partly)
 - Never put "Generated with Claude" or any AI attribution in commit messages
 
 ## When Stuck
