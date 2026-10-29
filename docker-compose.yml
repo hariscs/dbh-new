@@ -4,7 +4,7 @@ services:
   db:
     image: postgres:16
     ports:
-      - "127.0.0.1:5433:5432"
+      - "127.0.0.1:5435:5432"
     environment:
       POSTGRES_DB: dbh
       POSTGRES_USER: dbh
@@ -21,7 +21,7 @@ services:
   wp-mysql:
     image: mysql:8.0
     profiles: [import]
-    command: --max-allowed-packet=1G
+    command: --max-allowed-packet=1G --skip-log-bin --innodb-flush-log-at-trx-commit=0 --innodb-buffer-pool-size=2G
     ports:
       - "127.0.0.1:3307:3306"
     environment:

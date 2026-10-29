@@ -8,7 +8,7 @@ Run from the repo root:
 
 ```bash
 cp apps/backend/.env.example apps/backend/.env   # set PAYLOAD_SECRET
-pnpm db:up                             # Postgres 16 in Docker on 127.0.0.1:5433
+pnpm db:up                             # Postgres 16 in Docker on 127.0.0.1:5435
 pnpm install
 pnpm dev:backend                       # http://localhost:3003/admin
 ```

@@ -12,6 +12,10 @@
     "build:backend": "pnpm --dir apps/backend build",
     "db:up": "docker compose up -d db",
     "db:down": "docker compose down",
-    "docker:build": "docker build -t dbh-backend ."
+    "docker:build": "docker build -t dbh-backend .",
+    "wp:up": "docker compose --profile import up -d wp-mysql",
+    "wp:load": "sh devops/load-wp-dump.sh",
+    "import:wp": "pnpm --dir apps/backend import:wp",
+    "parity": "pnpm --dir apps/backend parity"
   }
 }
