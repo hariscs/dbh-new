@@ -70,6 +70,7 @@ export interface Config {
     users: User;
     media: Media;
     pages: Page;
+    'field-groups': FieldGroup;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -80,6 +81,7 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
+    'field-groups': FieldGroupsSelect<false> | FieldGroupsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -172,9 +174,13 @@ export interface Page {
   id: number;
   wpId: number;
   postType: string;
+  status: string;
   path: string;
   isFrontPage?: boolean | null;
   slug: string;
+  parentWpId?: number | null;
+  parentSlug?: string | null;
+  postDate?: string | null;
   title: string;
   template?: string | null;
   templates?:
@@ -227,6 +233,27 @@ export interface Page {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "field-groups".
+ */
+export interface FieldGroup {
+  id: number;
+  key: string;
+  title: string;
+  position: number;
+  fields?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -260,6 +287,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'pages';
         value: number | Page;
+      } | null)
+    | ({
+        relationTo: 'field-groups';
+        value: number | FieldGroup;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -351,9 +382,13 @@ export interface MediaSelect<T extends boolean = true> {
 export interface PagesSelect<T extends boolean = true> {
   wpId?: T;
   postType?: T;
+  status?: T;
   path?: T;
   isFrontPage?: T;
   slug?: T;
+  parentWpId?: T;
+  parentSlug?: T;
+  postDate?: T;
   title?: T;
   template?: T;
   templates?: T;
@@ -361,6 +396,18 @@ export interface PagesSelect<T extends boolean = true> {
   seo?: T;
   meta?: T;
   present?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "field-groups_select".
+ */
+export interface FieldGroupsSelect<T extends boolean = true> {
+  key?: T;
+  title?: T;
+  position?: T;
+  fields?: T;
   updatedAt?: T;
   createdAt?: T;
 }

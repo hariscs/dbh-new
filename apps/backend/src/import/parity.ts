@@ -4,6 +4,8 @@ import path from 'node:path'
 import { getPayload } from 'payload'
 
 import { findPageData } from '../builder-api/page-data'
+import { listFieldGroups } from '../builder-api/field-groups'
+import { findPages } from '../builder-api/pages'
 import config from '../payload.config'
 
 const MAX_VALUE_LENGTH = 120
@@ -26,6 +28,8 @@ const canonical = (value: unknown): string =>
   )
 
 const fileFor =(pagePath: string) => (pagePath === '/' ? 'home.json' : `${pagePath.replace(/\//g, '_')}.json`)
+
+const PAGES_QUERIES = ['', '/location-served/usa/ca', '/quiz', '/location-served/usa/fl/lake-worth', '/does-not-exist']
 
 const paths = (await readFile(path.join(baselineDir, '..', 'paths.txt'), 'utf8')).split('\n').filter(Boolean)
 const payload = await getPayload({ config })
@@ -70,4 +74,42 @@ for (const pagePath of paths) {
 const topFields = [...fieldDiffCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 25)
 console.info(`\n${cleanPages}/${paths.length} pages clean`)
 if (topFields.length) console.info(`most frequent field differences:\n${topFields.map(([key, count]) => `  ${count}× ${key}`).join('\n')}`)
-process.exit(cleanPages === paths.length ? 0 : 1)
+
+let endpointFailures = 0
+for (const pagesPath of PAGES_QUERIES) {
+  const label = pagesPath ? `pages?path=${pagesPath}` : 'pages'
+  const baselineFile = path.join(baselineDir, `_pages${pagesPath.replace(/\//g, '_')}.json`)
+  const expected = JSON.parse(await readFile(baselineFile, 'utf8')) as unknown[]
+  const actual = await findPages(payload, { postType: 'page', path: pagesPath || undefined })
+  const firstDifference = expected.findIndex((item, index) => canonical(item) !== canonical(actual[index]))
+
+  if (firstDifference === -1 && expected.length === actual.length) {
+    console.info(`✓ ${label}`)
+    continue
+  }
+  endpointFailures++
+  const index = firstDifference === -1 ? Math.min(expected.length, actual.length) : firstDifference
+  console.info(
+    `\n✗ ${label}: expected ${expected.length} items, actual ${actual.length}, first difference at [${index}]\n` +
+      `  expected ${shorten(expected[index])}\n  actual   ${shorten(actual[index])}`,
+  )
+}
+
+const expectedGroups = JSON.parse(await readFile(path.join(baselineDir, '_field-groups.json'), 'utf8')) as {
+  groups: { key: string }[]
+}
+const actualGroups = await listFieldGroups(payload)
+const differentGroups = expectedGroups.groups.filter(
+  (group, index) => canonical(group) !== canonical(actualGroups.groups[index]),
+)
+if (!differentGroups.length && expectedGroups.groups.length === actualGroups.groups.length) {
+  console.info('✓ field-groups')
+} else {
+  endpointFailures++
+  console.info(
+    `\n✗ field-groups: expected ${expectedGroups.groups.length} groups, actual ${actualGroups.groups.length}\n` +
+      differentGroups.map((group) => `  differs at ${group.key}`).join('\n'),
+  )
+}
+
+process.exit(cleanPages === paths.length && !endpointFailures ? 0 : 1)

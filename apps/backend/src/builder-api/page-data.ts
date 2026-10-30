@@ -12,7 +12,7 @@ type PageDataQuery = {
 const findOne = async (payload: Payload, where: Where) => {
   const { docs } = await payload.find({
     collection: 'pages',
-    where,
+    where: { and: [where, { status: { equals: 'publish' } }] },
     sort: '-wpId',
     limit: 1,
     depth: 0,

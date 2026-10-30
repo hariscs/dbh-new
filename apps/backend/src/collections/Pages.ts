@@ -9,9 +9,13 @@ export const Pages: CollectionConfig = {
   fields: [
     { name: 'wpId', type: 'number', required: true, unique: true, index: true },
     { name: 'postType', type: 'text', required: true, index: true },
+    { name: 'status', type: 'text', required: true, defaultValue: 'publish', index: true },
     { name: 'path', type: 'text', required: true, index: true },
     { name: 'isFrontPage', type: 'checkbox', defaultValue: false, index: true },
     { name: 'slug', type: 'text', required: true, index: true },
+    { name: 'parentWpId', type: 'number', defaultValue: 0, index: true },
+    { name: 'parentSlug', type: 'text', defaultValue: '' },
+    { name: 'postDate', type: 'text', index: true },
     { name: 'title', type: 'text', required: true },
     { name: 'template', type: 'text' },
     { name: 'templates', type: 'json' },

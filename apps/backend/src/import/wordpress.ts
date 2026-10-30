@@ -34,6 +34,7 @@ type Post = {
   post_parent: number
   post_date: string
   post_modified_gmt: string
+  post_status: string
 }
 type Term = { taxonomy: string; term_id: number; name: string; slug: string }
 
@@ -170,6 +171,18 @@ for (const row of await query<{ post_name: string; post_excerpt: string; post_co
   })
 }
 
+const fieldGroups = await query<{ ID: number; post_name: string; post_title: string }>(
+  `select ID, post_name, post_title from wp_posts
+   where post_type = 'acf-field-group' and post_status in ('publish', 'acf-disabled')
+   order by menu_order, post_title`,
+)
+const groupFields = await query<{ post_parent: number; post_name: string; post_title: string; post_excerpt: string }>(
+  `select post_parent, post_name, post_title, post_excerpt from wp_posts
+   where post_type = 'acf-field' and post_parent in (?)
+   order by menu_order, ID`,
+  [fieldGroups.map((group) => group.ID)],
+)
+
 const typeList = [...postTypes.keys()]
 const allPosts = await query<Post>(
   `select ID, post_type, post_name, post_title, post_parent, post_date, post_modified_gmt, post_status
@@ -181,6 +194,7 @@ const published = (
   await query<{ ID: number }>(`select ID from wp_posts where post_status = 'publish' and post_type in (?)`, [typeList])
 ).map((row) => postsById.get(row.ID) as Post)
 const publishedIds = published.map((post) => post.ID)
+const draftPages = allPosts.filter((post) => post.post_type === 'page' && post.post_status === 'draft' && post.post_name)
 
 const hierarchicalName = (post: Post) => {
   const names = [post.post_name]
@@ -395,14 +409,18 @@ const payload = await getPayload({ config })
 let created = 0
 let updated = 0
 
-for (const post of published) {
+for (const post of [...published, ...draftPages]) {
   const templates = buildTemplates(post)
   const data = {
     wpId: post.ID,
     postType: post.post_type,
+    status: post.post_status,
     path: pathOf(post),
     isFrontPage: post.ID === frontPageId,
     slug: post.post_name,
+    parentWpId: post.post_parent,
+    parentSlug: postsById.get(post.post_parent)?.post_name ?? '',
+    postDate: post.post_date,
     title: post.post_title || post.post_name,
     template: templates.slugs[0] ?? '',
     templates,
@@ -422,6 +440,29 @@ for (const post of published) {
   }
 }
 
-console.info(`imported ${published.length} posts: ${created} created, ${updated} updated`)
+console.info(
+  `imported ${published.length} posts + ${draftPages.length} draft pages: ${created} created, ${updated} updated`,
+)
+
+for (const [position, group] of fieldGroups.entries()) {
+  const data = {
+    key: group.post_name,
+    title: group.post_title,
+    position,
+    fields: groupFields
+      .filter((field) => field.post_parent === group.ID)
+      .map((field) => ({
+        key: field.post_name,
+        name: field.post_excerpt,
+        type: acfFields.get(field.post_name)?.type,
+        label: field.post_title,
+      })),
+  }
+
+  const { docs } = await payload.find({ collection: 'field-groups', where: { key: { equals: data.key } }, limit: 1 })
+  if (docs[0]) await payload.update({ collection: 'field-groups', id: docs[0].id, data })
+  else await payload.create({ collection: 'field-groups', data })
+}
+console.info(`imported ${fieldGroups.length} field groups`)
 await db.end()
 process.exit(0)
