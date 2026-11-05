@@ -21,7 +21,7 @@ const parentIdForPath = async (payload: Payload, path: string) => {
   return docs[0]?.wpId
 }
 
-const hasTemplate = (templates: unknown, template: string) =>
+export const hasTemplate = (templates: unknown, template: string) =>
   !!templates &&
   typeof templates === 'object' &&
   'slugs' in templates &&
