@@ -5,7 +5,9 @@ import { getPayload } from 'payload'
 
 import { findDrugIndex } from '../builder-api/drug-index'
 import { findInterlinking } from '../builder-api/interlinking'
+import { findMenu } from '../builder-api/menu'
 import { findPageData } from '../builder-api/page-data'
+import { findWpV2 } from '../builder-api/wp-v2'
 import { listFieldGroups } from '../builder-api/field-groups'
 import { findPages } from '../builder-api/pages'
 import config from '../payload.config'
@@ -43,6 +45,21 @@ const RRIL_QUERIES = [
   'location-served/usa/ca/northern/adhd',
   'location-served/usa/mood-disorder-treatment',
   'location-served/usa/prozac-addiction-treatment/addiction',
+]
+
+const SITEMAP_FIELDS = '_fields=link,modified_gmt'
+const BLOG_QUERY = 'template=12,13&orderby=date&order=desc&per_page=6&_fields=id,link,title,acf.h1'
+const WP_V2_PAGE_NUMBERS = [1, 2, 3, 4, 5, 6, 7]
+const WP_V2_QUERIES = [
+  ...WP_V2_PAGE_NUMBERS.map((page) => `pages?per_page=100&page=${page}&${SITEMAP_FIELDS}`),
+  ...WP_V2_PAGE_NUMBERS.map((page) => `pages?per_page=100&page=${page}&_fields=link`),
+  ...['facility', 'authors', 'our_locations', 'difference'].map((type) => `${type}?per_page=100&page=1&${SITEMAP_FIELDS}`),
+  ...[0, 72, 144].map((offset) => `pages?${BLOG_QUERY.replace('per_page=6', `per_page=6&offset=${offset}`)}`),
+  `difference?per_page=100&page=99&${SITEMAP_FIELDS}`,
+]
+const MENU_QUERIES = [
+  { location: 'primary', file: '_menu.json' },
+  { location: 'footer', file: '_menu_footer.json' },
 ]
 
 const PAGES_QUERIES = ['', '/location-served/usa/ca', '/quiz', '/location-served/usa/fl/lake-worth', '/does-not-exist']
@@ -170,5 +187,49 @@ for (const rrilPath of RRIL_QUERIES) {
   }
 }
 console.info(`${rrilClean}/${RRIL_QUERIES.length} rril queries clean`)
+
+for (const { location, file } of MENU_QUERIES) {
+  const expected = JSON.parse(await readFile(path.join(baselineDir, file), 'utf8')) as unknown
+  const { body } = await findMenu(payload, location)
+  if (canonical(expected) === canonical(body)) {
+    console.info(`✓ menu ${location}`)
+    continue
+  }
+  endpointFailures++
+  console.info(`\n✗ menu ${location}\n  expected ${shorten(expected)}\n  actual   ${shorten(body)}`)
+}
+
+let wpV2Clean = 0
+for (const query of WP_V2_QUERIES) {
+  const file = `_wp-v2_${query.replace(/[^a-zA-Z0-9]+/g, '_')}.json`
+  const expected = JSON.parse(await readFile(path.join(baselineDir, file), 'utf8')) as {
+    status: number
+    total: string | null
+    totalPages: string | null
+    body: unknown
+  }
+  const [type, search] = query.split('?')
+  const actual = await findWpV2(payload, type, new URLSearchParams(search))
+  const normalized = {
+    status: expected.status,
+    total: expected.total === null ? null : Number(expected.total),
+    totalPages: expected.totalPages === null ? null : Number(expected.totalPages),
+    body: expected.body,
+  }
+  if (canonical(normalized) === canonical(actual)) {
+    wpV2Clean++
+    continue
+  }
+  endpointFailures++
+  const expectedList = Array.isArray(expected.body) ? expected.body : []
+  const actualList = Array.isArray(actual.body) ? actual.body : []
+  const index = expectedList.findIndex((item, position) => canonical(item) !== canonical(actualList[position]))
+  console.info(
+    `\n✗ wp/v2/${query}: status ${expected.status}/${actual.status}, total ${expected.total}/${actual.total}, ` +
+      `totalPages ${expected.totalPages}/${actual.totalPages}, first difference at [${index}]\n` +
+      `  expected ${shorten(expectedList[index] ?? expected.body)}\n  actual   ${shorten(actualList[index] ?? actual.body)}`,
+  )
+}
+console.info(`${wpV2Clean}/${WP_V2_QUERIES.length} wp/v2 queries clean`)
 
 process.exit(cleanPages === paths.length && !endpointFailures ? 0 : 1)
