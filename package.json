@@ -16,6 +16,8 @@
     "wp:up": "docker compose --profile import up -d wp-mysql",
     "wp:load": "sh devops/load-wp-dump.sh",
     "import:wp": "pnpm --dir apps/backend import:wp",
-    "parity": "pnpm --dir apps/backend parity"
+    "parity": "pnpm --dir apps/backend parity",
+    "capture:baselines": "pnpm --dir apps/backend capture:baselines",
+    "parity:all": "pnpm --dir apps/backend parity:all"
   }
 }
