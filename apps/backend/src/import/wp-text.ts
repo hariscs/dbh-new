@@ -37,6 +37,22 @@ export const wptexturize = (html: string) => {
     .join('')
 }
 
+const TITLE_ENTITIES: Record<string, string> = {
+  '‘': '&#8216;',
+  '’': '&#8217;',
+  '“': '&#8220;',
+  '”': '&#8221;',
+  '–': '&#8211;',
+  '—': '&#8212;',
+  '…': '&#8230;',
+}
+
+export const renderTitle = (title: string) =>
+  wptexturize(title)
+    .trim()
+    .replace(/[‘’“”–—…]/g, (char) => TITLE_ENTITIES[char])
+    .replace(/&(?!#?\w+;)/g, '&#038;')
+
 const ALL_BLOCKS =
   '(?:table|thead|tfoot|caption|col|colgroup|tbody|tr|td|th|div|dl|dd|dt|ul|ol|li|pre|form|map|area|blockquote|address|style|p|h[1-6]|hr|fieldset|legend|section|article|aside|hgroup|header|footer|nav|figure|figcaption|details|menu|summary)'
 

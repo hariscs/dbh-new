@@ -1,6 +1,6 @@
 import type { Payload } from 'payload'
 
-import { wptexturize } from '../import/wp-text'
+import { renderTitle } from '../import/wp-text'
 import { hasTemplate } from './pages'
 
 const LINK_ORIGIN = 'https://cms.districtbehavioralhealth.com'
@@ -16,9 +16,7 @@ const toLetter = (raw: string) => {
 }
 
 const escapeTitle = (title: string) =>
-  wptexturize(title)
-    .trim()
-    .replace(/&(?!#?\w+;)/g, '&#038;')
+  renderTitle(title)
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
