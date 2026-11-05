@@ -83,8 +83,8 @@ const diffInterlinking = (baseline: Baseline, actual: unknown): Diff[] => {
     const haveLinks = have.map((item) => item.link)
     const missing = wantLinks.filter((link) => !haveLinks.includes(link))
     const extra = haveLinks.filter((link) => !wantLinks.includes(link))
-    const titleDiff = want.find((item) =>
-      have.some((other) => other.link === item.link && other.title !== item.title),
+    const titleDiffIndex = want.findIndex(
+      (item, index) => have[index]?.link === item.link && have[index]?.title !== item.title,
     )
 
     if (missing.length || extra.length) {
@@ -101,8 +101,12 @@ const diffInterlinking = (baseline: Baseline, actual: unknown): Diff[] => {
         detail: `first difference at [${index}]: expected ${wantLinks[index]} actual ${haveLinks[index]}`,
       })
     }
-    if (titleDiff) {
-      diffs.push({ group: `rril ${list} title`, path: baseline.path, detail: `expected ${shorten(titleDiff)}` })
+    if (titleDiffIndex !== -1) {
+      diffs.push({
+        group: `rril ${list} title`,
+        path: baseline.path,
+        detail: `expected ${shorten(want[titleDiffIndex])} actual ${shorten(have[titleDiffIndex])}`,
+      })
     }
   }
   return diffs
