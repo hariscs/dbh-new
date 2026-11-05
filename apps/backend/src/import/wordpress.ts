@@ -211,6 +211,14 @@ const hierarchicalName = (post: Post) => {
   return names.join('/')
 }
 
+const hasEmptySlugAncestor = (post: Post) => {
+  let parent = postsById.get(post.post_parent)
+  while (parent) {
+    if (!parent.post_name) return true
+    parent = postsById.get(parent.post_parent)
+  }
+  return false
+}
 const pathOf = (post: Post) => {
   const type = postTypes.get(post.post_type) as PostType
   const name = type.hierarchical ? hierarchicalName(post) : post.post_name
@@ -238,6 +246,9 @@ for (const meta of metaByPost.values()) {
     if (id > 0) imageIds.add(id)
   }
 }
+const attachmentIds = new Set(
+  (await query<{ ID: number }>(`select ID from wp_posts where post_type = 'attachment'`)).map((row) => row.ID),
+)
 const attachments = new Map<number, { url: string; alt: string }>()
 if (imageIds.size) {
   for (const row of await query<{ post_id: number; meta_key: string; meta_value: string }>(
@@ -297,7 +308,11 @@ const formatAcfValue = (field: AcfField, raw: string): unknown => {
       if (typeof value !== 'string' || !value) return value
       if (field.newLines === 'wpautop') return wpautop(value)
       return field.newLines === 'br' ? value.replace(/\r?\n/g, '<br />\n') : value
-    case 'gallery':
+    case 'gallery': {
+      if (isEmpty(value)) return false
+      const ids = value && typeof value === 'object' ? Object.values(value) : [value]
+      return ids.some((id) => attachmentIds.has(Number(id))) ? value : false
+    }
     case 'repeater':
     case 'relationship':
     case 'post_object':
@@ -442,7 +457,10 @@ const buildSeo = (post: Post) => {
   const rawTitle = meta.get('rank_math_title') || wptexturize(post.post_title)
   const robots = maybeUnserialize(meta.get('rank_math_robots') ?? null)
   const seo = {
-    title: rawTitle.replace(/%[a-z_]+(\([^)]*\))?%/gi, ''),
+    title: rawTitle
+      .replace(/%[a-z_]+(\([^)]*\))?%/gi, '')
+      .replace(/<[^>]*>/g, '')
+      .replace(/ {2,}/g, ' '),
     description: meta.get('rank_math_description') ?? '',
     canonical: meta.get('rank_math_canonical_url') || permalinkOf(post),
     robots: robots && typeof robots === 'object' ? Object.values(robots).join(', ') : 'index, follow',
@@ -501,6 +519,7 @@ for (const post of [...published, ...draftPages]) {
     postType: post.post_type,
     status: post.post_status,
     path: pathOf(post),
+    reachableByPath: !hasEmptySlugAncestor(post),
     isFrontPage: post.ID === frontPageId,
     slug: post.post_name,
     parentWpId: post.post_parent,

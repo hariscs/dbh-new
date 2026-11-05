@@ -216,16 +216,19 @@ export const findInterlinking = async (payload: Payload, rawPath: string, now = 
     sort: ['-postDate', '-wpId'],
     depth: 0,
     pagination: false,
-    select: { wpId: true, path: true, postDate: true, interlinking: true },
+    select: { wpId: true, path: true, reachableByPath: true, postDate: true, interlinking: true },
   })
   const pages = pageDocs.map((page) => ({
     ...(page.interlinking as Interlinking),
     wpId: page.wpId,
     postDate: page.postDate ?? '',
     path: page.path,
+    reachableByPath: page.reachableByPath,
   }))
 
-  const current = pages.find((page) => page.path === `/${rawPath.replace(/^\/+|\/+$/g, '')}`)
+  const current = pages.find(
+    (page) => page.reachableByPath && page.path === `/${rawPath.replace(/^\/+|\/+$/g, '')}`,
+  )
   if (!current) return undefined
 
   const [{ docs: rules }, { docs: geoTerms }] = await Promise.all([

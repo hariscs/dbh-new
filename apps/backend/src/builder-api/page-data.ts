@@ -30,8 +30,11 @@ const resolvePage = async (payload: Payload, { id, path, slug }: PageDataQuery) 
   if (path !== undefined && path !== '') {
     const trimmed = path.replace(/^\/+|\/+$/g, '')
     const page = trimmed
-      ? ((await findOne(payload, { path: { equals: `/${trimmed}` }, postType: { equals: 'page' } })) ??
-        (await findOne(payload, { path: { equals: `/${trimmed}` } })))
+      ? ((await findOne(payload, {
+          path: { equals: `/${trimmed}` },
+          postType: { equals: 'page' },
+          reachableByPath: { equals: true },
+        })) ?? (await findOne(payload, { path: { equals: `/${trimmed}` }, reachableByPath: { equals: true } })))
       : await findOne(payload, { isFrontPage: { equals: true } })
     if (page) return page
   }

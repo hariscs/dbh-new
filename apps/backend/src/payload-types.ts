@@ -182,6 +182,7 @@ export interface Page {
   postType: string;
   status: string;
   path: string;
+  reachableByPath?: boolean | null;
   isFrontPage?: boolean | null;
   slug: string;
   parentWpId?: number | null;
@@ -465,6 +466,7 @@ export interface PagesSelect<T extends boolean = true> {
   postType?: T;
   status?: T;
   path?: T;
+  reachableByPath?: T;
   isFrontPage?: T;
   slug?: T;
   parentWpId?: T;

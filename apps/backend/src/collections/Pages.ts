@@ -11,6 +11,7 @@ export const Pages: CollectionConfig = {
     { name: 'postType', type: 'text', required: true, index: true },
     { name: 'status', type: 'text', required: true, defaultValue: 'publish', index: true },
     { name: 'path', type: 'text', required: true, index: true },
+    { name: 'reachableByPath', type: 'checkbox', defaultValue: true, index: true },
     { name: 'isFrontPage', type: 'checkbox', defaultValue: false, index: true },
     { name: 'slug', type: 'text', required: true, index: true },
     { name: 'parentWpId', type: 'number', defaultValue: 0, index: true },
