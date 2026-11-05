@@ -46,7 +46,14 @@ const pageTypeOf = (lineage: string[], geoLevel: string | null) => {
 
 export const derivePage: CollectionBeforeChangeHook = async ({ data, originalDoc, operation, req, context }) => {
   const page = { ...originalDoc, ...data }
-  const { docs: allTerms } = await req.payload.find({ collection: 'terms', depth: 0, pagination: false, req })
+  const { docs: termDocs } = await req.payload.find({ collection: 'terms', depth: 0, pagination: false, req })
+  const allTerms: Term[] = termDocs.map(({ wpId, taxonomy, slug, name, parent }) => ({
+    wpId,
+    taxonomy,
+    slug,
+    name,
+    parent,
+  }))
   const termIds = (page.termIds ?? {}) as TermIds
   const previousTermIds = (originalDoc?.termIds ?? {}) as TermIds
   const termsOf = (taxonomy: string) =>
