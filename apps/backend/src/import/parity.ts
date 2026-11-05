@@ -3,6 +3,8 @@ import path from 'node:path'
 
 import { getPayload } from 'payload'
 
+import { findDrugIndex } from '../builder-api/drug-index'
+import { findInterlinking } from '../builder-api/interlinking'
 import { findPageData } from '../builder-api/page-data'
 import { listFieldGroups } from '../builder-api/field-groups'
 import { findPages } from '../builder-api/pages'
@@ -14,6 +16,7 @@ const baselineDir = process.env.PARITY_BASELINE_DIR
 if (!baselineDir) throw new Error('PARITY_BASELINE_DIR is not set')
 
 type PageData = Record<string, unknown> & { fields: Record<string, string> }
+type InterlinkItems = { link: string; title: string }[]
 
 const shorten = (value: unknown) => {
   const text = JSON.stringify(value) ?? 'undefined'
@@ -28,6 +31,19 @@ const canonical = (value: unknown): string =>
   )
 
 const fileFor =(pagePath: string) => (pagePath === '/' ? 'home.json' : `${pagePath.replace(/\//g, '_')}.json`)
+
+const DRUG_INDEX_QUERIES = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'].map((letter) => ({ di: letter, file: letter })).concat({ di: '1', file: 'invalid' })
+
+const RRIL_BASELINE_DATE = new Date('2026-11-05T12:00:00Z')
+const RRIL_QUERIES = [
+  'home',
+  'location-served/usa/ca/adhd',
+  'location-served/usa/ca/fountain-valley/adhd',
+  'location-served/usa/ca/los-angeles/adhd',
+  'location-served/usa/ca/northern/adhd',
+  'location-served/usa/mood-disorder-treatment',
+  'location-served/usa/prozac-addiction-treatment/addiction',
+]
 
 const PAGES_QUERIES = ['', '/location-served/usa/ca', '/quiz', '/location-served/usa/fl/lake-worth', '/does-not-exist']
 
@@ -111,5 +127,48 @@ if (!differentGroups.length && expectedGroups.groups.length === actualGroups.gro
       differentGroups.map((group) => `  differs at ${group.key}`).join('\n'),
   )
 }
+
+let drugIndexClean = 0
+for (const { di, file } of DRUG_INDEX_QUERIES) {
+  const expected = JSON.parse(await readFile(path.join(baselineDir, `_drug-index_${file}.json`), 'utf8')) as unknown
+  const actual = await findDrugIndex(payload, di)
+  if (canonical(expected) === canonical(actual)) {
+    drugIndexClean++
+    continue
+  }
+  endpointFailures++
+  console.info(`\n✗ drug-index?di=${di}\n  expected ${JSON.stringify(expected)}\n  actual   ${JSON.stringify(actual)}`)
+}
+console.info(`${drugIndexClean}/${DRUG_INDEX_QUERIES.length} drug-index queries clean`)
+
+let rrilClean = 0
+for (const rrilPath of RRIL_QUERIES) {
+  const file = `_rril_${rrilPath.replace(/\//g, '_')}.json`
+  const expected = JSON.parse(await readFile(path.join(baselineDir, file), 'utf8')) as Record<string, InterlinkItems>
+  const actual = ((await findInterlinking(payload, rrilPath, RRIL_BASELINE_DATE)) ?? {}) as Record<string, InterlinkItems>
+  if (canonical(expected) === canonical(actual)) {
+    rrilClean++
+    console.info(`✓ rril ${rrilPath}`)
+    continue
+  }
+  endpointFailures++
+  console.info(`\n✗ rril ${rrilPath}`)
+  for (const list of ['main_pages', 'blog_pages']) {
+    const want = (expected[list] ?? []).map((item) => item.link)
+    const got = (actual[list] ?? []).map((item) => item.link)
+    const missing = want.filter((link) => !got.includes(link))
+    const extra = got.filter((link) => !want.includes(link))
+    const firstDifference = want.findIndex((link, index) => link !== got[index])
+    const titles = (expected[list] ?? []).filter(
+      (item) => (actual[list] ?? []).some((other) => other.link === item.link && other.title !== item.title),
+    )
+    console.info(
+      `  ${list}: expected ${want.length}, actual ${got.length}, first order difference at [${firstDifference}]\n` +
+        `    missing ${JSON.stringify(missing)}\n    extra   ${JSON.stringify(extra)}\n` +
+        `    title differs ${shorten(titles)}`,
+    )
+  }
+}
+console.info(`${rrilClean}/${RRIL_QUERIES.length} rril queries clean`)
 
 process.exit(cleanPages === paths.length && !endpointFailures ? 0 : 1)

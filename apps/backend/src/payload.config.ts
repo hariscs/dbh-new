@@ -9,6 +9,8 @@ import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Pages } from './collections/Pages'
 import { FieldGroups } from './collections/FieldGroups'
+import { GeoTerms } from './collections/GeoTerms'
+import { InterlinkingRules } from './collections/InterlinkingRules'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -20,7 +22,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Pages, FieldGroups],
+  collections: [Users, Media, Pages, FieldGroups, InterlinkingRules, GeoTerms],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

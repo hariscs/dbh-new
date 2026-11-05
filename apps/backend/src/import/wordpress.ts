@@ -5,12 +5,15 @@ import mysql, { type RowDataPacket } from 'mysql2/promise'
 import { getPayload } from 'payload'
 import { unserialize } from 'php-serialize'
 
+import type { Interlinking } from '../builder-api/interlinking'
 import config from '../payload.config'
 import { formatWysiwyg, wpautop, wptexturize } from './wp-text'
 
 const PRESENT_CACHE = path.resolve(process.cwd(), '.cache/present.json')
 const PRESENT_CONCURRENCY = 2
 const PRESENT_TIMEOUT_MS = 60_000
+const GEO_LEVELS = ['national', 'state', 'county', 'city', 'region']
+const GEO_LEVEL_BY_DEPTH = ['national', 'state', 'region', 'county']
 const SKIPPED_META_PREFIXES = ['_elementor', '_wp_old', '_edit_', '_wp_page_template']
 
 // DBH Code Snippets #7 (acf/load_value) fills these when empty, so ACF returns a gallery array.
@@ -352,6 +355,86 @@ const buildTemplates = (post: Post) => {
 
 const permalinkOf = (post: Post) => (post.ID === frontPageId ? `${home}/` : `${home}${pathOf(post)}/`)
 
+const termParents = await query<{ taxonomy: string; term_id: number; slug: string; parent: number }>(
+  `select tt.taxonomy, t.term_id, t.slug, tt.parent
+   from wp_term_taxonomy tt
+   join wp_terms t on t.term_id = tt.term_id
+   where tt.taxonomy in ('geo', 'template')`,
+)
+const geoTerms = termParents.filter((term) => term.taxonomy === 'geo')
+const templateTerms = termParents.filter((term) => term.taxonomy === 'template')
+
+const termAncestors = (terms: typeof termParents, termId: number) => {
+  const ancestors: typeof termParents = []
+  let parent = terms.find((term) => term.term_id === termId)?.parent
+  while (parent) {
+    const term = terms.find((candidate) => candidate.term_id === parent)
+    if (!term) break
+    ancestors.push(term)
+    parent = term.parent
+  }
+  return ancestors
+}
+
+const geoDepth = (termId: number) => termAncestors(geoTerms, termId).length
+
+const escHtml = (text: string) =>
+  text
+    .replace(/&(?!#?\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;')
+
+const pageGeoLevel = (post: Post, deepestGeoId: number | null) => {
+  const acfValue = (metaByPost.get(post.ID)?.get('geo_type') ?? '').trim().toLowerCase()
+  const acfLevel = GEO_LEVELS.includes(acfValue) ? acfValue : GEO_LEVELS.find((level) => acfValue.includes(level))
+  if (acfLevel) return acfLevel
+  return deepestGeoId ? (GEO_LEVEL_BY_DEPTH[geoDepth(deepestGeoId)] ?? 'city') : null
+}
+
+const detectPageType = (lineage: string[], geoLevel: string | null) => {
+  if (lineage.includes('blog')) return 'blog'
+  if (lineage.includes('national-rehab')) return 'national'
+  if (!lineage.includes('geo')) return 'homepage'
+  if (geoLevel === 'region') return 'state'
+  return geoLevel === 'state' || geoLevel === 'county' || geoLevel === 'city' ? geoLevel : 'homepage'
+}
+
+const buildInterlinking = (post: Post): Interlinking => {
+  const meta = metaByPost.get(post.ID)
+  const terms = termsByPost.get(post.ID) ?? []
+  const slugsOf = (taxonomy: string) => terms.filter((term) => term.taxonomy === taxonomy).map((term) => term.slug)
+  const geoIds = terms.filter((term) => term.taxonomy === 'geo').map((term) => term.term_id)
+  const deepestGeoId = geoIds.reduce<number | null>(
+    (deepest, id) => (deepest === null || geoDepth(id) > geoDepth(deepest) ? id : deepest),
+    null,
+  )
+  const templateIds = terms.filter((term) => term.taxonomy === 'template').map((term) => term.term_id)
+  const templateLineage = [
+    ...new Set([
+      ...slugsOf('template'),
+      ...templateIds.flatMap((id) => termAncestors(templateTerms, id).map((term) => term.slug)),
+    ]),
+  ]
+  const geoLevel = pageGeoLevel(post, deepestGeoId)
+  const h1 = (meta?.get('h1') ?? '').replaceAll('[acf field=geo]', meta?.get('geo') ?? '')
+
+  return {
+    link: permalinkOf(post),
+    title: escHtml(h1) || escHtml(wptexturize(post.post_title).trim()),
+    excluded: /ppc/i.test(post.post_title) || slugsOf('category').includes('redirected'),
+    isBlog: slugsOf('template').includes('blog'),
+    pageType: detectPageType(templateLineage, geoLevel),
+    topics: slugsOf('topic'),
+    intents: slugsOf('intent'),
+    geoIds,
+    deepestGeoId,
+    geoLevel,
+    templateLineage,
+  }
+}
+
 const buildSeo = (post: Post) => {
   const meta = metaByPost.get(post.ID) ?? new Map<string, string>()
   const rawTitle = meta.get('rank_math_title') || wptexturize(post.post_title)
@@ -428,6 +511,7 @@ for (const post of [...published, ...draftPages]) {
     seo: buildSeo(post),
     meta: buildMeta(post),
     present: present[post.ID] ?? [],
+    interlinking: buildInterlinking(post),
   }
 
   const { docs } = await payload.find({ collection: 'pages', where: { wpId: { equals: post.ID } }, limit: 1 })
@@ -464,5 +548,36 @@ for (const [position, group] of fieldGroups.entries()) {
   else await payload.create({ collection: 'field-groups', data })
 }
 console.info(`imported ${fieldGroups.length} field groups`)
+
+for (const term of geoTerms) {
+  const data = { wpId: term.term_id, slug: term.slug, parent: term.parent }
+  const { docs } = await payload.find({ collection: 'geo-terms', where: { wpId: { equals: term.term_id } }, limit: 1 })
+  if (docs[0]) await payload.update({ collection: 'geo-terms', id: docs[0].id, data })
+  else await payload.create({ collection: 'geo-terms', data })
+}
+console.info(`imported ${geoTerms.length} geo terms`)
+
+const interlinkingRules = await query<{
+  id: number
+  page_type: string
+  name: string
+  priority: number
+  status: string
+  conditions: string | null
+}>('select id, page_type, name, priority, status, conditions from wp_rril_rules')
+for (const rule of interlinkingRules) {
+  const data = {
+    wpId: rule.id,
+    pageType: rule.page_type,
+    name: rule.name,
+    priority: rule.priority,
+    status: rule.status,
+    conditions: JSON.parse(rule.conditions ?? '{}'),
+  }
+  const { docs } = await payload.find({ collection: 'interlinking-rules', where: { wpId: { equals: rule.id } }, limit: 1 })
+  if (docs[0]) await payload.update({ collection: 'interlinking-rules', id: docs[0].id, data })
+  else await payload.create({ collection: 'interlinking-rules', data })
+}
+console.info(`imported ${interlinkingRules.length} interlinking rules`)
 await db.end()
 process.exit(0)

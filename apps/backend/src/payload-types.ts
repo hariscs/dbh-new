@@ -71,6 +71,8 @@ export interface Config {
     media: Media;
     pages: Page;
     'field-groups': FieldGroup;
+    'interlinking-rules': InterlinkingRule;
+    'geo-terms': GeoTerm;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -82,6 +84,8 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
     'field-groups': FieldGroupsSelect<false> | FieldGroupsSelect<true>;
+    'interlinking-rules': InterlinkingRulesSelect<false> | InterlinkingRulesSelect<true>;
+    'geo-terms': GeoTermsSelect<false> | GeoTermsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -228,6 +232,15 @@ export interface Page {
     | number
     | boolean
     | null;
+  interlinking?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -249,6 +262,41 @@ export interface FieldGroup {
     | number
     | boolean
     | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "interlinking-rules".
+ */
+export interface InterlinkingRule {
+  id: number;
+  wpId: number;
+  pageType: string;
+  name: string;
+  priority: number;
+  status: string;
+  conditions?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "geo-terms".
+ */
+export interface GeoTerm {
+  id: number;
+  wpId: number;
+  slug: string;
+  parent: number;
   updatedAt: string;
   createdAt: string;
 }
@@ -291,6 +339,14 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'field-groups';
         value: number | FieldGroup;
+      } | null)
+    | ({
+        relationTo: 'interlinking-rules';
+        value: number | InterlinkingRule;
+      } | null)
+    | ({
+        relationTo: 'geo-terms';
+        value: number | GeoTerm;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -396,6 +452,7 @@ export interface PagesSelect<T extends boolean = true> {
   seo?: T;
   meta?: T;
   present?: T;
+  interlinking?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -408,6 +465,31 @@ export interface FieldGroupsSelect<T extends boolean = true> {
   title?: T;
   position?: T;
   fields?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "interlinking-rules_select".
+ */
+export interface InterlinkingRulesSelect<T extends boolean = true> {
+  wpId?: T;
+  pageType?: T;
+  name?: T;
+  priority?: T;
+  status?: T;
+  conditions?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "geo-terms_select".
+ */
+export interface GeoTermsSelect<T extends boolean = true> {
+  wpId?: T;
+  slug?: T;
+  parent?: T;
   updatedAt?: T;
   createdAt?: T;
 }

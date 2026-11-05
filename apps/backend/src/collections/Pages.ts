@@ -23,5 +23,6 @@ export const Pages: CollectionConfig = {
     { name: 'seo', type: 'json' },
     { name: 'meta', type: 'json' },
     { name: 'present', type: 'json' },
+    { name: 'interlinking', type: 'json' },
   ],
 }
