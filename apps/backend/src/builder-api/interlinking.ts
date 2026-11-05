@@ -239,7 +239,7 @@ export const findInterlinking = async (payload: Payload, rawPath: string, now = 
       depth: 0,
       pagination: false,
     }),
-    payload.find({ collection: 'geo-terms', depth: 0, pagination: false }),
+    payload.find({ collection: 'terms', where: { taxonomy: { equals: 'geo' } }, depth: 0, pagination: false }),
   ])
   const tree = buildGeoTree(geoTerms)
 

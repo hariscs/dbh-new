@@ -8,8 +8,8 @@ import sharp from 'sharp'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Pages } from './collections/Pages'
+import { Terms } from './collections/Terms'
 import { FieldGroups } from './collections/FieldGroups'
-import { GeoTerms } from './collections/GeoTerms'
 import { InterlinkingRules } from './collections/InterlinkingRules'
 import { Menus } from './collections/Menus'
 
@@ -23,7 +23,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Pages, FieldGroups, InterlinkingRules, GeoTerms, Menus],
+  collections: [Users, Media, Pages, FieldGroups, InterlinkingRules, Terms, Menus],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

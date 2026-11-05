@@ -72,7 +72,7 @@ export interface Config {
     pages: Page;
     'field-groups': FieldGroup;
     'interlinking-rules': InterlinkingRule;
-    'geo-terms': GeoTerm;
+    terms: Term;
     menus: Menu;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
@@ -86,7 +86,7 @@ export interface Config {
     pages: PagesSelect<false> | PagesSelect<true>;
     'field-groups': FieldGroupsSelect<false> | FieldGroupsSelect<true>;
     'interlinking-rules': InterlinkingRulesSelect<false> | InterlinkingRulesSelect<true>;
-    'geo-terms': GeoTermsSelect<false> | GeoTermsSelect<true>;
+    terms: TermsSelect<false> | TermsSelect<true>;
     menus: MenusSelect<false> | MenusSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
@@ -235,6 +235,24 @@ export interface Page {
     | number
     | boolean
     | null;
+  termIds?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  fieldTaxonomies?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   interlinking?:
     | {
         [k: string]: unknown;
@@ -293,12 +311,14 @@ export interface InterlinkingRule {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "geo-terms".
+ * via the `definition` "terms".
  */
-export interface GeoTerm {
+export interface Term {
   id: number;
   wpId: number;
+  taxonomy: string;
   slug: string;
+  name: string;
   parent: number;
   updatedAt: string;
   createdAt: string;
@@ -367,8 +387,8 @@ export interface PayloadLockedDocument {
         value: number | InterlinkingRule;
       } | null)
     | ({
-        relationTo: 'geo-terms';
-        value: number | GeoTerm;
+        relationTo: 'terms';
+        value: number | Term;
       } | null)
     | ({
         relationTo: 'menus';
@@ -479,6 +499,8 @@ export interface PagesSelect<T extends boolean = true> {
   seo?: T;
   meta?: T;
   present?: T;
+  termIds?: T;
+  fieldTaxonomies?: T;
   interlinking?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -511,11 +533,13 @@ export interface InterlinkingRulesSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "geo-terms_select".
+ * via the `definition` "terms_select".
  */
-export interface GeoTermsSelect<T extends boolean = true> {
+export interface TermsSelect<T extends boolean = true> {
   wpId?: T;
+  taxonomy?: T;
   slug?: T;
+  name?: T;
   parent?: T;
   updatedAt?: T;
   createdAt?: T;

@@ -1,10 +1,17 @@
 import type { CollectionConfig } from 'payload'
 
+import { derivePage } from '../content/derive'
+import { revalidatePage } from '../content/revalidate'
+
 export const Pages: CollectionConfig = {
   slug: 'pages',
   admin: {
     useAsTitle: 'path',
     defaultColumns: ['path', 'title', 'postType', 'template', 'updatedAt'],
+  },
+  hooks: {
+    beforeChange: [derivePage],
+    afterChange: [revalidatePage],
   },
   fields: [
     { name: 'wpId', type: 'number', required: true, unique: true, index: true },
@@ -24,6 +31,8 @@ export const Pages: CollectionConfig = {
     { name: 'seo', type: 'json' },
     { name: 'meta', type: 'json' },
     { name: 'present', type: 'json' },
+    { name: 'termIds', type: 'json' },
+    { name: 'fieldTaxonomies', type: 'json' },
     { name: 'interlinking', type: 'json' },
   ],
 }
