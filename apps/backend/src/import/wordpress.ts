@@ -7,10 +7,12 @@ import { unserialize } from 'php-serialize'
 
 import type { Interlinking } from '../builder-api/interlinking'
 import config from '../payload.config'
-import { formatWysiwyg, wpautop, wptexturize } from './wp-text'
+import { formatWysiwyg, renderTitle, wpautop, wptexturize } from './wp-text'
 
 const PRESENT_CACHE = path.resolve(process.cwd(), '.cache/present.json')
 const PRESENT_CONCURRENCY = 2
+const MENU_CACHE = path.resolve(process.cwd(), '.cache/menu.json')
+const MENU_LOCATION = 'primary'
 const PRESENT_TIMEOUT_MS = 60_000
 const GEO_LEVELS = ['national', 'state', 'county', 'city', 'region']
 const GEO_LEVEL_BY_DEPTH = ['national', 'state', 'region', 'county']
@@ -422,7 +424,7 @@ const buildInterlinking = (post: Post): Interlinking => {
 
   return {
     link: permalinkOf(post),
-    title: escHtml(h1) || escHtml(wptexturize(post.post_title).trim()),
+    title: escHtml(h1) || escHtml(renderTitle(post.post_title)),
     excluded: /ppc/i.test(post.post_title) || slugsOf('category').includes('redirected'),
     isBlog: slugsOf('template').includes('blog'),
     pageType: detectPageType(templateLineage, geoLevel),
@@ -579,5 +581,25 @@ for (const rule of interlinkingRules) {
   else await payload.create({ collection: 'interlinking-rules', data })
 }
 console.info(`imported ${interlinkingRules.length} interlinking rules`)
+
+const loadMenuTree = async () => {
+  try {
+    return JSON.parse(await readFile(MENU_CACHE, 'utf8')) as unknown[]
+  } catch {
+    const response = await fetch(`${home}/wp-json/builder/v1/menu?location=${MENU_LOCATION}`, {
+      signal: AbortSignal.timeout(PRESENT_TIMEOUT_MS),
+    })
+    if (!response.ok) throw new Error(`menu snapshot failed: ${response.status}`)
+    const tree = (await response.json()) as unknown[]
+    await mkdir(path.dirname(MENU_CACHE), { recursive: true })
+    await writeFile(MENU_CACHE, JSON.stringify(tree))
+    return tree
+  }
+}
+const menuData = { location: MENU_LOCATION, tree: await loadMenuTree() }
+const { docs: menuDocs } = await payload.find({ collection: 'menus', where: { location: { equals: MENU_LOCATION } }, limit: 1 })
+if (menuDocs[0]) await payload.update({ collection: 'menus', id: menuDocs[0].id, data: menuData })
+else await payload.create({ collection: 'menus', data: menuData })
+console.info(`imported menu ${MENU_LOCATION}`)
 await db.end()
 process.exit(0)

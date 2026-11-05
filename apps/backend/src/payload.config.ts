@@ -11,6 +11,7 @@ import { Pages } from './collections/Pages'
 import { FieldGroups } from './collections/FieldGroups'
 import { GeoTerms } from './collections/GeoTerms'
 import { InterlinkingRules } from './collections/InterlinkingRules'
+import { Menus } from './collections/Menus'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -22,7 +23,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Pages, FieldGroups, InterlinkingRules, GeoTerms],
+  collections: [Users, Media, Pages, FieldGroups, InterlinkingRules, GeoTerms, Menus],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

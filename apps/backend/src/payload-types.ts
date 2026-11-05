@@ -73,6 +73,7 @@ export interface Config {
     'field-groups': FieldGroup;
     'interlinking-rules': InterlinkingRule;
     'geo-terms': GeoTerm;
+    menus: Menu;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -86,6 +87,7 @@ export interface Config {
     'field-groups': FieldGroupsSelect<false> | FieldGroupsSelect<true>;
     'interlinking-rules': InterlinkingRulesSelect<false> | InterlinkingRulesSelect<true>;
     'geo-terms': GeoTermsSelect<false> | GeoTermsSelect<true>;
+    menus: MenusSelect<false> | MenusSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -302,6 +304,25 @@ export interface GeoTerm {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "menus".
+ */
+export interface Menu {
+  id: number;
+  location: string;
+  tree:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -347,6 +368,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'geo-terms';
         value: number | GeoTerm;
+      } | null)
+    | ({
+        relationTo: 'menus';
+        value: number | Menu;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -490,6 +515,16 @@ export interface GeoTermsSelect<T extends boolean = true> {
   wpId?: T;
   slug?: T;
   parent?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "menus_select".
+ */
+export interface MenusSelect<T extends boolean = true> {
+  location?: T;
+  tree?: T;
   updatedAt?: T;
   createdAt?: T;
 }
