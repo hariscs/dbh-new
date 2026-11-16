@@ -15,6 +15,8 @@
     "capture:baselines": "cross-env NODE_OPTIONS=--no-deprecation payload run src/import/capture-baselines.ts",
     "parity:all": "cross-env NODE_OPTIONS=--no-deprecation payload run src/import/parity-all.ts",
     "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "migrate": "cross-env NODE_OPTIONS=--no-deprecation payload migrate",
+    "migrate:create": "cross-env NODE_OPTIONS=--no-deprecation payload migrate:create",
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start -p 3003"
   },
   "dependencies": {

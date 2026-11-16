@@ -77,5 +77,18 @@ docker run --env-file apps/backend/.env -p 3000:3000 dbh-backend
 
 One image for every environment, variables supplied at start. Inside the container nginx listens on
 3000 and proxies to Next.js on 8080 under supervisord (`devops/`). The entrypoint runs
-`payload migrate` before starting, so schema changes must ship as migrations
-(`pnpm --dir apps/backend payload migrate:create`).
+`payload migrate` before starting, so schema changes must ship as migrations.
+
+## Schema changes
+
+Schema push is off, so local and deployed databases are both built from `src/migrations`. After
+changing a collection:
+
+```bash
+pnpm --dir apps/backend migrate:create <name>   # writes src/migrations/<timestamp>_<name>.ts
+pnpm --dir apps/backend migrate                 # applies it locally
+pnpm --dir apps/backend generate:types
+```
+
+Commit the migration with the collection change. A fresh database needs `pnpm --dir apps/backend migrate`
+before `pnpm import:wp`.
