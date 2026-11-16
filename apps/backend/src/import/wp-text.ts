@@ -124,3 +124,23 @@ const doShortcode = (html: string, globals: Map<string, string>) =>
 // ACF's acf_the_content filter chain for wysiwyg fields, in WordPress priority order.
 export const formatWysiwyg = (html: string, globals: Map<string, string>) =>
   doShortcode(shortcodeUnautop(wpautop(wptexturize(html))), globals)
+
+const NAMED_ENTITIES: Record<string, string> = {
+  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: '\u00a0', ndash: '–', mdash: '—',
+  hellip: '…', lsquo: '‘', rsquo: '’', ldquo: '“', rdquo: '”', copy: '©', reg: '®', trade: '™',
+  shy: '­', deg: '°',
+}
+
+export const decodeEntities = (value: string) =>
+  value.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (match, entity: string) => {
+    if (entity[0] !== '#') return NAMED_ENTITIES[entity.toLowerCase()] ?? match
+    const codePoint = entity[1].toLowerCase() === 'x' ? parseInt(entity.slice(2), 16) : Number(entity.slice(1))
+    return String.fromCodePoint(codePoint)
+  })
+
+export const formatDate = (stored: string, format: string) => {
+  const match = /^(\d{4})(\d{2})(\d{2})$/.exec(stored)
+  if (!match) return stored
+  const [, year, month, day] = match
+  return format.replace('Y', year).replace('m', month).replace('d', day)
+}

@@ -6,7 +6,7 @@ import { getPayload } from 'payload'
 import { unserialize } from 'php-serialize'
 
 import config from '../payload.config'
-import { formatWysiwyg, wpautop, wptexturize } from './wp-text'
+import { decodeEntities, formatDate, formatWysiwyg, wpautop, wptexturize } from './wp-text'
 
 const PRESENT_CACHE = path.resolve(process.cwd(), '.cache/present.json')
 const PRESENT_CONCURRENCY = 2
@@ -60,19 +60,6 @@ const maybeUnserialize = (value: string | null): unknown => {
     return value
   }
 }
-
-const NAMED_ENTITIES: Record<string, string> = {
-  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: '\u00a0', ndash: '–', mdash: '—',
-  hellip: '…', lsquo: '‘', rsquo: '’', ldquo: '“', rdquo: '”', copy: '©', reg: '®', trade: '™',
-  shy: '­', deg: '°',
-}
-
-const decodeEntities = (value: string) =>
-  value.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (match, entity: string) => {
-    if (entity[0] !== '#') return NAMED_ENTITIES[entity.toLowerCase()] ?? match
-    const codePoint = entity[1].toLowerCase() === 'x' ? parseInt(entity.slice(2), 16) : Number(entity.slice(1))
-    return String.fromCodePoint(codePoint)
-  })
 
 const normalizeValue = (value: unknown): string | null => {
   if (typeof value === 'string') return decodeEntities(value)
@@ -279,13 +266,6 @@ const isEmpty = (value: unknown) =>
   value === null || value === undefined || value === '' || value === false ||
   (typeof value === 'object' && Object.keys(value).length === 0)
 
-const formatDate = (stored: string, format: string) => {
-  const match = /^(\d{4})(\d{2})(\d{2})$/.exec(stored)
-  if (!match) return stored
-  const [, year, month, day] = match
-  return format.replace('Y', year).replace('m', month).replace('d', day)
-}
-
 const formatAcfValue = (field: AcfField, raw: string): unknown => {
   const value = maybeUnserialize(raw)
   switch (field.type) {
@@ -477,6 +457,9 @@ for (const [position, group] of fieldGroups.entries()) {
         name: field.post_excerpt,
         type: acfFields.get(field.post_name)?.type,
         label: field.post_title,
+        returnFormat: acfFields.get(field.post_name)?.returnFormat,
+        newLines: acfFields.get(field.post_name)?.newLines,
+        displayFormat: acfFields.get(field.post_name)?.displayFormat,
       })),
   }
 
@@ -485,6 +468,13 @@ for (const [position, group] of fieldGroups.entries()) {
   else await payload.create({ collection: 'field-groups', data })
 }
 console.info(`imported ${fieldGroups.length} field groups`)
+
+for (const [name, value] of globalVariables) {
+  const { docs } = await payload.find({ collection: 'global-variables', where: { name: { equals: name } }, limit: 1 })
+  if (docs[0]) await payload.update({ collection: 'global-variables', id: docs[0].id, data: { value } })
+  else await payload.create({ collection: 'global-variables', data: { name, value } })
+}
+console.info(`imported ${globalVariables.size} global variables`)
 
 const interlinkingRules = await query<{
   id: number

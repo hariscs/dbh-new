@@ -60,6 +60,7 @@ export const derivePage: CollectionBeforeChangeHook = async ({ data, originalDoc
     (termIds[taxonomy] ?? [])
       .map((id) => allTerms.find((term) => term.wpId === id))
       .filter((term): term is Term => !!term)
+      .sort((a, b) => a.name.localeCompare(b.name))
 
   const fields: Fields = { ...((page.fields ?? {}) as Fields) }
   for (const taxonomy of (page.fieldTaxonomies ?? []) as string[]) {
@@ -80,12 +81,13 @@ export const derivePage: CollectionBeforeChangeHook = async ({ data, originalDoc
     names: templateTerms.map((term) => term.name),
   }
 
-  let { path, reachableByPath, parentSlug, meta } = page
-  const isEdit = operation === 'update' && !context.import
+  let { path, reachableByPath, parentSlug, meta, seo } = page
+  const isEdit = !context.import
+  const isCreate = operation === 'create'
   const parentChanged = data.parentWpId !== undefined && data.parentWpId !== originalDoc?.parentWpId
   const slugChanged = data.slug !== undefined && data.slug !== originalDoc?.slug
 
-  if (isEdit && (parentChanged || slugChanged)) {
+  if (isEdit && (isCreate || parentChanged || slugChanged)) {
     const { docs: parents } = await req.payload.find({
       collection: 'pages',
       where: { wpId: { equals: page.parentWpId ?? 0 } },
@@ -95,7 +97,7 @@ export const derivePage: CollectionBeforeChangeHook = async ({ data, originalDoc
     })
     const parent = parents[0]
     path =
-      page.postType === 'page'
+      page.postType === 'page' || !path
         ? `${parent ? parent.path.replace(/\/$/, '') : ''}/${page.slug}`
         : path.replace(/[^/]+$/, page.slug)
     reachableByPath = parent ? !!parent.reachableByPath && !!parent.slug : true
@@ -107,6 +109,11 @@ export const derivePage: CollectionBeforeChangeHook = async ({ data, originalDoc
       slug: page.slug,
       parent: parentSlug,
       updatedAt: `${new Date().toISOString().slice(0, 19)}+00:00`,
+      createdAt: (meta as Record<string, string> | undefined)?.createdAt ?? new Date().toISOString().slice(0, 10),
+    }
+    const canonical = (seo as Record<string, string> | undefined)?.canonical
+    if (path !== originalDoc?.path && (!canonical || canonical === `${LINK_ORIGIN}${originalDoc?.path}/`)) {
+      seo = { ...(seo as Record<string, string>), canonical: `${LINK_ORIGIN}${path}/` }
     }
   }
 
@@ -150,6 +157,7 @@ export const derivePage: CollectionBeforeChangeHook = async ({ data, originalDoc
     reachableByPath,
     parentSlug,
     meta,
+    seo,
     interlinking,
   }
 }

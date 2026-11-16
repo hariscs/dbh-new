@@ -12,6 +12,8 @@ import { Terms } from './collections/Terms'
 import { FieldGroups } from './collections/FieldGroups'
 import { InterlinkingRules } from './collections/InterlinkingRules'
 import { Menus } from './collections/Menus'
+import { GlobalVariables } from './collections/GlobalVariables'
+import { SheetImports } from './collections/SheetImports'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -23,7 +25,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Pages, FieldGroups, InterlinkingRules, Terms, Menus],
+  collections: [Users, Media, Pages, FieldGroups, InterlinkingRules, Terms, Menus, GlobalVariables, SheetImports],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

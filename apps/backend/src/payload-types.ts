@@ -74,6 +74,8 @@ export interface Config {
     'interlinking-rules': InterlinkingRule;
     terms: Term;
     menus: Menu;
+    'global-variables': GlobalVariable;
+    'sheet-imports': SheetImport;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -88,6 +90,8 @@ export interface Config {
     'interlinking-rules': InterlinkingRulesSelect<false> | InterlinkingRulesSelect<true>;
     terms: TermsSelect<false> | TermsSelect<true>;
     menus: MenusSelect<false> | MenusSelect<true>;
+    'global-variables': GlobalVariablesSelect<false> | GlobalVariablesSelect<true>;
+    'sheet-imports': SheetImportsSelect<false> | SheetImportsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -344,6 +348,46 @@ export interface Menu {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "global-variables".
+ */
+export interface GlobalVariable {
+  id: number;
+  name: string;
+  value?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sheet-imports".
+ */
+export interface SheetImport {
+  id: number;
+  dryRun?: boolean | null;
+  summary?: string | null;
+  report?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -393,6 +437,14 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'menus';
         value: number | Menu;
+      } | null)
+    | ({
+        relationTo: 'global-variables';
+        value: number | GlobalVariable;
+      } | null)
+    | ({
+        relationTo: 'sheet-imports';
+        value: number | SheetImport;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -553,6 +605,36 @@ export interface MenusSelect<T extends boolean = true> {
   tree?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "global-variables_select".
+ */
+export interface GlobalVariablesSelect<T extends boolean = true> {
+  name?: T;
+  value?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sheet-imports_select".
+ */
+export interface SheetImportsSelect<T extends boolean = true> {
+  dryRun?: T;
+  summary?: T;
+  report?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

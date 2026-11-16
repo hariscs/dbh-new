@@ -25,8 +25,10 @@ const requestRevalidation = async (req: PayloadRequest, slug?: string) => {
 const slugOf = (doc: { path?: string; isFrontPage?: boolean | null }) =>
   doc.isFrontPage ? undefined : doc.path?.replace(/^\/+|\/+$/g, '')
 
+export const revalidateSite = (req: PayloadRequest) => requestRevalidation(req)
+
 export const revalidatePage: CollectionAfterChangeHook = async ({ doc, previousDoc, req, context }) => {
-  if (context.import) return doc
+  if (context.import || context.sheetImport) return doc
   await requestRevalidation(req, slugOf(doc))
   if (previousDoc?.path && previousDoc.path !== doc.path) await requestRevalidation(req, slugOf(previousDoc))
   return doc
