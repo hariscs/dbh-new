@@ -1,5 +1,6 @@
 import type { CollectionConfig } from 'payload'
 
+import { moveChildren } from '../content/cascade'
 import { derivePage } from '../content/derive'
 import { revalidatePage } from '../content/revalidate'
 
@@ -11,7 +12,7 @@ export const Pages: CollectionConfig = {
   },
   hooks: {
     beforeChange: [derivePage],
-    afterChange: [revalidatePage],
+    afterChange: [revalidatePage, moveChildren],
   },
   fields: [
     { name: 'wpId', type: 'number', required: true, unique: true, index: true },

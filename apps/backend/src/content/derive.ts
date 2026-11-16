@@ -87,7 +87,7 @@ export const derivePage: CollectionBeforeChangeHook = async ({ data, originalDoc
   const parentChanged = data.parentWpId !== undefined && data.parentWpId !== originalDoc?.parentWpId
   const slugChanged = data.slug !== undefined && data.slug !== originalDoc?.slug
 
-  if (isEdit && (isCreate || parentChanged || slugChanged)) {
+  if (isEdit && (isCreate || parentChanged || slugChanged || context.parentMoved)) {
     const { docs: parents } = await req.payload.find({
       collection: 'pages',
       where: { wpId: { equals: page.parentWpId ?? 0 } },
@@ -108,7 +108,9 @@ export const derivePage: CollectionBeforeChangeHook = async ({ data, originalDoc
       ...(meta as Record<string, string>),
       slug: page.slug,
       parent: parentSlug,
-      updatedAt: `${new Date().toISOString().slice(0, 19)}+00:00`,
+      updatedAt: context.parentMoved
+        ? (meta as Record<string, string>).updatedAt
+        : `${new Date().toISOString().slice(0, 19)}+00:00`,
       createdAt: (meta as Record<string, string> | undefined)?.createdAt ?? new Date().toISOString().slice(0, 10),
     }
     const canonical = (seo as Record<string, string> | undefined)?.canonical
