@@ -1,5 +1,6 @@
 import type { CollectionConfig } from 'payload'
 
+import { clearInterlinkingCache } from '../builder-api/interlinking'
 import { rederiveTermPages } from '../content/cascade'
 
 export const Terms: CollectionConfig = {
@@ -9,7 +10,8 @@ export const Terms: CollectionConfig = {
     defaultColumns: ['name', 'taxonomy', 'slug', 'parent'],
   },
   hooks: {
-    afterChange: [rederiveTermPages],
+    afterChange: [clearInterlinkingCache, rederiveTermPages],
+    afterDelete: [clearInterlinkingCache],
   },
   fields: [
     { name: 'wpId', type: 'number', required: true, unique: true, index: true },

@@ -1,10 +1,16 @@
 import type { CollectionConfig } from 'payload'
 
+import { clearInterlinkingCache } from '../builder-api/interlinking'
+
 export const InterlinkingRules: CollectionConfig = {
   slug: 'interlinking-rules',
   admin: {
     useAsTitle: 'name',
     defaultColumns: ['name', 'pageType', 'priority', 'status'],
+  },
+  hooks: {
+    afterChange: [clearInterlinkingCache],
+    afterDelete: [clearInterlinkingCache],
   },
   fields: [
     { name: 'wpId', type: 'number', required: true, unique: true, index: true },

@@ -209,15 +209,25 @@ const runRule = (cond: Conditions, current: Candidate, pages: Candidate[], tree:
   return unique.filter((page) => !page.topics.some((slug) => excludedTopics.includes(slug))).slice(0, limit)
 }
 
-export const findInterlinking = async (payload: Payload, rawPath: string, now = new Date()) => {
-  const { docs: pageDocs } = await payload.find({
-    collection: 'pages',
-    where: { postType: { equals: 'page' }, status: { equals: 'publish' } },
-    sort: ['-postDate', '-wpId'],
-    depth: 0,
-    pagination: false,
-    select: { wpId: true, path: true, reachableByPath: true, postDate: true, interlinking: true },
-  })
+const loadSnapshot = async (payload: Payload) => {
+  const [{ docs: pageDocs }, { docs: rules }, { docs: geoTerms }] = await Promise.all([
+    payload.find({
+      collection: 'pages',
+      where: { postType: { equals: 'page' }, status: { equals: 'publish' } },
+      sort: ['-postDate', '-wpId'],
+      depth: 0,
+      pagination: false,
+      select: { wpId: true, path: true, reachableByPath: true, postDate: true, interlinking: true },
+    }),
+    payload.find({
+      collection: 'interlinking-rules',
+      where: { status: { equals: 'active' } },
+      sort: ['priority', 'wpId'],
+      depth: 0,
+      pagination: false,
+    }),
+    payload.find({ collection: 'terms', where: { taxonomy: { equals: 'geo' } }, depth: 0, pagination: false }),
+  ])
   const pages = pageDocs.map((page) => ({
     ...(page.interlinking as Interlinking),
     wpId: page.wpId,
@@ -225,23 +235,32 @@ export const findInterlinking = async (payload: Payload, rawPath: string, now = 
     path: page.path,
     reachableByPath: page.reachableByPath,
   }))
+  return { pages, rules, tree: buildGeoTree(geoTerms) }
+}
+
+let snapshot: ReturnType<typeof loadSnapshot> | null = null
+
+export const clearInterlinkingCache = () => {
+  snapshot = null
+}
+
+const getSnapshot = (payload: Payload) => {
+  snapshot ??= loadSnapshot(payload).catch((error: unknown) => {
+    snapshot = null
+    throw error
+  })
+  return snapshot
+}
+
+export const findInterlinking = async (payload: Payload, rawPath: string, now = new Date()) => {
+  const { pages, rules: allRules, tree } = await getSnapshot(payload)
 
   const current = pages.find(
     (page) => page.reachableByPath && page.path === `/${rawPath.replace(/^\/+|\/+$/g, '')}`,
   )
   if (!current) return undefined
 
-  const [{ docs: rules }, { docs: geoTerms }] = await Promise.all([
-    payload.find({
-      collection: 'interlinking-rules',
-      where: { pageType: { equals: current.pageType }, status: { equals: 'active' } },
-      sort: ['priority', 'wpId'],
-      depth: 0,
-      pagination: false,
-    }),
-    payload.find({ collection: 'terms', where: { taxonomy: { equals: 'geo' } }, depth: 0, pagination: false }),
-  ])
-  const tree = buildGeoTree(geoTerms)
+  const rules = allRules.filter((rule) => rule.pageType === current.pageType)
 
   const seen = new Set<number>()
   const related = rules

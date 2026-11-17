@@ -1,5 +1,6 @@
 import type { CollectionConfig } from 'payload'
 
+import { clearInterlinkingCache } from '../builder-api/interlinking'
 import { moveChildren } from '../content/cascade'
 import { derivePage } from '../content/derive'
 import { revalidatePage } from '../content/revalidate'
@@ -12,7 +13,8 @@ export const Pages: CollectionConfig = {
   },
   hooks: {
     beforeChange: [derivePage],
-    afterChange: [revalidatePage, moveChildren],
+    afterChange: [clearInterlinkingCache, revalidatePage, moveChildren],
+    afterDelete: [clearInterlinkingCache],
   },
   fields: [
     { name: 'wpId', type: 'number', required: true, unique: true, index: true },
