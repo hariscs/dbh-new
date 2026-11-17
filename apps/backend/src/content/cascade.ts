@@ -12,7 +12,7 @@ export const moveChildren: CollectionAfterChangeHook = async ({ doc, previousDoc
     where: { parentWpId: { equals: doc.wpId }, postType: { equals: 'page' } },
     depth: 0,
     pagination: false,
-    select: { id: true },
+    select: { slug: true },
     req,
   })
   for (const child of children) {
