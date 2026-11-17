@@ -108,7 +108,7 @@ export const derivePage: CollectionBeforeChangeHook = async ({ data, originalDoc
       ...(meta as Record<string, string>),
       slug: page.slug,
       parent: parentSlug,
-      updatedAt: context.parentMoved
+      updatedAt: context.parentMoved || context.termChanged
         ? (meta as Record<string, string>).updatedAt
         : `${new Date().toISOString().slice(0, 19)}+00:00`,
       createdAt: (meta as Record<string, string> | undefined)?.createdAt ?? new Date().toISOString().slice(0, 10),

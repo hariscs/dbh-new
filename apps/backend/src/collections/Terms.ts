@@ -1,10 +1,15 @@
 import type { CollectionConfig } from 'payload'
 
+import { rederiveTermPages } from '../content/cascade'
+
 export const Terms: CollectionConfig = {
   slug: 'terms',
   admin: {
     useAsTitle: 'name',
     defaultColumns: ['name', 'taxonomy', 'slug', 'parent'],
+  },
+  hooks: {
+    afterChange: [rederiveTermPages],
   },
   fields: [
     { name: 'wpId', type: 'number', required: true, unique: true, index: true },

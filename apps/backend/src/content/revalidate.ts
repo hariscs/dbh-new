@@ -28,7 +28,7 @@ const slugOf = (doc: { path?: string; isFrontPage?: boolean | null }) =>
 export const revalidateSite = (req: PayloadRequest) => requestRevalidation(req)
 
 export const revalidatePage: CollectionAfterChangeHook = async ({ doc, previousDoc, req, context }) => {
-  if (context.import || context.sheetImport || context.parentMoved) return doc
+  if (context.import || context.sheetImport || context.parentMoved || context.termChanged) return doc
   await requestRevalidation(req, slugOf(doc))
   if (previousDoc?.path && previousDoc.path !== doc.path) await requestRevalidation(req, slugOf(previousDoc))
   return doc
