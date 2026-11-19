@@ -1282,7 +1282,7 @@ export default function LocationServedNationalCro2({ fields = {}, relatedLinks, 
 <div className="elementor-widget-container">
 <iframe id="JotFormIFrame-252953870854469" title="TDRC New Design Insurance Form" allowTransparency={true} allow="geolocation; microphone; camera; fullscreen; payment" src="https://form.jotform.com/252953870854469" frameBorder="0" style={{"minWidth":"100%","maxWidth":"100%","border":"none"}} scrolling="no">
 </iframe>
-<script data-minify="1" src="https://cms.districtbehavioralhealth.com/wp-content/cache/min/1/s/umd/latest/for-form-embed-handler.js?ver=1785936052"></script>
+<script data-minify="1" src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
 <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-252953870854469']", "https://form.jotform.com/")</script>
 </div>
 </div>
