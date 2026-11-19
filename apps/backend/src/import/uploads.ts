@@ -33,16 +33,26 @@ const sizeFilesOf = (metadata: string | null) => {
   }
 }
 
+const OPTIMIZER_SUFFIXES = ['-300', '-600', '-1200', '-1920', '-150x150']
+const withoutExtension = (file: string) => file.slice(0, file.length - path.posix.extname(file).length)
+
 const files = new Set<string>()
+const optimizerVariants = new Set<string>()
 for (const { file, metadata } of rows as { file: string; metadata: string | null }[]) {
+  const sizeFiles = sizeFilesOf(metadata).map((sizeFile) => path.posix.join(path.posix.dirname(file), sizeFile))
   files.add(file)
-  for (const sizeFile of sizeFilesOf(metadata)) files.add(path.posix.join(path.posix.dirname(file), sizeFile))
+  for (const sizeFile of sizeFiles) files.add(sizeFile)
+  for (const each of [file, ...sizeFiles]) optimizerVariants.add(`${withoutExtension(each)}.webp`)
+  for (const suffix of OPTIMIZER_SUFFIXES) optimizerVariants.add(`${withoutExtension(file)}${suffix}.webp`)
 }
+for (const file of files) optimizerVariants.delete(file)
 
 const skippedTypes: string[] = []
 const missing: string[] = []
 let copied = 0
-for (const file of files) {
+let variantsCopied = 0
+for (const file of [...files, ...optimizerVariants]) {
+  const isVariant = optimizerVariants.has(file)
   const normalized = path.posix.normalize(file)
   if (normalized.startsWith('..') || path.posix.isAbsolute(normalized) || !(path.extname(normalized).toLowerCase() in UPLOAD_TYPES)) {
     skippedTypes.push(file)
@@ -50,15 +60,17 @@ for (const file of files) {
   }
   const source = path.join(sourceDir, normalized)
   if (!(await stat(source).catch(() => null))?.isFile()) {
-    missing.push(file)
+    if (!isVariant) missing.push(file)
     continue
   }
   await mkdir(path.dirname(path.join(targetDir, normalized)), { recursive: true })
   await copyFile(source, path.join(targetDir, normalized))
-  copied++
+  if (isVariant) variantsCopied++
+  else copied++
 }
 
 console.info(`uploads: ${rows.length} attachments, ${files.size} files, ${copied} copied to ${targetDir}`)
+console.info(`uploads: ${variantsCopied} image optimizer webp variants copied`)
 console.info(`uploads: ${skippedTypes.length} skipped (type not served)${skippedTypes.length ? `: ${skippedTypes.join(', ')}` : ''}`)
 console.info(`uploads: ${missing.length} missing on disk${missing.length ? `: ${missing.join(', ')}` : ''}`)
 process.exit(0)
