@@ -67,15 +67,15 @@ export interface Config {
   };
   blocks: {};
   collections: {
-    users: User;
-    media: Media;
     pages: Page;
+    media: Media;
+    terms: Term;
+    'global-variables': GlobalVariable;
+    menus: Menu;
+    'sheet-imports': SheetImport;
     'field-groups': FieldGroup;
     'interlinking-rules': InterlinkingRule;
-    terms: Term;
-    menus: Menu;
-    'global-variables': GlobalVariable;
-    'sheet-imports': SheetImport;
+    users: User;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -83,15 +83,15 @@ export interface Config {
   };
   collectionsJoins: {};
   collectionsSelect: {
-    users: UsersSelect<false> | UsersSelect<true>;
-    media: MediaSelect<false> | MediaSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
+    media: MediaSelect<false> | MediaSelect<true>;
+    terms: TermsSelect<false> | TermsSelect<true>;
+    'global-variables': GlobalVariablesSelect<false> | GlobalVariablesSelect<true>;
+    menus: MenusSelect<false> | MenusSelect<true>;
+    'sheet-imports': SheetImportsSelect<false> | SheetImportsSelect<true>;
     'field-groups': FieldGroupsSelect<false> | FieldGroupsSelect<true>;
     'interlinking-rules': InterlinkingRulesSelect<false> | InterlinkingRulesSelect<true>;
-    terms: TermsSelect<false> | TermsSelect<true>;
-    menus: MenusSelect<false> | MenusSelect<true>;
-    'global-variables': GlobalVariablesSelect<false> | GlobalVariablesSelect<true>;
-    'sheet-imports': SheetImportsSelect<false> | SheetImportsSelect<true>;
+    users: UsersSelect<false> | UsersSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -133,29 +133,114 @@ export interface UserAuthOperations {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "users".
+ * via the `definition` "pages".
  */
-export interface User {
+export interface Page {
   id: number;
+  /**
+   * Shown in the admin and used for the browser title when no meta title is set
+   */
+  title: string;
+  /**
+   * Last part of the URL, e.g. "adhd" in /location-served/usa/ca/adhd
+   */
+  slug: string;
+  /**
+   * The URL is built from the parent path plus the slug. Child pages move with their parent
+   */
+  parentWpId?: number | null;
+  /**
+   * Drafts are never shown on the site
+   */
+  status: string;
+  fields?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  seo?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  termIds?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  reachableByPath?: boolean | null;
+  parentSlug?: string | null;
+  template?: string | null;
+  templates?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  meta?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  fieldTaxonomies?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  interlinking?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  present?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  /**
+   * Built from parent and slug on save
+   */
+  path: string;
+  postType: string;
+  isFrontPage?: boolean | null;
+  postDate?: string | null;
+  /**
+   * Original WordPress post ID, kept for links and imports
+   */
+  wpId: number;
   updatedAt: string;
   createdAt: string;
-  email: string;
-  resetPasswordToken?: string | null;
-  resetPasswordExpiration?: string | null;
-  salt?: string | null;
-  hash?: string | null;
-  resetPasswordRequestedAt?: string | null;
-  loginAttempts?: number | null;
-  lockUntil?: string | null;
-  sessions?:
-    | {
-        id: string;
-        createdAt?: string | null;
-        expiresAt: string;
-      }[]
-    | null;
-  password?: string | null;
-  collection: 'users';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -178,110 +263,44 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "pages".
+ * via the `definition` "terms".
  */
-export interface Page {
+export interface Term {
   id: number;
-  title: string;
-  slug: string;
-  parentWpId?: number | null;
-  status: string;
-  fields?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
-  seo?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
-  present?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
-  termIds?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
   wpId: number;
-  postType: string;
-  isFrontPage?: boolean | null;
-  postDate?: string | null;
+  taxonomy: string;
+  slug: string;
+  name: string;
   /**
-   * Set automatically on save
+   * Renaming or moving a term updates every page that uses it
    */
-  path: string;
-  /**
-   * Set automatically on save
-   */
-  reachableByPath?: boolean | null;
-  /**
-   * Set automatically on save
-   */
-  parentSlug?: string | null;
-  /**
-   * Set automatically on save
-   */
-  template?: string | null;
-  /**
-   * Set automatically on save
-   */
-  templates?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
-  /**
-   * Set automatically on save
-   */
-  meta?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
-  /**
-   * Set automatically on save
-   */
-  fieldTaxonomies?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
-  /**
-   * Set automatically on save
-   */
-  interlinking?:
+  parent: number;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Values used across the site, e.g. [nav_glbl_var] placeholders in page content
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "global-variables".
+ */
+export interface GlobalVariable {
+  id: number;
+  name: string;
+  value?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Snapshot of the WordPress menu. Edit the menu JSON only if you know the structure
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "menus".
+ */
+export interface Menu {
+  id: number;
+  location: string;
+  tree:
     | {
         [k: string]: unknown;
       }
@@ -294,6 +313,42 @@ export interface Page {
   createdAt: string;
 }
 /**
+ * Upload a Google Sheet CSV to create or update pages, like WP All Import. Rows match pages by WordPress ID
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sheet-imports".
+ */
+export interface SheetImport {
+  id: number;
+  /**
+   * Ticked: only shows what would change. Untick to apply the changes
+   */
+  dryRun?: boolean | null;
+  summary?: string | null;
+  report?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+}
+/**
+ * Field definitions copied from ACF. They decide which fields show on each page
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "field-groups".
  */
@@ -324,6 +379,8 @@ export interface FieldGroup {
   createdAt: string;
 }
 /**
+ * Rules that pick the related-page links shown at the bottom of pages (RR Interlinking plugin)
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "interlinking-rules".
  */
@@ -348,76 +405,29 @@ export interface InterlinkingRule {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "terms".
+ * via the `definition` "users".
  */
-export interface Term {
+export interface User {
   id: number;
-  wpId: number;
-  taxonomy: string;
-  slug: string;
-  name: string;
-  parent: number;
   updatedAt: string;
   createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "menus".
- */
-export interface Menu {
-  id: number;
-  location: string;
-  tree:
+  email: string;
+  resetPasswordToken?: string | null;
+  resetPasswordExpiration?: string | null;
+  salt?: string | null;
+  hash?: string | null;
+  resetPasswordRequestedAt?: string | null;
+  loginAttempts?: number | null;
+  lockUntil?: string | null;
+  sessions?:
     | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
+        id: string;
+        createdAt?: string | null;
+        expiresAt: string;
+      }[]
     | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "global-variables".
- */
-export interface GlobalVariable {
-  id: number;
-  name: string;
-  value?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "sheet-imports".
- */
-export interface SheetImport {
-  id: number;
-  dryRun?: boolean | null;
-  summary?: string | null;
-  report?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
-  updatedAt: string;
-  createdAt: string;
-  url?: string | null;
-  thumbnailURL?: string | null;
-  filename?: string | null;
-  mimeType?: string | null;
-  filesize?: number | null;
-  width?: number | null;
-  height?: number | null;
-  focalX?: number | null;
-  focalY?: number | null;
+  password?: string | null;
+  collection: 'users';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -444,16 +454,28 @@ export interface PayloadLockedDocument {
   id: number;
   document?:
     | ({
-        relationTo: 'users';
-        value: number | User;
+        relationTo: 'pages';
+        value: number | Page;
       } | null)
     | ({
         relationTo: 'media';
         value: number | Media;
       } | null)
     | ({
-        relationTo: 'pages';
-        value: number | Page;
+        relationTo: 'terms';
+        value: number | Term;
+      } | null)
+    | ({
+        relationTo: 'global-variables';
+        value: number | GlobalVariable;
+      } | null)
+    | ({
+        relationTo: 'menus';
+        value: number | Menu;
+      } | null)
+    | ({
+        relationTo: 'sheet-imports';
+        value: number | SheetImport;
       } | null)
     | ({
         relationTo: 'field-groups';
@@ -464,20 +486,8 @@ export interface PayloadLockedDocument {
         value: number | InterlinkingRule;
       } | null)
     | ({
-        relationTo: 'terms';
-        value: number | Term;
-      } | null)
-    | ({
-        relationTo: 'menus';
-        value: number | Menu;
-      } | null)
-    | ({
-        relationTo: 'global-variables';
-        value: number | GlobalVariable;
-      } | null)
-    | ({
-        relationTo: 'sheet-imports';
-        value: number | SheetImport;
+        relationTo: 'users';
+        value: number | User;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -523,26 +533,31 @@ export interface PayloadMigration {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "users_select".
+ * via the `definition` "pages_select".
  */
-export interface UsersSelect<T extends boolean = true> {
+export interface PagesSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  parentWpId?: T;
+  status?: T;
+  fields?: T;
+  seo?: T;
+  termIds?: T;
+  reachableByPath?: T;
+  parentSlug?: T;
+  template?: T;
+  templates?: T;
+  meta?: T;
+  fieldTaxonomies?: T;
+  interlinking?: T;
+  present?: T;
+  path?: T;
+  postType?: T;
+  isFrontPage?: T;
+  postDate?: T;
+  wpId?: T;
   updatedAt?: T;
   createdAt?: T;
-  email?: T;
-  resetPasswordToken?: T;
-  resetPasswordExpiration?: T;
-  salt?: T;
-  hash?: T;
-  resetPasswordRequestedAt?: T;
-  loginAttempts?: T;
-  lockUntil?: T;
-  sessions?:
-    | T
-    | {
-        id?: T;
-        createdAt?: T;
-        expiresAt?: T;
-      };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -564,31 +579,56 @@ export interface MediaSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "pages_select".
+ * via the `definition` "terms_select".
  */
-export interface PagesSelect<T extends boolean = true> {
-  title?: T;
-  slug?: T;
-  parentWpId?: T;
-  status?: T;
-  fields?: T;
-  seo?: T;
-  present?: T;
-  termIds?: T;
+export interface TermsSelect<T extends boolean = true> {
   wpId?: T;
-  postType?: T;
-  isFrontPage?: T;
-  postDate?: T;
-  path?: T;
-  reachableByPath?: T;
-  parentSlug?: T;
-  template?: T;
-  templates?: T;
-  meta?: T;
-  fieldTaxonomies?: T;
-  interlinking?: T;
+  taxonomy?: T;
+  slug?: T;
+  name?: T;
+  parent?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "global-variables_select".
+ */
+export interface GlobalVariablesSelect<T extends boolean = true> {
+  name?: T;
+  value?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "menus_select".
+ */
+export interface MenusSelect<T extends boolean = true> {
+  location?: T;
+  tree?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sheet-imports_select".
+ */
+export interface SheetImportsSelect<T extends boolean = true> {
+  dryRun?: T;
+  summary?: T;
+  report?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -619,56 +659,26 @@ export interface InterlinkingRulesSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "terms_select".
+ * via the `definition` "users_select".
  */
-export interface TermsSelect<T extends boolean = true> {
-  wpId?: T;
-  taxonomy?: T;
-  slug?: T;
-  name?: T;
-  parent?: T;
+export interface UsersSelect<T extends boolean = true> {
   updatedAt?: T;
   createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "menus_select".
- */
-export interface MenusSelect<T extends boolean = true> {
-  location?: T;
-  tree?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "global-variables_select".
- */
-export interface GlobalVariablesSelect<T extends boolean = true> {
-  name?: T;
-  value?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "sheet-imports_select".
- */
-export interface SheetImportsSelect<T extends boolean = true> {
-  dryRun?: T;
-  summary?: T;
-  report?: T;
-  updatedAt?: T;
-  createdAt?: T;
-  url?: T;
-  thumbnailURL?: T;
-  filename?: T;
-  mimeType?: T;
-  filesize?: T;
-  width?: T;
-  height?: T;
-  focalX?: T;
-  focalY?: T;
+  email?: T;
+  resetPasswordToken?: T;
+  resetPasswordExpiration?: T;
+  salt?: T;
+  hash?: T;
+  resetPasswordRequestedAt?: T;
+  loginAttempts?: T;
+  lockUntil?: T;
+  sessions?:
+    | T
+    | {
+        id?: T;
+        createdAt?: T;
+        expiresAt?: T;
+      };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

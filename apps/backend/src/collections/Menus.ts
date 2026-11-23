@@ -5,6 +5,8 @@ import { revalidateLayout } from '../content/revalidate'
 export const Menus: CollectionConfig = {
   slug: 'menus',
   admin: {
+    group: 'Settings',
+    description: 'Snapshot of the WordPress menu. Edit the menu JSON only if you know the structure',
     useAsTitle: 'location',
   },
   hooks: {

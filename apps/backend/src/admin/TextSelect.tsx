@@ -3,13 +3,14 @@
 import { SelectInput, useField } from '@payloadcms/ui'
 import type { TextFieldClientComponent } from 'payload'
 
-type Props = { options: string[] }
+type Option = { label: string; value: string }
+type Props = { options: Option[] }
 
 export const TextSelect: TextFieldClientComponent = (props) => {
   const { field, path, readOnly } = props
   const { options } = props as unknown as Props
   const { value, setValue } = useField<string>({ path })
-  const values = value && !options.includes(value) ? [...options, value] : options
+  const all = value && !options.some((option) => option.value === value) ? [...options, { label: value, value }] : options
 
   return (
     <SelectInput
@@ -18,7 +19,7 @@ export const TextSelect: TextFieldClientComponent = (props) => {
       label={field.label}
       name={field.name}
       onChange={(option) => !Array.isArray(option) && setValue(option ? String(option.value) : '')}
-      options={values.map((option) => ({ label: option, value: option }))}
+      options={all}
       path={path}
       readOnly={readOnly}
       required={field.required}

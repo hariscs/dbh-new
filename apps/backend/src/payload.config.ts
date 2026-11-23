@@ -24,8 +24,14 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    meta: { titleSuffix: ' - DBH CMS' },
+    components: {
+      graphics: { Logo: '/admin/Branding#Logo', Icon: '/admin/Branding#Icon' },
+      beforeNavLinks: ['/admin/PostTypeLinks#PostTypeLinks'],
+      beforeDashboard: ['/admin/Dashboard#Dashboard'],
+    },
   },
-  collections: [Users, Media, Pages, FieldGroups, InterlinkingRules, Terms, Menus, GlobalVariables, SheetImports],
+  collections: [Pages, Media, Terms, GlobalVariables, Menus, SheetImports, FieldGroups, InterlinkingRules, Users],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

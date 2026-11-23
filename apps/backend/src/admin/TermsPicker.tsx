@@ -4,6 +4,8 @@ import { JSONField, SelectInput, useField, useFormFields } from '@payloadcms/ui'
 import type { JSONFieldClientComponent } from 'payload'
 import { useEffect, useState } from 'react'
 
+import { TAXONOMIES } from './labels'
+
 type TermDoc = { wpId: number; name: string; taxonomy: string; parent: number }
 type TermIds = Record<string, number[]>
 
@@ -58,7 +60,7 @@ export const TermsPicker: JSONFieldClientComponent = (props) => {
 
   return (
     <div>
-      <h4>Terms</h4>
+      <h4>Categories &amp; tags</h4>
       {taxonomies.map((taxonomy) => {
         const selected = termIds[taxonomy] ?? []
         const options = terms
@@ -73,7 +75,7 @@ export const TermsPicker: JSONFieldClientComponent = (props) => {
             hasMany
             isClearable
             key={taxonomy}
-            label={taxonomy}
+            label={TAXONOMIES.find((option) => option.value === taxonomy)?.label ?? taxonomy}
             name={`${path}.${taxonomy}`}
             onChange={(picked) => change(taxonomy, (Array.isArray(picked) ? picked : []).map((option) => Number(option.value)))}
             options={[...options, ...missing]}

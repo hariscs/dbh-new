@@ -5,6 +5,8 @@ import { clearInterlinkingCache } from '../builder-api/interlinking'
 export const InterlinkingRules: CollectionConfig = {
   slug: 'interlinking-rules',
   admin: {
+    group: 'Developer',
+    description: 'Rules that pick the related-page links shown at the bottom of pages (RR Interlinking plugin)',
     useAsTitle: 'name',
     defaultColumns: ['name', 'pageType', 'priority', 'status'],
   },

@@ -22,7 +22,10 @@ const refreshSite: CollectionAfterChangeHook = async ({ doc, operation, req }) =
 
 export const SheetImports: CollectionConfig = {
   slug: 'sheet-imports',
+  labels: { singular: 'Sheet import', plural: 'Import from Sheet' },
   admin: {
+    group: 'Settings',
+    description: 'Upload a Google Sheet CSV to create or update pages, like WP All Import. Rows match pages by WordPress ID',
     useAsTitle: 'filename',
     defaultColumns: ['filename', 'summary', 'createdAt'],
   },
@@ -34,7 +37,12 @@ export const SheetImports: CollectionConfig = {
     mimeTypes: ['text/csv', 'application/vnd.ms-excel', 'text/plain'],
   },
   fields: [
-    { name: 'dryRun', type: 'checkbox', defaultValue: true },
+    {
+      name: 'dryRun',
+      type: 'checkbox',
+      defaultValue: true,
+      admin: { description: 'Ticked: only shows what would change. Untick to apply the changes' },
+    },
     { name: 'summary', type: 'text', admin: { readOnly: true } },
     { name: 'report', type: 'json', admin: { readOnly: true } },
   ],

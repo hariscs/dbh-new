@@ -2,12 +2,13 @@ import type { CollectionConfig } from 'payload'
 
 import { clearInterlinkingCache } from '../builder-api/interlinking'
 import { rederiveTermPages } from '../content/cascade'
-
-const TAXONOMIES = ['geo', 'template', 'topic', 'topic-2', 'intent', 'marketing-channel', 'category', 'business-unit', 'facility-type', 'newsroom-category']
+import { TAXONOMIES } from '../admin/labels'
 
 export const Terms: CollectionConfig = {
   slug: 'terms',
+  labels: { singular: 'Category / tag', plural: 'Categories & Tags' },
   admin: {
+    group: 'Content',
     useAsTitle: 'name',
     defaultColumns: ['name', 'taxonomy', 'slug', 'parent'],
     listSearchableFields: ['name', 'slug'],
@@ -17,7 +18,7 @@ export const Terms: CollectionConfig = {
     afterDelete: [clearInterlinkingCache],
   },
   fields: [
-    { name: 'wpId', type: 'number', required: true, unique: true, index: true, admin: { position: 'sidebar' } },
+    { name: 'wpId', label: 'WordPress ID', type: 'number', required: true, unique: true, index: true, admin: { position: 'sidebar' } },
     {
       name: 'taxonomy',
       type: 'text',
@@ -33,7 +34,10 @@ export const Terms: CollectionConfig = {
       required: true,
       defaultValue: 0,
       index: true,
-      admin: { components: { Field: { path: '/admin/WpIdSelect#WpIdSelect', clientProps: { collection: 'terms' } } } },
+      admin: {
+        description: 'Renaming or moving a term updates every page that uses it',
+        components: { Field: { path: '/admin/WpIdSelect#WpIdSelect', clientProps: { collection: 'terms' } } },
+      },
     },
     { name: 'usedBy', type: 'ui', admin: { components: { Field: '/admin/TermPages#TermPages' } } },
   ],
