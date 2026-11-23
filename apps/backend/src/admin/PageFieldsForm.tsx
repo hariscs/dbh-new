@@ -8,6 +8,7 @@ type GroupField = { key: string; name: string; type?: string; label: string }
 type Rule = { param: string; operator: string; value: string }
 type Group = { id: number; title: string; fields: GroupField[]; location?: Rule[][] }
 type Author = { wpId: number; title: string }
+type MediaDoc = { filename: string; alt: string }
 type Fields = Record<string, string>
 
 const OTHER_TAB = 'Other'
@@ -15,6 +16,9 @@ const EMPTY_IMAGE = 'false'
 const TEXT_TYPES = ['text', 'url', 'email', 'number', 'select', 'color_picker', 'date_picker', 'true_false']
 const HTML_TYPES = ['textarea', 'wysiwyg']
 const AUTHOR_FIELDS = ['authored_by', 'edited_by', 'medically_reviewed_by']
+const MEDIA_PATH = '/wp-content/uploads/cms/'
+
+const mediaUrl = (filename: string) => `${window.location.origin}${MEDIA_PATH}${encodeURIComponent(filename)}`
 
 const appliesTo = (group: Group, postType: string) =>
   (group.location ?? []).some((rules) =>
@@ -34,6 +38,8 @@ export const PageFieldsForm: JSONFieldClientComponent = (props) => {
   const [search, setSearch] = useState('')
   const [showEmpty, setShowEmpty] = useState(false)
   const [rawJson, setRawJson] = useState(false)
+  const [media, setMedia] = useState<MediaDoc[]>([])
+  const [uploading, setUploading] = useState('')
 
   useEffect(() => {
     fetch(
@@ -48,6 +54,11 @@ export const PageFieldsForm: JSONFieldClientComponent = (props) => {
     )
       .then((response) => response.json())
       .then(({ docs }: { docs: Author[] }) => setAuthors(docs))
+    fetch('/api/media?depth=0&pagination=false&sort=-createdAt&select[filename]=true&select[alt]=true', {
+      credentials: 'include',
+    })
+      .then((response) => response.json())
+      .then(({ docs }: { docs: MediaDoc[] }) => setMedia(docs))
   }, [])
 
   const jsonToggle = (
@@ -77,6 +88,19 @@ export const PageFieldsForm: JSONFieldClientComponent = (props) => {
     : (currentTab?.fields ?? []).filter(matches).map((field) => ({ ...field, group: currentTab?.title ?? '' }))
 
   const change = (name: string, next: string) => setValue({ ...fields, [name]: next })
+
+  const upload = async (name: string, file: File) => {
+    setUploading(name)
+    const form = new FormData()
+    form.append('file', file)
+    form.append('_payload', JSON.stringify({ alt: fields[`${name}___alt`] || file.name }))
+    const response = await fetch('/api/media', { method: 'POST', body: form, credentials: 'include' })
+    setUploading('')
+    if (!response.ok) return window.alert('Upload failed. Use a JPG, PNG, WebP, GIF or AVIF image')
+    const { doc } = (await response.json()) as { doc: MediaDoc }
+    setMedia([doc, ...media])
+    change(name, mediaUrl(doc.filename))
+  }
 
   const renderField = (field: GroupField & { group: string }) => {
     const fieldPath = `${path}.${field.name}`
@@ -113,6 +137,32 @@ export const PageFieldsForm: JSONFieldClientComponent = (props) => {
             value={isEmpty(current) ? '' : current}
           />
           {!isEmpty(current) && <img alt="" src={current} style={{ maxHeight: 120, marginBottom: 8 }} />}
+          {!readOnly && (
+            <div style={{ display: 'flex', gap: 12, alignItems: 'center', marginBottom: 12 }}>
+              <label className="btn btn--style-secondary btn--size-small" style={{ margin: 0, cursor: 'pointer' }}>
+                {uploading === field.name ? 'Uploading…' : 'Upload image'}
+                <input
+                  accept="image/jpeg,image/png,image/webp,image/gif,image/avif"
+                  hidden
+                  onChange={(event: ChangeEvent<HTMLInputElement>) => {
+                    const file = event.target.files?.[0]
+                    if (file) upload(field.name, file)
+                  }}
+                  type="file"
+                />
+              </label>
+              <div style={{ flex: 1 }}>
+                <SelectInput
+                  name={`${fieldPath}.library`}
+                  onChange={(option) => !Array.isArray(option) && option && change(field.name, String(option.value))}
+                  options={media.map((item) => ({ label: `${item.filename} (${item.alt})`, value: mediaUrl(item.filename) }))}
+                  path={`${fieldPath}.library`}
+                  placeholder="Or choose from Media"
+                  value=""
+                />
+              </div>
+            </div>
+          )}
           <TextInput
             label={`${field.label} alt text`}
             onChange={(event: ChangeEvent<HTMLInputElement>) => change(`${field.name}___alt`, event.target.value)}
