@@ -5,6 +5,8 @@ import { moveChildren } from '../content/cascade'
 import { derivePage } from '../content/derive'
 import { revalidatePage } from '../content/revalidate'
 
+const POST_TYPES = ['page', 'post', 'authors', 'facility', 'newsroom', 'difference', 'testimonials', 'external_post']
+
 const derived = { readOnly: true, position: 'sidebar', description: 'Set automatically on save' } as const
 
 export const Pages: CollectionConfig = {
@@ -27,14 +29,42 @@ export const Pages: CollectionConfig = {
   fields: [
     { name: 'title', type: 'text', required: true },
     { name: 'slug', type: 'text', required: true, index: true },
-    { name: 'parentWpId', type: 'number', defaultValue: 0, index: true },
-    { name: 'status', type: 'text', required: true, defaultValue: 'publish', index: true },
+    {
+      name: 'parentWpId',
+      label: 'Parent page',
+      type: 'number',
+      defaultValue: 0,
+      index: true,
+      admin: { components: { Field: { path: '/admin/WpIdSelect#WpIdSelect', clientProps: { collection: 'pages' } } } },
+    },
+    {
+      name: 'status',
+      type: 'text',
+      required: true,
+      defaultValue: 'publish',
+      index: true,
+      admin: { components: { Field: { path: '/admin/TextSelect#TextSelect', clientProps: { options: ['publish', 'draft'] } } } },
+    },
     { name: 'fields', type: 'json' },
     { name: 'seo', type: 'json' },
     { name: 'present', type: 'json' },
-    { name: 'termIds', type: 'json' },
+    {
+      name: 'termIds',
+      label: 'Terms',
+      type: 'json',
+      admin: { components: { Field: '/admin/TermsPicker#TermsPicker' } },
+    },
     { name: 'wpId', type: 'number', required: true, unique: true, index: true, admin: { position: 'sidebar' } },
-    { name: 'postType', type: 'text', required: true, index: true, admin: { position: 'sidebar' } },
+    {
+      name: 'postType',
+      type: 'text',
+      required: true,
+      index: true,
+      admin: {
+        position: 'sidebar',
+        components: { Field: { path: '/admin/TextSelect#TextSelect', clientProps: { options: POST_TYPES } } },
+      },
+    },
     { name: 'isFrontPage', type: 'checkbox', defaultValue: false, index: true, admin: { position: 'sidebar' } },
     { name: 'postDate', type: 'text', index: true, admin: { position: 'sidebar' } },
     { name: 'path', type: 'text', required: true, index: true, admin: derived },
