@@ -236,6 +236,10 @@ export interface Page {
   isFrontPage?: boolean | null;
   postDate?: string | null;
   /**
+   * See every saved version in the Versions tab
+   */
+  lastEditedBy?: string | null;
+  /**
    * Original WordPress post ID, kept for links and imports
    */
   wpId: number;
@@ -243,6 +247,8 @@ export interface Page {
   createdAt: string;
 }
 /**
+ * Images uploaded in the CMS. They are served from /wp-content/uploads/cms/ like WordPress uploads
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "media".
  */
@@ -555,6 +561,7 @@ export interface PagesSelect<T extends boolean = true> {
   postType?: T;
   isFrontPage?: T;
   postDate?: T;
+  lastEditedBy?: T;
   wpId?: T;
   updatedAt?: T;
   createdAt?: T;

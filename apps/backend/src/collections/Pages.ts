@@ -1,4 +1,4 @@
-import type { CollectionConfig } from 'payload'
+import type { CollectionBeforeChangeHook, CollectionConfig } from 'payload'
 
 import { POST_TYPES, STATUSES } from '../admin/labels'
 import { clearInterlinkingCache } from '../builder-api/interlinking'
@@ -7,11 +7,19 @@ import { derivePage } from '../content/derive'
 import { revalidatePage } from '../content/revalidate'
 
 const derived = { readOnly: true } as const
+const IMPORT_EDITOR = 'WordPress import'
+const SYSTEM_EDITOR = 'System'
+
+const stampEditor: CollectionBeforeChangeHook = ({ data, req, context }) => ({
+  ...data,
+  lastEditedBy: context.import ? IMPORT_EDITOR : (req.user?.email ?? SYSTEM_EDITOR),
+})
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
   labels: { singular: 'Page', plural: 'All content' },
   defaultSort: '-postDate',
+  versions: { maxPerDoc: 10 },
   admin: {
     group: 'Content',
     useAsTitle: 'path',
@@ -25,7 +33,7 @@ export const Pages: CollectionConfig = {
     },
   },
   hooks: {
-    beforeChange: [derivePage],
+    beforeChange: [stampEditor, derivePage],
     afterChange: [clearInterlinkingCache, revalidatePage, moveChildren],
     afterDelete: [clearInterlinkingCache],
   },
@@ -105,6 +113,12 @@ export const Pages: CollectionConfig = {
     },
     { name: 'isFrontPage', label: 'Homepage', type: 'checkbox', defaultValue: false, index: true, admin: { position: 'sidebar' } },
     { name: 'postDate', label: 'Published date', type: 'text', index: true, admin: { position: 'sidebar' } },
+    {
+      name: 'lastEditedBy',
+      label: 'Last edited by',
+      type: 'text',
+      admin: { position: 'sidebar', readOnly: true, description: 'See every saved version in the Versions tab' },
+    },
     {
       name: 'wpId',
       label: 'WordPress ID',
