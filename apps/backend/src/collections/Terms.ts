@@ -8,13 +8,14 @@ export const Terms: CollectionConfig = {
   admin: {
     useAsTitle: 'name',
     defaultColumns: ['name', 'taxonomy', 'slug', 'parent'],
+    listSearchableFields: ['name', 'slug'],
   },
   hooks: {
     afterChange: [clearInterlinkingCache, rederiveTermPages],
     afterDelete: [clearInterlinkingCache],
   },
   fields: [
-    { name: 'wpId', type: 'number', required: true, unique: true, index: true },
+    { name: 'wpId', type: 'number', required: true, unique: true, index: true, admin: { position: 'sidebar' } },
     { name: 'taxonomy', type: 'text', required: true, index: true },
     { name: 'slug', type: 'text', required: true, index: true },
     { name: 'name', type: 'text', required: true },
