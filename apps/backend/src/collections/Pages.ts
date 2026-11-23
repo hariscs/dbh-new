@@ -46,7 +46,7 @@ export const Pages: CollectionConfig = {
       admin: { components: { Field: { path: '/admin/TextSelect#TextSelect', clientProps: { options: ['publish', 'draft'] } } } },
     },
     { name: 'fields', type: 'json', admin: { components: { Field: '/admin/PageFieldsForm#PageFieldsForm' } } },
-    { name: 'seo', type: 'json' },
+    { name: 'seo', type: 'json', admin: { components: { Field: '/admin/SeoForm#SeoForm' } } },
     { name: 'present', type: 'json' },
     {
       name: 'termIds',
