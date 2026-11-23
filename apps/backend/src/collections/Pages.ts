@@ -54,6 +54,7 @@ export const Pages: CollectionConfig = {
       type: 'json',
       admin: { components: { Field: '/admin/TermsPicker#TermsPicker' } },
     },
+    { name: 'childPages', type: 'ui', admin: { components: { Field: '/admin/ChildPages#ChildPages' } } },
     { name: 'wpId', type: 'number', required: true, unique: true, index: true, admin: { position: 'sidebar' } },
     {
       name: 'postType',

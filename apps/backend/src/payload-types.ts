@@ -311,6 +311,15 @@ export interface FieldGroup {
     | number
     | boolean
     | null;
+  location?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -590,6 +599,7 @@ export interface FieldGroupsSelect<T extends boolean = true> {
   title?: T;
   position?: T;
   fields?: T;
+  location?: T;
   updatedAt?: T;
   createdAt?: T;
 }

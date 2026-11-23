@@ -160,8 +160,8 @@ for (const row of await query<{ post_name: string; post_excerpt: string; post_co
   })
 }
 
-const fieldGroups = await query<{ ID: number; post_name: string; post_title: string }>(
-  `select ID, post_name, post_title from wp_posts
+const fieldGroups = await query<{ ID: number; post_name: string; post_title: string; post_content: string }>(
+  `select ID, post_name, post_title, post_content from wp_posts
    where post_type = 'acf-field-group' and post_status in ('publish', 'acf-disabled')
    order by menu_order, post_title`,
 )
@@ -450,6 +450,7 @@ for (const [position, group] of fieldGroups.entries()) {
     key: group.post_name,
     title: group.post_title,
     position,
+    location: (maybeUnserialize(group.post_content) as { location?: unknown[] } | null)?.location ?? [],
     fields: groupFields
       .filter((field) => field.post_parent === group.ID)
       .map((field) => ({

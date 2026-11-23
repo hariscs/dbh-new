@@ -35,5 +35,6 @@ export const Terms: CollectionConfig = {
       index: true,
       admin: { components: { Field: { path: '/admin/WpIdSelect#WpIdSelect', clientProps: { collection: 'terms' } } } },
     },
+    { name: 'usedBy', type: 'ui', admin: { components: { Field: '/admin/TermPages#TermPages' } } },
   ],
 }
