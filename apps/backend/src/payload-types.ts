@@ -182,27 +182,10 @@ export interface Media {
  */
 export interface Page {
   id: number;
-  wpId: number;
-  postType: string;
-  status: string;
-  path: string;
-  reachableByPath?: boolean | null;
-  isFrontPage?: boolean | null;
+  title: string;
   slug: string;
   parentWpId?: number | null;
-  parentSlug?: string | null;
-  postDate?: string | null;
-  title: string;
-  template?: string | null;
-  templates?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
+  status: string;
   fields?:
     | {
         [k: string]: unknown;
@@ -213,15 +196,6 @@ export interface Page {
     | boolean
     | null;
   seo?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
-  meta?:
     | {
         [k: string]: unknown;
       }
@@ -248,6 +222,53 @@ export interface Page {
     | number
     | boolean
     | null;
+  wpId: number;
+  postType: string;
+  isFrontPage?: boolean | null;
+  postDate?: string | null;
+  /**
+   * Set automatically on save
+   */
+  path: string;
+  /**
+   * Set automatically on save
+   */
+  reachableByPath?: boolean | null;
+  /**
+   * Set automatically on save
+   */
+  parentSlug?: string | null;
+  /**
+   * Set automatically on save
+   */
+  template?: string | null;
+  /**
+   * Set automatically on save
+   */
+  templates?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  /**
+   * Set automatically on save
+   */
+  meta?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  /**
+   * Set automatically on save
+   */
   fieldTaxonomies?:
     | {
         [k: string]: unknown;
@@ -257,6 +278,9 @@ export interface Page {
     | number
     | boolean
     | null;
+  /**
+   * Set automatically on save
+   */
   interlinking?:
     | {
         [k: string]: unknown;
@@ -534,24 +558,24 @@ export interface MediaSelect<T extends boolean = true> {
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
-  wpId?: T;
-  postType?: T;
-  status?: T;
-  path?: T;
-  reachableByPath?: T;
-  isFrontPage?: T;
+  title?: T;
   slug?: T;
   parentWpId?: T;
-  parentSlug?: T;
-  postDate?: T;
-  title?: T;
-  template?: T;
-  templates?: T;
+  status?: T;
   fields?: T;
   seo?: T;
-  meta?: T;
   present?: T;
   termIds?: T;
+  wpId?: T;
+  postType?: T;
+  isFrontPage?: T;
+  postDate?: T;
+  path?: T;
+  reachableByPath?: T;
+  parentSlug?: T;
+  template?: T;
+  templates?: T;
+  meta?: T;
   fieldTaxonomies?: T;
   interlinking?: T;
   updatedAt?: T;
