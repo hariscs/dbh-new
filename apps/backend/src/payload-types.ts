@@ -392,11 +392,8 @@ export interface FieldGroup {
  */
 export interface InterlinkingRule {
   id: number;
-  wpId: number;
-  pageType: string;
   name: string;
-  priority: number;
-  status: string;
+  pageType: string;
   conditions?:
     | {
         [k: string]: unknown;
@@ -406,6 +403,15 @@ export interface InterlinkingRule {
     | number
     | boolean
     | null;
+  /**
+   * Rules for the same page type run from lowest to highest
+   */
+  priority: number;
+  /**
+   * Inactive rules add no links
+   */
+  status: string;
+  wpId: number;
   updatedAt: string;
   createdAt: string;
 }
@@ -655,12 +661,12 @@ export interface FieldGroupsSelect<T extends boolean = true> {
  * via the `definition` "interlinking-rules_select".
  */
 export interface InterlinkingRulesSelect<T extends boolean = true> {
-  wpId?: T;
-  pageType?: T;
   name?: T;
+  pageType?: T;
+  conditions?: T;
   priority?: T;
   status?: T;
-  conditions?: T;
+  wpId?: T;
   updatedAt?: T;
   createdAt?: T;
 }
