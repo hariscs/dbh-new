@@ -1,5 +1,6 @@
 import type { CollectionConfig } from 'payload'
 
+import { allow, hiddenUnless, loggedIn } from '../access'
 import { clearInterlinkingCache } from '../builder-api/interlinking'
 import { rederiveTermPages } from '../content/cascade'
 import { TAXONOMIES } from '../admin/labels'
@@ -8,11 +9,13 @@ export const Terms: CollectionConfig = {
   slug: 'terms',
   labels: { singular: 'Category / tag', plural: 'Categories & Tags' },
   admin: {
+    hidden: hiddenUnless('terms'),
     group: 'Content',
     useAsTitle: 'name',
     defaultColumns: ['name', 'taxonomy', 'slug', 'parent'],
     listSearchableFields: ['name', 'slug'],
   },
+  access: { ...allow('terms'), read: loggedIn },
   hooks: {
     afterChange: [clearInterlinkingCache, rederiveTermPages],
     afterDelete: [clearInterlinkingCache],

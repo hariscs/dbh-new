@@ -2,15 +2,16 @@ import path from 'node:path'
 
 import type { CollectionConfig } from 'payload'
 
+import { allow, hiddenUnless } from '../access'
+
 export const Media: CollectionConfig = {
   slug: 'media',
   admin: {
+    hidden: hiddenUnless('media'),
     group: 'Content',
     description: 'Images uploaded in the CMS. They are served from /wp-content/uploads/cms/ like WordPress uploads',
   },
-  access: {
-    read: () => true,
-  },
+  access: { ...allow('media'), read: () => true },
   fields: [
     {
       name: 'alt',

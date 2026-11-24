@@ -1,5 +1,7 @@
 import type { CollectionConfig } from 'payload'
 
+import { allow } from '../access'
+
 export const GlobalVariables: CollectionConfig = {
   slug: 'global-variables',
   labels: { singular: 'Site variable', plural: 'Site Variables' },
@@ -9,6 +11,7 @@ export const GlobalVariables: CollectionConfig = {
     useAsTitle: 'name',
     defaultColumns: ['name', 'value'],
   },
+  access: allow('global-variables'),
   fields: [
     { name: 'name', type: 'text', required: true, unique: true, index: true },
     { name: 'value', type: 'text' },

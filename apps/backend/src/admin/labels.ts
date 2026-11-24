@@ -26,3 +26,23 @@ export const TAXONOMIES = [
   { value: 'facility-type', label: 'Facility type' },
   { value: 'newsroom-category', label: 'Newsroom category' },
 ]
+
+export const PERMISSION_COLLECTIONS = [
+  { value: 'pages', label: 'All content' },
+  { value: 'media', label: 'Media' },
+  { value: 'terms', label: 'Categories & Tags' },
+  { value: 'menus', label: 'Menus' },
+  { value: 'global-variables', label: 'Site Variables' },
+  { value: 'sheet-imports', label: 'Import from Sheet' },
+  { value: 'field-groups', label: 'Custom Fields (ACF)' },
+  { value: 'interlinking-rules', label: 'Interlinking Rules' },
+  { value: 'users', label: 'Users' },
+  { value: 'roles', label: 'Roles' },
+]
+
+export const PERMISSION_ACTIONS = [
+  { value: 'read', label: 'View' },
+  { value: 'create', label: 'Create' },
+  { value: 'update', label: 'Edit' },
+  { value: 'delete', label: 'Delete' },
+]

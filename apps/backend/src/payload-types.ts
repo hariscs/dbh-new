@@ -76,6 +76,7 @@ export interface Config {
     'field-groups': FieldGroup;
     'interlinking-rules': InterlinkingRule;
     users: User;
+    roles: Role;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -92,6 +93,7 @@ export interface Config {
     'field-groups': FieldGroupsSelect<false> | FieldGroupsSelect<true>;
     'interlinking-rules': InterlinkingRulesSelect<false> | InterlinkingRulesSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
+    roles: RolesSelect<false> | RolesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -142,7 +144,7 @@ export interface Page {
    */
   title: string;
   /**
-   * Last part of the URL, e.g. "adhd" in /location-served/usa/ca/adhd
+   * Last part of the URL, e.g. "adhd" in /location-served/usa/ca/adhd. Filled from the title on new pages
    */
   slug: string;
   /**
@@ -163,15 +165,6 @@ export interface Page {
     | boolean
     | null;
   seo?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
-  termIds?:
     | {
         [k: string]: unknown;
       }
@@ -234,7 +227,14 @@ export interface Page {
   path: string;
   postType: string;
   isFrontPage?: boolean | null;
+  /**
+   * Set to now on first save when left empty
+   */
   postDate?: string | null;
+  /**
+   * Roles limited to their own pages only see pages they created
+   */
+  createdBy?: (number | null) | User;
   /**
    * See every saved version in the Versions tab
    */
@@ -243,6 +243,85 @@ export interface Page {
    * Original WordPress post ID, kept for links and imports
    */
   wpId: number;
+  termIds?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "users".
+ */
+export interface User {
+  id: number;
+  name?: string | null;
+  bio?: string | null;
+  /**
+   * Permissions add up across roles. Only users who can manage users can change this
+   */
+  roles?: (number | Role)[] | null;
+  updatedAt: string;
+  createdAt: string;
+  email: string;
+  resetPasswordToken?: string | null;
+  resetPasswordExpiration?: string | null;
+  salt?: string | null;
+  hash?: string | null;
+  resetPasswordRequestedAt?: string | null;
+  loginAttempts?: number | null;
+  lockUntil?: string | null;
+  sessions?:
+    | {
+        id: string;
+        createdAt?: string | null;
+        expiresAt: string;
+      }[]
+    | null;
+  password?: string | null;
+  collection: 'users';
+}
+/**
+ * What each role can see and change. A user with several roles gets everything their roles allow
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "roles".
+ */
+export interface Role {
+  id: number;
+  name: string;
+  /**
+   * Can do everything. The settings below are ignored
+   */
+  fullAccess?: boolean | null;
+  permissions?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  /**
+   * Without this, new pages can only be saved as drafts
+   */
+  canPublish?: boolean | null;
+  /**
+   * See and edit only the pages they created
+   */
+  ownPagesOnly?: boolean | null;
+  /**
+   * Leave empty for all post types
+   */
+  postTypes?:
+    ('page' | 'authors' | 'facility' | 'newsroom' | 'difference' | 'testimonials' | 'external_post' | 'post')[] | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -417,32 +496,6 @@ export interface InterlinkingRule {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "users".
- */
-export interface User {
-  id: number;
-  updatedAt: string;
-  createdAt: string;
-  email: string;
-  resetPasswordToken?: string | null;
-  resetPasswordExpiration?: string | null;
-  salt?: string | null;
-  hash?: string | null;
-  resetPasswordRequestedAt?: string | null;
-  loginAttempts?: number | null;
-  lockUntil?: string | null;
-  sessions?:
-    | {
-        id: string;
-        createdAt?: string | null;
-        expiresAt: string;
-      }[]
-    | null;
-  password?: string | null;
-  collection: 'users';
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -500,6 +553,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'users';
         value: number | User;
+      } | null)
+    | ({
+        relationTo: 'roles';
+        value: number | Role;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -554,7 +611,6 @@ export interface PagesSelect<T extends boolean = true> {
   status?: T;
   fields?: T;
   seo?: T;
-  termIds?: T;
   reachableByPath?: T;
   parentSlug?: T;
   template?: T;
@@ -567,8 +623,10 @@ export interface PagesSelect<T extends boolean = true> {
   postType?: T;
   isFrontPage?: T;
   postDate?: T;
+  createdBy?: T;
   lastEditedBy?: T;
   wpId?: T;
+  termIds?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -675,6 +733,9 @@ export interface InterlinkingRulesSelect<T extends boolean = true> {
  * via the `definition` "users_select".
  */
 export interface UsersSelect<T extends boolean = true> {
+  name?: T;
+  bio?: T;
+  roles?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;
@@ -692,6 +753,20 @@ export interface UsersSelect<T extends boolean = true> {
         createdAt?: T;
         expiresAt?: T;
       };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "roles_select".
+ */
+export interface RolesSelect<T extends boolean = true> {
+  name?: T;
+  fullAccess?: T;
+  permissions?: T;
+  canPublish?: T;
+  ownPagesOnly?: T;
+  postTypes?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

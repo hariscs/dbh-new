@@ -1,5 +1,6 @@
 import type { CollectionAfterChangeHook, CollectionBeforeChangeHook, CollectionConfig } from 'payload'
 
+import { allow } from '../access'
 import { revalidateSite } from '../content/revalidate'
 import { importSheet, type SheetReport } from '../import/sheet'
 
@@ -29,6 +30,7 @@ export const SheetImports: CollectionConfig = {
     useAsTitle: 'filename',
     defaultColumns: ['filename', 'summary', 'createdAt'],
   },
+  access: allow('sheet-imports'),
   hooks: {
     beforeChange: [runImport],
     afterChange: [refreshSite],

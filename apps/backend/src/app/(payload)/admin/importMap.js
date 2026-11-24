@@ -12,6 +12,7 @@ import { PublishButtons as PublishButtons_c1ca5b37e7717da7880698a5a52e4d85 } fro
 import { TermPages as TermPages_cfefd35e466a90f6adb259a3f7513de9 } from '../../../admin/TermPages'
 import { FieldGroupRules as FieldGroupRules_8de9e089914824ae1b4338bfda65f084 } from '../../../admin/FieldGroupRules'
 import { RuleConditionsForm as RuleConditionsForm_85f29ba48b63cc649c9565404c3f255c } from '../../../admin/RuleConditionsForm'
+import { PermissionsGrid as PermissionsGrid_4eec5b7de7f919dba2c310dc42f9b132 } from '../../../admin/PermissionsGrid'
 import { Icon as Icon_aaf9b047f9f60ee623417c7e8c724db1 } from '../../../admin/Branding'
 import { Logo as Logo_aaf9b047f9f60ee623417c7e8c724db1 } from '../../../admin/Branding'
 import { Dashboard as Dashboard_b1da18705623495fe0da513a008df5f5 } from '../../../admin/Dashboard'
@@ -34,6 +35,7 @@ export const importMap = {
   "/admin/TermPages#TermPages": TermPages_cfefd35e466a90f6adb259a3f7513de9,
   "/admin/FieldGroupRules#FieldGroupRules": FieldGroupRules_8de9e089914824ae1b4338bfda65f084,
   "/admin/RuleConditionsForm#RuleConditionsForm": RuleConditionsForm_85f29ba48b63cc649c9565404c3f255c,
+  "/admin/PermissionsGrid#PermissionsGrid": PermissionsGrid_4eec5b7de7f919dba2c310dc42f9b132,
   "/admin/Branding#Icon": Icon_aaf9b047f9f60ee623417c7e8c724db1,
   "/admin/Branding#Logo": Logo_aaf9b047f9f60ee623417c7e8c724db1,
   "/admin/Dashboard#Dashboard": Dashboard_b1da18705623495fe0da513a008df5f5,

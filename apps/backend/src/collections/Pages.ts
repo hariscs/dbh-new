@@ -1,5 +1,6 @@
 import type { CollectionBeforeChangeHook, CollectionConfig } from 'payload'
 
+import { guardPage, pageAccess } from '../access'
 import { POST_TYPES, STATUSES } from '../admin/labels'
 import { clearInterlinkingCache } from '../builder-api/interlinking'
 import { moveChildren } from '../content/cascade'
@@ -10,8 +11,9 @@ const derived = { readOnly: true } as const
 const IMPORT_EDITOR = 'WordPress import'
 const SYSTEM_EDITOR = 'System'
 
-const stampEditor: CollectionBeforeChangeHook = ({ data, req, context }) => ({
+const stampEditor: CollectionBeforeChangeHook = ({ data, req, context, operation }) => ({
   ...data,
+  ...(operation === 'create' && req.user ? { createdBy: req.user.id } : {}),
   lastEditedBy: context.import ? IMPORT_EDITOR : (req.user?.email ?? SYSTEM_EDITOR),
 })
 
@@ -40,8 +42,9 @@ export const Pages: CollectionConfig = {
       return doc.isFrontPage ? `${frontendUrl}/` : `${frontendUrl}${doc.path}/`
     },
   },
+  access: pageAccess,
   hooks: {
-    beforeChange: [stampEditor, fillPostDate, derivePage],
+    beforeChange: [guardPage, stampEditor, fillPostDate, derivePage],
     afterChange: [clearInterlinkingCache, revalidatePage, moveChildren],
     afterDelete: [clearInterlinkingCache],
   },
@@ -134,6 +137,13 @@ export const Pages: CollectionConfig = {
         description: 'Set to now on first save when left empty',
         components: { Field: '/admin/PostDateInput#PostDateInput' },
       },
+    },
+    {
+      name: 'createdBy',
+      label: 'Created by',
+      type: 'relationship',
+      relationTo: 'users',
+      admin: { position: 'sidebar', readOnly: true, description: 'Roles limited to their own pages only see pages they created' },
     },
     {
       name: 'lastEditedBy',
