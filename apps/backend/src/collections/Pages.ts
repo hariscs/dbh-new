@@ -15,6 +15,11 @@ const stampEditor: CollectionBeforeChangeHook = ({ data, req, context }) => ({
   lastEditedBy: context.import ? IMPORT_EDITOR : (req.user?.email ?? SYSTEM_EDITOR),
 })
 
+const fillPostDate: CollectionBeforeChangeHook = ({ data, originalDoc }) => ({
+  ...data,
+  postDate: data.postDate || originalDoc?.postDate || new Date().toISOString().slice(0, 19).replace('T', ' '),
+})
+
 export const Pages: CollectionConfig = {
   slug: 'pages',
   labels: { singular: 'Page', plural: 'All content' },
@@ -25,7 +30,10 @@ export const Pages: CollectionConfig = {
     useAsTitle: 'path',
     defaultColumns: ['title', 'path', 'status', 'postType', 'template', 'postDate'],
     listSearchableFields: ['title', 'path', 'slug'],
-    components: { beforeListTable: ['/admin/StatusTabs#StatusTabs'] },
+    components: {
+      beforeListTable: ['/admin/StatusTabs#StatusTabs'],
+      edit: { SaveButton: '/admin/PublishButtons#PublishButtons' },
+    },
     preview: (doc) => {
       const frontendUrl = process.env.FRONTEND_URL?.replace(/\/+$/, '')
       if (!frontendUrl || doc.status !== 'publish') return null
@@ -33,13 +41,22 @@ export const Pages: CollectionConfig = {
     },
   },
   hooks: {
-    beforeChange: [stampEditor, derivePage],
+    beforeChange: [stampEditor, fillPostDate, derivePage],
     afterChange: [clearInterlinkingCache, revalidatePage, moveChildren],
     afterDelete: [clearInterlinkingCache],
   },
   fields: [
     { name: 'title', type: 'text', required: true, admin: { description: 'Shown in the admin and used for the browser title when no meta title is set' } },
-    { name: 'slug', type: 'text', required: true, index: true, admin: { description: 'Last part of the URL, e.g. "adhd" in /location-served/usa/ca/adhd' } },
+    {
+      name: 'slug',
+      type: 'text',
+      required: true,
+      index: true,
+      admin: {
+        description: 'Last part of the URL, e.g. "adhd" in /location-served/usa/ca/adhd. Filled from the title on new pages',
+        components: { Field: '/admin/SlugInput#SlugInput' },
+      },
+    },
     {
       name: 'parentWpId',
       label: 'Parent page',
@@ -58,6 +75,7 @@ export const Pages: CollectionConfig = {
       defaultValue: 'publish',
       index: true,
       admin: {
+        position: 'sidebar',
         description: 'Drafts are never shown on the site',
         components: {
           Field: { path: '/admin/TextSelect#TextSelect', clientProps: { options: STATUSES } },
@@ -67,12 +85,6 @@ export const Pages: CollectionConfig = {
     },
     { name: 'fields', type: 'json', admin: { components: { Field: '/admin/PageFieldsForm#PageFieldsForm' } } },
     { name: 'seo', type: 'json', admin: { components: { Field: '/admin/SeoForm#SeoForm' } } },
-    {
-      name: 'termIds',
-      label: 'Categories & tags',
-      type: 'json',
-      admin: { components: { Field: '/admin/TermsPicker#TermsPicker' } },
-    },
     { name: 'childPages', type: 'ui', admin: { components: { Field: '/admin/ChildPages#ChildPages' } } },
     {
       type: 'collapsible',
@@ -112,7 +124,17 @@ export const Pages: CollectionConfig = {
       },
     },
     { name: 'isFrontPage', label: 'Homepage', type: 'checkbox', defaultValue: false, index: true, admin: { position: 'sidebar' } },
-    { name: 'postDate', label: 'Published date', type: 'text', index: true, admin: { position: 'sidebar' } },
+    {
+      name: 'postDate',
+      label: 'Published date',
+      type: 'text',
+      index: true,
+      admin: {
+        position: 'sidebar',
+        description: 'Set to now on first save when left empty',
+        components: { Field: '/admin/PostDateInput#PostDateInput' },
+      },
+    },
     {
       name: 'lastEditedBy',
       label: 'Last edited by',
@@ -127,6 +149,12 @@ export const Pages: CollectionConfig = {
       unique: true,
       index: true,
       admin: { position: 'sidebar', description: 'Original WordPress post ID, kept for links and imports' },
+    },
+    {
+      name: 'termIds',
+      label: 'Categories & tags',
+      type: 'json',
+      admin: { position: 'sidebar', components: { Field: '/admin/TermsPicker#TermsPicker' } },
     },
   ],
 }

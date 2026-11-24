@@ -1,11 +1,14 @@
+import { SlugInput as SlugInput_6f1b7b62589cd31db9cb3ba864165696 } from '../../../admin/SlugInput'
 import { WpIdSelect as WpIdSelect_c9eb4b33e8cf5d171d4c571f3e9d5fe6 } from '../../../admin/WpIdSelect'
 import { LabelCell as LabelCell_5f314de9e4ed2ca937121fffeb38de9d } from '../../../admin/LabelCell'
 import { TextSelect as TextSelect_0ee9b727dd0923a16947f37836fda012 } from '../../../admin/TextSelect'
 import { PageFieldsForm as PageFieldsForm_af1f2eba22302469be3c79deb9b4c576 } from '../../../admin/PageFieldsForm'
 import { SeoForm as SeoForm_6de86124066410e07b05001a80e0d9a6 } from '../../../admin/SeoForm'
-import { TermsPicker as TermsPicker_0b37058f0637752fe0c849983a30e221 } from '../../../admin/TermsPicker'
 import { ChildPages as ChildPages_c9d68f60ea34e7ff0a84b7b7bebb6804 } from '../../../admin/ChildPages'
+import { PostDateInput as PostDateInput_c4ada35e03c69bed6504fdc80e0aab47 } from '../../../admin/PostDateInput'
+import { TermsPicker as TermsPicker_0b37058f0637752fe0c849983a30e221 } from '../../../admin/TermsPicker'
 import { StatusTabs as StatusTabs_9607748802c8141aca5f64302654074a } from '../../../admin/StatusTabs'
+import { PublishButtons as PublishButtons_c1ca5b37e7717da7880698a5a52e4d85 } from '../../../admin/PublishButtons'
 import { TermPages as TermPages_cfefd35e466a90f6adb259a3f7513de9 } from '../../../admin/TermPages'
 import { FieldGroupRules as FieldGroupRules_8de9e089914824ae1b4338bfda65f084 } from '../../../admin/FieldGroupRules'
 import { RuleConditionsForm as RuleConditionsForm_85f29ba48b63cc649c9565404c3f255c } from '../../../admin/RuleConditionsForm'
@@ -17,14 +20,17 @@ import { CollectionCards as CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1 } f
 
 /** @type import('payload').ImportMap */
 export const importMap = {
+  "/admin/SlugInput#SlugInput": SlugInput_6f1b7b62589cd31db9cb3ba864165696,
   "/admin/WpIdSelect#WpIdSelect": WpIdSelect_c9eb4b33e8cf5d171d4c571f3e9d5fe6,
   "/admin/LabelCell#LabelCell": LabelCell_5f314de9e4ed2ca937121fffeb38de9d,
   "/admin/TextSelect#TextSelect": TextSelect_0ee9b727dd0923a16947f37836fda012,
   "/admin/PageFieldsForm#PageFieldsForm": PageFieldsForm_af1f2eba22302469be3c79deb9b4c576,
   "/admin/SeoForm#SeoForm": SeoForm_6de86124066410e07b05001a80e0d9a6,
-  "/admin/TermsPicker#TermsPicker": TermsPicker_0b37058f0637752fe0c849983a30e221,
   "/admin/ChildPages#ChildPages": ChildPages_c9d68f60ea34e7ff0a84b7b7bebb6804,
+  "/admin/PostDateInput#PostDateInput": PostDateInput_c4ada35e03c69bed6504fdc80e0aab47,
+  "/admin/TermsPicker#TermsPicker": TermsPicker_0b37058f0637752fe0c849983a30e221,
   "/admin/StatusTabs#StatusTabs": StatusTabs_9607748802c8141aca5f64302654074a,
+  "/admin/PublishButtons#PublishButtons": PublishButtons_c1ca5b37e7717da7880698a5a52e4d85,
   "/admin/TermPages#TermPages": TermPages_cfefd35e466a90f6adb259a3f7513de9,
   "/admin/FieldGroupRules#FieldGroupRules": FieldGroupRules_8de9e089914824ae1b4338bfda65f084,
   "/admin/RuleConditionsForm#RuleConditionsForm": RuleConditionsForm_85f29ba48b63cc649c9565404c3f255c,

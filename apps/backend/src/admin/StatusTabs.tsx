@@ -30,11 +30,19 @@ export const StatusTabs = () => {
     }
   }, [postType])
 
-  const typeLabel = POST_TYPES.find((type) => type.value === postType)?.plural
+  const type = POST_TYPES.find((option) => option.value === postType)
 
   return (
     <div style={{ margin: '16px 0', display: 'flex', gap: 16, alignItems: 'baseline' }}>
-      {typeLabel && <strong>{typeLabel}:</strong>}
+      <style>{'.list-create-new-doc__create-new-button { display: none; }'}</style>
+      <a
+        className="btn btn--style-primary btn--size-small"
+        href={`/admin/collections/pages/create${postType ? `?postType=${postType}` : ''}`}
+        style={{ margin: 0 }}
+      >
+        Add new {type?.label.toLowerCase() ?? 'page'}
+      </a>
+      {type && <strong>{type.plural}:</strong>}
       {TABS.map((tab) => (
         <a
           href={`/admin/collections/pages?${queryFor(tab.status)}`}
