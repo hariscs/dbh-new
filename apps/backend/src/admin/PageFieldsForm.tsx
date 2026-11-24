@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, JSONField, SelectInput, TextareaInput, TextInput, useField, useFormFields } from '@payloadcms/ui'
+import { Button, Collapsible, JSONField, SelectInput, TextareaInput, TextInput, useField, useFormFields } from '@payloadcms/ui'
 import type { JSONFieldClientComponent } from 'payload'
 import { type ChangeEvent, useEffect, useState } from 'react'
 
@@ -11,7 +11,7 @@ type Author = { wpId: number; title: string }
 type MediaDoc = { filename: string; alt: string }
 type Fields = Record<string, string>
 
-const OTHER_TAB = 'Other'
+const OTHER_GROUP = 'Other'
 const EMPTY_IMAGE = 'false'
 const TEXT_TYPES = ['text', 'url', 'email', 'number', 'select', 'color_picker', 'date_picker', 'true_false']
 const HTML_TYPES = ['textarea', 'wysiwyg']
@@ -34,9 +34,8 @@ export const PageFieldsForm: JSONFieldClientComponent = (props) => {
   const fieldTaxonomies = useFormFields(([fields]) => fields.fieldTaxonomies?.value as string[] | undefined)
   const [groups, setGroups] = useState<Group[]>([])
   const [authors, setAuthors] = useState<Author[]>([])
-  const [activeTab, setActiveTab] = useState('')
   const [search, setSearch] = useState('')
-  const [showEmpty, setShowEmpty] = useState(false)
+  const [showEmpty, setShowEmpty] = useState(true)
   const [rawJson, setRawJson] = useState(false)
   const [media, setMedia] = useState<MediaDoc[]>([])
   const [uploading, setUploading] = useState('')
@@ -76,16 +75,18 @@ export const PageFieldsForm: JSONFieldClientComponent = (props) => {
     .filter((name) => !groupedNames.has(name))
     .sort()
     .map((name) => ({ key: name, name, label: name, type: derivedKeys.has(name) ? 'derived' : 'text' }))
-  const tabs = [...pageGroups.map((group) => ({ title: group.title, fields: group.fields })), { title: OTHER_TAB, fields: otherFields }]
-  const currentTab = tabs.find((tab) => tab.title === activeTab) ?? tabs[0]
+  const sections = [
+    ...pageGroups.map((group) => ({ title: group.title, fields: group.fields })),
+    { title: OTHER_GROUP, fields: otherFields },
+  ]
 
   const term = search.trim().toLowerCase()
   const matches = (field: GroupField) =>
     (showEmpty || !isEmpty(fields[field.name])) &&
     (!term || field.name.toLowerCase().includes(term) || field.label.toLowerCase().includes(term))
-  const visible = term
-    ? tabs.flatMap((tab) => tab.fields.filter(matches).map((field) => ({ ...field, group: tab.title })))
-    : (currentTab?.fields ?? []).filter(matches).map((field) => ({ ...field, group: currentTab?.title ?? '' }))
+  const visibleSections = sections
+    .map((section) => ({ title: section.title, fields: section.fields.filter(matches).map((field) => ({ ...field, group: section.title })) }))
+    .filter((section) => section.fields.length)
 
   const change = (name: string, next: string) => setValue({ ...fields, [name]: next })
 
@@ -214,19 +215,6 @@ export const PageFieldsForm: JSONFieldClientComponent = (props) => {
   return (
     <div className="field-type">
       <h4>Page fields</h4>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 12 }}>
-        {tabs.map((tab) => (
-          <Button
-            buttonStyle={tab.title === currentTab?.title && !term ? 'primary' : 'secondary'}
-            key={tab.title}
-            margin={false}
-            onClick={() => setActiveTab(tab.title)}
-            size="small"
-          >
-            {tab.title}
-          </Button>
-        ))}
-      </div>
       <div style={{ display: 'flex', gap: 12, alignItems: 'center', marginBottom: 12 }}>
         <input
           onChange={(event) => setSearch(event.target.value)}
@@ -240,8 +228,14 @@ export const PageFieldsForm: JSONFieldClientComponent = (props) => {
           fields
         </label>
       </div>
-      {visible.length === 0 && <p>No fields to show. Tick "Show empty fields" to see all.</p>}
-      {visible.map(renderField)}
+      {visibleSections.length === 0 && <p>No fields to show. Tick "Show empty fields" to see all.</p>}
+      {term
+        ? visibleSections.flatMap((section) => section.fields).map(renderField)
+        : visibleSections.map((section, index) => (
+            <Collapsible header={section.title} initCollapsed={index > 0} key={section.title}>
+              {section.fields.map(renderField)}
+            </Collapsible>
+          ))}
       {jsonToggle}
     </div>
   )
