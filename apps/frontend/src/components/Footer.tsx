@@ -1,7 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import { fetchFooterLinks, type FooterLink } from "@/lib/wordpress";
 
-export default function Footer() {
+const DEFAULT_LINKS: FooterLink[] = [
+  { title: "Privacy Policy", url: "/privacy-policy/", target: "" },
+  { title: "Terms of Service", url: "/terms-of-service/", target: "" },
+];
+
+export default async function Footer() {
+  const links = (await fetchFooterLinks()) ?? DEFAULT_LINKS;
   return (
     <footer className="elementor elementor-117 elementor-location-footer">
       <div className="elementor-element elementor-element-f7771bd e-flex e-con-boxed e-con e-parent e-lazyloaded">
@@ -109,20 +116,17 @@ export default function Footer() {
               <div className="elementor-element elementor-element-3a61439 elementor-icon-list--layout-inline elementor-align-end elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-widget_type="icon-list.default">
                 <div className="elementor-widget-container">
                   <ul className="elementor-icon-list-items elementor-inline-items">
-                    <li className="elementor-icon-list-item elementor-inline-item">
-                      <Link href="/privacy-policy/">
-                        <span className="elementor-icon-list-text">
-                          Privacy Policy
-                        </span>
-                      </Link>
-                    </li>
-                    <li className="elementor-icon-list-item elementor-inline-item">
-                      <Link href="/terms-of-service/">
-                        <span className="elementor-icon-list-text">
-                          Terms of Service
-                        </span>
-                      </Link>
-                    </li>
+                    {links.map((link) => (
+                      <li className="elementor-icon-list-item elementor-inline-item" key={`${link.title}${link.url}`}>
+                        <Link
+                          href={link.url}
+                          rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
+                          target={link.target || undefined}
+                        >
+                          <span className="elementor-icon-list-text">{link.title}</span>
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>

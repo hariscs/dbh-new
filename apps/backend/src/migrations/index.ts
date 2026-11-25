@@ -5,6 +5,10 @@ import * as migration_20261124_201156_add_roles from './20261124_201156_add_role
 import * as migration_20261125_114820_add_activity_log from './20261125_114820_add_activity_log';
 import * as migration_20261125_115445_add_redirects from './20261125_115445_add_redirects';
 import * as migration_20261125_120000_remove_internal_terms from './20261125_120000_remove_internal_terms';
+import * as migration_20261125_130000_add_starting_roles from './20261125_130000_add_starting_roles';
+import * as migration_20261125_140000_add_footer_menu from './20261125_140000_add_footer_menu';
+import * as migration_20261125_150000_fix_seo_site_name from './20261125_150000_fix_seo_site_name';
+import * as migration_20261125_160000_refresh_meta_stats from './20261125_160000_refresh_meta_stats';
 
 export const migrations = [
   {
@@ -41,5 +45,25 @@ export const migrations = [
     up: migration_20261125_120000_remove_internal_terms.up,
     down: migration_20261125_120000_remove_internal_terms.down,
     name: '20261125_120000_remove_internal_terms'
+  },
+  {
+    up: migration_20261125_130000_add_starting_roles.up,
+    down: migration_20261125_130000_add_starting_roles.down,
+    name: '20261125_130000_add_starting_roles',
+  },
+  {
+    up: migration_20261125_140000_add_footer_menu.up,
+    down: migration_20261125_140000_add_footer_menu.down,
+    name: '20261125_140000_add_footer_menu',
+  },
+  {
+    up: migration_20261125_150000_fix_seo_site_name.up,
+    down: migration_20261125_150000_fix_seo_site_name.down,
+    name: '20261125_150000_fix_seo_site_name',
+  },
+  {
+    up: migration_20261125_160000_refresh_meta_stats.up,
+    down: migration_20261125_160000_refresh_meta_stats.down,
+    name: '20261125_160000_refresh_meta_stats',
   },
 ];

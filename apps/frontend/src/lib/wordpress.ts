@@ -477,3 +477,23 @@ export async function fetchMenu(location = "primary"): Promise<MenuTopLevel[] | 
     return null;
   }
 }
+
+export type FooterLink = { title: string; url: string; target: string };
+
+export async function fetchFooterLinks(): Promise<FooterLink[] | null> {
+  try {
+    const res = await fetch(`${WORDPRESS_URL}/wp-json/builder/v1/menu?location=footer`, {
+      next: { revalidate: REVALIDATE },
+      signal: AbortSignal.timeout(MENU_TIMEOUT_MS),
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (!Array.isArray(data)) return null;
+    const links = (data as RawNode[])
+      .map((n) => ({ title: asString(n.title), url: asString(n.url), target: asString(n.target) }))
+      .filter((link) => link.title && link.url);
+    return links.length ? links : null;
+  } catch {
+    return null;
+  }
+}

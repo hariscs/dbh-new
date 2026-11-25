@@ -10,6 +10,7 @@ import {
   TextareaInput,
   TextInput,
   useField,
+  useFormFields,
 } from '@payloadcms/ui'
 import type { JSONFieldClientComponent } from 'payload'
 import { type ChangeEvent, type MouseEvent, type ReactNode, useEffect, useState } from 'react'
@@ -46,6 +47,7 @@ const PLACEHOLDER_IMAGE = {
   isPlaceholder: true,
 }
 const LEVEL_NAMES = ['Top menu tab', 'Section', 'Link']
+const PRIMARY_LOCATION = 'primary'
 const LINK_TYPES = [
   { value: 'heading', label: 'No link (heading)' },
   { value: 'page', label: 'Page' },
@@ -65,13 +67,13 @@ const DEPTH_DEFAULTS: Record<string, unknown>[] = [
 const hrefOf = (page: PageDoc) => (page.isFrontPage ? '/' : `${page.path}/`)
 const mediaUrl = (filename: string) => `${window.location.origin}${MEDIA_PATH}${encodeURIComponent(filename)}`
 
-const normalize = (items: Item[], parent = 0, depth = 0): Item[] =>
+const normalize = (items: Item[], flat: boolean, parent = 0, depth = 0): Item[] =>
   items.map((item) => ({
     ...item,
     parent,
     depth,
-    children: normalize(item.children ?? [], item.id, depth + 1),
-    ...Object.fromEntries(Object.entries(DEPTH_DEFAULTS[depth] ?? {}).filter(([key]) => !(key in item))),
+    children: normalize(item.children ?? [], flat, item.id, depth + 1),
+    ...(flat ? {} : Object.fromEntries(Object.entries(DEPTH_DEFAULTS[depth] ?? {}).filter(([key]) => !(key in item)))),
   }))
 
 const allItems = (items: Item[]): Item[] => items.flatMap((item) => [item, ...allItems(item.children)])
@@ -103,6 +105,10 @@ const Row = ({ children }: { children: ReactNode }) => (
 export const MenuEditor: JSONFieldClientComponent = (props) => {
   const { path, readOnly } = props
   const { value, setValue } = useField<Item[]>({ path })
+  const location = useFormFields(([fields]) => fields.location?.value as string | undefined)
+  const flat = location !== PRIMARY_LOCATION
+  const maxDepth = flat ? 0 : MAX_DEPTH
+  const levelName = (depth: number) => (flat ? 'Link' : LEVEL_NAMES[depth])
   const [pages, setPages] = useState<PageDoc[]>([])
   const [media, setMedia] = useState<MediaDoc[]>([])
   const [rawJson, setRawJson] = useState(false)
@@ -130,7 +136,7 @@ export const MenuEditor: JSONFieldClientComponent = (props) => {
   if (rawJson) return <div>{jsonToggle}<JSONField {...props} /></div>
 
   const tree = value ?? []
-  const save = (next: Item[]) => setValue(normalize(next))
+  const save = (next: Item[]) => setValue(normalize(next, flat))
   const pageByHref = new Map(pages.map((page) => [hrefOf(page), page]))
   const pageOptions = pages.map((page) => ({ label: `${page.title} — ${hrefOf(page)}`, value: hrefOf(page) }))
 
@@ -237,8 +243,8 @@ export const MenuEditor: JSONFieldClientComponent = (props) => {
             Open in a new tab
           </label>
         )}
-        {item.depth === 0 && renderFeaturedBlogs(item)}
-        {item.depth === 1 && (
+        {!flat && item.depth === 0 && renderFeaturedBlogs(item)}
+        {!flat && item.depth === 1 && (
           <Row>
             <TextInput
               label="Section heading"
@@ -267,7 +273,7 @@ export const MenuEditor: JSONFieldClientComponent = (props) => {
             </label>
           </Row>
         )}
-        {item.depth === 2 && renderCard(item)}
+        {!flat && item.depth === 2 && renderCard(item)}
       </div>
     )
   }
@@ -400,7 +406,7 @@ export const MenuEditor: JSONFieldClientComponent = (props) => {
                 actions={
                   !readOnly && (
                     <div onClick={stop} style={{ display: 'flex', gap: 4 }}>
-                      {index > 0 && (
+                      {index > 0 && !flat && (
                         <Button buttonStyle="secondary" margin={false} onClick={() => indent(item, items)} size="small" tooltip="Move under the item above">
                           →
                         </Button>
@@ -419,13 +425,13 @@ export const MenuEditor: JSONFieldClientComponent = (props) => {
                 dragHandleProps={{ id: String(item.id), attributes, listeners }}
                 header={
                   <span>
-                    {item.title} <small style={{ opacity: 0.6 }}>{LEVEL_NAMES[item.depth]} · {item.url}</small>
+                    {item.title} <small style={{ opacity: 0.6 }}>{levelName(item.depth)} · {item.url}</small>
                   </span>
                 }
                 initCollapsed
               >
                 {renderFields(item)}
-                {item.depth < MAX_DEPTH && (
+                {item.depth < maxDepth && (
                   <div style={{ marginTop: 16, paddingLeft: 16, borderLeft: '2px solid var(--theme-elevation-150)' }}>
                     {renderList(item.children, item.id)}
                     {!readOnly && (
@@ -448,13 +454,15 @@ export const MenuEditor: JSONFieldClientComponent = (props) => {
       <style>{'.menu-editor .collapsible__actions { width: auto; margin-inline-end: 12px; }'}</style>
       <h4>Menu items</h4>
       <p style={{ opacity: 0.6 }}>
-        Drag to reorder. → moves an item under the one above it, ← moves it up a level. Changes go live when you save
+        {flat
+          ? 'Drag to reorder. Changes go live when you save'
+          : 'Drag to reorder. → moves an item under the one above it, ← moves it up a level. Changes go live when you save'}
       </p>
       {renderList(tree, 0)}
       <div style={{ display: 'flex', gap: 8, marginTop: 12, alignItems: 'center' }}>
         {!readOnly && (
           <Button margin={false} onClick={() => add(0)} size="small">
-            + Add top menu tab
+            + Add {flat ? 'link' : 'top menu tab'}
           </Button>
         )}
         {jsonToggle}

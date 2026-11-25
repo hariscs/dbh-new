@@ -73,11 +73,12 @@ const options = Object.fromEntries(
   (
     await query<{ option_name: string; option_value: string }>(
       `select option_name, option_value from wp_options
-       where option_name in ('home', 'page_on_front', 'cptui_post_types', 'cptui_taxonomies')`,
+       where option_name in ('home', 'blogname', 'page_on_front', 'cptui_post_types', 'cptui_taxonomies')`,
     )
   ).map((row) => [row.option_name, row.option_value]),
 )
 const home = options.home.replace(/\/+$/, '')
+const siteName = options.blogname ?? ''
 
 const globalVariables = new Map(
   (
@@ -348,16 +349,24 @@ const termIdsOf = (post: Post) => {
 
 const permalinkOf = (post: Post) => (post.ID === frontPageId ? `${home}/` : `${home}${pathOf(post)}/`)
 
+const STALE_STATS = /^10\+ years 14000\+ Patients Treated \/ 50\+ Licenses & Accreditations \/ 4\.85 ⭐ Rating \(750\+\)/
+const currentStats = () =>
+  `${globalVariables.get('years_in_business')} Years / ${globalVariables.get('patients_helped')} Patients Treated / ` +
+  `${globalVariables.get('licenses_certifications')} Licenses & Accreditations / ` +
+  `${globalVariables.get('review_rating')} ⭐ Rating (${globalVariables.get('review_count')})`
+
 const buildSeo = (post: Post) => {
   const meta = metaByPost.get(post.ID) ?? new Map<string, string>()
   const rawTitle = meta.get('rank_math_title') || wptexturize(post.post_title)
   const robots = maybeUnserialize(meta.get('rank_math_robots') ?? null)
   const seo = {
     title: rawTitle
+      .replace(/%sitename%/gi, siteName)
+      .replace(/%customfield\(([^)]*)\)%/gi, (_match, name: string) => meta.get(name) ?? '')
       .replace(/%[a-z_]+(\([^)]*\))?%/gi, '')
       .replace(/<[^>]*>/g, '')
       .replace(/ {2,}/g, ' '),
-    description: meta.get('rank_math_description') ?? '',
+    description: (meta.get('rank_math_description') ?? '').replace(STALE_STATS, currentStats),
     canonical: meta.get('rank_math_canonical_url') || permalinkOf(post),
     robots: robots && typeof robots === 'object' ? Object.values(robots).join(', ') : 'index, follow',
   }
