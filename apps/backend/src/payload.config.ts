@@ -1,4 +1,5 @@
 import { postgresAdapter } from '@payloadcms/db-postgres'
+import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
 import { buildConfig } from 'payload'
@@ -21,7 +22,24 @@ import { Redirects } from './collections/Redirects'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
+const SMTP_PORT = 587
+const FROM_NAME = 'DBH CMS'
+
+const email = process.env.SMTP_HOST
+  ? nodemailerAdapter({
+      defaultFromAddress: process.env.EMAIL_FROM ?? '',
+      defaultFromName: FROM_NAME,
+      transportOptions: {
+        host: process.env.SMTP_HOST,
+        port: Number(process.env.SMTP_PORT ?? SMTP_PORT),
+        auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+      },
+    })
+  : undefined
+
 export default buildConfig({
+  serverURL: process.env.SERVER_URL,
+  email,
   admin: {
     user: Users.slug,
     importMap: {
