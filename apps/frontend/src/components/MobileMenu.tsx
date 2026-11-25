@@ -12,6 +12,7 @@ import type { MenuTopLevel } from "@/lib/wordpress";
 // scroll lock are added in Chunk 2.
 export default function MobileMenu({ items }: { items?: MenuTopLevel[] | null }) {
   const [open, setOpen] = useState(false);
+  const [opened, setOpened] = useState(false);
   // The call button's number comes from the page's builder `tel_phone` field, but this
   // component is rendered by the layout, which cannot read page data without making every
   // route dynamic (see the note in layout.tsx). The page's own <Header> already renders that
@@ -75,7 +76,10 @@ export default function MobileMenu({ items }: { items?: MenuTopLevel[] | null })
       firstRun.current = false;
       return;
     }
-    if (open) closeBtnRef.current?.focus();
+    if (open) {
+      setOpened(true);
+      closeBtnRef.current?.focus();
+    }
     else trigger?.focus();
   }, [open]);
 
@@ -120,7 +124,7 @@ export default function MobileMenu({ items }: { items?: MenuTopLevel[] | null })
         </div>
         <nav className="dbh-nav">
                   <ul className="dbh-nav__list">
-            <PrimaryNav items={items} idSuffix="-m" withBack />
+            {opened && <PrimaryNav items={items} idSuffix="-m" withBack />}
           </ul>
                 </nav>
       </aside>

@@ -12,7 +12,7 @@ import "./not-found.css";
 export default function NotFound() {
   return (
     <>
-      <Header />
+      <Header withNav={false} />
       <div className="elementor elementor-104774 elementor-location-single">
         <div className="elementor-element elementor-element-525d415 e-flex e-con-boxed e-con e-parent">
           <div className="e-con-inner">

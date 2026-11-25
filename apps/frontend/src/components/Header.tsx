@@ -11,14 +11,16 @@ import { fetchMenu } from "@/lib/wordpress";
  */
 export default async function Header({
   fields,
+  withNav = true,
 }: {
   /** the page's builder fields; omit on routes without page data to use the fallback number */
   fields?: Record<string, string> | null;
+  withNav?: boolean;
 }) {
   const { phone, telHref } = resolvePhone(fields);
   // One fetch per page render in source terms only — Next dedupes it within a render
   // and caches it across them, so the 72 routes rendering Header share one response.
-  const menu = await fetchMenu();
+  const menu = withNav ? await fetchMenu() : null;
   // role="banner" is set explicitly: the page owns the header now, so it renders inside
   // <main>, and a <header> descended from <main> would otherwise stop exposing the
   // banner landmark it had when the layout rendered it as a sibling of <main>.
@@ -38,7 +40,7 @@ export default async function Header({
               <div className="elementor-shortcode">
                 <nav id="dbh-primary-nav" className="dbh-nav">
                   <ul id="menu-mega-menu-district-behavioral-health" className="dbh-nav__list">
-                    <PrimaryNav items={menu} />
+                    {withNav && <PrimaryNav items={menu} />}
                   </ul>
                 </nav>
               </div>
