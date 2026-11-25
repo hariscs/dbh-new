@@ -50,6 +50,7 @@ endpoint the frontend calls is served, and all are public:
 | `builder/v1/drug-index` | `src/builder-api/drug-index.ts` |
 | `rril/v1/interlinking/<path>` | `src/builder-api/interlinking.ts` (rules in `interlinking-rules`) |
 | `wp/v2/<type>` | `src/builder-api/wp-v2.ts` (only the query shapes the frontend sends) |
+| `builder/v1/redirects` | `src/builder-api/redirects.ts` (enabled rows of `redirects`; the frontend applies them in `src/proxy.ts`, cached 60s) |
 
 Intended differences from WordPress: an unknown RRIL path returns 404 (WordPress crashes and sends an
 empty 200), and pages with an empty-slug ancestor are never served by path, matching what WordPress serves.
@@ -66,7 +67,23 @@ slug change); menu saves refresh the whole site. Set `FRONTEND_URL` and `REVALID
 the frontend). A failed refresh is logged and never blocks the save; other pages pick the change up on the
 frontend's normal revalidation timer.
 
-Known limits: changing a parent's slug doesn't move its children, and the menu is a JSON snapshot.
+Known limits: changing a parent's slug doesn't move its children.
+
+Admin features:
+
+| Feature | Where | Notes |
+| --- | --- | --- |
+| Roles and permissions | `roles` collection, `src/access.ts` | Sections × view/create/edit/delete, can publish, own pages only, allowed post types. Permissions add up across a user's roles. The public `wp-json` API uses the Local API, so roles never affect it |
+| Menus | `menus`, `src/admin/MenuEditor.tsx` | `primary` is the mega menu (3 levels, card fields); any other location (`footer`) is a flat link list |
+| Custom field groups | `field-groups`, `src/admin/FieldBuilder.tsx` | Types, choices, required, min/max length, pattern. Checked on admin saves only (`validateFields` in `Pages.ts`); imports skip it |
+| Redirects | `redirects` | `from` must start with `/` |
+| Activity log | `activity-log`, `src/content/activity.ts` | Written by hooks on every collection, read only |
+| Draft preview | `src/content/preview.ts` | Preview on a draft opens a signed one-hour link to the frontend's `/api/preview`; page-data returns drafts only with the `x-preview-secret` header |
+| Revisions | `versions` on `pages` | `pnpm versions:baseline` adds a "WordPress import" version to pages that have none |
+
+Environment for these: `PREVIEW_SECRET` (same value in the frontend), `SERVER_URL` (public admin URL, used in
+password-reset links), and for email `SMTP_HOST`, `SMTP_PORT` (default 587), `SMTP_USER`, `SMTP_PASS`,
+`EMAIL_FROM`. Without `SMTP_HOST`, emails are printed to the server log.
 
 ## Docker image
 
@@ -92,3 +109,12 @@ pnpm --dir apps/backend generate:types
 
 Commit the migration with the collection change. A fresh database needs `pnpm --dir apps/backend migrate`
 before `pnpm import:wp`.
+
+Data-only migrations (seed rows, one-off fixes) are written by hand and added to `src/migrations/index.ts`.
+
+Before deploying, run `pnpm --dir apps/backend exec tsc --noEmit`: the production build type-checks and
+fails on errors that `next dev` ignores.
+
+`pnpm parity:all` compares against live WordPress captures. Since 2026-11-25 it reports about 363
+`page-data seo` differences on purpose (`%sitename%` resolved in titles, current stats in meta
+descriptions). Any other difference is a regression.
