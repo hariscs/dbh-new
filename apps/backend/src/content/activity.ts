@@ -21,11 +21,13 @@ const IGNORED_KEYS = [
 const titleOf = (collection: CollectionConfig, doc: Record<string, unknown>) =>
   String(doc[collection.admin?.useAsTitle ?? 'id'] ?? doc.title ?? doc.name ?? doc.id ?? '')
 
+type Action = 'created' | 'updated' | 'deleted'
+
 const record = (
   req: PayloadRequest,
   collection: CollectionConfig,
   doc: Record<string, unknown>,
-  action: string,
+  action: Action,
   changes: string[],
 ) =>
   req.payload.create({

@@ -8,7 +8,7 @@ const { docs: pages } = await payload.find({
   collection: 'pages',
   depth: 0,
   pagination: false,
-  select: { id: true },
+  select: { wpId: true },
 })
 
 let created = 0

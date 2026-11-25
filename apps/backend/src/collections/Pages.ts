@@ -54,7 +54,7 @@ const validateFields: JSONFieldValidation = async (value, { req, data }) => {
     req,
   })
   const problems = docs
-    .filter((group) => appliesTo(group.location, String(data?.postType ?? '')))
+    .filter((group) => appliesTo(group.location, String((data as Record<string, unknown> | undefined)?.postType ?? '')))
     .flatMap((group) => ((group.fields ?? []) as FieldDefinition[]).map((field) => problemOf(field, values[field.name])))
     .filter(Boolean)
   return problems.length ? problems.join('. ') : true
