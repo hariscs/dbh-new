@@ -12,8 +12,19 @@ export default function LocationServedUsaAlcohol(props: Record<string, string>) 
   const { phone, telHref } = resolvePhone(props);
   const topic_2 = props.topic_2 ?? "Addiction";
   const address_county = props.address_county ?? "Orange County";
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: (props.h1 || props.meta_title || "").replace(/<[^>]*>/g, "").trim(),
+    ...(props.createdAt ? { datePublished: props.createdAt } : {}),
+    publisher: { "@id": "https://districtbehavioralhealth.com/#organization" },
+  };
   return (
     <>
+    <script
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, "\\u003c") }}
+      type="application/ld+json"
+    />
     <div className="wp-singular page-template-default page page-id-105168 page-child parent-pageid-3171 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-theme-child-master hello-elementor-default elementor-default elementor-kit-7 elementor-page elementor-page-105168 elementor-page-2841 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit">
   <Link className="skip-link screen-reader-text" href="#content">
     Skip to content
