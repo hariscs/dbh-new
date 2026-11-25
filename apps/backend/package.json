@@ -11,6 +11,7 @@
     "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
     "import:wp": "cross-env NODE_OPTIONS=--no-deprecation payload run src/import/wordpress.ts",
     "import:uploads": "cross-env NODE_OPTIONS=--no-deprecation payload run src/import/uploads.ts",
+    "versions:baseline": "cross-env NODE_OPTIONS=--no-deprecation payload run src/import/baseline-versions.ts",
     "parity": "cross-env NODE_OPTIONS=--no-deprecation payload run src/import/parity.ts",
     "capture:baselines": "cross-env NODE_OPTIONS=--no-deprecation payload run src/import/capture-baselines.ts",
     "parity:all": "cross-env NODE_OPTIONS=--no-deprecation payload run src/import/parity-all.ts",
