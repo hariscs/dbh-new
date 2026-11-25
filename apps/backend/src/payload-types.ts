@@ -75,6 +75,7 @@ export interface Config {
     'sheet-imports': SheetImport;
     'field-groups': FieldGroup;
     'interlinking-rules': InterlinkingRule;
+    redirects: Redirect;
     users: User;
     roles: Role;
     'activity-log': ActivityLog;
@@ -93,6 +94,7 @@ export interface Config {
     'sheet-imports': SheetImportsSelect<false> | SheetImportsSelect<true>;
     'field-groups': FieldGroupsSelect<false> | FieldGroupsSelect<true>;
     'interlinking-rules': InterlinkingRulesSelect<false> | InterlinkingRulesSelect<true>;
+    redirects: RedirectsSelect<false> | RedirectsSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     roles: RolesSelect<false> | RolesSelect<true>;
     'activity-log': ActivityLogSelect<false> | ActivityLogSelect<true>;
@@ -503,6 +505,30 @@ export interface InterlinkingRule {
   createdAt: string;
 }
 /**
+ * Send visitors from an old URL to a new one, like Rank Math redirections. Changes apply within a minute
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "redirects".
+ */
+export interface Redirect {
+  id: number;
+  /**
+   * Old path on this site, e.g. /location-served/usa/adderall/
+   */
+  from: string;
+  /**
+   * New path (/new-page/) or a full URL (https://…)
+   */
+  to: string;
+  status: '301' | '302';
+  /**
+   * Untick to pause the redirect without deleting it
+   */
+  enabled?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * Who created, changed or deleted what, and when. Written automatically, read only
  *
  * This interface was referenced by `Config`'s JSON-Schema
@@ -582,6 +608,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'interlinking-rules';
         value: number | InterlinkingRule;
+      } | null)
+    | ({
+        relationTo: 'redirects';
+        value: number | Redirect;
       } | null)
     | ({
         relationTo: 'users';
@@ -762,6 +792,18 @@ export interface InterlinkingRulesSelect<T extends boolean = true> {
   priority?: T;
   status?: T;
   wpId?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "redirects_select".
+ */
+export interface RedirectsSelect<T extends boolean = true> {
+  from?: T;
+  to?: T;
+  status?: T;
+  enabled?: T;
   updatedAt?: T;
   createdAt?: T;
 }

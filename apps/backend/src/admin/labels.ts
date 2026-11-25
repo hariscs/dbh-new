@@ -36,6 +36,7 @@ export const PERMISSION_COLLECTIONS = [
   { value: 'sheet-imports', label: 'Import from Sheet' },
   { value: 'field-groups', label: 'Custom Fields (ACF)' },
   { value: 'interlinking-rules', label: 'Interlinking Rules' },
+  { value: 'redirects', label: 'Redirects' },
   { value: 'users', label: 'Users' },
   { value: 'roles', label: 'Roles' },
   { value: 'activity-log', label: 'Activity log (view only)' },

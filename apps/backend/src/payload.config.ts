@@ -16,6 +16,7 @@ import { GlobalVariables } from './collections/GlobalVariables'
 import { SheetImports } from './collections/SheetImports'
 import { Roles } from './collections/Roles'
 import { ActivityLog } from './collections/ActivityLog'
+import { Redirects } from './collections/Redirects'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -33,7 +34,7 @@ export default buildConfig({
       beforeDashboard: ['/admin/Dashboard#Dashboard'],
     },
   },
-  collections: [Pages, Media, Terms, GlobalVariables, Menus, SheetImports, FieldGroups, InterlinkingRules, Users, Roles, ActivityLog],
+  collections: [Pages, Media, Terms, GlobalVariables, Menus, SheetImports, FieldGroups, InterlinkingRules, Redirects, Users, Roles, ActivityLog],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
