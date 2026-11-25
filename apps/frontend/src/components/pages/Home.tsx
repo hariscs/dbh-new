@@ -26,7 +26,7 @@ export default function Page({ relatedLinks, relatedBlogs }: TemplateProps) {
           </div>
           <div className="elementor-element elementor-element-c7ce012 banner_head elementor-widget elementor-widget-heading" data-widget_type="heading.default">
             <div className="elementor-widget-container">
-              <h2 className="elementor-heading-title elementor-size-default">
+              <h1 className="elementor-heading-title elementor-size-default">
                 Comprehensive Behavioral Health Care, From { " "}
                 <strong>
                   Coast to Coast
@@ -36,7 +36,7 @@ export default function Page({ relatedLinks, relatedBlogs }: TemplateProps) {
 
                   </strong>
                 </strong>
-              </h2>
+              </h1>
             </div>
           </div>
           <strong>
@@ -185,11 +185,11 @@ export default function Page({ relatedLinks, relatedBlogs }: TemplateProps) {
                                         <div className="elementor-element elementor-element-ec5ace6 e-con-full e-flex e-con e-child">
                                           <div className="elementor-element elementor-element-f407a3e elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-widget_type="theme-post-title.default">
                                             <div className="elementor-widget-container">
-                                              <h1 className="elementor-heading-title elementor-size-default">
+                                              <h3 className="elementor-heading-title elementor-size-default">
                                                 <a href="https://www.renaissancerecovery.com/drug/rehab/tennessee/davidson-county/nashville/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
                                                   Renaissance Recovery Nashville, TN
                                                 </a>
-                                              </h1>
+                                              </h3>
                                             </div>
                                           </div>
                                           <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -234,11 +234,11 @@ export default function Page({ relatedLinks, relatedBlogs }: TemplateProps) {
                                         <div className="elementor-element elementor-element-ec5ace6 e-con-full e-flex e-con e-child">
                                           <div className="elementor-element elementor-element-f407a3e elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-widget_type="theme-post-title.default">
                                             <div className="elementor-widget-container">
-                                              <h1 className="elementor-heading-title elementor-size-default">
+                                              <h3 className="elementor-heading-title elementor-size-default">
                                                 <a href="https://www.renaissancerecovery.com/drug/rehab/california/orange-county/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
                                                   Renaissance Recovery Orange County, CA
                                                 </a>
-                                              </h1>
+                                              </h3>
                                             </div>
                                           </div>
                                           <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -283,11 +283,11 @@ export default function Page({ relatedLinks, relatedBlogs }: TemplateProps) {
                                         <div className="elementor-element elementor-element-ec5ace6 e-con-full e-flex e-con e-child">
                                           <div className="elementor-element elementor-element-f407a3e elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-widget_type="theme-post-title.default">
                                             <div className="elementor-widget-container">
-                                              <h1 className="elementor-heading-title elementor-size-default">
+                                              <h3 className="elementor-heading-title elementor-size-default">
                                                 <a href="https://www.renaissancerecovery.com/drug/rehab/florida/palm-beach/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
                                                   Renaissance Recovery Palm Beach, FL
                                                 </a>
-                                              </h1>
+                                              </h3>
                                             </div>
                                           </div>
                                           <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -332,11 +332,11 @@ export default function Page({ relatedLinks, relatedBlogs }: TemplateProps) {
                                         <div className="elementor-element elementor-element-ec5ace6 e-con-full e-flex e-con e-child">
                                           <div className="elementor-element elementor-element-f407a3e elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-widget_type="theme-post-title.default">
                                             <div className="elementor-widget-container">
-                                              <h1 className="elementor-heading-title elementor-size-default">
+                                              <h3 className="elementor-heading-title elementor-size-default">
                                                 <a href="https://www.gratitudelodge.com/drug-rehab/california/los-angeles/long-beach/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
                                                   Gratitude Lodge – Long Beach, CA
                                                 </a>
-                                              </h1>
+                                              </h3>
                                             </div>
                                           </div>
                                           <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -381,11 +381,11 @@ export default function Page({ relatedLinks, relatedBlogs }: TemplateProps) {
                                         <div className="elementor-element elementor-element-ec5ace6 e-con-full e-flex e-con e-child">
                                           <div className="elementor-element elementor-element-f407a3e elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-widget_type="theme-post-title.default">
                                             <div className="elementor-widget-container">
-                                              <h1 className="elementor-heading-title elementor-size-default">
+                                              <h3 className="elementor-heading-title elementor-size-default">
                                                 <a href="https://www.gratitudelodge.com/drug-rehab/california/orange-county/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
                                                   Gratitude Lodge – Orange County, CA
                                                 </a>
-                                              </h1>
+                                              </h3>
                                             </div>
                                           </div>
                                           <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -430,11 +430,11 @@ export default function Page({ relatedLinks, relatedBlogs }: TemplateProps) {
                                         <div className="elementor-element elementor-element-ec5ace6 e-con-full e-flex e-con e-child">
                                           <div className="elementor-element elementor-element-f407a3e elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-widget_type="theme-post-title.default">
                                             <div className="elementor-widget-container">
-                                              <h1 className="elementor-heading-title elementor-size-default">
+                                              <h3 className="elementor-heading-title elementor-size-default">
                                                 <a href="https://www.gratitudelodge.com/drug-rehab/california/orange-county/newport-beach/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
                                                   Gratitude Lodge – Newport Beach, CA
                                                 </a>
-                                              </h1>
+                                              </h3>
                                             </div>
                                           </div>
                                           <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -479,11 +479,11 @@ export default function Page({ relatedLinks, relatedBlogs }: TemplateProps) {
                                         <div className="elementor-element elementor-element-ec5ace6 e-con-full e-flex e-con e-child">
                                           <div className="elementor-element elementor-element-f407a3e elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-widget_type="theme-post-title.default">
                                             <div className="elementor-widget-container">
-                                              <h1 className="elementor-heading-title elementor-size-default">
+                                              <h3 className="elementor-heading-title elementor-size-default">
                                                 <a href="https://www.gratitudelodge.com/drug-rehab/california/los-angeles/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
                                                   Gratitude Lodge – Los Angeles, CA
                                                 </a>
-                                              </h1>
+                                              </h3>
                                             </div>
                                           </div>
                                           <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -528,11 +528,11 @@ export default function Page({ relatedLinks, relatedBlogs }: TemplateProps) {
                                         <div className="elementor-element elementor-element-ec5ace6 e-con-full e-flex e-con e-child">
                                           <div className="elementor-element elementor-element-f407a3e elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-widget_type="theme-post-title.default">
                                             <div className="elementor-widget-container">
-                                              <h1 className="elementor-heading-title elementor-size-default">
+                                              <h3 className="elementor-heading-title elementor-size-default">
                                                 <a href="https://californiadetox.com/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
                                                   California Detox – Orange County, CA
                                                 </a>
-                                              </h1>
+                                              </h3>
                                             </div>
                                           </div>
                                           <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -577,11 +577,11 @@ export default function Page({ relatedLinks, relatedBlogs }: TemplateProps) {
                                         <div className="elementor-element elementor-element-ec5ace6 e-con-full e-flex e-con e-child">
                                           <div className="elementor-element elementor-element-f407a3e elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-widget_type="theme-post-title.default">
                                             <div className="elementor-widget-container">
-                                              <h1 className="elementor-heading-title elementor-size-default">
+                                              <h3 className="elementor-heading-title elementor-size-default">
                                                 <a href="https://connectionsoc.com/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
                                                   Connections Mental Health – Orange County, CA
                                                 </a>
-                                              </h1>
+                                              </h3>
                                             </div>
                                           </div>
                                           <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -626,11 +626,11 @@ export default function Page({ relatedLinks, relatedBlogs }: TemplateProps) {
                                         <div className="elementor-element elementor-element-ec5ace6 e-con-full e-flex e-con e-child">
                                           <div className="elementor-element elementor-element-f407a3e elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-widget_type="theme-post-title.default">
                                             <div className="elementor-widget-container">
-                                              <h1 className="elementor-heading-title elementor-size-default">
+                                              <h3 className="elementor-heading-title elementor-size-default">
                                                 <a href="https://alliancerecovery.com/drug/los-angeles-ca/?utm_source=districtbehavioralhealth.com&utm_medium=referral">
                                                   Alliance Recovery – Los Angeles, CA
                                                 </a>
-                                              </h1>
+                                              </h3>
                                             </div>
                                           </div>
                                           <div className="elementor-element elementor-element-e78a91f elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -2504,9 +2504,9 @@ A Lifelong Support System.
                           <div className="elementor-element elementor-element-cc445b9 e-con-full diff_title e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div className="elementor-element elementor-element-af1f0ab elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-widget_type="theme-post-title.default">
                               <div className="elementor-widget-container">
-                                <h1 className="elementor-heading-title elementor-size-default">
+                                <h3 className="elementor-heading-title elementor-size-default">
                                   Nationally Accredited Facilities
-                                </h1>
+                                </h3>
                               </div>
                             </div>
                           </div>
@@ -2526,9 +2526,9 @@ A Lifelong Support System.
                           <div className="elementor-element elementor-element-cc445b9 e-con-full diff_title e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div className="elementor-element elementor-element-af1f0ab elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-widget_type="theme-post-title.default">
                               <div className="elementor-widget-container">
-                                <h1 className="elementor-heading-title elementor-size-default">
+                                <h3 className="elementor-heading-title elementor-size-default">
                                   Over 10 Years of Clinical Excellence
-                                </h1>
+                                </h3>
                               </div>
                             </div>
                           </div>
@@ -2548,11 +2548,11 @@ A Lifelong Support System.
                           <div className="elementor-element elementor-element-cc445b9 e-con-full diff_title e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div className="elementor-element elementor-element-af1f0ab elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-widget_type="theme-post-title.default">
                               <div className="elementor-widget-container">
-                                <h1 className="elementor-heading-title elementor-size-default">
+                                <h3 className="elementor-heading-title elementor-size-default">
                                   Seamless Transitions Between
                                   <br />
                                    Levels of Care
-                                </h1>
+                                </h3>
                               </div>
                             </div>
                           </div>
@@ -2572,11 +2572,11 @@ A Lifelong Support System.
                           <div className="elementor-element elementor-element-cc445b9 e-con-full diff_title e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div className="elementor-element elementor-element-af1f0ab elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-widget_type="theme-post-title.default">
                               <div className="elementor-widget-container">
-                                <h1 className="elementor-heading-title elementor-size-default">
+                                <h3 className="elementor-heading-title elementor-size-default">
                                   Mental Health & Addiction
                                   <br />
                                    Dual Focus
-                                </h1>
+                                </h3>
                               </div>
                             </div>
                           </div>
@@ -2596,9 +2596,9 @@ A Lifelong Support System.
                           <div className="elementor-element elementor-element-cc445b9 e-con-full diff_title e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div className="elementor-element elementor-element-af1f0ab elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-widget_type="theme-post-title.default">
                               <div className="elementor-widget-container">
-                                <h1 className="elementor-heading-title elementor-size-default">
+                                <h3 className="elementor-heading-title elementor-size-default">
                                   Transparent Communication with Families
-                                </h1>
+                                </h3>
                               </div>
                             </div>
                           </div>

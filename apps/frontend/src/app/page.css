@@ -571,9 +571,9 @@
    whether or not a non-element node is present. */
 .diff_col .swiper-wrapper .swiper-slide:nth-of-type(odd) .diff_main .e-con-inner { flex-direction: column-reverse; }
 .diff_col .swiper-wrapper .swiper-slide:nth-of-type(odd) .diff_main .e-con-inner .diff_title { background: rgb(46, 106, 161); }
-.diff_col .swiper-wrapper .swiper-slide:nth-of-type(odd) .diff_main .e-con-inner .diff_title h1.elementor-heading-title.elementor-size-default { color: white; }
+.diff_col .swiper-wrapper .swiper-slide:nth-of-type(odd) .diff_main .e-con-inner .diff_title h3.elementor-heading-title.elementor-size-default { color: white; }
 .diff_main .elementor-widget-theme-post-featured-image.elementor-widget-image { width: 100%; height: 100%; object-fit: cover; display: block; overflow: hidden; border-radius: 12px; }
-@media screen and (min-device-width: 1300px) and (max-device-width: 1400px) {.diff_title h1.elementor-heading-title.elementor-size-default { font-size: 15px !important; line-height: 23px !important; }}
+@media screen and (min-device-width: 1300px) and (max-device-width: 1400px) {.diff_title h3.elementor-heading-title.elementor-size-default { font-size: 15px !important; line-height: 23px !important; }}
 .elementor-75 .elementor-element.elementor-element-2c0bd73 { --display: flex; --flex-direction: column; --container-widget-width: 100%; --container-widget-height: initial; --container-widget-flex-grow: 0; --container-widget-align-self: initial; --flex-wrap-mobile: wrap; --border-radius: 20px 20px 20px 20px; --padding-top: 10px; --padding-bottom: 10px; --padding-left: 10px; --padding-right: 10px; }
 .elementor-75 .elementor-element.elementor-element-2c0bd73:not(.elementor-motion-effects-element-type-background), .elementor-75 .elementor-element.elementor-element-2c0bd73 > .elementor-motion-effects-container > .elementor-motion-effects-layer { background-color: rgb(255, 255, 255); }
 .elementor-75 .elementor-element.elementor-element-fd7bae9 { --display: flex; --gap: 0px 0px; --row-gap: 0px; --column-gap: 0px; --padding-top: 0px; --padding-bottom: 0px; --padding-left: 0px; --padding-right: 0px; }
