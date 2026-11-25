@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import MobileMenu from "@/components/MobileMenu";
 import CtmRouteSwap from "@/components/CtmRouteSwap";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
+import PreviewBanner from "@/components/PreviewBanner";
 import { fetchMenu, SITE_URL } from "@/lib/wordpress";
 
 export const metadata: Metadata = {
@@ -92,6 +93,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <ExitIntentPopup />
         <Script id="third-party-loader" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `(function(){var E=['scroll','click','touchstart','keydown','pointerdown'];function once(fn,delay,afterLoad){var done=false;function run(){if(done)return;done=true;fn();for(var k=0;k<E.length;k++)removeEventListener(E[k],run);}for(var k=0;k<E.length;k++)addEventListener(E[k],run,{passive:true,once:true});function arm(){setTimeout(run,delay);}if(afterLoad&&document.readyState!=='complete')addEventListener('load',arm,{once:true});else arm();}once(function(){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MGF7WNCV');},10000,true);once(function(){var a=document.createElement('script');a.src='https://js.talkfurther.com/talkfurther_init.min.js';a.async=true;document.head.appendChild(a);},5000,true);}());` }} />
         <Script id="body-style-guard" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `(function(){var i=false;['click','touchstart','keydown'].forEach(function(e){document.addEventListener(e,function(){i=true;},{once:true,capture:true});});var o=new MutationObserver(function(){if(i)return;if(document.body.style.overflow==='hidden')document.body.style.overflow='';if(document.body.style.touchAction==='none')document.body.style.touchAction='';});o.observe(document.body,{attributes:true,attributeFilter:['style']});}());` }} />
+        <PreviewBanner />
       </body>
     </html>
   );

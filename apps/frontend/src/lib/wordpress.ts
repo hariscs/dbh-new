@@ -1,3 +1,4 @@
+import { draftMode } from "next/headers";
 const WORDPRESS_URL = process.env.WORDPRESS_URL;
 if (!WORDPRESS_URL) throw new Error("WORDPRESS_URL is not set");
 
@@ -23,13 +24,24 @@ const toApexCanonical = (canonical: string) => {
   }
 };
 
+async function isPreview() {
+  try {
+    return (await draftMode()).isEnabled;
+  } catch {
+    return false;
+  }
+}
+
 export async function fetchPageData(path: string): Promise<BuilderPageData | null> {
   if (!path) return null;
   try {
-    const res = await fetch(
-      `${WORDPRESS_URL}/wp-json/builder/v1/page-data?path=${encodeURIComponent(path)}`,
-      { next: { revalidate: REVALIDATE } }
-    );
+    const url = `${WORDPRESS_URL}/wp-json/builder/v1/page-data?path=${encodeURIComponent(path)}`;
+    const res = (await isPreview())
+      ? await fetch(`${url}&draft=1`, {
+          cache: "no-store",
+          headers: { "x-preview-secret": process.env.PREVIEW_SECRET ?? "" },
+        })
+      : await fetch(url, { next: { revalidate: REVALIDATE } });
     if (!res.ok) return null;
     const data = (await res.json()) as BuilderPageData;
     if (data?.seo?.canonical) data.seo.canonical = toApexCanonical(data.seo.canonical);

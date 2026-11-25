@@ -7,12 +7,13 @@ type PageDataQuery = {
   path?: string
   slug?: string
   present?: boolean
+  draft?: boolean
 }
 
-const findOne = async (payload: Payload, where: Where) => {
+const findOne = async (payload: Payload, where: Where, draft = false) => {
   const { docs } = await payload.find({
     collection: 'pages',
-    where: { and: [where, { status: { equals: 'publish' } }] },
+    where: draft ? where : { and: [where, { status: { equals: 'publish' } }] },
     sort: '-wpId',
     limit: 1,
     depth: 0,
@@ -21,9 +22,9 @@ const findOne = async (payload: Payload, where: Where) => {
   return docs[0]
 }
 
-const resolvePage = async (payload: Payload, { id, path, slug }: PageDataQuery) => {
+const resolvePage = async (payload: Payload, { id, path, slug, draft }: PageDataQuery) => {
   if (id && id > 0) {
-    const page = await findOne(payload, { wpId: { equals: id } })
+    const page = await findOne(payload, { wpId: { equals: id } }, draft)
     if (page) return page
   }
 
@@ -34,15 +35,15 @@ const resolvePage = async (payload: Payload, { id, path, slug }: PageDataQuery) 
           path: { equals: `/${trimmed}` },
           postType: { equals: 'page' },
           reachableByPath: { equals: true },
-        })) ?? (await findOne(payload, { path: { equals: `/${trimmed}` }, reachableByPath: { equals: true } })))
-      : await findOne(payload, { isFrontPage: { equals: true } })
+        }, draft)) ?? (await findOne(payload, { path: { equals: `/${trimmed}` }, reachableByPath: { equals: true } }, draft)))
+      : await findOne(payload, { isFrontPage: { equals: true } }, draft)
     if (page) return page
   }
 
   if (!slug) return undefined
   return (
-    (await findOne(payload, { slug: { equals: slug }, postType: { equals: 'page' } })) ??
-    (await findOne(payload, { slug: { equals: slug } }))
+    (await findOne(payload, { slug: { equals: slug }, postType: { equals: 'page' } }, draft)) ??
+    (await findOne(payload, { slug: { equals: slug } }, draft))
   )
 }
 

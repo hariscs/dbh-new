@@ -6,6 +6,7 @@ import { type FieldDefinition, POST_TYPES, STATUSES } from '../admin/labels'
 import { clearInterlinkingCache } from '../builder-api/interlinking'
 import { moveChildren } from '../content/cascade'
 import { derivePage } from '../content/derive'
+import { previewUrl } from '../content/preview'
 import { revalidatePage } from '../content/revalidate'
 
 const derived = { readOnly: true } as const
@@ -75,8 +76,11 @@ export const Pages: CollectionConfig = {
     },
     preview: (doc) => {
       const frontendUrl = process.env.FRONTEND_URL?.replace(/\/+$/, '')
-      if (!frontendUrl || doc.status !== 'publish') return null
-      return doc.isFrontPage ? `${frontendUrl}/` : `${frontendUrl}${doc.path}/`
+      const path = doc.isFrontPage ? '/' : `${doc.path}/`
+      if (!frontendUrl) return null
+      if (doc.status === 'publish') return `${frontendUrl}${path}`
+      const secret = process.env.PREVIEW_SECRET
+      return secret ? previewUrl(frontendUrl, path, secret) : null
     },
   },
   access: pageAccess,
