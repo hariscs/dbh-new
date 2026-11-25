@@ -1,6 +1,7 @@
 import type { CollectionConfig } from 'payload'
 
 import { allow, hiddenUnless, loggedIn } from '../access'
+import { logChange, logDelete } from '../content/activity'
 import { POST_TYPES } from '../admin/labels'
 
 export const Roles: CollectionConfig = {
@@ -13,6 +14,7 @@ export const Roles: CollectionConfig = {
     defaultColumns: ['name', 'fullAccess', 'canPublish', 'ownPagesOnly'],
   },
   access: { ...allow('roles'), read: loggedIn },
+  hooks: { afterChange: [logChange], afterDelete: [logDelete] },
   fields: [
     { name: 'name', type: 'text', required: true, unique: true },
     {

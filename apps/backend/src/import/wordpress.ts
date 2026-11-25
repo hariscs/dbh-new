@@ -247,15 +247,27 @@ if (imageIds.size) {
   }
 }
 
+const INTERNAL_TAXONOMIES = [
+  'elementor_library_type',
+  'elementor_font_type',
+  'wpcode_tags',
+  'wpcode_type',
+  'wpcode_location',
+  'pgscl_user_journey',
+  'rank_math_redirection_category',
+  'wp_theme',
+  'nav_menu',
+]
+
 const termsByPost = new Map<number, Term[]>()
 for (const row of await query<Term & { object_id: number }>(
   `select tr.object_id, tt.taxonomy, t.term_id, t.name, t.slug
    from wp_term_relationships tr
    join wp_term_taxonomy tt on tt.term_taxonomy_id = tr.term_taxonomy_id
    join wp_terms t on t.term_id = tt.term_id
-   where tr.object_id in (?)
+   where tr.object_id in (?) and tt.taxonomy not in (?)
    order by t.name`,
-  [publishedIds],
+  [publishedIds, INTERNAL_TAXONOMIES],
 )) {
   const terms = termsByPost.get(row.object_id) ?? []
   terms.push(row)
@@ -397,7 +409,9 @@ const payload = await getPayload({ config })
 const allTerms = await query<{ term_id: number; taxonomy: string; slug: string; name: string; parent: number }>(
   `select t.term_id, tt.taxonomy, t.slug, t.name, tt.parent
    from wp_term_taxonomy tt
-   join wp_terms t on t.term_id = tt.term_id`,
+   join wp_terms t on t.term_id = tt.term_id
+   where tt.taxonomy not in (?)`,
+  [INTERNAL_TAXONOMIES],
 )
 for (const term of allTerms) {
   const data = { wpId: term.term_id, taxonomy: term.taxonomy, slug: term.slug, name: term.name, parent: term.parent }

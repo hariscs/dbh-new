@@ -1,6 +1,7 @@
 import type { CollectionConfig } from 'payload'
 
 import { allow, hiddenUnless, loggedIn } from '../access'
+import { logChange, logDelete } from '../content/activity'
 import { clearInterlinkingCache } from '../builder-api/interlinking'
 import { rederiveTermPages } from '../content/cascade'
 import { TAXONOMIES } from '../admin/labels'
@@ -17,8 +18,8 @@ export const Terms: CollectionConfig = {
   },
   access: { ...allow('terms'), read: loggedIn },
   hooks: {
-    afterChange: [clearInterlinkingCache, rederiveTermPages],
-    afterDelete: [clearInterlinkingCache],
+    afterChange: [clearInterlinkingCache, rederiveTermPages, logChange],
+    afterDelete: [clearInterlinkingCache, logDelete],
   },
   fields: [
     { name: 'wpId', label: 'WordPress ID', type: 'number', required: true, unique: true, index: true, admin: { position: 'sidebar' } },

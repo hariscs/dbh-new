@@ -1,6 +1,7 @@
 import type { CollectionBeforeChangeHook, CollectionConfig, JSONFieldValidation } from 'payload'
 
 import { guardPage, pageAccess } from '../access'
+import { logChange, logDelete } from '../content/activity'
 import { type FieldDefinition, POST_TYPES, STATUSES } from '../admin/labels'
 import { clearInterlinkingCache } from '../builder-api/interlinking'
 import { moveChildren } from '../content/cascade'
@@ -81,8 +82,8 @@ export const Pages: CollectionConfig = {
   access: pageAccess,
   hooks: {
     beforeChange: [guardPage, stampEditor, fillPostDate, derivePage],
-    afterChange: [clearInterlinkingCache, revalidatePage, moveChildren],
-    afterDelete: [clearInterlinkingCache],
+    afterChange: [clearInterlinkingCache, revalidatePage, moveChildren, logChange],
+    afterDelete: [clearInterlinkingCache, logDelete],
   },
   fields: [
     { name: 'title', type: 'text', required: true, admin: { description: 'Shown in the admin and used for the browser title when no meta title is set' } },

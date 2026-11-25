@@ -38,6 +38,7 @@ export const PERMISSION_COLLECTIONS = [
   { value: 'interlinking-rules', label: 'Interlinking Rules' },
   { value: 'users', label: 'Users' },
   { value: 'roles', label: 'Roles' },
+  { value: 'activity-log', label: 'Activity log (view only)' },
 ]
 
 export const PERMISSION_ACTIONS = [

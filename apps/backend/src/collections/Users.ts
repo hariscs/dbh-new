@@ -1,6 +1,7 @@
 import type { Access, CollectionBeforeChangeHook, CollectionConfig } from 'payload'
 
 import { can } from '../access'
+import { logChange, logDelete } from '../content/activity'
 
 const selfOr =
   (action: 'read' | 'update'): Access =>
@@ -34,7 +35,7 @@ export const Users: CollectionConfig = {
     update: selfOr('update'),
     delete: ({ req }) => can(req.user, 'users', 'delete'),
   },
-  hooks: { beforeChange: [guardRoles] },
+  hooks: { beforeChange: [guardRoles], afterChange: [logChange], afterDelete: [logDelete] },
   fields: [
     { name: 'name', type: 'text' },
     { name: 'bio', type: 'textarea' },

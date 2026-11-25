@@ -1,6 +1,7 @@
 import type { CollectionAfterChangeHook, CollectionBeforeChangeHook, CollectionConfig } from 'payload'
 
 import { allow } from '../access'
+import { logChange, logDelete } from '../content/activity'
 import { revalidateSite } from '../content/revalidate'
 import { importSheet, type SheetReport } from '../import/sheet'
 
@@ -33,7 +34,8 @@ export const SheetImports: CollectionConfig = {
   access: allow('sheet-imports'),
   hooks: {
     beforeChange: [runImport],
-    afterChange: [refreshSite],
+    afterChange: [refreshSite, logChange],
+    afterDelete: [logDelete],
   },
   upload: {
     mimeTypes: ['text/csv', 'application/vnd.ms-excel', 'text/plain'],

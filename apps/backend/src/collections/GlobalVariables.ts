@@ -1,6 +1,7 @@
 import type { CollectionConfig } from 'payload'
 
 import { allow } from '../access'
+import { logChange, logDelete } from '../content/activity'
 
 export const GlobalVariables: CollectionConfig = {
   slug: 'global-variables',
@@ -12,6 +13,7 @@ export const GlobalVariables: CollectionConfig = {
     defaultColumns: ['name', 'value'],
   },
   access: allow('global-variables'),
+  hooks: { afterChange: [logChange], afterDelete: [logDelete] },
   fields: [
     { name: 'name', type: 'text', required: true, unique: true, index: true },
     { name: 'value', type: 'text' },

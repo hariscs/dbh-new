@@ -77,6 +77,7 @@ export interface Config {
     'interlinking-rules': InterlinkingRule;
     users: User;
     roles: Role;
+    'activity-log': ActivityLog;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -94,6 +95,7 @@ export interface Config {
     'interlinking-rules': InterlinkingRulesSelect<false> | InterlinkingRulesSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     roles: RolesSelect<false> | RolesSelect<true>;
+    'activity-log': ActivityLogSelect<false> | ActivityLogSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -501,6 +503,31 @@ export interface InterlinkingRule {
   createdAt: string;
 }
 /**
+ * Who created, changed or deleted what, and when. Written automatically, read only
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "activity-log".
+ */
+export interface ActivityLog {
+  id: number;
+  user?: string | null;
+  action?: ('created' | 'updated' | 'deleted') | null;
+  section?: string | null;
+  recordId?: string | null;
+  title?: string | null;
+  changes?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
@@ -563,6 +590,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'roles';
         value: number | Role;
+      } | null)
+    | ({
+        relationTo: 'activity-log';
+        value: number | ActivityLog;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -771,6 +802,20 @@ export interface RolesSelect<T extends boolean = true> {
   canPublish?: T;
   ownPagesOnly?: T;
   postTypes?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "activity-log_select".
+ */
+export interface ActivityLogSelect<T extends boolean = true> {
+  user?: T;
+  action?: T;
+  section?: T;
+  recordId?: T;
+  title?: T;
+  changes?: T;
   updatedAt?: T;
   createdAt?: T;
 }

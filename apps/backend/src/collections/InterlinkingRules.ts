@@ -1,6 +1,7 @@
 import type { CollectionConfig } from 'payload'
 
 import { allow } from '../access'
+import { logChange, logDelete } from '../content/activity'
 import { clearInterlinkingCache } from '../builder-api/interlinking'
 
 const PAGE_TYPES = [
@@ -27,8 +28,8 @@ export const InterlinkingRules: CollectionConfig = {
   defaultSort: ['pageType', 'priority'],
   access: allow('interlinking-rules'),
   hooks: {
-    afterChange: [clearInterlinkingCache],
-    afterDelete: [clearInterlinkingCache],
+    afterChange: [clearInterlinkingCache, logChange],
+    afterDelete: [clearInterlinkingCache, logDelete],
   },
   fields: [
     { name: 'name', type: 'text', required: true },

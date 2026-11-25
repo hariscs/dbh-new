@@ -1,6 +1,7 @@
 import type { CollectionConfig } from 'payload'
 
 import { allow } from '../access'
+import { logChange, logDelete } from '../content/activity'
 import { revalidateLayout } from '../content/revalidate'
 
 export const Menus: CollectionConfig = {
@@ -13,7 +14,8 @@ export const Menus: CollectionConfig = {
   },
   access: allow('menus'),
   hooks: {
-    afterChange: [revalidateLayout],
+    afterChange: [revalidateLayout, logChange],
+    afterDelete: [logDelete],
   },
   fields: [
     { name: 'location', type: 'text', required: true, unique: true, index: true },

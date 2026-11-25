@@ -3,6 +3,7 @@ import { randomUUID } from 'node:crypto'
 import type { CollectionBeforeChangeHook, CollectionConfig } from 'payload'
 
 import { allow, hiddenUnless, loggedIn } from '../access'
+import { logChange, logDelete } from '../content/activity'
 
 const KEY_LENGTH = 13
 
@@ -25,7 +26,7 @@ export const FieldGroups: CollectionConfig = {
     listSearchableFields: ['title', 'key'],
   },
   access: { ...allow('field-groups'), read: loggedIn },
-  hooks: { beforeChange: [fillKeyAndPosition] },
+  hooks: { beforeChange: [fillKeyAndPosition], afterChange: [logChange], afterDelete: [logDelete] },
   fields: [
     {
       name: 'key',

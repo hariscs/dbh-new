@@ -3,6 +3,7 @@ import path from 'node:path'
 import type { CollectionConfig } from 'payload'
 
 import { allow, hiddenUnless } from '../access'
+import { logChange, logDelete } from '../content/activity'
 
 export const Media: CollectionConfig = {
   slug: 'media',
@@ -12,6 +13,7 @@ export const Media: CollectionConfig = {
     description: 'Images uploaded in the CMS. They are served from /wp-content/uploads/cms/ like WordPress uploads',
   },
   access: { ...allow('media'), read: () => true },
+  hooks: { afterChange: [logChange], afterDelete: [logDelete] },
   fields: [
     {
       name: 'alt',
