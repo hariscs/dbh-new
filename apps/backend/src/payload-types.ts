@@ -377,7 +377,7 @@ export interface GlobalVariable {
   createdAt: string;
 }
 /**
- * Snapshot of the WordPress menu. Edit the menu JSON only if you know the structure
+ * Site navigation. Open a menu to add, edit, reorder or delete its items
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "menus".

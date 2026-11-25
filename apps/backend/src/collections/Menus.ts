@@ -7,8 +7,9 @@ export const Menus: CollectionConfig = {
   slug: 'menus',
   admin: {
     group: 'Settings',
-    description: 'Snapshot of the WordPress menu. Edit the menu JSON only if you know the structure',
+    description: 'Site navigation. Open a menu to add, edit, reorder or delete its items',
     useAsTitle: 'location',
+    defaultColumns: ['location', 'updatedAt'],
   },
   access: allow('menus'),
   hooks: {
@@ -16,6 +17,6 @@ export const Menus: CollectionConfig = {
   },
   fields: [
     { name: 'location', type: 'text', required: true, unique: true, index: true },
-    { name: 'tree', type: 'json', required: true },
+    { name: 'tree', type: 'json', required: true, admin: { components: { Field: '/admin/MenuEditor#MenuEditor' } } },
   ],
 }

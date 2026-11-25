@@ -10,6 +10,7 @@ import { TermsPicker as TermsPicker_0b37058f0637752fe0c849983a30e221 } from '../
 import { StatusTabs as StatusTabs_9607748802c8141aca5f64302654074a } from '../../../admin/StatusTabs'
 import { PublishButtons as PublishButtons_c1ca5b37e7717da7880698a5a52e4d85 } from '../../../admin/PublishButtons'
 import { TermPages as TermPages_cfefd35e466a90f6adb259a3f7513de9 } from '../../../admin/TermPages'
+import { MenuEditor as MenuEditor_421a3d0f76f75fdf14c57a7395709d20 } from '../../../admin/MenuEditor'
 import { FieldGroupRules as FieldGroupRules_8de9e089914824ae1b4338bfda65f084 } from '../../../admin/FieldGroupRules'
 import { RuleConditionsForm as RuleConditionsForm_85f29ba48b63cc649c9565404c3f255c } from '../../../admin/RuleConditionsForm'
 import { PermissionsGrid as PermissionsGrid_4eec5b7de7f919dba2c310dc42f9b132 } from '../../../admin/PermissionsGrid'
@@ -33,6 +34,7 @@ export const importMap = {
   "/admin/StatusTabs#StatusTabs": StatusTabs_9607748802c8141aca5f64302654074a,
   "/admin/PublishButtons#PublishButtons": PublishButtons_c1ca5b37e7717da7880698a5a52e4d85,
   "/admin/TermPages#TermPages": TermPages_cfefd35e466a90f6adb259a3f7513de9,
+  "/admin/MenuEditor#MenuEditor": MenuEditor_421a3d0f76f75fdf14c57a7395709d20,
   "/admin/FieldGroupRules#FieldGroupRules": FieldGroupRules_8de9e089914824ae1b4338bfda65f084,
   "/admin/RuleConditionsForm#RuleConditionsForm": RuleConditionsForm_85f29ba48b63cc649c9565404c3f255c,
   "/admin/PermissionsGrid#PermissionsGrid": PermissionsGrid_4eec5b7de7f919dba2c310dc42f9b132,
