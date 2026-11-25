@@ -1,7 +1,7 @@
-import type { CollectionBeforeChangeHook, CollectionConfig } from 'payload'
+import type { CollectionBeforeChangeHook, CollectionConfig, JSONFieldValidation } from 'payload'
 
 import { guardPage, pageAccess } from '../access'
-import { POST_TYPES, STATUSES } from '../admin/labels'
+import { type FieldDefinition, POST_TYPES, STATUSES } from '../admin/labels'
 import { clearInterlinkingCache } from '../builder-api/interlinking'
 import { moveChildren } from '../content/cascade'
 import { derivePage } from '../content/derive'
@@ -10,6 +10,42 @@ import { revalidatePage } from '../content/revalidate'
 const derived = { readOnly: true } as const
 const IMPORT_EDITOR = 'WordPress import'
 const SYSTEM_EDITOR = 'System'
+
+const EMAIL_FORMAT = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const URL_FORMAT = /^(https?:\/\/|\/|#|mailto:|tel:)/
+const EMPTY_VALUE = 'false'
+
+type Rule = { param: string; operator: string; value: string }
+
+const appliesTo = (location: unknown, postType: string) =>
+  ((location ?? []) as Rule[][]).some((rules) =>
+    rules.some((rule) => rule.param === 'post_type' && (rule.operator === '==') === (rule.value === postType)),
+  )
+
+const problemOf = (field: FieldDefinition, value: string | undefined) => {
+  const empty = !value || value === EMPTY_VALUE
+  if (empty) return field.required ? `${field.label} is required` : null
+  if (field.type === 'email' && !EMAIL_FORMAT.test(value)) return `${field.label} must be an email address`
+  if (field.type === 'url' && !URL_FORMAT.test(value)) return `${field.label} must start with https://, / or #`
+  return null
+}
+
+const validateFields: JSONFieldValidation = async (value, { req, data }) => {
+  if (req.payloadAPI !== 'REST') return true
+  const values = (value ?? {}) as Record<string, string>
+  const { docs } = await req.payload.find({
+    collection: 'field-groups',
+    depth: 0,
+    pagination: false,
+    select: { fields: true, location: true },
+    req,
+  })
+  const problems = docs
+    .filter((group) => appliesTo(group.location, String(data?.postType ?? '')))
+    .flatMap((group) => ((group.fields ?? []) as FieldDefinition[]).map((field) => problemOf(field, values[field.name])))
+    .filter(Boolean)
+  return problems.length ? problems.join('. ') : true
+}
 
 const stampEditor: CollectionBeforeChangeHook = ({ data, req, context, operation }) => ({
   ...data,
@@ -86,7 +122,7 @@ export const Pages: CollectionConfig = {
         },
       },
     },
-    { name: 'fields', type: 'json', admin: { components: { Field: '/admin/PageFieldsForm#PageFieldsForm' } } },
+    { name: 'fields', label: 'Page fields', type: 'json', validate: validateFields, admin: { components: { Field: '/admin/PageFieldsForm#PageFieldsForm' } } },
     { name: 'seo', type: 'json', admin: { components: { Field: '/admin/SeoForm#SeoForm' } } },
     { name: 'childPages', type: 'ui', admin: { components: { Field: '/admin/ChildPages#ChildPages' } } },
     {

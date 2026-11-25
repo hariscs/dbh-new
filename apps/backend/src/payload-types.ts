@@ -432,17 +432,19 @@ export interface SheetImport {
   focalY?: number | null;
 }
 /**
- * Field definitions copied from ACF. They decide which fields show on each page
+ * Field groups like ACF. They decide which fields show on each page
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "field-groups".
  */
 export interface FieldGroup {
   id: number;
+  /**
+   * Set automatically for new groups
+   */
   key: string;
   title: string;
-  position: number;
-  fields?:
+  location?:
     | {
         [k: string]: unknown;
       }
@@ -451,7 +453,11 @@ export interface FieldGroup {
     | number
     | boolean
     | null;
-  location?:
+  /**
+   * Order of the group on pages. Set automatically for new groups
+   */
+  position: number;
+  fields?:
     | {
         [k: string]: unknown;
       }
@@ -708,9 +714,9 @@ export interface SheetImportsSelect<T extends boolean = true> {
 export interface FieldGroupsSelect<T extends boolean = true> {
   key?: T;
   title?: T;
+  location?: T;
   position?: T;
   fields?: T;
-  location?: T;
   updatedAt?: T;
   createdAt?: T;
 }

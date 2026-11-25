@@ -29,7 +29,7 @@ export const FieldGroupRules: UIFieldServerComponent = async ({ data, payload })
   return (
     <div className="field-type">
       <h4>Applies to</h4>
-      {ruleGroups.length === 0 && <p>No location rules imported.</p>}
+      {ruleGroups.length === 0 && <p>Not shown on any page yet. Tick post types under Show on, then save.</p>}
       <ul>
         {ruleGroups.map((rules, index) => (
           <li key={index}>

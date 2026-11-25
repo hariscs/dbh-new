@@ -1,10 +1,23 @@
 'use client'
 
-import { Button, Collapsible, JSONField, SelectInput, TextareaInput, TextInput, useField, useFormFields } from '@payloadcms/ui'
+import {
+  Button,
+  Collapsible,
+  JSONField,
+  SelectInput,
+  TextareaInput,
+  TextInput,
+  useDocumentInfo,
+  useField,
+  useFormFields,
+} from '@payloadcms/ui'
 import type { JSONFieldClientComponent } from 'payload'
 import { type ChangeEvent, useEffect, useState } from 'react'
 
-type GroupField = { key: string; name: string; type?: string; label: string }
+import type { FieldDefinition } from './labels'
+
+type GroupField = FieldDefinition
+type PageDoc = { title: string; path: string; isFrontPage: boolean }
 type Rule = { param: string; operator: string; value: string }
 type Group = { id: number; title: string; fields: GroupField[]; location?: Rule[][] }
 type Author = { wpId: number; title: string }
@@ -13,7 +26,9 @@ type Fields = Record<string, string>
 
 const OTHER_GROUP = 'Other'
 const EMPTY_IMAGE = 'false'
-const TEXT_TYPES = ['text', 'url', 'email', 'number', 'select', 'color_picker', 'date_picker', 'true_false']
+const TEXT_TYPES = ['text', 'url', 'email', 'number', 'select', 'color_picker', 'date_picker']
+const TRUE_VALUE = '1'
+const MULTI_SEPARATOR = ','
 const HTML_TYPES = ['textarea', 'wysiwyg']
 const AUTHOR_FIELDS = ['authored_by', 'edited_by', 'medically_reviewed_by']
 const MEDIA_PATH = '/wp-content/uploads/cms/'
@@ -26,10 +41,13 @@ const appliesTo = (group: Group, postType: string) =>
   )
 
 const isEmpty = (value: string | undefined) => !value || value === EMPTY_IMAGE
+const hrefOf = (page: PageDoc) => (page.isFrontPage ? '/' : `${page.path}/`)
 
 export const PageFieldsForm: JSONFieldClientComponent = (props) => {
   const { path, readOnly } = props
-  const { value, setValue } = useField<Fields>({ path })
+  const { value, setValue, errorMessage, showError } = useField<Fields>({ path })
+  const { id } = useDocumentInfo()
+  const [pages, setPages] = useState<PageDoc[]>([])
   const postType = useFormFields(([fields]) => fields.postType?.value as string | undefined)
   const fieldTaxonomies = useFormFields(([fields]) => fields.fieldTaxonomies?.value as string[] | undefined)
   const [groups, setGroups] = useState<Group[]>([])
@@ -58,7 +76,23 @@ export const PageFieldsForm: JSONFieldClientComponent = (props) => {
     })
       .then((response) => response.json())
       .then(({ docs }: { docs: MediaDoc[] }) => setMedia(docs))
+    fetch(
+      '/api/pages?depth=0&pagination=false&sort=path&where[status][equals]=publish&select[title]=true&select[path]=true&select[isFrontPage]=true',
+      { credentials: 'include' },
+    )
+      .then((response) => response.json())
+      .then(({ docs }: { docs: PageDoc[] }) => setPages(docs))
   }, [])
+
+  useEffect(() => {
+    if (id || !groups.length) return
+    const current = value ?? {}
+    const defaults = groups
+      .filter((group) => appliesTo(group, postType ?? ''))
+      .flatMap((group) => group.fields)
+      .filter((field) => field.defaultValue && current[field.name] === undefined)
+    if (defaults.length) setValue({ ...current, ...Object.fromEntries(defaults.map((field) => [field.name, field.defaultValue ?? ''])) })
+  }, [groups, postType])
 
   const jsonToggle = (
     <Button buttonStyle="secondary" onClick={() => setRawJson(!rawJson)} size="small">
@@ -105,7 +139,8 @@ export const PageFieldsForm: JSONFieldClientComponent = (props) => {
 
   const renderField = (field: GroupField & { group: string }) => {
     const fieldPath = `${path}.${field.name}`
-    const label = term ? `${field.label} · ${field.group}` : field.label
+    const label = `${term ? `${field.label} · ${field.group}` : field.label}${field.required ? ' *' : ''}`
+    const description = field.instructions || undefined
     const current = fields[field.name]
 
     if (derivedKeys.has(field.name)) {
@@ -174,10 +209,65 @@ export const PageFieldsForm: JSONFieldClientComponent = (props) => {
         </div>
       )
     }
+    if (field.type === 'select' && field.choices?.length) {
+      const options = field.choices.map((choice) => ({ label: choice.label, value: choice.value }))
+      return (
+        <SelectInput
+          description={description}
+          hasMany={field.multiple}
+          isClearable
+          key={fieldPath}
+          label={label}
+          name={fieldPath}
+          onChange={(option) =>
+            change(
+              field.name,
+              Array.isArray(option) ? option.map((item) => item.value).join(MULTI_SEPARATOR) : option ? String(option.value) : '',
+            )
+          }
+          options={options}
+          path={fieldPath}
+          readOnly={readOnly}
+          value={field.multiple ? (current ? current.split(MULTI_SEPARATOR) : []) : (current ?? '')}
+        />
+      )
+    }
+    if (field.type === 'page_link') {
+      return (
+        <SelectInput
+          description={description}
+          isClearable
+          key={fieldPath}
+          label={label}
+          name={fieldPath}
+          onChange={(option) => !Array.isArray(option) && change(field.name, option ? String(option.value) : '')}
+          options={pages.map((page) => ({ label: `${page.title} — ${hrefOf(page)}`, value: hrefOf(page) }))}
+          path={fieldPath}
+          readOnly={readOnly}
+          value={current ?? ''}
+        />
+      )
+    }
+    if (field.type === 'true_false') {
+      return (
+        <div className="field-type" key={fieldPath}>
+          <label>
+            <input
+              checked={current === TRUE_VALUE}
+              disabled={readOnly}
+              onChange={(event) => change(field.name, event.target.checked ? TRUE_VALUE : '')}
+              type="checkbox"
+            />{' '}
+            {label}
+          </label>
+          {description && <div style={{ opacity: 0.6 }}>{description}</div>}
+        </div>
+      )
+    }
     if (HTML_TYPES.includes(field.type ?? '')) {
       return (
         <TextareaInput
-          description={field.type === 'wysiwyg' ? 'HTML' : undefined}
+          description={[field.type === 'wysiwyg' ? 'HTML' : '', description].filter(Boolean).join(' · ') || undefined}
           key={fieldPath}
           label={label}
           onChange={(event) => change(field.name, event.target.value)}
@@ -191,6 +281,7 @@ export const PageFieldsForm: JSONFieldClientComponent = (props) => {
     if (TEXT_TYPES.includes(field.type ?? '')) {
       return (
         <TextInput
+          description={description}
           key={fieldPath}
           label={label}
           onChange={(event: ChangeEvent<HTMLInputElement>) => change(field.name, event.target.value)}
@@ -215,6 +306,7 @@ export const PageFieldsForm: JSONFieldClientComponent = (props) => {
   return (
     <div className="field-type">
       <h4>Page fields</h4>
+      {showError && errorMessage && <p style={{ color: 'var(--theme-error-500)' }}>{errorMessage}</p>}
       <div style={{ display: 'flex', gap: 12, alignItems: 'center', marginBottom: 12 }}>
         <input
           onChange={(event) => setSearch(event.target.value)}

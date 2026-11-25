@@ -46,3 +46,28 @@ export const PERMISSION_ACTIONS = [
   { value: 'update', label: 'Edit' },
   { value: 'delete', label: 'Delete' },
 ]
+
+export type FieldDefinition = {
+  key: string
+  name: string
+  label: string
+  type?: string
+  required?: boolean
+  instructions?: string
+  defaultValue?: string
+  choices?: { value: string; label: string }[]
+  multiple?: boolean
+}
+
+export const FIELD_TYPES = [
+  { value: 'text', label: 'Text' },
+  { value: 'textarea', label: 'Text area' },
+  { value: 'wysiwyg', label: 'Rich text (HTML)' },
+  { value: 'email', label: 'Email' },
+  { value: 'url', label: 'URL' },
+  { value: 'number', label: 'Number' },
+  { value: 'select', label: 'Select / multi-select' },
+  { value: 'page_link', label: 'Page link' },
+  { value: 'image', label: 'Image' },
+  { value: 'true_false', label: 'True / false' },
+]
