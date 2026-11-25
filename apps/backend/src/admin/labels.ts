@@ -59,6 +59,10 @@ export type FieldDefinition = {
   defaultValue?: string
   choices?: { value: string; label: string }[]
   multiple?: boolean
+  minLength?: number
+  maxLength?: number
+  pattern?: string
+  patternMessage?: string
 }
 
 export const FIELD_TYPES = [

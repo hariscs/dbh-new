@@ -24,11 +24,22 @@ const appliesTo = (location: unknown, postType: string) =>
     rules.some((rule) => rule.param === 'post_type' && (rule.operator === '==') === (rule.value === postType)),
   )
 
+const matches = (pattern: string, value: string) => {
+  try {
+    return new RegExp(pattern).test(value)
+  } catch {
+    return true
+  }
+}
+
 const problemOf = (field: FieldDefinition, value: string | undefined) => {
   const empty = !value || value === EMPTY_VALUE
   if (empty) return field.required ? `${field.label} is required` : null
   if (field.type === 'email' && !EMAIL_FORMAT.test(value)) return `${field.label} must be an email address`
   if (field.type === 'url' && !URL_FORMAT.test(value)) return `${field.label} must start with https://, / or #`
+  if (field.minLength && value.length < field.minLength) return `${field.label} needs at least ${field.minLength} characters`
+  if (field.maxLength && value.length > field.maxLength) return `${field.label} allows at most ${field.maxLength} characters`
+  if (field.pattern && !matches(field.pattern, value)) return field.patternMessage || `${field.label} has the wrong format`
   return null
 }
 

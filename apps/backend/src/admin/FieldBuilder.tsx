@@ -17,6 +17,7 @@ import { type ChangeEvent, type MouseEvent, useState } from 'react'
 import { FIELD_TYPES, type FieldDefinition } from './labels'
 
 const KEY_LENGTH = 13
+const LENGTH_TYPES = ['text', 'textarea', 'wysiwyg', 'email', 'url']
 const CHOICE_SEPARATOR = ' : '
 
 const newKey = () => `field_${crypto.randomUUID().replace(/-/g, '').slice(0, KEY_LENGTH)}`
@@ -166,6 +167,40 @@ export const FieldBuilder: JSONFieldClientComponent = (props) => {
             value={field.defaultValue ?? ''}
           />
         </div>
+        {LENGTH_TYPES.includes(field.type ?? '') && (
+          <div style={{ display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))' }}>
+            <TextInput
+              label="Min length"
+              onChange={(event: ChangeEvent<HTMLInputElement>) => update(field.key, { minLength: Number(event.target.value) || undefined })}
+              path={`${key}.minLength`}
+              readOnly={readOnly}
+              value={field.minLength ? String(field.minLength) : ''}
+            />
+            <TextInput
+              label="Max length"
+              onChange={(event: ChangeEvent<HTMLInputElement>) => update(field.key, { maxLength: Number(event.target.value) || undefined })}
+              path={`${key}.maxLength`}
+              readOnly={readOnly}
+              value={field.maxLength ? String(field.maxLength) : ''}
+            />
+            <TextInput
+              description="Regular expression the value must match, e.g. ^\d{3}-\d{3}-\d{4}$"
+              label="Pattern"
+              onChange={(event: ChangeEvent<HTMLInputElement>) => update(field.key, { pattern: event.target.value || undefined })}
+              path={`${key}.pattern`}
+              readOnly={readOnly}
+              value={field.pattern ?? ''}
+            />
+            <TextInput
+              description="Shown when the pattern doesn't match"
+              label="Pattern message"
+              onChange={(event: ChangeEvent<HTMLInputElement>) => update(field.key, { patternMessage: event.target.value || undefined })}
+              path={`${key}.patternMessage`}
+              readOnly={readOnly}
+              value={field.patternMessage ?? ''}
+            />
+          </div>
+        )}
         <label>
           <input
             checked={Boolean(field.required)}
